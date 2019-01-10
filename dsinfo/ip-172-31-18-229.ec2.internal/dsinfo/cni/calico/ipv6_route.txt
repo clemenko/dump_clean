@@ -1,0 +1,15 @@
+unreachable ::/96 dev lo  metric 1024  error -113
+unreachable ::ffff:0.0.0.0/96 dev lo  metric 1024  error -113
+unreachable 2002:a00::/24 dev lo  metric 1024  error -113
+unreachable 2002:7f00::/24 dev lo  metric 1024  error -113
+unreachable 2002:a9fe::/32 dev lo  metric 1024  error -113
+unreachable 2002:ac10::/28 dev lo  metric 1024  error -113
+unreachable 2002:c0a8::/32 dev lo  metric 1024  error -113
+unreachable 2002:e000::/19 dev lo  metric 1024  error -113
+unreachable 3ffe:ffff::/32 dev lo  metric 1024  error -113
+fe80::/64 dev eth0  proto kernel  metric 256  mtu 9001
+fe80::/64 dev docker_gwbridge  proto kernel  metric 256 
+fe80::/64 dev docker0  proto kernel  metric 256 
+fe80::/64 dev veth902724d  proto kernel  metric 256 
+fe80::/64 dev veth04d5ea3  proto kernel  metric 256 
+fe80::/64 dev vethb5f5ff1  proto kernel  metric 256 

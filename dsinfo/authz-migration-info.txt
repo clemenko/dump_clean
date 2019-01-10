@@ -1,0 +1,7 @@
+{
+	"status": "success",
+	"version": "3.0.1 (2f7c7e1)",
+	"error": "",
+	"hostname": "ip-172-31-9-58.ec2.internal",
+	"kubernetesAdminGrantsAdded": true
+}

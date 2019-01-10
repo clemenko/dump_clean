@@ -1,0 +1,49 @@
+ucp-auth-store
+2018-06-21T20:58:07.687489681Z WARNING: ignoring --server-name because this server already has a name.
+2018-06-21T20:58:07.690822998Z Running rethinkdb 2.3.6 (GCC 6.4.0)...
+2018-06-21T20:58:07.695963594Z Running on Linux 3.10.0-693.11.6.el7.x86_64 x86_64
+2018-06-21T20:58:07.695982092Z Loading data from directory /var/data/rethinkdb
+2018-06-21T20:58:07.706432635Z Listening for intracluster connections on port 12384
+2018-06-21T20:58:07.706571153Z warn: Attempted to join self, peer ignored
+2018-06-21T20:58:08.205898124Z warn: Received invalid clustering header from [::ffff:172.17.0.1]:54778, closing connection -- something might be connecting to the wrong port.
+2018-06-21T20:58:08.471903235Z Listening for client driver connections on port 12383
+2018-06-21T20:58:08.471918233Z Administrative HTTP connections are disabled.
+2018-06-21T20:58:08.471924360Z Listening on cluster addresses: 127.0.0.1, 172.17.0.11
+2018-06-21T20:58:08.472235725Z Listening on driver addresses: 127.0.0.1, 172.17.0.11
+2018-06-21T20:58:08.472599047Z Listening on http addresses: 127.0.0.1, 172.17.0.11
+2018-06-21T20:58:08.472611252Z Server ready, "ucp_auth_store_172_31_9_58" b2861513-069a-4402-9b97-34b006099674
+2018-06-28T16:42:04.432668141Z Server got SIGTERM from pid 0, uid 0; shutting down...
+2018-06-28T16:42:04.432690998Z Shutting down client connections...
+2018-06-28T16:42:04.432699481Z All client connections closed.
+2018-06-28T16:42:04.442743365Z Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-06-28T16:42:04.564662322Z Storage engine shut down.
+2018-06-28T16:42:27.199194546Z WARNING: ignoring --server-name because this server already has a name.
+2018-06-28T16:42:27.201825135Z Running rethinkdb 2.3.6 (GCC 6.4.0)...
+2018-06-28T16:42:27.202999767Z Running on Linux 3.10.0-693.11.6.el7.x86_64 x86_64
+2018-06-28T16:42:27.203047614Z Loading data from directory /var/data/rethinkdb
+2018-06-28T16:42:27.293738621Z Listening for intracluster connections on port 12384
+2018-06-28T16:42:27.293772873Z warn: Attempted to join self, peer ignored
+2018-06-28T16:42:30.049654716Z Listening for client driver connections on port 12383
+2018-06-28T16:42:30.050519727Z Administrative HTTP connections are disabled.
+2018-06-28T16:42:30.114528672Z Listening on cluster addresses: 127.0.0.1, 172.17.0.14
+2018-06-28T16:42:30.114547145Z Listening on driver addresses: 127.0.0.1, 172.17.0.14
+2018-06-28T16:42:30.114554520Z Listening on http addresses: 127.0.0.1, 172.17.0.14
+2018-06-28T16:42:30.114560592Z Server ready, "ucp_auth_store_172_31_9_58" b2861513-069a-4402-9b97-34b006099674
+2018-06-28T16:42:34.919645467Z warn: Driver connection TLS handshake failed: unknown error (OpenSSL error 0)
+2018-06-28T16:56:31.798226605Z Server got SIGTERM from pid 0, uid 0; shutting down...
+2018-06-28T16:56:31.798253937Z Shutting down client connections...
+2018-06-28T16:56:31.798273999Z All client connections closed.
+2018-06-28T16:56:31.798282083Z Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-06-28T16:56:31.876151876Z Storage engine shut down.
+2018-06-28T16:56:50.837058476Z WARNING: ignoring --server-name because this server already has a name.
+2018-06-28T16:56:50.861004815Z Running rethinkdb 2.3.6 (GCC 6.4.0)...
+2018-06-28T16:56:50.861040862Z Running on Linux 3.10.0-693.11.6.el7.x86_64 x86_64
+2018-06-28T16:56:50.861049443Z Loading data from directory /var/data/rethinkdb
+2018-06-28T16:56:50.978009835Z Listening for intracluster connections on port 12384
+2018-06-28T16:56:50.996292131Z warn: Attempted to join self, peer ignored
+2018-06-28T16:56:52.596686459Z Listening for client driver connections on port 12383
+2018-06-28T16:56:52.596739964Z Administrative HTTP connections are disabled.
+2018-06-28T16:56:52.596747904Z Listening on cluster addresses: 127.0.0.1, 172.17.0.12
+2018-06-28T16:56:52.644978857Z Listening on driver addresses: 127.0.0.1, 172.17.0.12
+2018-06-28T16:56:52.645061114Z Listening on http addresses: 127.0.0.1, 172.17.0.12
+2018-06-28T16:56:52.645069456Z Server ready, "ucp_auth_store_172_31_9_58" b2861513-069a-4402-9b97-34b006099674

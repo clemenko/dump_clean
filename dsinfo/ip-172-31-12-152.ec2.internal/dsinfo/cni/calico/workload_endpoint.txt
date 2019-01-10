@@ -1,0 +1,4 @@
+NAMESPACE     NAME                                                                   WORKLOAD                   NODE                          NETWORKS           INTERFACE         PROFILES          NATS   
+kube-system   ip--172--31--9--58.ec2.internal-k8s-compose--6df8746695--d6q2m-eth0    compose-6df8746695-d6q2m   ip-172-31-9-58.ec2.internal   192.168.171.7/32   calic8c2c8c484a   kns.kube-system          
+kube-system   ip--172--31--9--58.ec2.internal-k8s-kube--dns--fbf6ff8fb--w5zw8-eth0   kube-dns-fbf6ff8fb-w5zw8   ip-172-31-9-58.ec2.internal   192.168.171.8/32   cali71fc82667f3   kns.kube-system          
+

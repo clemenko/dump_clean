@@ -1,0 +1,14 @@
+Calico process is running.
+
+IPv4 BGP status
++---------------+-------------------+-------+------------+-------------+
+| PEER ADDRESS  |     PEER TYPE     | STATE |   SINCE    |    INFO     |
++---------------+-------------------+-------+------------+-------------+
+| 172.31.12.152 | node-to-node mesh | up    | 2018-06-28 | Established |
+| 172.31.18.229 | node-to-node mesh | up    | 2018-06-28 | Established |
+| 172.31.9.58   | node-to-node mesh | up    | 2018-06-28 | Established |
++---------------+-------------------+-------+------------+-------------+
+
+IPv6 BGP status
+No IPv6 peers found.
+

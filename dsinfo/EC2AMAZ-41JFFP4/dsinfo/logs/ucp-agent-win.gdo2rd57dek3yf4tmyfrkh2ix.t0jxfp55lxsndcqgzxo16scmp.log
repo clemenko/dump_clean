@@ -1,0 +1,54 @@
+2018-06-28T17:55:33.469379900Z {"level":"info","msg":"Initializing UCP Agent ...","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:33.469379900Z {"level":"info","msg":"Connecting to local Docker daemon.","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:33.554379900Z {"level":"info","msg":"Loading UCP Configuration file.","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:33.556378000Z {"level":"info","msg":"UCP agent initialization complete.","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:33.557378400Z {"level":"info","msg":"Beginning state difference detection loop...","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:33.584384900Z {"level":"info","msg":"detected state difference for component: Docker Proxy","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:33.585380400Z {"level":"info","msg":"Detected difference in desired and current state of UCP on this node.","time":"2018-06-28T17:55:33Z"}
+2018-06-28T17:55:39.714380700Z {"level":"info","msg":"Beginning state reconciliation","time":"2018-06-28T17:55:39Z"}
+2018-06-28T17:55:39.714380700Z {"level":"info","msg":"Launching ucp-reconcile container with image docker/ucp-agent-win:3.0.2","time":"2018-06-28T17:55:39Z"}
+2018-06-28T17:55:42.583373300Z {"level":"info","msg":"Configuring node as agent with the following SANs: [127.0.0.1 172.31.29.135 localhost proxy.local ec2amaz-41jffp4 174q5382xmnb2e5a2c4dwyb4g]","time":"2018-06-28T17:55:42Z"}
+2018-06-28T17:55:42.583373300Z {"level":"info","msg":"Reconciling state of component Docker Proxy","time":"2018-06-28T17:55:42Z"}
+2018-06-28T17:55:42.729379600Z {"level":"info","msg":"Sending CSR Request to a manager at 172.31.9.58:443","time":"2018-06-28T17:55:42Z"}
+2018-06-28T17:55:45.744376800Z {"level":"info","msg":"Joining UCP ID: 174q5382xmnb2e5a2c4dwyb4g","time":"2018-06-28T17:55:45Z"}
+2018-06-28T17:55:45.751380500Z {"level":"info","msg":"VerifyPermissions not supported on windows, skipping","time":"2018-06-28T17:55:45Z"}
+2018-06-28T17:55:51.126386000Z {"level":"info","msg":"Reconciling state of component Certificates","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"Reconciling state of component Concurrent [Client CA Cluster CA Analytics prometheus Kubelet Kubernetes Proxy Concurrent [ucp-agent-service ucp-agent-win-service ucp-agent-s390x-service] interlockservice [etcd Exclusive RethinkDB etcdmigration Concurrent [Swarm-Classic Manager eNZi API eNZi Worker Kubernetes Scheduler Kubernetes Controller Manager]]]","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of Client CA component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of Analytics component","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of ucp-agent-s390x-service component. This component will enable UCP on s390x linux nodes if they are added to the cluster","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of Cluster CA component","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of Kubelet component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of prometheus component","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of ucp-agent-service component. This component will enable UCP on x86_64 linux nodes if they are added to the cluster","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of Kubernetes Proxy component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of interlockservice component. This component will enable the interlock load balancing solution on the UCP cluster.","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of ucp-agent-win-service component. This component will enable UCP on x86_64 windows nodes if they are added to the cluster","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"Reconciling components [etcd Exclusive RethinkDB etcdmigration Concurrent [Swarm-Classic Manager eNZi API eNZi Worker Kubernetes Scheduler Kubernetes Controller Manager]]","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"successfully reconciled state of Concurrent [ucp-agent-service ucp-agent-win-service ucp-agent-s390x-service] component","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"Reconciling state of component etcd","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"Reconciling state of component Exclusive RethinkDB","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"Reconciling state of component etcdmigration","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.129386700Z {"level":"info","msg":"Reconciling state of component Concurrent [Swarm-Classic Manager eNZi API eNZi Worker Kubernetes Scheduler Kubernetes Controller Manager]","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of Kubernetes Controller Manager component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of eNZi API component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of Swarm-Classic Manager component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of eNZi Worker component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of Kubernetes Scheduler component","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of [etcd Exclusive RethinkDB etcdmigration Concurrent [Swarm-Classic Manager eNZi API eNZi Worker Kubernetes Scheduler Kubernetes Controller Manager]] component","time":"2018-06-28T17:55:51Z"}
+
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"Reconciling state of component Concurrent [Kubernetes API Server UCP Controller]","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of UCP Controller component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"successfully reconciled state of Kubernetes API Server component","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"Reconciling state of component Kubernetes CNI Plugin","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:51.130386700Z {"level":"info","msg":"Reconciling state of component Kubernetes addons","time":"2018-06-28T17:55:51Z"}
+2018-06-28T17:55:52.647367100Z {"level":"info","msg":"Completed state reconciliation, system is ready.","time":"2018-06-28T17:55:52Z"}
+

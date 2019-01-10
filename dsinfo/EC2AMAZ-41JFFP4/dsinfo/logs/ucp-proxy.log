@@ -1,0 +1,4 @@
+2018-06-28T17:55:48.546368700Z {"level":"info","msg":"Initializing kubernetes reverse TLS proxy for port 6443 on managers on :6444","time":"2018-06-28T17:55:48Z"}
+2018-06-28T17:55:48.546368700Z {"level":"info","msg":"Initializing etcd reverse TLS proxy for port 12379 on managers on :12378","time":"2018-06-28T17:55:48Z"}
+2018-06-28T17:55:48.546368700Z {"level":"info","msg":"Configuring TLS: ca=C:\\ucp-node-certs\\ca.pem cert=C:\\ucp-node-certs\\cert.pem key=C:\\ucp-node-certs\\key.pem","time":"2018-06-28T17:55:48Z"}
+

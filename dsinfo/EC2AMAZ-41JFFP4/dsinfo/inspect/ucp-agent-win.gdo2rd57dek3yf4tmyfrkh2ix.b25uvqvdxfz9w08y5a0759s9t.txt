@@ -1,0 +1,218 @@
+[
+    {
+        "Id": "d90121b612115e60a000bd1955b48608b98c681132d52574e7d792fc02f45254",
+        "Created": "2018-07-10T20:20:55.9476904Z",
+        "Path": "/bin/ucp-agent",
+        "Args": [
+            "agent",
+            "-d",
+            "/"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 4108,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-07-10T20:21:03.3386988Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:2f416369819e7f48c17784f4afb7e52913670df267ab0d5df6b3bdbc2d114ae2",
+        "ResolvConfPath": "",
+        "HostnamePath": "",
+        "HostsPath": "",
+        "LogPath": "D:\\containers\\d90121b612115e60a000bd1955b48608b98c681132d52574e7d792fc02f45254\\d90121b612115e60a000bd1955b48608b98c681132d52574e7d792fc02f45254-json.log",
+        "Name": "/ucp-agent-win.gdo2rd57dek3yf4tmyfrkh2ix.b25uvqvdxfz9w08y5a0759s9t",
+        "RestartCount": 0,
+        "Driver": "windowsfilter",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 0,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "process",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "c:\\ProgramData\\docker\\daemoncerts",
+                    "Target": "c:\\ProgramData\\docker\\daemoncerts",
+                    "ReadOnly": true
+                }
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "dir": "D:\\windowsfilter\\d90121b612115e60a000bd1955b48608b98c681132d52574e7d792fc02f45254"
+            },
+            "Name": "windowsfilter"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "c:\\ProgramData\\docker\\daemoncerts",
+                "Destination": "c:\\ProgramData\\docker\\daemoncerts",
+                "Mode": "",
+                "RW": false,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "d90121b61211",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "2376/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "EXTERNAL_SERVICE_LB=",
+                "KV_TIMEOUT=5000",
+                "CONTROLLER_PORT=443",
+                "DNS=",
+                "DNS_OPT=",
+                "DNS_SEARCH=%!s(MISSING)",
+                "UCP_INSTANCE_ID=174q5382xmnb2e5a2c4dwyb4g",
+                "KV_SNAPSHOT_COUNT=20000",
+                "IMAGE_VERSION=3.0.2",
+                "SWARM_STRATEGY=spread",
+                "SWARM_PORT=2376"
+            ],
+            "Cmd": null,
+            "Image": "docker/ucp-agent-win:3.0.2@sha256:0e3cccfb2f775246be1dae6718d2fa88799c555acc2762abe05ecf5127f17b51",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/bin/ucp-agent",
+                "agent",
+                "-d",
+                "/"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.swarm.node.id": "gdo2rd57dek3yf4tmyfrkh2ix",
+                "com.docker.swarm.service.id": "9x29y4g6xsahks3fqdt63ix4y",
+                "com.docker.swarm.service.name": "ucp-agent-win",
+                "com.docker.swarm.task": "",
+                "com.docker.swarm.task.id": "b25uvqvdxfz9w08y5a0759s9t",
+                "com.docker.swarm.task.name": "ucp-agent-win.gdo2rd57dek3yf4tmyfrkh2ix.b25uvqvdxfz9w08y5a0759s9t",
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "d2b3ffefc7b90ef849bdd772d626ed7d75e10cddfef59c4e9a1e237e235c264b",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "2376/tcp": null
+            },
+            "SandboxKey": "d2b3ffefc7b9",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "nat": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "c2bec0ce3be2c203b39f8c4dd9feddd17c21b597acdb612ee9241ebe4b0f62e4",
+                    "EndpointID": "fd9ac71a3be3a300b937ae8afd8d8115de02779314c750205ef7be8ca149b650",
+                    "Gateway": "172.20.128.1",
+                    "IPAddress": "172.20.142.85",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "00:15:5d:e6:0f:b8",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

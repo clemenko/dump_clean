@@ -1,0 +1,359 @@
+[
+    {
+        "Id": "57a2cc391d86de02aa70121c763e5b528a7390610544f116d68eda100191d811",
+        "Created": "2018-06-28T17:55:39.7343313Z",
+        "Path": "/bin/ucp-agent.exe",
+        "Args": [
+            "reconcile",
+            "--payload",
+            "{\"Expected\":{\"ControllerPort\":443,\"KubeAPIServerPort\":6443,\"ProxyKubeAPIServerPort\":6443,\"SwarmPort\":2376,\"SwarmStrategy\":\"spread\",\"DNS\":[],\"DNSOpt\":[],\"DNSSearch\":[],\"KVTimeout\":5000,\"KVSnapshotCount\":20000,\"ProfilingEnabled\":false,\"ExternalServiceLB\":\"\",\"MetricsRetentionTime\":\"24h\",\"MetricsTargetHeapSize\":\"256M\",\"MetricsScrapeInterval\":\"1m\",\"ProxyMetricsScrapeInterval\":\"1m\",\"RethinkDBCacheSize\":\"1GB\",\"CloudProvider\":\"\",\"CNIInstallerURL\":\"\",\"PodCIDR\":\"192.168.0.0/16\",\"CalicoMTU\":\"1500\",\"NodePortRange\":\"32768-35535\",\"CustomKubeAPIServerFlags\":null,\"CustomKubeControllerManagerFlags\":null,\"CustomKubeletFlags\":null,\"CustomKubeSchedulerFlags\":null,\"LocalVolumeCollectionMapping\":false,\"managerKubeReservedResources\":\"\",\"workerKubeReservedResources\":\"\",\"nodeID\":\"gdo2rd57dek3yf4tmyfrkh2ix\",\"is_manager\":false,\"is_leader\":false,\"nodeCertExpiry\":0,\"certs_need_regen\":true,\"certs_not_before\":\"0001-01-01T00:00:00Z\",\"certs_need_permissions_update\":false,\"host_address\":\"172.31.29.135\",\"hostname\":\"EC2AMAZ-41JFFP4\",\"docker_root_dir\":\"D:\\\\\",\"sans\":[\"127.0.0.1\",\"172.31.29.135\",\"localhost\",\"proxy.local\",\"ec2amaz-41jffp4\",\"174q5382xmnb2e5a2c4dwyb4g\"],\"managers\":[\"172.31.9.58\"],\"clusterCASigningURLs\":[\"https://172.31.9.58:12381/api/v1/cfssl/sign\"],\"rethinkDBPeerAddrs\":null,\"rethinkDBHasAllTableReplicas\":false,\"containers\":{\"ucp-auth-api\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-auth:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-auth-store\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-auth-store:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-auth-worker\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-auth:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-client-root-ca\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-cfssl:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-cluster-root-ca\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-cfssl:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-controller\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-controller:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-apiserver\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-controller-manager\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-proxy\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-scheduler\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kubelet\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kv\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-etcd:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-metrics\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-metrics:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-proxy\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-agent-win:3.0.2\",\"running\":true,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-swarm-manager\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-swarm:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"}},\"services\":{\"ucp-agent\":{\"configName\":\"\",\"licenseName\":\"\"},\"ucp-agent-s390x\":{\"configName\":\"\",\"licenseName\":\"\"},\"ucp-agent-win\":{\"configName\":\"\",\"licenseName\":\"\"}},\"kubeAddons\":{},\"AnalyticsPresent\":true,\"AnalyticsEnabled\":true,\"kubeReservedFlag\":\"\"},\"Current\":{\"ControllerPort\":0,\"KubeAPIServerPort\":0,\"ProxyKubeAPIServerPort\":0,\"SwarmPort\":0,\"SwarmStrategy\":\"\",\"DNS\":null,\"DNSOpt\":null,\"DNSSearch\":null,\"KVTimeout\":0,\"KVSnapshotCount\":0,\"ProfilingEnabled\":false,\"ExternalServiceLB\":\"\",\"MetricsRetentionTime\":\"\",\"MetricsTargetHeapSize\":\"\",\"MetricsScrapeInterval\":\"\",\"ProxyMetricsScrapeInterval\":\"\",\"RethinkDBCacheSize\":\"\",\"CloudProvider\":\"\",\"CNIInstallerURL\":\"\",\"PodCIDR\":\"\",\"CalicoMTU\":\"\",\"NodePortRange\":\"\",\"CustomKubeAPIServerFlags\":null,\"CustomKubeControllerManagerFlags\":null,\"CustomKubeletFlags\":null,\"CustomKubeSchedulerFlags\":null,\"LocalVolumeCollectionMapping\":false,\"managerKubeReservedResources\":\"\",\"workerKubeReservedResources\":\"\",\"nodeID\":\"gdo2rd57dek3yf4tmyfrkh2ix\",\"is_manager\":false,\"is_leader\":false,\"nodeCertExpiry\":0,\"certs_need_regen\":false,\"certs_not_before\":\"0001-01-01T00:00:00Z\",\"certs_need_permissions_update\":false,\"host_address\":\"\",\"hostname\":\"\",\"docker_root_dir\":\"D:\\\\\",\"sans\":null,\"managers\":null,\"clusterCASigningURLs\":null,\"rethinkDBPeerAddrs\":null,\"rethinkDBHasAllTableReplicas\":false,\"containers\":{},\"services\":{},\"kubeAddons\":null,\"AnalyticsPresent\":false,\"AnalyticsEnabled\":false,\"kubeReservedFlag\":\"\"}}"
+        ],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-06-28T17:55:42.0783916Z",
+            "FinishedAt": "2018-06-28T17:55:52.4123133Z"
+        },
+        "Image": "sha256:2f416369819e7f48c17784f4afb7e52913670df267ab0d5df6b3bdbc2d114ae2",
+        "ResolvConfPath": "",
+        "HostnamePath": "",
+        "HostsPath": "",
+        "LogPath": "D:\\containers\\57a2cc391d86de02aa70121c763e5b528a7390610544f116d68eda100191d811\\57a2cc391d86de02aa70121c763e5b528a7390610544f116d68eda100191d811-json.log",
+        "Name": "/ucp-reconcile",
+        "RestartCount": 0,
+        "Driver": "windowsfilter",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "C:\\ProgramData\\docker\\daemoncerts:C:\\ProgramData\\docker\\daemoncerts:ro",
+                "D:\\swarm\\certificates:C:\\ProgramData\\docker\\swarm\\certificates",
+                "ucp-node-certs:C:\\ucp-node-certs",
+                "ucp-controller-server-certs:C:\\var\\lib\\docker\\ucp\\ucp-controller-server-certs",
+                "ucp-controller-client-certs:C:\\var\\lib\\docker\\ucp\\ucp-controller-client-certs",
+                "ucp-cluster-root-ca:C:\\var\\lib\\docker\\ucp\\ucp-cluster-root-ca",
+                "ucp-kv-certs:C:\\var\\lib\\docker\\ucp\\ucp-kv-certs",
+                "ucp-client-root-ca:C:\\var\\lib\\docker\\ucp\\ucp-client-root-ca",
+                "ucp-kv:C:\\var\\lib\\docker\\ucp\\ucp-kv",
+                "ucp-auth-api-certs:C:\\var\\lib\\docker\\ucp\\ucp-auth-api-certs",
+                "ucp-auth-worker-certs:C:\\var\\lib\\docker\\ucp\\ucp-auth-worker-certs",
+                "ucp-auth-store-certs:C:\\var\\lib\\docker\\ucp\\ucp-auth-store-certs",
+                "ucp-auth-store-data:C:\\var\\lib\\docker\\ucp\\ucp-auth-store-data",
+                "ucp-auth-worker-data:C:\\var\\lib\\docker\\ucp\\ucp-auth-worker-data",
+                "ucp-metrics-data:C:\\var\\lib\\docker\\ucp\\ucp-metrics-data",
+                "ucp-metrics-inventory:C:\\var\\lib\\docker\\ucp\\ucp-metrics-inventory"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": null,
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": -500,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 0,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "process",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "dir": "D:\\windowsfilter\\57a2cc391d86de02aa70121c763e5b528a7390610544f116d68eda100191d811"
+            },
+            "Name": "windowsfilter"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "c:\\programdata\\docker\\daemoncerts",
+                "Destination": "c:\\programdata\\docker\\daemoncerts",
+                "Mode": "",
+                "RW": false,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-client-root-ca",
+                "Source": "D:\\volumes\\ucp-client-root-ca\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-client-root-ca",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-metrics-inventory",
+                "Source": "D:\\volumes\\ucp-metrics-inventory\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-metrics-inventory",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-worker-data",
+                "Source": "D:\\volumes\\ucp-auth-worker-data\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-auth-worker-data",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-metrics-data",
+                "Source": "D:\\volumes\\ucp-metrics-data\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-metrics-data",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "d:\\swarm\\certificates",
+                "Destination": "c:\\programdata\\docker\\swarm\\certificates",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-kv-certs",
+                "Source": "D:\\volumes\\ucp-kv-certs\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-kv-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-kv",
+                "Source": "D:\\volumes\\ucp-kv\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-kv",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-api-certs",
+                "Source": "D:\\volumes\\ucp-auth-api-certs\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-auth-api-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-worker-certs",
+                "Source": "D:\\volumes\\ucp-auth-worker-certs\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-auth-worker-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-node-certs",
+                "Source": "D:\\volumes\\ucp-node-certs\\_data",
+                "Destination": "c:\\ucp-node-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-controller-client-certs",
+                "Source": "D:\\volumes\\ucp-controller-client-certs\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-controller-client-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-cluster-root-ca",
+                "Source": "D:\\volumes\\ucp-cluster-root-ca\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-cluster-root-ca",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-controller-server-certs",
+                "Source": "D:\\volumes\\ucp-controller-server-certs\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-controller-server-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-store-certs",
+                "Source": "D:\\volumes\\ucp-auth-store-certs\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-auth-store-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-store-data",
+                "Source": "D:\\volumes\\ucp-auth-store-data\\_data",
+                "Destination": "c:\\var\\lib\\docker\\ucp\\ucp-auth-store-data",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "57a2cc391d86",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "2376/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "UCP_INSTANCE_ID=174q5382xmnb2e5a2c4dwyb4g",
+                "IMAGE_VERSION=3.0.2"
+            ],
+            "Cmd": [
+                "reconcile",
+                "--payload",
+                "{\"Expected\":{\"ControllerPort\":443,\"KubeAPIServerPort\":6443,\"ProxyKubeAPIServerPort\":6443,\"SwarmPort\":2376,\"SwarmStrategy\":\"spread\",\"DNS\":[],\"DNSOpt\":[],\"DNSSearch\":[],\"KVTimeout\":5000,\"KVSnapshotCount\":20000,\"ProfilingEnabled\":false,\"ExternalServiceLB\":\"\",\"MetricsRetentionTime\":\"24h\",\"MetricsTargetHeapSize\":\"256M\",\"MetricsScrapeInterval\":\"1m\",\"ProxyMetricsScrapeInterval\":\"1m\",\"RethinkDBCacheSize\":\"1GB\",\"CloudProvider\":\"\",\"CNIInstallerURL\":\"\",\"PodCIDR\":\"192.168.0.0/16\",\"CalicoMTU\":\"1500\",\"NodePortRange\":\"32768-35535\",\"CustomKubeAPIServerFlags\":null,\"CustomKubeControllerManagerFlags\":null,\"CustomKubeletFlags\":null,\"CustomKubeSchedulerFlags\":null,\"LocalVolumeCollectionMapping\":false,\"managerKubeReservedResources\":\"\",\"workerKubeReservedResources\":\"\",\"nodeID\":\"gdo2rd57dek3yf4tmyfrkh2ix\",\"is_manager\":false,\"is_leader\":false,\"nodeCertExpiry\":0,\"certs_need_regen\":true,\"certs_not_before\":\"0001-01-01T00:00:00Z\",\"certs_need_permissions_update\":false,\"host_address\":\"172.31.29.135\",\"hostname\":\"EC2AMAZ-41JFFP4\",\"docker_root_dir\":\"D:\\\\\",\"sans\":[\"127.0.0.1\",\"172.31.29.135\",\"localhost\",\"proxy.local\",\"ec2amaz-41jffp4\",\"174q5382xmnb2e5a2c4dwyb4g\"],\"managers\":[\"172.31.9.58\"],\"clusterCASigningURLs\":[\"https://172.31.9.58:12381/api/v1/cfssl/sign\"],\"rethinkDBPeerAddrs\":null,\"rethinkDBHasAllTableReplicas\":false,\"containers\":{\"ucp-auth-api\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-auth:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-auth-store\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-auth-store:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-auth-worker\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-auth:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-client-root-ca\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-cfssl:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-cluster-root-ca\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-cfssl:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-controller\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-controller:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-apiserver\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-controller-manager\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-proxy\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kube-scheduler\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kubelet\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-hyperkube:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-kv\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-etcd:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-metrics\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-metrics:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-proxy\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-agent-win:3.0.2\",\"running\":true,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"},\"ucp-swarm-manager\":{\"ucpInstanceID\":\"\",\"image\":\"docker/ucp-swarm:3.0.2\",\"running\":false,\"dns\":null,\"dnsOpt\":null,\"dnsSearch\":null,\"debugLogging\":false,\"profilingEnabled\":false,\"CreatedAt\":\"0001-01-01T00:00:00Z\",\"cloudprovider\":\"\"}},\"services\":{\"ucp-agent\":{\"configName\":\"\",\"licenseName\":\"\"},\"ucp-agent-s390x\":{\"configName\":\"\",\"licenseName\":\"\"},\"ucp-agent-win\":{\"configName\":\"\",\"licenseName\":\"\"}},\"kubeAddons\":{},\"AnalyticsPresent\":true,\"AnalyticsEnabled\":true,\"kubeReservedFlag\":\"\"},\"Current\":{\"ControllerPort\":0,\"KubeAPIServerPort\":0,\"ProxyKubeAPIServerPort\":0,\"SwarmPort\":0,\"SwarmStrategy\":\"\",\"DNS\":null,\"DNSOpt\":null,\"DNSSearch\":null,\"KVTimeout\":0,\"KVSnapshotCount\":0,\"ProfilingEnabled\":false,\"ExternalServiceLB\":\"\",\"MetricsRetentionTime\":\"\",\"MetricsTargetHeapSize\":\"\",\"MetricsScrapeInterval\":\"\",\"ProxyMetricsScrapeInterval\":\"\",\"RethinkDBCacheSize\":\"\",\"CloudProvider\":\"\",\"CNIInstallerURL\":\"\",\"PodCIDR\":\"\",\"CalicoMTU\":\"\",\"NodePortRange\":\"\",\"CustomKubeAPIServerFlags\":null,\"CustomKubeControllerManagerFlags\":null,\"CustomKubeletFlags\":null,\"CustomKubeSchedulerFlags\":null,\"LocalVolumeCollectionMapping\":false,\"managerKubeReservedResources\":\"\",\"workerKubeReservedResources\":\"\",\"nodeID\":\"gdo2rd57dek3yf4tmyfrkh2ix\",\"is_manager\":false,\"is_leader\":false,\"nodeCertExpiry\":0,\"certs_need_regen\":false,\"certs_not_before\":\"0001-01-01T00:00:00Z\",\"certs_need_permissions_update\":false,\"host_address\":\"\",\"hostname\":\"\",\"docker_root_dir\":\"D:\\\\\",\"sans\":null,\"managers\":null,\"clusterCASigningURLs\":null,\"rethinkDBPeerAddrs\":null,\"rethinkDBHasAllTableReplicas\":false,\"containers\":{},\"services\":{},\"kubeAddons\":null,\"AnalyticsPresent\":false,\"AnalyticsEnabled\":false,\"kubeReservedFlag\":\"\"}}"
+            ],
+            "Image": "docker/ucp-agent-win:3.0.2",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/bin/ucp-agent.exe"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "1ee9d263e222cf4b38a4a5b1c9de236e618077ff004f88a619e82e0fde156b4d",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "1ee9d263e222",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "nat": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "c2bec0ce3be2c203b39f8c4dd9feddd17c21b597acdb612ee9241ebe4b0f62e4",
+                    "EndpointID": "",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

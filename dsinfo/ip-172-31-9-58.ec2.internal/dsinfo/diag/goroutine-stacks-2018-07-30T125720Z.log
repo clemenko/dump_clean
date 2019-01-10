@@ -1,0 +1,2487 @@
+goroutine 60 [running]:
+github.com/docker/orca/vendor/github.com/docker/docker/pkg/signal.DumpStacks(0x1b43e48, 0x9, 0x0, 0x0, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/pkg/signal/trap.go:82 +0xc5
+github.com/docker/orca/controller/manager.(*DefaultManager).setupDumpStackTrap.func1(0xc4200935c0, 0x1b43e48, 0x9)
+	/go/src/github.com/docker/orca/controller/manager/debugtrap_unix.go:24 +0x99
+created by github.com/docker/orca/controller/manager.(*DefaultManager).setupDumpStackTrap
+	/go/src/github.com/docker/orca/controller/manager/debugtrap_unix.go:22 +0x101
+
+goroutine 1 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da45430, 0x72, 0xffffffffffffffff)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420314d18, 0x72, 0xc4215d8700, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420314d18, 0xffffffffffffff00, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Accept(0xc420314d00, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:335 +0x1e2
+net.(*netFD).accept(0xc420314d00, 0xc42001a070, 0xc42001a000, 0xc421b8ea80)
+	/usr/local/go/src/net/fd_unix.go:238 +0x42
+net.(*TCPListener).accept(0xc42042a188, 0x42d026, 0x1c05a00, 0xc4215d8958)
+	/usr/local/go/src/net/tcpsock_posix.go:136 +0x2e
+net.(*TCPListener).AcceptTCP(0xc42042a188, 0x402de1, 0xc420a9c260, 0x18b1f00)
+	/usr/local/go/src/net/tcpsock.go:234 +0x49
+net/http.tcpKeepAliveListener.Accept(0xc42042a188, 0x43709b, 0xc4215d8998, 0x706fb8, 0x45b720)
+	/usr/local/go/src/net/http/server.go:3120 +0x2f
+crypto/tls.(*listener).Accept(0xc42073a080, 0x1c051e8, 0xc420a9c1e0, 0x2761900, 0xc420fea1e0)
+	/usr/local/go/src/crypto/tls/tls.go:52 +0x37
+net/http.(*Server).Serve(0xc420e101a0, 0x2751e00, 0xc42073a080, 0x0, 0x0)
+	/usr/local/go/src/net/http/server.go:2695 +0x1b2
+net/http.(*Server).ServeTLS(0xc420e101a0, 0x2761180, 0xc42042a188, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/server.go:2764 +0x293
+net/http.(*Server).ListenAndServeTLS(0xc420e101a0, 0x0, 0x0, 0x0, 0x0, 0xc4200ca900, 0x6a8)
+	/usr/local/go/src/net/http/server.go:2943 +0xd1
+github.com/docker/orca/controller/api.(*API).Run(0xc420aff880, 0x0, 0x0)
+	/go/src/github.com/docker/orca/controller/api/api.go:395 +0xc99
+github.com/docker/orca/controller/commands.cmdServer(0xc4200d3e00)
+	/go/src/github.com/docker/orca/controller/commands/server.go:361 +0x1f6f
+reflect.Value.call(0x183b880, 0x1c00868, 0x13, 0x1b3d8d3, 0x4, 0xc4205e59b0, 0x1, 0x1, 0xc4205e5930, 0x1b01a20, ...)
+	/usr/local/go/src/reflect/value.go:434 +0x905
+reflect.Value.Call(0x183b880, 0x1c00868, 0x13, 0xc4205e59b0, 0x1, 0x1, 0xc4200d3e00, 0x7fc93db038f8, 0x0)
+	/usr/local/go/src/reflect/value.go:302 +0xa4
+github.com/docker/orca/vendor/github.com/codegangsta/cli.HandleAction(0x183b880, 0x1c00868, 0xc4200d3e00, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/github.com/codegangsta/cli/app.go:481 +0x180
+github.com/docker/orca/vendor/github.com/codegangsta/cli.Command.Run(0x1b40806, 0x6, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1b4c5e2, 0xe, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/codegangsta/cli/command.go:186 +0x9ed
+github.com/docker/orca/vendor/github.com/codegangsta/cli.(*App).Run(0xc420001500, 0xc420084000, 0x24, 0x24, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/github.com/codegangsta/cli/app.go:235 +0x57d
+main.main()
+	/go/src/github.com/docker/orca/controller/main.go:40 +0x3d6
+
+goroutine 37 [syscall]:
+os/signal.signal_recv(0x2751040)
+	/usr/local/go/src/runtime/sigqueue.go:131 +0xa6
+os/signal.loop()
+	/usr/local/go/src/os/signal/signal_unix.go:22 +0x22
+created by os/signal.init.0
+	/usr/local/go/src/os/signal/signal_unix.go:28 +0x41
+
+goroutine 21 [chan receive, 1 minutes]:
+github.com/docker/orca/vendor/github.com/golang/glog.(*loggingT).flushDaemon(0x27e76a0)
+	/go/src/github.com/docker/orca/vendor/github.com/golang/glog/glog.go:882 +0x9f
+created by github.com/docker/orca/vendor/github.com/golang/glog.init.0
+	/go/src/github.com/docker/orca/vendor/github.com/golang/glog/glog.go:410 +0x203
+
+goroutine 23 [select, 45840 minutes]:
+github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*healthBalancer).updateNotifyLoop(0xc4202c2000)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/health_balancer.go:349 +0x3a6
+created by github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.newHealthBalancer
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/health_balancer.go:128 +0x375
+
+goroutine 24 [select, 1 minutes]:
+github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*healthBalancer).updateUnhealthy(0xc4202c2000)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/health_balancer.go:246 +0x101
+github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.newHealthBalancer.func1(0xc4202c2000)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/health_balancer.go:132 +0x5a
+created by github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.newHealthBalancer
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/health_balancer.go:130 +0x3b5
+
+goroutine 25 [select, 45840 minutes]:
+github.com/docker/orca/vendor/google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc420967ef0)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/balancer_conn_wrappers.go:117 +0x141
+created by github.com/docker/orca/vendor/google.golang.org/grpc.newCCBalancerWrapper
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/balancer_conn_wrappers.go:108 +0x144
+
+goroutine 26 [chan receive, 45840 minutes]:
+github.com/docker/orca/vendor/google.golang.org/grpc.(*balancerWrapper).lbWatcher(0xc4204adf80)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/balancer_v1_wrapper.go:115 +0x186
+created by github.com/docker/orca/vendor/google.golang.org/grpc.(*balancerWrapperBuilder).Build
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/balancer_v1_wrapper.go:53 +0x25c
+
+goroutine 27 [select, 45840 minutes]:
+github.com/docker/orca/vendor/google.golang.org/grpc.(*addrConn).transportMonitor(0xc420214200)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/clientconn.go:1012 +0x166
+github.com/docker/orca/vendor/google.golang.org/grpc.(*addrConn).connect.func1(0xc420214200)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/clientconn.go:703 +0x1ce
+created by github.com/docker/orca/vendor/google.golang.org/grpc.(*addrConn).connect
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/clientconn.go:694 +0x40d
+
+goroutine 7 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da45f70, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420124898, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420124898, 0xc420ad5c00, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420124880, 0xc420ad5c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420124880, 0xc420ad5c00, 0x400, 0x400, 0x2e, 0x8, 0x0)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007e658, 0xc420ad5c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc42020aa50, 0x7fc93da6cbe0, 0xc42007e658, 0x5, 0xc42007e658, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42026f880, 0x1c05a17, 0xc42026f9a0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42026f880, 0xc4206f0000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+bufio.(*Reader).Read(0xc42023c1e0, 0xc420740738, 0x9, 0x9, 0xc422edf7e0, 0x7fc93d589d30, 0x0)
+	/usr/local/go/src/bufio/bufio.go:213 +0x30b
+io.ReadAtLeast(0x273e880, 0xc42023c1e0, 0xc420740738, 0x9, 0x9, 0x9, 0xc420039de8, 0x401e0e, 0xc420039e97)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x273e880, 0xc42023c1e0, 0xc420740738, 0x9, 0x9, 0x44e4b8, 0xbe1e034554f5e, 0xc41a71506a)
+	/usr/local/go/src/io/io.go:327 +0x58
+github.com/docker/orca/vendor/golang.org/x/net/http2.readFrameHeader(0xc420740738, 0x9, 0x9, 0x273e880, 0xc42023c1e0, 0x0, 0x9c58000000000, 0x27e6aa0, 0xbecfe0ac1a6da688)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/frame.go:237 +0x7b
+github.com/docker/orca/vendor/golang.org/x/net/http2.(*Framer).ReadFrame(0xc420740700, 0xc422edf7e0, 0xc422edf7e0, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/frame.go:492 +0xa4
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.(*http2Client).reader(0xc420064d80)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/http2_client.go:1118 +0xbe
+created by github.com/docker/orca/vendor/google.golang.org/grpc/transport.newHTTP2Client
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/http2_client.go:266 +0xc80
+
+goroutine 8 [select]:
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.loopyWriter(0x2761840, 0xc420acf980, 0xc420344810, 0xc4205f5fb8)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/transport.go:750 +0x2e4
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.newHTTP2Client.func3(0xc420064d80)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/http2_client.go:298 +0x5e
+created by github.com/docker/orca/vendor/google.golang.org/grpc/transport.newHTTP2Client
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/http2_client.go:297 +0xdd1
+
+goroutine 58 [select]:
+github.com/docker/orca/vendor/github.com/docker/go-events.(*Broadcaster).run(0xc42025acd0)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/go-events/broadcast.go:117 +0x412
+created by github.com/docker/orca/vendor/github.com/docker/go-events.NewBroadcaster
+	/go/src/github.com/docker/orca/vendor/github.com/docker/go-events/broadcast.go:39 +0x1af
+
+goroutine 30 [select, 45840 minutes]:
+net/http.(*persistConn).readLoop(0xc420206c60)
+	/usr/local/go/src/net/http/transport.go:1654 +0x7a7
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 31 [select, 45840 minutes]:
+net/http.(*persistConn).writeLoop(0xc420206c60)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 48 [select, 1 minutes]:
+github.com/docker/orca/controller/manager.(*DefaultManager).StartLicenseUpdateWatcher.func1(0xc420058cc0, 0xc4201ea580)
+	/go/src/github.com/docker/orca/controller/manager/licensing.go:184 +0xfe
+created by github.com/docker/orca/controller/manager.(*DefaultManager).StartLicenseUpdateWatcher
+	/go/src/github.com/docker/orca/controller/manager/licensing.go:182 +0x14f
+
+goroutine 1690 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da752d0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420f47f98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420f47f98, 0xc422084c00, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420f47f80, 0xc422084c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420f47f80, 0xc422084c00, 0x400, 0x400, 0x1, 0x1, 0xc421ca2788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042a538, 0xc422084c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420a11e90, 0x7fc93da6cbe0, 0xc42042a538, 0x5, 0xc42042a538, 0xc422ddeb10)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420ff0000, 0x1c05a17, 0xc420ff0120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420ff0000, 0xc420fd6000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420da2900, 0xc420fd6000, 0x1000, 0x1000, 0xc420019c80, 0xc421c1ab38, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4204ad860)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4204ad860, 0x1, 0x0, 0x0, 0x0, 0xc423b40780, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420da2900)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 73 [chan receive, 45840 minutes]:
+github.com/docker/orca/controller/manager/config.(*DefaultConfigManager).configWatcher(0xc42046d080, 0xc420270000)
+	/go/src/github.com/docker/orca/controller/manager/config/config.go:204 +0x103
+created by github.com/docker/orca/controller/manager/config.(*DefaultConfigManager).SetupConfigWatcher
+	/go/src/github.com/docker/orca/controller/manager/config/config.go:197 +0x173
+
+goroutine 70 [select]:
+github.com/docker/orca/vendor/github.com/hailocab/go-hostpool.(*epsilonGreedyHostPool).epsilonGreedyDecay(0xc4207a62d0)
+	/go/src/github.com/docker/orca/vendor/github.com/hailocab/go-hostpool/epsilon_greedy.go:94 +0x13c
+created by github.com/docker/orca/vendor/github.com/hailocab/go-hostpool.NewEpsilonGreedy
+	/go/src/github.com/docker/orca/vendor/github.com/hailocab/go-hostpool/epsilon_greedy.go:65 +0x2c9
+
+goroutine 59 [select, 45840 minutes, locked to thread]:
+runtime.gopark(0x1c058d8, 0x0, 0x1b407fa, 0x6, 0x18, 0x1)
+	/usr/local/go/src/runtime/proc.go:287 +0x12c
+runtime.selectgo(0xc420965f50, 0xc420995680)
+	/usr/local/go/src/runtime/select.go:395 +0x1149
+runtime.ensureSigM.func1()
+	/usr/local/go/src/runtime/signal_unix.go:511 +0x220
+runtime.goexit()
+	/usr/local/go/src/runtime/asm_amd64.s:2337 +0x1
+
+goroutine 82 [select, 1 minutes]:
+github.com/docker/orca/controller/manager/config.(*ManagerConfig).StartConfigUpdateWatcher.func1(0xc420554300, 0xc420252fc0, 0xc42023a800)
+	/go/src/github.com/docker/orca/controller/manager/config/config.go:315 +0x119
+created by github.com/docker/orca/controller/manager/config.(*ManagerConfig).StartConfigUpdateWatcher
+	/go/src/github.com/docker/orca/controller/manager/config/config.go:313 +0x32c
+
+goroutine 85 [select, 45840 minutes]:
+context.propagateCancel.func1(0x2761dc0, 0xc4206f8840, 0x2749dc0, 0xc4202ccbc0)
+	/usr/local/go/src/context/context.go:260 +0x113
+created by context.propagateCancel
+	/usr/local/go/src/context/context.go:259 +0x1da
+
+goroutine 124826 [select, 45371 minutes]:
+net/http.(*persistConn).writeLoop(0xc42119eea0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 63 [chan receive, 1 minutes]:
+github.com/docker/orca/controller/manager/config.(*DefaultConfigManager).PersistEnziSigningKey(0xc42046d080)
+	/go/src/github.com/docker/orca/controller/manager/config/auth.go:234 +0x73
+github.com/docker/orca/controller/manager.(*DefaultManager).PersistEnziSigningKey(0xc4201ea580)
+	<autogenerated>:1 +0x46
+created by github.com/docker/orca/controller/manager/config.SetupAuthenticator
+	/go/src/github.com/docker/orca/controller/manager/config/auth.go:95 +0x10e
+
+goroutine 72 [chan receive, 45840 minutes]:
+github.com/docker/orca/vendor/github.com/docker/libkv/store/etcd/v3.(*EtcdV3).WatchTree.func1(0x274aac0, 0xc42012a230, 0xc420270000, 0xc420478100, 0x1, 0x1, 0xc42075c848, 0xc42007e628, 0xc42075c850, 0xf, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/libkv/store/etcd/v3/etcd.go:266 +0x430
+created by github.com/docker/orca/vendor/github.com/docker/libkv/store/etcd/v3.(*EtcdV3).WatchTree
+	/go/src/github.com/docker/orca/vendor/github.com/docker/libkv/store/etcd/v3/etcd.go:256 +0x2a5
+
+goroutine 74 [select]:
+github.com/docker/orca/controller/manager/resources.(*DefaultResourceManager).processEvents(0xc4202b3050)
+	/go/src/github.com/docker/orca/controller/manager/resources/events.go:71 +0x146
+created by github.com/docker/orca/controller/manager/resources.(*DefaultResourceManager).StartEventWatcher
+	/go/src/github.com/docker/orca/controller/manager/resources/events.go:53 +0x3f
+
+goroutine 1699 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da75150, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4202bdc98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4202bdc98, 0xc420dee000, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4202bdc80, 0xc420dee000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4202bdc80, 0xc420dee000, 0x400, 0x400, 0x1, 0x1, 0xc4218c6788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042a528, 0xc420dee000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420344b40, 0x7fc93da6cbe0, 0xc42042a528, 0x5, 0xc42042a528, 0xc4224a13e0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4212bd180, 0x1c05a17, 0xc4212bd2a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4212bd180, 0xc420c19000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420da2a20, 0xc420c19000, 0x1000, 0x1000, 0xc42106ff20, 0xc421d18fb8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc420a4d620)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc420a4d620, 0x1, 0x0, 0x0, 0x0, 0xc423b40900, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420da2a20)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 65 [runnable]:
+internal/poll.runtime_pollWait(0x7fc93da45eb0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4202bcb18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4202bcb18, 0xc420773800, 0x800, 0x800)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4202bcb00, 0xc420773800, 0x800, 0x800, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4202bcb00, 0xc420773800, 0x800, 0x800, 0x8000000000000000, 0xc420911538, 0x4c2fbf)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e060, 0xc420773800, 0x800, 0x800, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc42020aab0, 0x7fc93da6cbe0, 0xc42000e060, 0x5, 0xc42000e060, 0xc421f9b213)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4200b4380, 0x1c05a17, 0xc4200b44a0, 0x1aa06e0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4200b4380, 0xc42031d000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420206c60, 0xc42031d000, 0x1000, 0x1000, 0xc4203e9760, 0x18dee20, 0xa)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc420058a20)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).ReadSlice(0xc420058a20, 0x173860a, 0x5, 0xc420911bd0, 0x4f9d1c, 0xc4203e96e8, 0x9)
+	/usr/local/go/src/bufio/bufio.go:338 +0x2c
+net/http/internal.readChunkLine(0xc420058a20, 0x0, 0x1aa06e0, 0xc42085e1b0, 0x199, 0x2)
+	/usr/local/go/src/net/http/internal/chunked.go:122 +0x34
+net/http/internal.(*chunkedReader).beginChunk(0xc420345aa0)
+	/usr/local/go/src/net/http/internal/chunked.go:48 +0x32
+net/http/internal.(*chunkedReader).Read(0xc420345aa0, 0xc421f9b000, 0xe00, 0xe00, 0x42c689, 0xc400000008, 0xc421773340)
+	/usr/local/go/src/net/http/internal/chunked.go:93 +0x13b
+net/http.(*body).readLocked(0xc4202ccc40, 0xc421f9b000, 0xe00, 0xe00, 0x330, 0x0, 0xc421f9b280)
+	/usr/local/go/src/net/http/transfer.go:779 +0x67
+net/http.(*body).Read(0xc4202ccc40, 0xc421f9b000, 0xe00, 0xe00, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transfer.go:771 +0xea
+net/http.(*bodyEOFSignal).Read(0xc4202ccc80, 0xc421f9b000, 0xe00, 0xe00, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:2124 +0xe9
+encoding/json.(*Decoder).refill(0xc4203e96c0, 0x1aa06e0, 0xc42085e1b0)
+	/usr/local/go/src/encoding/json/stream.go:152 +0x114
+encoding/json.(*Decoder).readValue(0xc4203e96c0, 0x0, 0x0, 0x413218)
+	/usr/local/go/src/encoding/json/stream.go:128 +0x275
+encoding/json.(*Decoder).Decode(0xc4203e96c0, 0x17d7ae0, 0xc42085e2d0, 0x0, 0x0)
+	/usr/local/go/src/encoding/json/stream.go:57 +0x78
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).Events.func1(0xc4204ac840, 0xc420125f00, 0x1b3cb8f, 0x1, 0x0, 0x0, 0x0, 0xc42012ca80, 0x2761840, 0xc420476dc0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/events.go:54 +0x2f7
+created by github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).Events
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/events.go:26 +0x11d
+
+goroutine 86 [select, 45840 minutes]:
+github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*watchGrpcStream).run(0xc42032a340)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/watch.go:438 +0x3f3
+created by github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*watcher).newWatcherGrpcStream
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/watch.go:236 +0x372
+
+goroutine 98 [select, 45840 minutes]:
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.(*recvBufferReader).read(0xc4206faa00, 0xc4206fd1f0, 0x5, 0x5, 0x1871f40, 0xc420907ad8, 0x42cd48)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/transport.go:133 +0x28b
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.(*recvBufferReader).Read(0xc4206faa00, 0xc4206fd1f0, 0x5, 0x5, 0x3, 0xc42001c600, 0xc42001c670)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/transport.go:122 +0x67
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.(*transportReader).Read(0xc4203456b0, 0xc4206fd1f0, 0x5, 0x5, 0x46883e, 0xc4208f42c8, 0xc420ace800)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/transport.go:403 +0x55
+io.ReadAtLeast(0x2742f40, 0xc4203456b0, 0xc4206fd1f0, 0x5, 0x5, 0x5, 0xc420064d80, 0xc4208f4200, 0x5)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x2742f40, 0xc4203456b0, 0xc4206fd1f0, 0x5, 0x5, 0x3, 0xc420907ea0, 0xc4201b8180)
+	/usr/local/go/src/io/io.go:327 +0x58
+github.com/docker/orca/vendor/google.golang.org/grpc/transport.(*Stream).Read(0xc4208f4200, 0xc4206fd1f0, 0x5, 0x5, 0xc420907de8, 0x2, 0x2)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/transport/transport.go:387 +0xbf
+github.com/docker/orca/vendor/google.golang.org/grpc.(*parser).recvMsg(0xc4206fd1e0, 0x7fffffff, 0x20, 0x20, 0x1a9c4a0, 0xc42012a2d0, 0x3, 0xc420907ed0)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/rpc_util.go:270 +0x65
+github.com/docker/orca/vendor/google.golang.org/grpc.recv(0xc4206fd1e0, 0x2760cc0, 0x280a750, 0xc4208f4200, 0x0, 0x0, 0x1a9c4a0, 0xc420080230, 0x7fffffff, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/rpc_util.go:356 +0x4d
+github.com/docker/orca/vendor/google.golang.org/grpc.(*clientStream).RecvMsg(0xc4203104b0, 0x1a9c4a0, 0xc420080230, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/stream.go:392 +0xd8
+github.com/docker/orca/vendor/github.com/coreos/etcd/etcdserver/etcdserverpb.(*watchWatchClient).Recv(0xc4206f8880, 0x0, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/etcdserver/etcdserverpb/rpc.pb.go:3217 +0x62
+github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*watchGrpcStream).serveWatchClient(0xc42032a340, 0x2767480, 0xc4206f8880)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/watch.go:565 +0x4e
+created by github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*watchGrpcStream).newWatchClient
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/watch.go:720 +0x654
+
+goroutine 88 [select, 45840 minutes]:
+github.com/docker/orca/vendor/google.golang.org/grpc.newClientStream.func4(0x27677e0, 0xc420064d80, 0xc4203661e0, 0xc4203104b0, 0xc4208f4200)
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/stream.go:255 +0x1cd
+created by github.com/docker/orca/vendor/google.golang.org/grpc.newClientStream
+	/go/src/github.com/docker/orca/vendor/google.golang.org/grpc/stream.go:254 +0xdc0
+
+goroutine 99 [select, 45840 minutes]:
+github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*watchGrpcStream).serveSubstream(0xc42032a340, 0xc4201eedc0, 0xc420734ea0)
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/watch.go:611 +0x2eb
+created by github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3.(*watchGrpcStream).run
+	/go/src/github.com/docker/orca/vendor/github.com/coreos/etcd/clientv3/watch.go:452 +0x1125
+
+goroutine 49 [chan receive, 1 minutes]:
+github.com/docker/orca/controller/manager.(*DefaultManager).startPeriodicTasks.func2(0x1c008e8, 0xc4203305c0, 0xc4201ea580)
+	/go/src/github.com/docker/orca/controller/manager/periodic.go:23 +0xa4
+created by github.com/docker/orca/controller/manager.(*DefaultManager).startPeriodicTasks
+	/go/src/github.com/docker/orca/controller/manager/periodic.go:20 +0x6c
+
+goroutine 114 [chan receive, 1 minutes]:
+github.com/docker/orca/controller/manager.(*DefaultManager).startPeriodicTasks.func3(0xc420330600, 0xc4201ea580)
+	/go/src/github.com/docker/orca/controller/manager/periodic.go:31 +0xf3
+created by github.com/docker/orca/controller/manager.(*DefaultManager).startPeriodicTasks
+	/go/src/github.com/docker/orca/controller/manager/periodic.go:29 +0xab
+
+goroutine 115 [chan receive, 1 minutes]:
+github.com/docker/orca/controller/manager.(*DefaultManager).startPeriodicTasks.func4(0xc4201ea580)
+	/go/src/github.com/docker/orca/controller/manager/periodic.go:40 +0xad
+created by github.com/docker/orca/controller/manager.(*DefaultManager).startPeriodicTasks
+	/go/src/github.com/docker/orca/controller/manager/periodic.go:38 +0xcd
+
+goroutine 116 [chan receive, 1 minutes]:
+github.com/docker/orca/controller/middleware/tracking.(*middlewareLayer).runPeriodicTasks(0xc420365a10)
+	/go/src/github.com/docker/orca/controller/middleware/tracking/tracking.go:113 +0x9f
+created by github.com/docker/orca/controller/middleware/tracking.NewMiddlewareLayer
+	/go/src/github.com/docker/orca/controller/middleware/tracking/tracking.go:38 +0xd1
+
+goroutine 72955401 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99cb60, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423cbe118, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423cbe118, 0xc421c60000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423cbe100, 0xc421c60000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423cbe100, 0xc421c60000, 0x1000, 0x1000, 0xc423d8b09d, 0xc4202d7800, 0x7fc93dafe458)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000f7f0, 0xc421c60000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc423e50e10, 0x7fc93da6cbe0, 0xc42000f7f0, 0x5, 0xc42000f7f0, 0xc422771ad0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc422f38000, 0x1c05a17, 0xc422f38120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc422f38000, 0xc423d8b000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420cda7e0, 0xc423d8b000, 0x1000, 0x1000, 0xc422c4a880, 0xc422a0aa18, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4236ac4e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4236ac4e0, 0x1, 0x0, 0x0, 0x0, 0xc422d3b860, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420cda7e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72962462 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420ef6b40)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 24687151 [select, 17254 minutes]:
+net/http.(*persistConn).writeLoop(0xc420d15e60)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 120 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da45df0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4202bc418, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4202bc418, 0xc422588000, 0x800, 0x800)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4202bc400, 0xc422588000, 0x800, 0x800, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4202bc400, 0xc422588000, 0x800, 0x800, 0x1, 0x3, 0xc420af9788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007e7a0, 0xc422588000, 0x800, 0x800, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc42047a000, 0x7fc93da6cbe0, 0xc42007e7a0, 0x5, 0xc42007e7a0, 0xc422e1c5d0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4209ff500, 0x1c05a17, 0xc4209ff620, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4209ff500, 0xc42013a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4203179e0, 0xc42013a000, 0x1000, 0x1000, 0xc4208b8320, 0xc42019a298, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4205544e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4205544e0, 0x1, 0x0, 0x0, 0x0, 0xc421cc1b00, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4203179e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 121 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc4203179e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 27383688 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6ef270, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4240e6098, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4240e6098, 0xc422fba000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4240e6080, 0xc422fba000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4240e6080, 0xc422fba000, 0x8000, 0x8000, 0x1, 0x3, 0xc42072c788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000ed60, 0xc422fba000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420f37800, 0x7fc93da6cbe0, 0xc42000ed60, 0x5, 0xc42000ed60, 0xc420eeb320)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42268b880, 0x1c05a17, 0xc42268b9a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42268b880, 0xc422dff000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420f2c480, 0xc422dff000, 0x1000, 0x1000, 0xc422a55ec0, 0xc420832b38, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4225aeb40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4225aeb40, 0x1, 0x0, 0x0, 0x0, 0xc4232887e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420f2c480)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 149 [semacquire, 15420 minutes]:
+sync.runtime_notifyListWait(0xc4207dc100, 0xc400000051)
+	/usr/local/go/src/runtime/sema.go:507 +0x110
+sync.(*Cond).Wait(0xc4207dc0f0)
+	/usr/local/go/src/sync/cond.go:56 +0x80
+io.(*pipe).read(0xc4207dc0c0, 0xc420e88676, 0x98a, 0x98a, 0x0, 0x0, 0x0)
+	/usr/local/go/src/io/pipe.go:47 +0xc6
+io.(*PipeReader).Read(0xc42042a168, 0xc420e88676, 0x98a, 0x98a, 0xc4233ce000, 0xc420af8e68, 0x51707a)
+	/usr/local/go/src/io/pipe.go:130 +0x4c
+bufio.(*Scanner).Scan(0xc420af8f38, 0x1)
+	/usr/local/go/src/bufio/scan.go:207 +0xaf
+github.com/docker/orca/vendor/github.com/Sirupsen/logrus.(*Logger).writerScanner(0xc420080140, 0xc42042a168, 0xc420f24c60)
+	/go/src/github.com/docker/orca/vendor/github.com/Sirupsen/logrus/writer.go:42 +0xab
+created by github.com/docker/orca/vendor/github.com/Sirupsen/logrus.(*Logger).WriterLevel
+	/go/src/github.com/docker/orca/vendor/github.com/Sirupsen/logrus/writer.go:34 +0x175
+
+goroutine 150 [select]:
+net/http.(*http2serverConn).serve(0xc420761c00)
+	/usr/local/go/src/net/http/h2_bundle.go:4501 +0x629
+net/http.(*http2Server).ServeConn(0xc420a6fb00, 0x2767300, 0xc42104ce00, 0xc4205d1d20)
+	/usr/local/go/src/net/http/h2_bundle.go:4120 +0x794
+net/http.http2ConfigureServer.func1(0xc420e101a0, 0xc42104ce00, 0x2748cc0, 0xc420f26a90)
+	/usr/local/go/src/net/http/h2_bundle.go:3958 +0x81
+net/http.(*conn).serve(0xc420a7f400, 0x2761900, 0xc420fea2a0)
+	/usr/local/go/src/net/http/server.go:1722 +0x107c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2720 +0x288
+
+goroutine 148 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da454f0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4203b2698, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4203b2698, 0xc421950000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4203b2680, 0xc421950000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4203b2680, 0xc421950000, 0x8000, 0x8000, 0x0, 0x8, 0x0)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc420478250, 0xc421950000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4209b5a70, 0x7fc93da6cbe0, 0xc420478250, 0x5, 0xc420478250, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4208d0000, 0x1c05a17, 0xc4208d0120, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4208d0000, 0xc420ccf000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+bufio.(*Reader).Read(0xc420a4cf60, 0xc42097a738, 0x9, 0x9, 0x0, 0x40d712, 0x1b45db7)
+	/usr/local/go/src/bufio/bufio.go:213 +0x30b
+io.ReadAtLeast(0x273e880, 0xc420a4cf60, 0xc42097a738, 0x9, 0x9, 0x9, 0xc421d40fc0, 0xc42072ecf0, 0x1b3eb00)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x273e880, 0xc420a4cf60, 0xc42097a738, 0x9, 0x9, 0xc422eb4200, 0xc420804aa8, 0x0)
+	/usr/local/go/src/io/io.go:327 +0x58
+github.com/docker/orca/vendor/golang.org/x/net/http2.readFrameHeader(0xc42097a738, 0x9, 0x9, 0x273e880, 0xc420a4cf60, 0x0, 0xc400000000, 0xc420acb180, 0x0)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/frame.go:237 +0x7b
+github.com/docker/orca/vendor/golang.org/x/net/http2.(*Framer).ReadFrame(0xc42097a700, 0xc420200780, 0x0, 0x0, 0x0)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/frame.go:492 +0xa4
+github.com/docker/orca/vendor/golang.org/x/net/http2.(*clientConnReadLoop).run(0xc42072efb0, 0x1c034b0, 0xc42045b7b0)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/transport.go:1471 +0x90
+github.com/docker/orca/vendor/golang.org/x/net/http2.(*ClientConn).readLoop(0xc4203e9dc0)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/transport.go:1397 +0x9d
+created by github.com/docker/orca/vendor/golang.org/x/net/http2.(*Transport).newClientConn
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/http2/transport.go:581 +0x6c4
+
+goroutine 122 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da45370, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420314f18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420314f18, 0xc42076b400, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420314f00, 0xc42076b400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420314f00, 0xc42076b400, 0x400, 0x400, 0x1a1f900, 0x8, 0x8)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042a1b0, 0xc42076b400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420fea2d0, 0x7fc93da6cbe0, 0xc42042a1b0, 0x5, 0xc42042a1b0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42104ce00, 0x1c05a17, 0xc42104cf20, 0x100010001)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42104ce00, 0xc4210182d8, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+io.ReadAtLeast(0x7fc93d9fd588, 0xc42104ce00, 0xc4210182d8, 0x9, 0x9, 0x9, 0xc420b40780, 0xc42072aee0, 0xc42012d440)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x7fc93d9fd588, 0xc42104ce00, 0xc4210182d8, 0x9, 0x9, 0xc420734040, 0xc42072af42, 0xc4220409d0)
+	/usr/local/go/src/io/io.go:327 +0x58
+net/http.http2readFrameHeader(0xc4210182d8, 0x9, 0x9, 0x7fc93d9fd588, 0xc42104ce00, 0x0, 0x0, 0xc42072aee0, 0x2)
+	/usr/local/go/src/net/http/h2_bundle.go:1516 +0x7b
+net/http.(*http2Framer).ReadFrame(0xc4210182a0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1774 +0xa4
+net/http.(*http2serverConn).readFrames(0xc420761c00)
+	/usr/local/go/src/net/http/h2_bundle.go:4388 +0xab
+created by net/http.(*http2serverConn).serve
+	/usr/local/go/src/net/http/h2_bundle.go:4493 +0x32e
+
+goroutine 27383714 [select, 28361 minutes]:
+net/http.(*persistConn).writeLoop(0xc420f2cfc0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 142259 [select, 14380 minutes]:
+net/http.(*persistConn).writeLoop(0xc420d85560)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 406 [IO wait, 15619 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75b10, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420508518, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420508518, 0xc4208b6000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420508500, 0xc4208b6000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420508500, 0xc4208b6000, 0x1000, 0x1000, 0x1, 0x4, 0xc421d51788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e1d8, 0xc4208b6000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc421164780, 0x7fc93da6cbe0, 0xc42000e1d8, 0x5, 0xc42000e1d8, 0xc421b8df80)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421e3e000, 0x1c05a17, 0xc421e3e120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421e3e000, 0xc421e6c000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420edd0e0, 0xc421e6c000, 0x1000, 0x1000, 0xc421771800, 0xc421d5fd98, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421d3b9e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421d3b9e0, 0x1, 0x0, 0x0, 0x0, 0xc422003920, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420edd0e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 237 [select, 1 minutes]:
+github.com/docker/orca/vendor/github.com/segmentio/analytics-go.(*Client).loop(0xc420148500)
+	/go/src/github.com/docker/orca/vendor/github.com/segmentio/analytics-go/analytics.go:338 +0x1b5
+created by github.com/docker/orca/vendor/github.com/segmentio/analytics-go.(*Client).startLoop
+	/go/src/github.com/docker/orca/vendor/github.com/segmentio/analytics-go/analytics.go:232 +0x3f
+
+goroutine 45533965 [select, 6 minutes]:
+net/http.(*persistConn).writeLoop(0xc4211b47e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 136007 [select, 14380 minutes]:
+net/http.(*persistConn).writeLoop(0xc4211cd8c0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969204 [select]:
+net/http.(*http2serverConn).serve(0xc4234de000)
+	/usr/local/go/src/net/http/h2_bundle.go:4501 +0x629
+net/http.(*http2Server).ServeConn(0xc420a6fb00, 0x2767300, 0xc421b8e380, 0xc423e39d20)
+	/usr/local/go/src/net/http/h2_bundle.go:4120 +0x794
+net/http.http2ConfigureServer.func1(0xc420e101a0, 0xc421b8e380, 0x2748cc0, 0xc42177a360)
+	/usr/local/go/src/net/http/h2_bundle.go:3958 +0x81
+net/http.(*conn).serve(0xc420948b40, 0x2761900, 0xc424198570)
+	/usr/local/go/src/net/http/server.go:1722 +0x107c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2720 +0x288
+
+goroutine 45533964 [IO wait, 6 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6eef70, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423170018, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423170018, 0xc423e0a000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423170000, 0xc423e0a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423170000, 0xc423e0a000, 0x1000, 0x1000, 0x1, 0x3, 0xc4217b0788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007f0d8, 0xc423e0a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422c46930, 0x7fc93da6cbe0, 0xc42007f0d8, 0x5, 0xc42007f0d8, 0xc423d27740)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42289bc00, 0x1c05a17, 0xc42289bd20, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42289bc00, 0xc420fa4000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4211b47e0, 0xc420fa4000, 0x1000, 0x1000, 0xc4207a84e0, 0xc421ceefb8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421817a40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421817a40, 0x1, 0x0, 0x0, 0x0, 0xc421cc0240, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4211b47e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 1151 [IO wait, 6 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75d50, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc421fd6618, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc421fd6618, 0xc421fac000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc421fd6600, 0xc421fac000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc421fd6600, 0xc421fac000, 0x1000, 0x1000, 0x1, 0x3, 0xc421ccb788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e408, 0xc421fac000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420e8b2c0, 0x7fc93da6cbe0, 0xc42000e408, 0x5, 0xc42000e408, 0xc422e1f6b0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421b8fc00, 0x1c05a17, 0xc421b8fd20, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421b8fc00, 0xc42208a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4211519e0, 0xc42208a000, 0x1000, 0x1000, 0xc421d05b60, 0xc421a11918, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422080300)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422080300, 0x1, 0x0, 0x0, 0x0, 0xc423409200, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4211519e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72963632 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6eedf0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423ee7998, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423ee7998, 0xc423817800, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423ee7980, 0xc423817800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423ee7980, 0xc423817800, 0x400, 0x400, 0x1, 0x3, 0xc4221eb788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc421ed75a8, 0xc423817800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc42360e270, 0x7fc93da6cbe0, 0xc421ed75a8, 0x5, 0xc421ed75a8, 0xc4211cfe30)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc423849180, 0x1c05a17, 0xc4238492a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc423849180, 0xc422cc8000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4212fe6c0, 0xc422cc8000, 0x1000, 0x1000, 0xc4211b7e40, 0xc423f714f8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4232bb680)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4232bb680, 0x1, 0x0, 0x0, 0x0, 0xc4222d8a20, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4212fe6c0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 27383697 [IO wait, 28361 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6ef030, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4240e6598, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4240e6598, 0xc421c7a000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4240e6580, 0xc421c7a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4240e6580, 0xc421c7a000, 0x1000, 0x1000, 0x1, 0x3, 0xc423673788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000ed58, 0xc421c7a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422775d10, 0x7fc93da6cbe0, 0xc42000ed58, 0x5, 0xc42000ed58, 0xc4223bbd10)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42268b180, 0x1c05a17, 0xc42268b2a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42268b180, 0xc422dea000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420f2cfc0, 0xc422dea000, 0x1000, 0x1000, 0xc422986180, 0xc4208337f8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4225af080)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4225af080, 0x1, 0x0, 0x0, 0x0, 0xc4228121e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420f2cfc0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969314 [select]:
+net/http.(*persistConn).roundTrip(0xc42140a6c0, 0xc422e1cb70, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202080f0, 0xc4229ba400, 0xc4202080f0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc4229ba400, 0x2743fc0, 0xc4202080f0, 0x0, 0x0, 0x0, 0xc4204786a0, 0x58, 0xc4224f5370, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc4202b6690, 0xc4229ba400, 0x0, 0x0, 0x0, 0xc4204786a0, 0x0, 0x1, 0x80000000058)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc4202b6690, 0xc4229ba400, 0xc421d40ea0, 0xc4229ba400, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc421d40ea0, 0xc4202b6690, 0xc4229ba300, 0xc, 0xc422099aa8, 0xc4224f5608)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0xc4229ba300, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0x1b3da8f, 0x4, 0xc422812180, 0x52, 0xc422e1ca20, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0xc422812180, 0x52, 0xc422e1ca20, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).ContainerStart(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0xc4228e8c00, 0x40, 0x0, 0x0, 0x0, 0x0, 0x40, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_start.go:21 +0x180
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func3(0xc420d687a0, 0xc421427ad0, 0xc423b967f0, 0xc421427c50, 0xc421427c40, 0xc423bacac0, 0x1b, 0xc42245e4e0, 0x277a8e0, 0xc420125f00, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:271 +0x866
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:214 +0xa50
+
+goroutine 124825 [IO wait, 45371 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c560, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420eb2418, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420eb2418, 0xc420b9d400, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420eb2400, 0xc420b9d400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420eb2400, 0xc420b9d400, 0x400, 0x400, 0xc42222f051, 0x2, 0xfaf)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e0d8, 0xc420b9d400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc42113f920, 0x7fc93da6cbe0, 0xc42000e0d8, 0x5, 0xc42000e0d8, 0xc420f85320)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4223e7c00, 0x1c05a17, 0xc4223e7d20, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4223e7c00, 0xc42222f000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc42119eea0, 0xc42222f000, 0x1000, 0x1000, 0x2, 0xc421c9ee58, 0x2)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4217eca20)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4217eca20, 0x1, 0x0, 0x0, 0x0, 0xc42218d380, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc42119eea0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 1152 [select, 6 minutes]:
+net/http.(*persistConn).writeLoop(0xc4211519e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969243 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da75690, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4210a3298, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4210a3298, 0xc423bde000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4210a3280, 0xc423bde000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4210a3280, 0xc423bde000, 0x8000, 0x8000, 0x1, 0x2, 0xc4221e6788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc420478168, 0xc423bde000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc423c61920, 0x7fc93da6cbe0, 0xc420478168, 0x5, 0xc420478168, 0xc4235e4030)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421c9a000, 0x1c05a17, 0xc421c9a120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421c9a000, 0xc422fe9000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4210a99e0, 0xc422fe9000, 0x1000, 0x1000, 0xc423c7c460, 0xc423b41978, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc423676ea0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc423676ea0, 0x1, 0x0, 0x0, 0x0, 0xc4231a0120, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4210a99e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969240 [select]:
+net/http.setRequestCancel.func3(0x0, 0xc4224a11d0, 0xc4240fc5c0, 0xc42396083c, 0xc423b40a80)
+	/usr/local/go/src/net/http/client.go:320 +0x118
+created by net/http.setRequestCancel
+	/usr/local/go/src/net/http/client.go:319 +0x2bf
+
+goroutine 407 [select, 15619 minutes]:
+net/http.(*persistConn).writeLoop(0xc420edd0e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 120091 [select, 6 minutes]:
+net/http.(*http2serverConn).serve(0xc42225ec40)
+	/usr/local/go/src/net/http/h2_bundle.go:4501 +0x629
+net/http.(*http2Server).ServeConn(0xc420a6fb00, 0x2767300, 0xc4212bc380, 0xc4224f9d20)
+	/usr/local/go/src/net/http/h2_bundle.go:4120 +0x794
+net/http.http2ConfigureServer.func1(0xc420e101a0, 0xc4212bc380, 0x2748cc0, 0xc420471930)
+	/usr/local/go/src/net/http/h2_bundle.go:3958 +0x81
+net/http.(*conn).serve(0xc420c03180, 0x2761900, 0xc421034960)
+	/usr/local/go/src/net/http/server.go:1722 +0x107c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2720 +0x288
+
+goroutine 1648 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da75390, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4211cbf18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4211cbf18, 0xc421a1e400, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4211cbf00, 0xc421a1e400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4211cbf00, 0xc421a1e400, 0x400, 0x400, 0x1, 0x1, 0xc4218ca788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042a540, 0xc421a1e400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420a10780, 0x7fc93da6cbe0, 0xc42042a540, 0x5, 0xc42042a540, 0xc423c61710)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420ff0700, 0x1c05a17, 0xc420ff0820, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420ff0700, 0xc420fc7000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420d050e0, 0xc420fc7000, 0x1000, 0x1000, 0xc420f0f5e0, 0xc4212b82f8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc42023de60)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc42023de60, 0x1, 0x0, 0x0, 0x0, 0xc421cc0900, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420d050e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 24687150 [IO wait, 17254 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c0e0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc421d01618, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc421d01618, 0xc423281000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc421d01600, 0xc423281000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc421d01600, 0xc423281000, 0x1000, 0x1000, 0x1, 0x3, 0xc4218ea788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042afb0, 0xc423281000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc421183d10, 0x7fc93da6cbe0, 0xc42042afb0, 0x5, 0xc42042afb0, 0xc421b8ce40)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421070380, 0x1c05a17, 0xc4210704a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421070380, 0xc42194b000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420d15e60, 0xc42194b000, 0x1000, 0x1000, 0xc422ac31c0, 0xc421cee0b8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422d59020)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422d59020, 0x1, 0x0, 0x0, 0x0, 0xc4221eda40, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420d15e60)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 27383689 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420f2c480)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72962325 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6ee8b0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc421d01f18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc421d01f18, 0xc420f29000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc421d01f00, 0xc420f29000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc421d01f00, 0xc420f29000, 0x1000, 0x1000, 0x1, 0x3, 0xc4218ec788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422044d78, 0xc420f29000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4212d1080, 0x7fc93da6cbe0, 0xc422044d78, 0x5, 0xc422044d78, 0xc420825800)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42104c380, 0x1c05a17, 0xc42104c4a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42104c380, 0xc4212ce000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420e06480, 0xc4212ce000, 0x1000, 0x1000, 0xc422021100, 0xc421e4c778, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc42254e120)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc42254e120, 0x1, 0x0, 0x0, 0x0, 0xc422ef56e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420e06480)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72961767 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420f89440)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72959124 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93d6ee730, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4240e7898, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4240e7898, 0xc4227af000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4240e7880, 0xc4227af000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4240e7880, 0xc4227af000, 0x1000, 0x1000, 0x1, 0x3, 0xc423670788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422044520, 0xc4227af000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc421293620, 0x7fc93da6cbe0, 0xc422044520, 0x5, 0xc422044520, 0xc42369f260)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42210d180, 0x1c05a17, 0xc42210d2a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42210d180, 0xc423e0b000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420e145a0, 0xc423e0b000, 0x1000, 0x1000, 0xc421bb5280, 0xc423431fd8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422882c00)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422882c00, 0x1, 0x0, 0x0, 0x0, 0xc423b405a0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420e145a0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72957347 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c920, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423a7f118, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423a7f118, 0xc423888000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423a7f100, 0xc423888000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423a7f100, 0xc423888000, 0x1000, 0x1000, 0xc422ccd09d, 0xc420028800, 0x7fc93dafd6c8)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc4220440e8, 0xc423888000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc423f414a0, 0x7fc93da6cbe0, 0xc4220440e8, 0x5, 0xc4220440e8, 0xc4211cec60)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc422f38a80, 0x1c05a17, 0xc422f38ba0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc422f38a80, 0xc422ccd000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420c779e0, 0xc422ccd000, 0x1000, 0x1000, 0xc423c57aa0, 0xc422ecb318, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4216e9e60)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4216e9e60, 0x1, 0x0, 0x0, 0x0, 0xc422ef5380, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420c779e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 1362 [IO wait, 6 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da45130, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4219d8e98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4219d8e98, 0xc421c30000, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4219d8e80, 0xc421c30000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4219d8e80, 0xc421c30000, 0x400, 0x400, 0x1, 0x3, 0xc4218ed788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc421ed6418, 0xc421c30000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420fca090, 0x7fc93da6cbe0, 0xc421ed6418, 0x5, 0xc421ed6418, 0xc422e1f980)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421a0ca80, 0x1c05a17, 0xc421a0cba0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421a0ca80, 0xc421ed9000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420fef9e0, 0xc421ed9000, 0x1000, 0x1000, 0xc420eac070, 0xc421218178, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc420c6c120)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc420c6c120, 0x1, 0x0, 0x0, 0x0, 0xc422ecb0e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420fef9e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969218 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da45670, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc424182218, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc424182218, 0xc421418c00, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc424182200, 0xc421418c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc424182200, 0xc421418c00, 0x400, 0x400, 0x8, 0x8, 0x9)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422044068, 0xc421418c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc424198690, 0x7fc93da6cbe0, 0xc422044068, 0x5, 0xc422044068, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421b8e380, 0x1c05a17, 0xc421b8e4a0, 0x100010401)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421b8e380, 0xc421ba0818, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+io.ReadAtLeast(0x7fc93d9fd588, 0xc421b8e380, 0xc421ba0818, 0x9, 0x9, 0x9, 0xc420866780, 0xc421453ee0, 0xc423a5c2a0)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x7fc93d9fd588, 0xc421b8e380, 0xc421ba0818, 0x9, 0x9, 0xc423b40040, 0xc421453f42, 0xc421f997b0)
+	/usr/local/go/src/io/io.go:327 +0x58
+net/http.http2readFrameHeader(0xc421ba0818, 0x9, 0x9, 0x7fc93d9fd588, 0xc421b8e380, 0x0, 0x0, 0xc421453ee0, 0x2)
+	/usr/local/go/src/net/http/h2_bundle.go:1516 +0x7b
+net/http.(*http2Framer).ReadFrame(0xc421ba07e0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1774 +0xa4
+net/http.(*http2serverConn).readFrames(0xc4234de000)
+	/usr/local/go/src/net/http/h2_bundle.go:4388 +0xab
+created by net/http.(*http2serverConn).serve
+	/usr/local/go/src/net/http/h2_bundle.go:4493 +0x32e
+
+goroutine 1363 [select, 6 minutes]:
+net/http.(*persistConn).writeLoop(0xc420fef9e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 1174 [select]:
+net/http.(*persistConn).writeLoop(0xc4210278c0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 1691 [select]:
+net/http.(*persistConn).writeLoop(0xc420da2900)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 1700 [select]:
+net/http.(*persistConn).writeLoop(0xc420da2a20)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 136004 [IO wait, 14380 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99caa0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4224c5b18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4224c5b18, 0xc422eaa000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4224c5b00, 0xc422eaa000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4224c5b00, 0xc422eaa000, 0x1000, 0x1000, 0xc42218509d, 0xc4204aa400, 0x7fc93dafd6c8)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000f650, 0xc422eaa000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422cc1c20, 0x7fc93da6cbe0, 0xc42000f650, 0x5, 0xc42000f650, 0xc4212d1cb0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421f10a80, 0x1c05a17, 0xc421f10ba0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421f10a80, 0xc422185000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420c74900, 0xc422185000, 0x1000, 0x1000, 0xc422cd9360, 0xc422aedc78, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4219764e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4219764e0, 0x1, 0x0, 0x0, 0x0, 0xc421a21e60, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420c74900)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72949099 [select, 2 minutes]:
+net/http.(*http2serverConn).serve(0xc422fb81c0)
+	/usr/local/go/src/net/http/h2_bundle.go:4501 +0x629
+net/http.(*http2Server).ServeConn(0xc420a6fb00, 0x2767300, 0xc42104d180, 0xc4224f5d20)
+	/usr/local/go/src/net/http/h2_bundle.go:4120 +0x794
+net/http.http2ConfigureServer.func1(0xc420e101a0, 0xc42104d180, 0x2748cc0, 0xc42241c8a0)
+	/usr/local/go/src/net/http/h2_bundle.go:3958 +0x81
+net/http.(*conn).serve(0xc42069c780, 0x2761900, 0xc420da0690)
+	/usr/local/go/src/net/http/server.go:1722 +0x107c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2720 +0x288
+
+goroutine 72969315 [select]:
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func3(0xc420d687a0, 0xc421427ad0, 0xc423b967f0, 0xc421427c50, 0xc421427c40, 0xc423bacac0, 0x1b, 0xc42245e4e0, 0x277a8e0, 0xc420125f00, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:286 +0xb7a
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:214 +0xa50
+
+goroutine 1173 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da758d0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4219d8498, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4219d8498, 0xc4219c4000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4219d8480, 0xc4219c4000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4219d8480, 0xc4219c4000, 0x8000, 0x8000, 0xc421f50051, 0x2, 0xfaf)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc421ed63c0, 0xc4219c4000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420201bf0, 0x7fc93da6cbe0, 0xc421ed63c0, 0x5, 0xc421ed63c0, 0xc422e1ce70)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421a0c700, 0x1c05a17, 0xc421a0c820, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421a0c700, 0xc421f50000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4210278c0, 0xc421f50000, 0x1000, 0x1000, 0x2, 0xc421456e58, 0x2)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421f4e060)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421f4e060, 0x1, 0x0, 0x0, 0x0, 0xc422700120, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4210278c0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 1649 [select]:
+net/http.(*persistConn).writeLoop(0xc420d050e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969248 [select]:
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func3(0xc420d687a0, 0xc421427ad0, 0xc423b967f0, 0xc421427c50, 0xc421427c40, 0xc423bacac0, 0x1b, 0xc42245e4e0, 0x277a8e0, 0xc420125f00, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:286 +0xb7a
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:214 +0xa50
+
+goroutine 72968634 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6eeeb0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4241bae98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4241bae98, 0xc42300c400, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4241bae80, 0xc42300c400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4241bae80, 0xc42300c400, 0x400, 0x400, 0x1, 0x3, 0xc4221e9788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc420479bc8, 0xc42300c400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4239c13b0, 0x7fc93da6cbe0, 0xc420479bc8, 0x5, 0xc420479bc8, 0xc423a0e6f0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4228efc00, 0x1c05a17, 0xc4228efd20, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4228efc00, 0xc422a29000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420ebe6c0, 0xc422a29000, 0x1000, 0x1000, 0xc423303980, 0xc423cc1198, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc423676b40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc423676b40, 0x1, 0x0, 0x0, 0x0, 0xc4238e9260, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420ebe6c0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72955402 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420cda7e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 131605 [select]:
+net/http.(*persistConn).writeLoop(0xc420ec6120)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969350 [select]:
+net/http.(*persistConn).roundTrip(0xc4210278c0, 0xc422e1cfc0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202080f0, 0xc4229ba800, 0xc4202080f0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc4229ba800, 0x2743fc0, 0xc4202080f0, 0x0, 0x0, 0x0, 0xc420478750, 0x57, 0xc42302d9b8, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc4202b6690, 0xc4229ba800, 0x0, 0x0, 0x0, 0xc420478750, 0x0, 0x1, 0x17)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc4202b6690, 0xc4229ba800, 0xc4238c3260, 0xc4229ba800, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc4238c3260, 0xc4202b6690, 0xc4229ba500, 0xc, 0xc422340088, 0xc42302dc50)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc420125f00, 0x27618c0, 0xc4238c3260, 0xc4229ba500, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc420125f00, 0x27618c0, 0xc4238c3260, 0x1b3da8f, 0x4, 0xc422812600, 0x51, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc420125f00, 0x27618c0, 0xc4238c3260, 0xc422812600, 0x51, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait.func1(0xc420125f00, 0x27618c0, 0xc4238c3260, 0xc422ead640, 0x40, 0xc4228125a0, 0xc422812540)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:67 +0x122
+created by github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:66 +0xc6
+
+goroutine 72968635 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc420ebe6c0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 27383654 [IO wait, 26927 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75a50, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4215f4e98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4215f4e98, 0xc421f9a000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4215f4e80, 0xc421f9a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4215f4e80, 0xc421f9a000, 0x1000, 0x1000, 0x1, 0x4, 0xc420bcc788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007e5b8, 0xc421f9a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4202c8600, 0x7fc93da6cbe0, 0xc42007e5b8, 0x5, 0xc42007e5b8, 0xc420f36f90)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420e4f880, 0x1c05a17, 0xc420e4f9a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420e4f880, 0xc421015000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420e56c60, 0xc421015000, 0x1000, 0x1000, 0xc421eb7fa0, 0xc42226ec58, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422883140)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422883140, 0x1, 0x0, 0x0, 0x0, 0xc422d3b9e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420e56c60)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72962326 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420e06480)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 24687152 [IO wait, 3 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75210, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4224c4898, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4224c4898, 0xc4233bd000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4224c4880, 0xc4233bd000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4224c4880, 0xc4233bd000, 0x1000, 0x1000, 0x1, 0x3, 0xc421686788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007eb18, 0xc4233bd000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4211190b0, 0x7fc93da6cbe0, 0xc42007eb18, 0x5, 0xc42007eb18, 0xc4211f61b0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4209fea80, 0x1c05a17, 0xc4209feba0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4209fea80, 0xc420dbd000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc421269680, 0xc420dbd000, 0x1000, 0x1000, 0xc4220cbf00, 0xc421cef078, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422d593e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422d593e0, 0x1, 0x0, 0x0, 0x0, 0xc421c1b1a0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc421269680)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 116569 [IO wait, 45781 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da452b0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420508298, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420508298, 0xc421fe4800, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420508280, 0xc421fe4800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420508280, 0xc421fe4800, 0x400, 0x400, 0x1, 0x1, 0xc4218c4788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042ad80, 0xc421fe4800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4210f4c90, 0x7fc93da6cbe0, 0xc42042ad80, 0x5, 0xc42042ad80, 0xc421118960)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4209a1180, 0x1c05a17, 0xc4209a12a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4209a1180, 0xc42167e000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4211c2480, 0xc42167e000, 0x1000, 0x1000, 0xc422638120, 0xc42218cd78, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4222d07e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4222d07e0, 0x1, 0x0, 0x0, 0x0, 0xc4227019e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4211c2480)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 27841588 [select, 4 minutes]:
+net/http.(*persistConn).writeLoop(0xc421027440)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969362 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da45070, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4210a2198, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4210a2198, 0xc421a1f000, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4210a2180, 0xc421a1f000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4210a2180, 0xc421a1f000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007e030, 0xc421a1f000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4235e4210, 0x7fc93da6cbe0, 0xc42007e030, 0x5, 0xc42007e030, 0x1026)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421842000, 0x1c05a17, 0xc421842120, 0x412ab7)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421842000, 0xc423298000, 0x8009, 0x8009, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+bufio.(*Reader).Read(0xc42399a000, 0xc423298000, 0x8009, 0x8009, 0x8009, 0x8009, 0x3)
+	/usr/local/go/src/bufio/bufio.go:199 +0x1a3
+github.com/docker/orca/vendor/github.com/docker/docker/pkg/stdcopy.StdCopy(0x273e940, 0xc420b50850, 0x273e940, 0xc420b508c0, 0x273e880, 0xc42399a000, 0x52a6c0, 0xc424182180, 0x6)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/pkg/stdcopy/stdcopy.go:108 +0xe0
+github.com/docker/orca/utils/support.RunKubectlCommand.func1(0xc423445160, 0xc420b50850, 0xc420b508c0, 0x2767540, 0xc421141d40, 0xc42399a000)
+	/go/src/github.com/docker/orca/utils/support/kube.go:131 +0xa8
+created by github.com/docker/orca/utils/support.RunKubectlCommand
+	/go/src/github.com/docker/orca/utils/support/kube.go:126 +0xd92
+
+goroutine 72966467 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da457f0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4201f9998, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4201f9998, 0xc420ad5400, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4201f9980, 0xc420ad5400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4201f9980, 0xc420ad5400, 0x400, 0x400, 0x2e, 0x8, 0x0)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e228, 0xc420ad5400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc423643980, 0x7fc93da6cbe0, 0xc42000e228, 0x5, 0xc42000e228, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc423848380, 0x1c05a17, 0xc4238484a0, 0x100000601)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc423848380, 0xc42370c118, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+io.ReadAtLeast(0x7fc93d9fd588, 0xc423848380, 0xc42370c118, 0x9, 0x9, 0x9, 0xc422123200, 0xc4230bbee0, 0xc4216add40)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x7fc93d9fd588, 0xc423848380, 0xc42370c118, 0x9, 0x9, 0xc4216adde0, 0xc4230bbf42, 0xc420059cf0)
+	/usr/local/go/src/io/io.go:327 +0x58
+net/http.http2readFrameHeader(0xc42370c118, 0x9, 0x9, 0x7fc93d9fd588, 0xc423848380, 0x0, 0x0, 0xc4230bbee0, 0x2)
+	/usr/local/go/src/net/http/h2_bundle.go:1516 +0x7b
+net/http.(*http2Framer).ReadFrame(0xc42370c0e0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1774 +0xa4
+net/http.(*http2serverConn).readFrames(0xc423735dc0)
+	/usr/local/go/src/net/http/h2_bundle.go:4388 +0xab
+created by net/http.(*http2serverConn).serve
+	/usr/local/go/src/net/http/h2_bundle.go:4493 +0x32e
+
+goroutine 27383609 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc421074a20)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969244 [select]:
+net/http.(*persistConn).writeLoop(0xc4210a99e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969245 [chan receive]:
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func2(0xc42245e4e0, 0xc4240fd8c0, 0xc422d1bbc0)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:169 +0xba
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:168 +0x5b9
+
+goroutine 72969207 [semacquire]:
+sync.runtime_Semacquire(0xc420d687ac)
+	/usr/local/go/src/runtime/sema.go:56 +0x39
+sync.(*WaitGroup).Wait(0xc420d687a0)
+	/usr/local/go/src/sync/waitgroup.go:131 +0x72
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump(0x277a8e0, 0xc420125f00, 0x277a8e0, 0xc4201b0200, 0xc420252fc0, 0xc420001980, 0x7ffe7c873e02, 0x19, 0xc42078d130, 0xc42078d140, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:476 +0x205c
+github.com/docker/orca/controller/manager/support.(*DefaultSupportManager).SupportDump(0xc420093560, 0x27618c0, 0xc421d40ea0, 0xc423c606f0, 0x7fc93d98c5b8, 0xc422044070, 0xc4217d4100, 0x7fc93d98c5b8)
+	<autogenerated>:1 +0xb6
+github.com/docker/orca/controller/manager.(*DefaultManager).SupportDump(0xc4201ea580, 0x27618c0, 0xc421d40ea0, 0xc423c606f0, 0x7fc93d98c5b8, 0xc422044070, 0x37, 0xc423b967c0)
+	<autogenerated>:1 +0x79
+github.com/docker/orca/controller/api.(*API).supportDump(0xc420aff880, 0x275f940, 0xc422044070, 0xc420b7e510)
+	/go/src/github.com/docker/orca/controller/api/support.go:32 +0x516
+github.com/docker/orca/controller/api.(*API).(github.com/docker/orca/controller/api.supportDump)-fm(0x275f940, 0xc422044070, 0xc420b7e510)
+	/go/src/github.com/docker/orca/controller/api/routes.go:211 +0x48
+github.com/docker/orca/controller/middleware/pipeline.(*middlewarePipeline).Route.func1(0x275f940, 0xc422044070, 0xc421776300)
+	/go/src/github.com/docker/orca/controller/middleware/pipeline/pipeline.go:130 +0x237
+net/http.HandlerFunc.ServeHTTP(0xc420966ba0, 0x275f940, 0xc422044070, 0xc421776300)
+	/usr/local/go/src/net/http/server.go:1918 +0x44
+github.com/docker/orca/vendor/github.com/gorilla/mux.(*Router).ServeHTTP(0xc420080dc0, 0x275f940, 0xc422044070, 0xc421776300)
+	/go/src/github.com/docker/orca/vendor/github.com/gorilla/mux/mux.go:100 +0x22b
+github.com/docker/orca/controller/api/common.UCPHeadersWrapper.func1(0x275f940, 0xc422044070, 0xc421776300)
+	/go/src/github.com/docker/orca/controller/api/common/response.go:26 +0x250
+net/http.HandlerFunc.ServeHTTP(0xc420a6f7c0, 0x275f940, 0xc422044070, 0xc421776300)
+	/usr/local/go/src/net/http/server.go:1918 +0x44
+net/http.serverHandler.ServeHTTP(0xc420e101a0, 0x275f940, 0xc422044070, 0xc421776300)
+	/usr/local/go/src/net/http/server.go:2619 +0xb4
+net/http.initNPNRequest.ServeHTTP(0xc421b8e380, 0xc420e101a0, 0x275f940, 0xc422044070, 0xc421776300)
+	/usr/local/go/src/net/http/server.go:3164 +0x9a
+net/http.(*initNPNRequest).ServeHTTP(0xc42177a360, 0x275f940, 0xc422044070, 0xc421776300)
+	<autogenerated>:1 +0x63
+net/http.(Handler).ServeHTTP-fm(0x275f940, 0xc422044070, 0xc421776300)
+	/usr/local/go/src/net/http/h2_bundle.go:5462 +0x4d
+net/http.(*http2serverConn).runHandler(0xc4234de000, 0xc422044070, 0xc421776300, 0xc423768680)
+	/usr/local/go/src/net/http/h2_bundle.go:5747 +0x89
+created by net/http.(*http2serverConn).processHeaders
+	/usr/local/go/src/net/http/h2_bundle.go:5481 +0x495
+
+goroutine 136005 [select, 14380 minutes]:
+net/http.(*persistConn).writeLoop(0xc420c74900)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 24687188 [IO wait, 17254 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6eec70, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc42230ed18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc42230ed18, 0xc422acd000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc42230ed00, 0xc422acd000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc42230ed00, 0xc422acd000, 0x1000, 0x1000, 0x1, 0x4, 0xc4218eb788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422044468, 0xc422acd000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4211a6ff0, 0x7fc93da6cbe0, 0xc422044468, 0x5, 0xc422044468, 0xc420e8b590)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4228ef880, 0x1c05a17, 0xc4228ef9a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4228ef880, 0xc4221a3000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420ebf8c0, 0xc4221a3000, 0x1000, 0x1000, 0xc421c00140, 0xc422cd29b8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4221a51a0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4221a51a0, 0x1, 0x0, 0x0, 0x0, 0xc4227010e0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420ebf8c0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 26736472 [IO wait, 14380 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c6e0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420243a18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420243a18, 0xc420e72000, 0x4000, 0x4000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420243a00, 0xc420e72000, 0x4000, 0x4000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420243a00, 0xc420e72000, 0x4000, 0x4000, 0xc4211d209d, 0xc420232000, 0x7fc93dafe458)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007f790, 0xc420e72000, 0x4000, 0x4000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420eeaae0, 0x7fc93da6cbe0, 0xc42007f790, 0x5, 0xc42007f790, 0xc423e8f500)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421e3fc00, 0x1c05a17, 0xc421e3fd20, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421e3fc00, 0xc4211d2000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420dac5a0, 0xc4211d2000, 0x1000, 0x1000, 0xc421eb67a0, 0xc421068cb8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4232bb560)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4232bb560, 0x1, 0x0, 0x0, 0x0, 0xc421a21800, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420dac5a0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969274 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93d99c9e0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc421fd7318, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc421fd7318, 0xc420b9c800, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc421fd7300, 0xc420b9c800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc421fd7300, 0xc420b9c800, 0x400, 0x400, 0x1, 0x2, 0xc421458788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007f7c0, 0xc420b9c800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422ddf770, 0x7fc93da6cbe0, 0xc42007f7c0, 0x5, 0xc42007f7c0, 0xc422e1c9f0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4228eea80, 0x1c05a17, 0xc4228eeba0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4228eea80, 0xc4224b0000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc42140a6c0, 0xc4224b0000, 0x1000, 0x1000, 0xc42126c5c0, 0xc421e9d138, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc423d05980)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc423d05980, 0x1, 0x0, 0x0, 0x0, 0xc421e9cf00, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc42140a6c0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72966997 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c860, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420243418, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420243418, 0xc420fc6000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420243400, 0xc420fc6000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420243400, 0xc420fc6000, 0x1000, 0x1000, 0xc42394031a, 0x8, 0xc421d538a0)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000eb78, 0xc420fc6000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420f82c60, 0x7fc93da6cbe0, 0xc42000eb78, 0x5, 0xc42000eb78, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420ff1500, 0x1c05a17, 0xc420ff1620, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420ff1500, 0xc4229e3000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+bufio.(*Reader).Read(0xc42176dce0, 0xc42370d618, 0x9, 0x9, 0x0, 0x40d712, 0x1b45db7)
+	/usr/local/go/src/bufio/bufio.go:213 +0x30b
+io.ReadAtLeast(0x273e880, 0xc42176dce0, 0xc42370d618, 0x9, 0x9, 0x9, 0xc421d40d80, 0xc421d53cf0, 0x1b3eb00)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x273e880, 0xc42176dce0, 0xc42370d618, 0x9, 0x9, 0xc42236b340, 0xc4221c6328, 0x0)
+	/usr/local/go/src/io/io.go:327 +0x58
+net/http.http2readFrameHeader(0xc42370d618, 0x9, 0x9, 0x273e880, 0xc42176dce0, 0x0, 0xc400000000, 0xc42274e8c0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1516 +0x7b
+net/http.(*http2Framer).ReadFrame(0xc42370d5e0, 0xc423a0f230, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1774 +0xa4
+net/http.(*http2clientConnReadLoop).run(0xc421d53fb0, 0x1c05220, 0xc42045bfb0)
+	/usr/local/go/src/net/http/h2_bundle.go:7862 +0x92
+net/http.(*http2ClientConn).readLoop(0xc421728820)
+	/usr/local/go/src/net/http/h2_bundle.go:7788 +0x9d
+created by net/http.(*http2Transport).newClientConn
+	/usr/local/go/src/net/http/h2_bundle.go:7053 +0x6b9
+
+goroutine 27841587 [IO wait, 4 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6ee7f0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423171f98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423171f98, 0xc423a19000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423171f80, 0xc423a19000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423171f80, 0xc423a19000, 0x1000, 0x1000, 0x1, 0x3, 0xc42366f788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc4204784e0, 0xc423a19000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422001830, 0x7fc93da6cbe0, 0xc4204784e0, 0x5, 0xc4204784e0, 0xc4210f41e0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421843880, 0x1c05a17, 0xc4218439a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421843880, 0xc420dfc000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc421027440, 0xc420dfc000, 0x1000, 0x1000, 0xc4235028a0, 0xc4216ad618, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421976ba0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421976ba0, 0x1, 0x0, 0x0, 0x0, 0xc421ccede0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc421027440)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 131604 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da75bd0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc42230eb98, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc42230eb98, 0xc422494000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc42230eb80, 0xc422494000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc42230eb80, 0xc422494000, 0x8000, 0x8000, 0xc4226bf051, 0x2, 0xfaf)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042ae18, 0xc422494000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420d98db0, 0x7fc93da6cbe0, 0xc42042ae18, 0x5, 0xc42042ae18, 0xc422e1d0b0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42289a700, 0x1c05a17, 0xc42289a820, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42289a700, 0xc4226bf000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420ec6120, 0xc4226bf000, 0x1000, 0x1000, 0x2, 0xc421687e58, 0x2)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4229ed8c0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4229ed8c0, 0x1, 0x0, 0x0, 0x0, 0xc4211d8540, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420ec6120)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72963633 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc4212fe6c0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72966433 [select, 1 minutes]:
+net/http.(*http2serverConn).serve(0xc423735dc0)
+	/usr/local/go/src/net/http/h2_bundle.go:4501 +0x629
+net/http.(*http2Server).ServeConn(0xc420a6fb00, 0x2767300, 0xc423848380, 0xc423e3dd20)
+	/usr/local/go/src/net/http/h2_bundle.go:4120 +0x794
+net/http.http2ConfigureServer.func1(0xc420e101a0, 0xc423848380, 0x2748cc0, 0xc4233842e0)
+	/usr/local/go/src/net/http/h2_bundle.go:3958 +0x81
+net/http.(*conn).serve(0xc420b4dd60, 0x2761900, 0xc423643950)
+	/usr/local/go/src/net/http/server.go:1722 +0x107c
+created by net/http.(*Server).Serve
+	/usr/local/go/src/net/http/server.go:2720 +0x288
+
+goroutine 72969275 [select]:
+net/http.(*persistConn).writeLoop(0xc42140a6c0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969292 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da755d0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4224c4818, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4224c4818, 0xc420b9c000, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4224c4800, 0xc420b9c000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4224c4800, 0xc420b9c000, 0x400, 0x400, 0xc422197051, 0x2, 0xfaf)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42007f7c8, 0xc420b9c000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422ddf0e0, 0x7fc93da6cbe0, 0xc42007f7c8, 0x5, 0xc42007f7c8, 0xc4235e4990)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4228ef180, 0x1c05a17, 0xc4228ef2a0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4228ef180, 0xc422197000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4210747e0, 0xc422197000, 0x1000, 0x1000, 0x2, 0xc421d4de58, 0x2)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422d484e0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422d484e0, 0x1, 0x0, 0x0, 0x0, 0xc421d18960, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4210747e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969294 [select]:
+net/http.(*persistConn).roundTrip(0xc4210747e0, 0xc4235e4b10, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202080f0, 0xc422a12400, 0xc4202080f0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc422a12400, 0x2743fc0, 0xc4202080f0, 0x0, 0x0, 0x0, 0xc42007e3d8, 0x57, 0xc4230b59b8, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc4202b6690, 0xc422a12400, 0x0, 0x0, 0x0, 0xc42007e3d8, 0x0, 0x1, 0x80000000057)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc4202b6690, 0xc422a12400, 0xc42399a0c0, 0xc422a12400, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc42399a0c0, 0xc4202b6690, 0xc422a12200, 0xc, 0xc423022a28, 0xc4230b5c50)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc420125f00, 0x27618c0, 0xc42399a0c0, 0xc422a12200, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc420125f00, 0x27618c0, 0xc42399a0c0, 0x1b3da8f, 0x4, 0xc422700e40, 0x51, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc420125f00, 0x27618c0, 0xc42399a0c0, 0xc422700e40, 0x51, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait.func1(0xc420125f00, 0x27618c0, 0xc42399a0c0, 0xc4205dbe40, 0x40, 0xc422700de0, 0xc422700d80)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:67 +0x122
+created by github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:66 +0xc6
+
+goroutine 120092 [IO wait, 6 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c3e0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4201b0318, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4201b0318, 0xc422696c00, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4201b0300, 0xc422696c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4201b0300, 0xc422696c00, 0x400, 0x400, 0x1b46785, 0xa, 0x1b3cb01)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42042a460, 0xc422696c00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420f4b800, 0x7fc93da6cbe0, 0xc42042a460, 0x5, 0xc42042a460, 0xa)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4212bc380, 0x1c05a17, 0xc4212bc4a0, 0x1205cd828)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4212bc380, 0xc4210043b8, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+io.ReadAtLeast(0x7fc93d9fd588, 0xc4212bc380, 0xc4210043b8, 0x9, 0x9, 0x9, 0xc4205cd800, 0xc420903ee0, 0xc421d19b60)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x7fc93d9fd588, 0xc4212bc380, 0xc4210043b8, 0x9, 0x9, 0xc421d19ba0, 0xc420903f42, 0xc4225afe10)
+	/usr/local/go/src/io/io.go:327 +0x58
+net/http.http2readFrameHeader(0xc4210043b8, 0x9, 0x9, 0x7fc93d9fd588, 0xc4212bc380, 0x0, 0x0, 0xc420903ee0, 0x2)
+	/usr/local/go/src/net/http/h2_bundle.go:1516 +0x7b
+net/http.(*http2Framer).ReadFrame(0xc421004380, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1774 +0xa4
+net/http.(*http2serverConn).readFrames(0xc42225ec40)
+	/usr/local/go/src/net/http/h2_bundle.go:4388 +0xab
+created by net/http.(*http2serverConn).serve
+	/usr/local/go/src/net/http/h2_bundle.go:4493 +0x32e
+
+goroutine 125033 [select, 15370 minutes]:
+net/http.(*persistConn).writeLoop(0xc420ff77a0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 142258 [IO wait, 14380 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75810, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc421434a18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc421434a18, 0xc42278e000, 0x4000, 0x4000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc421434a00, 0xc42278e000, 0x4000, 0x4000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc421434a00, 0xc42278e000, 0x4000, 0x4000, 0xc4212cf09d, 0x27e83c0, 0x7fc93dafe458)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc4220441e8, 0xc42278e000, 0x4000, 0x4000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc421305bf0, 0x7fc93da6cbe0, 0xc4220441e8, 0x5, 0xc4220441e8, 0xc4211f6c00)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4208d0700, 0x1c05a17, 0xc4208d0820, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4208d0700, 0xc4212cf000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420d85560, 0xc4212cf000, 0x1000, 0x1000, 0xc422418180, 0xc4222d91f8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4209f5380)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4209f5380, 0x1, 0x0, 0x0, 0x0, 0xc421fb5b60, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420d85560)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969246 [select]:
+net/http.(*persistConn).roundTrip(0xc42105e240, 0xc4235e5ce0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202080f0, 0xc42394f200, 0xc4202080f0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc42394f200, 0x2743fc0, 0xc4202080f0, 0x0, 0x0, 0x0, 0xc4220445e0, 0x58, 0xc42084f370, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc4202b6690, 0xc42394f200, 0x0, 0x0, 0x0, 0xc4220445e0, 0x0, 0x1, 0x80000000058)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc4202b6690, 0xc42394f200, 0xc421d40ea0, 0xc42394f200, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc421d40ea0, 0xc4202b6690, 0xc42394f100, 0xc, 0xc422df9ec8, 0xc42084f608)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0xc42394f100, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0x1b3da8f, 0x4, 0xc4227001e0, 0x52, 0xc4235e5b60, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0xc4227001e0, 0x52, 0xc4235e5b60, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).ContainerStart(0xc420125f00, 0x27618c0, 0xc421d40ea0, 0xc422ead7c0, 0x40, 0x0, 0x0, 0x0, 0x0, 0x40, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_start.go:21 +0x180
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func3(0xc420d687a0, 0xc421427ad0, 0xc423b967f0, 0xc421427c50, 0xc421427c40, 0xc423bacac0, 0x1b, 0xc42245e4e0, 0x277a8e0, 0xc420125f00, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:271 +0x866
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:214 +0xa50
+
+goroutine 24687189 [select, 17254 minutes]:
+net/http.(*persistConn).writeLoop(0xc420ebf8c0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 207599 [select]:
+net/http.(*persistConn).writeLoop(0xc42105e240)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 24687153 [select, 3 minutes]:
+net/http.(*persistConn).writeLoop(0xc421269680)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72957348 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420c779e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72960591 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99cc20, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc424183218, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc424183218, 0xc420cf7000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc424183200, 0xc420cf7000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc424183200, 0xc420cf7000, 0x1000, 0x1000, 0xc421fe109d, 0xc420028800, 0x7fc93dafdd90)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422da4080, 0xc420cf7000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc423073740, 0x7fc93da6cbe0, 0xc422da4080, 0x5, 0xc422da4080, 0xc422447650)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421a0c000, 0x1c05a17, 0xc421a0c120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421a0c000, 0xc421fe1000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc42119f0e0, 0xc421fe1000, 0x1000, 0x1000, 0xc4232b2c80, 0xc422eca538, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421976e40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421976e40, 0x1, 0x0, 0x0, 0x0, 0xc422d3bf80, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc42119f0e0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969353 [select]:
+net/http.(*persistConn).roundTrip(0xc4210a99e0, 0xc421234cc0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202081e0, 0xc422ab0500, 0xc4202081e0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc422ab0500, 0x2743fc0, 0xc4202081e0, 0x0, 0x0, 0x0, 0xc420478218, 0x58, 0xc423e34b38, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc42032f1a0, 0xc422ab0500, 0x0, 0x0, 0x0, 0xc420478218, 0x0, 0x1, 0x80000000058)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc42032f1a0, 0xc422ab0500, 0xc421bdc1e0, 0xc422ab0500, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc421bdc1e0, 0xc42032f1a0, 0xc422ab0400, 0xc, 0xc4220988c8, 0xc423e34dd0)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc4201b0200, 0x27618c0, 0xc421bdc1e0, 0xc422ab0400, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc4201b0200, 0x27618c0, 0xc421bdc1e0, 0x1b3da8f, 0x4, 0xc4231a01e0, 0x52, 0xc421234b10, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc4201b0200, 0x27618c0, 0xc421bdc1e0, 0xc4231a01e0, 0x52, 0xc421234b10, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).ContainerStart(0xc4201b0200, 0x27618c0, 0xc421bdc1e0, 0xc422eac000, 0x40, 0x0, 0x0, 0x0, 0x0, 0x2767540, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_start.go:21 +0x180
+github.com/docker/orca/utils/support.RunKubectlCommand(0x27618c0, 0xc421bdc1e0, 0x277a8e0, 0xc4201b0200, 0x1b59824, 0x16, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/utils/support/kube.go:136 +0xe07
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func5(0xc420d687a0, 0x27618c0, 0xc421d40ea0, 0x277a8e0, 0xc420125f00, 0x277a8e0, 0xc4201b0200, 0xc420252fc0, 0xc420001980, 0x7ffe7c873e02, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:464 +0xff
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:460 +0x204b
+
+goroutine 116570 [select, 45781 minutes]:
+net/http.(*persistConn).writeLoop(0xc4211c2480)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72968600 [select, 1 minutes]:
+net/http.(*persistConn).writeLoop(0xc421072120)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 125032 [IO wait, 15370 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da45730, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4201f9898, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4201f9898, 0xc421d30000, 0x2000, 0x2000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4201f9880, 0xc421d30000, 0x2000, 0x2000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4201f9880, 0xc421d30000, 0x2000, 0x2000, 0x1, 0x3, 0xc420728788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e4c8, 0xc421d30000, 0x2000, 0x2000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420d26f90, 0x7fc93da6cbe0, 0xc42000e4c8, 0x5, 0xc42000e4c8, 0xc420d983c0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420d60380, 0x1c05a17, 0xc420d604a0, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420d60380, 0xc421f19000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420ff77a0, 0xc421f19000, 0x1000, 0x1000, 0xc420eaca30, 0xc421068fb8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc42023dd40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc42023dd40, 0x1, 0x0, 0x0, 0x0, 0xc421ff4ba0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420ff77a0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 27383608 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c620, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423568f18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423568f18, 0xc423012000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423568f00, 0xc423012000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423568f00, 0xc423012000, 0x1000, 0x1000, 0x1, 0x3, 0xc4221e7788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc421ed6068, 0xc423012000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420eea810, 0x7fc93da6cbe0, 0xc421ed6068, 0x5, 0xc421ed6068, 0xc420ce9d10)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4228ee000, 0x1c05a17, 0xc4228ee120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4228ee000, 0xc422885000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc421074a20, 0xc422885000, 0x1000, 0x1000, 0xc42287d4c0, 0xc421ff5cd8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421f6fda0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421f6fda0, 0x1, 0x0, 0x0, 0x0, 0xc4232a4600, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc421074a20)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 136006 [IO wait, 14380 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75e10, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc422c5b798, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc422c5b798, 0xc422957000, 0x1000, 0x1000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc422c5b780, 0xc422957000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc422c5b780, 0xc422957000, 0x1000, 0x1000, 0xc422d2109d, 0xc420232000, 0x7fc93dafdd90)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000f648, 0xc422957000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4226186c0, 0x7fc93da6cbe0, 0xc42000f648, 0x5, 0xc42000f648, 0xc420d80510)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421f10700, 0x1c05a17, 0xc421f10820, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421f10700, 0xc422d21000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc4211cd8c0, 0xc422d21000, 0x1000, 0x1000, 0xc4222c2ae0, 0xc422d1aa18, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421976600)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421976600, 0x1, 0x0, 0x0, 0x0, 0xc42220faa0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc4211cd8c0)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72968599 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da455b0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4239fc798, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4239fc798, 0xc422a26000, 0x2000, 0x2000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4239fc780, 0xc422a26000, 0x2000, 0x2000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4239fc780, 0xc422a26000, 0x2000, 0x2000, 0xc422a2409f, 0xc421f1cc00, 0x7fc93dafdd90)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc420479b88, 0xc422a26000, 0x2000, 0x2000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4239c0f30, 0x7fc93da6cbe0, 0xc420479b88, 0x5, 0xc420479b88, 0xc4239c0fc0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4228ef500, 0x1c05a17, 0xc4228ef620, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4228ef500, 0xc422a24000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc421072120, 0xc422a24000, 0x1000, 0x1000, 0xc42395cca0, 0xc42234b918, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc423024600)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc423024600, 0x1, 0x0, 0x0, 0x0, 0xc42234b800, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc421072120)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 207598 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93da451f0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc421123618, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc421123618, 0xc42186c000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc421123600, 0xc42186c000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc421123600, 0xc42186c000, 0x8000, 0x8000, 0x1, 0x2, 0xc4218c9788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422044648, 0xc42186c000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4212585d0, 0x7fc93da6cbe0, 0xc422044648, 0x5, 0xc422044648, 0xc4235e5b30)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4223e6000, 0x1c05a17, 0xc4223e6120, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4223e6000, 0xc4216bb000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc42105e240, 0xc4216bb000, 0x1000, 0x1000, 0xc420e38ba0, 0xc422cd21d8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc421f4fd40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc421f4fd40, 0x1, 0x0, 0x0, 0x0, 0xc42305ff20, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc42105e240)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969332 [select]:
+net/http.(*persistConn).roundTrip(0xc42121bb00, 0xc4212356e0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202080f0, 0xc42394f500, 0xc4202080f0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc42394f500, 0x2743fc0, 0xc4202080f0, 0x0, 0x0, 0x0, 0xc422044668, 0x57, 0xc4236749b8, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc4202b6690, 0xc42394f500, 0x0, 0x0, 0x0, 0xc422044668, 0x0, 0x1, 0x80000000057)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc4202b6690, 0xc42394f500, 0xc421f6e4e0, 0xc42394f500, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc421f6e4e0, 0xc4202b6690, 0xc42394f400, 0xc, 0xc422a21108, 0xc423674c50)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc420125f00, 0x27618c0, 0xc421f6e4e0, 0xc42394f400, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc420125f00, 0x27618c0, 0xc421f6e4e0, 0x1b3da8f, 0x4, 0xc4231a1da0, 0x51, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc420125f00, 0x27618c0, 0xc421f6e4e0, 0xc4231a1da0, 0x51, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait.func1(0xc420125f00, 0x27618c0, 0xc421f6e4e0, 0xc422d1e600, 0x40, 0xc4231a1d40, 0xc4231a1ce0)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:67 +0x122
+created by github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:66 +0xc6
+
+goroutine 26736473 [select, 14380 minutes]:
+net/http.(*persistConn).writeLoop(0xc420dac5a0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72968612 [select]:
+net/http.(*persistConn).writeLoop(0xc420ebe360)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72962461 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6ee5b0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc42230e618, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc42230e618, 0xc42120ac00, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc42230e600, 0xc42120ac00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc42230e600, 0xc42120ac00, 0x400, 0x400, 0x1, 0x3, 0xc4230b7788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000e648, 0xc42120ac00, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc422959140, 0x7fc93da6cbe0, 0xc42000e648, 0x5, 0xc42000e648, 0xc4210f4780)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420ff9c00, 0x1c05a17, 0xc420ff9d20, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420ff9c00, 0xc423402000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420ef6b40, 0xc423402000, 0x1000, 0x1000, 0xc42077e8d0, 0xc4200707d8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc42260f980)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc42260f980, 0x1, 0x0, 0x0, 0x0, 0xc422d3b1a0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420ef6b40)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 27383655 [select, 26927 minutes]:
+net/http.(*persistConn).writeLoop(0xc420e56c60)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969351 [select]:
+net/http.(*persistConn).roundTrip(0xc420ec6120, 0xc422e1d200, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202080f0, 0xc4229baa00, 0xc4202080f0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc4229baa00, 0x2743fc0, 0xc4202080f0, 0x0, 0x0, 0x0, 0xc420478780, 0x57, 0xc42302d9b8, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc4202b6690, 0xc4229baa00, 0x0, 0x0, 0x0, 0xc420478780, 0x0, 0x1, 0x80000000057)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc4202b6690, 0xc4229baa00, 0xc4238c3320, 0xc4229baa00, 0x185de40)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc4238c3320, 0xc4202b6690, 0xc4229ba900, 0xc, 0xc4223408c8, 0xc42302dc50)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc420125f00, 0x27618c0, 0xc4238c3320, 0xc4229ba900, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc420125f00, 0x27618c0, 0xc4238c3320, 0x1b3da8f, 0x4, 0xc422812960, 0x51, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc420125f00, 0x27618c0, 0xc4238c3320, 0xc422812960, 0x51, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait.func1(0xc420125f00, 0x27618c0, 0xc4238c3320, 0xc421fb1a80, 0x40, 0xc422812900, 0xc4228128a0)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:67 +0x122
+created by github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).legacyContainerWait
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_wait.go:66 +0xc6
+
+goroutine 72949106 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6eed30, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc4212d8718, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc4212d8718, 0xc422830400, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc4212d8700, 0xc422830400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc4212d8700, 0xc422830400, 0x400, 0x400, 0x1b3ff42, 0x6, 0x1b3cb01)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc422da5678, 0xc422830400, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420da07b0, 0x7fc93da6cbe0, 0xc422da5678, 0x5, 0xc422da5678, 0x6)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc42104d180, 0x1c05a17, 0xc42104d2a0, 0x121a33228)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc42104d180, 0xc4210da818, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+io.ReadAtLeast(0x7fc93d9fd588, 0xc42104d180, 0xc4210da818, 0x9, 0x9, 0x9, 0xc421a33200, 0xc4221eaee0, 0xc4234d70e0)
+	/usr/local/go/src/io/io.go:309 +0x86
+io.ReadFull(0x7fc93d9fd588, 0xc42104d180, 0xc4210da818, 0x9, 0x9, 0xc4234d7120, 0xc4221eaf42, 0xc4229ed9f0)
+	/usr/local/go/src/io/io.go:327 +0x58
+net/http.http2readFrameHeader(0xc4210da818, 0x9, 0x9, 0x7fc93d9fd588, 0xc42104d180, 0x0, 0x0, 0xc4221eaee0, 0x2)
+	/usr/local/go/src/net/http/h2_bundle.go:1516 +0x7b
+net/http.(*http2Framer).ReadFrame(0xc4210da7e0, 0x0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/h2_bundle.go:1774 +0xa4
+net/http.(*http2serverConn).readFrames(0xc422fb81c0)
+	/usr/local/go/src/net/http/h2_bundle.go:4388 +0xab
+created by net/http.(*http2serverConn).serve
+	/usr/local/go/src/net/http/h2_bundle.go:4493 +0x32e
+
+goroutine 72961766 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d6ee4f0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc42230f198, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc42230f198, 0xc423313800, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc42230f180, 0xc423313800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc42230f180, 0xc423313800, 0x400, 0x400, 0x1, 0x3, 0xc4230b8788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc421ed68c0, 0xc423313800, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420ae8d20, 0x7fc93da6cbe0, 0xc421ed68c0, 0x5, 0xc421ed68c0, 0xc422c463f0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4210ea700, 0x1c05a17, 0xc4210ea820, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4210ea700, 0xc421416000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420f89440, 0xc421416000, 0x1000, 0x1000, 0xc422062880, 0xc421a21a98, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc422cf3ec0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc422cf3ec0, 0x1, 0x0, 0x0, 0x0, 0xc4212180c0, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420f89440)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72957910 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420a6ab40)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 27321531 [IO wait]:
+internal/poll.runtime_pollWait(0x7fc93d99cda0, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc422845098, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc422845098, 0xc4240cc000, 0x8000, 0x8000)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc422845080, 0xc4240cc000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc422845080, 0xc4240cc000, 0x8000, 0x8000, 0xc423dd6051, 0x2, 0xfaf)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000faa8, 0xc4240cc000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc4224477a0, 0x7fc93da6cbe0, 0xc42000faa8, 0x5, 0xc42000faa8, 0xc421235560)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc420eca380, 0x1c05a17, 0xc420eca4a0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc420eca380, 0xc423dd6000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc42121bb00, 0xc423dd6000, 0x1000, 0x1000, 0x2, 0xc421d4fe58, 0x2)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4222d0e40)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4222d0e40, 0x1, 0x0, 0x0, 0x0, 0xc421a11980, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc42121bb00)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72961758 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc420c5bd40)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72960592 [select, 2 minutes]:
+net/http.(*persistConn).writeLoop(0xc42119f0e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 27321532 [select]:
+net/http.(*persistConn).writeLoop(0xc42121bb00)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72968611 [runnable]:
+sync.(*Mutex).Unlock(0xc4228eef20)
+	/usr/local/go/src/sync/mutex.go:175 +0xc8
+crypto/tls.(*Conn).Read(0xc4228eee00, 0xc423f3b000, 0x1000, 0x1000, 0x12f, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1176 +0x31f
+net/http.(*persistConn).Read(0xc420ebe360, 0xc423f3b000, 0x1000, 0x1000, 0xc423303540, 0xc42313a898, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4225aef60)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4225aef60, 0x1, 0x0, 0x0, 0x0, 0xc423483b00, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420ebe360)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72957909 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93da75f90, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc420508398, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc420508398, 0xc42120b000, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc420508380, 0xc42120b000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc420508380, 0xc42120b000, 0x400, 0x400, 0x1, 0x3, 0xc4230ba788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc4204789a0, 0xc42120b000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420ce9c80, 0x7fc93da6cbe0, 0xc4204789a0, 0x5, 0xc4204789a0, 0xc420860a80)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc4223e6e00, 0x1c05a17, 0xc4223e6f20, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc4223e6e00, 0xc421c8a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420a6ab40, 0xc421c8a000, 0x1000, 0x1000, 0xc420fa75e0, 0xc422d30898, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc423025da0)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc423025da0, 0x1, 0x0, 0x0, 0x0, 0xc421218240, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420a6ab40)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969293 [select]:
+net/http.(*persistConn).writeLoop(0xc4210747e0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969352 [select]:
+net/http.(*persistConn).roundTrip(0xc420ebe360, 0xc420b532f0, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:1970 +0x608
+net/http.(*Transport).RoundTrip(0xc4202081e0, 0xc421776500, 0xc4202081e0, 0x0, 0x0)
+	/usr/local/go/src/net/http/transport.go:413 +0x992
+net/http.send(0xc421776500, 0x2743fc0, 0xc4202081e0, 0x0, 0x0, 0x0, 0xc422da4050, 0x18, 0xc423ad8b00, 0x1)
+	/usr/local/go/src/net/http/client.go:249 +0x1a9
+net/http.(*Client).send(0xc42032f1a0, 0xc421776500, 0x0, 0x0, 0x0, 0xc422da4050, 0x0, 0x1, 0x150)
+	/usr/local/go/src/net/http/client.go:173 +0xfd
+net/http.(*Client).Do(0xc42032f1a0, 0xc421776500, 0xc422d49c20, 0xc421776500, 0x0)
+	/usr/local/go/src/net/http/client.go:602 +0x28d
+github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp.Do(0x27618c0, 0xc422d49c20, 0xc42032f1a0, 0xc421776400, 0xc, 0xc422df8348, 0xc423ad8d98)
+	/go/src/github.com/docker/orca/vendor/golang.org/x/net/context/ctxhttp/ctxhttp.go:30 +0x6e
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).doRequest(0xc4201b0200, 0x27618c0, 0xc422d49c20, 0xc421776400, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:135 +0xfb
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).sendRequest(0xc4201b0200, 0x27618c0, 0xc422d49c20, 0x1b3da8f, 0x4, 0x1b51d73, 0x12, 0xc420b52e10, 0x273e900, 0xc420aaa1c0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:122 +0x18d
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).post(0xc4201b0200, 0x27618c0, 0xc422d49c20, 0x1b51d73, 0x12, 0xc420b52e10, 0x19b06e0, 0xc421110480, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/request.go:46 +0x1ba
+github.com/docker/orca/vendor/github.com/docker/docker/client.(*Client).ContainerCreate(0xc4201b0200, 0x27618c0, 0xc422d49c20, 0xc421778500, 0xc420232400, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/vendor/github.com/docker/docker/client/container_create.go:45 +0x23f
+github.com/docker/orca/utils/support.RunKubectlCommand(0x27618c0, 0xc422d49c20, 0x277a8e0, 0xc4201b0200, 0x1b739fa, 0x23, 0x0, 0x0, 0x0, 0x0, ...)
+	/go/src/github.com/docker/orca/utils/support/kube.go:105 +0x97d
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func4(0xc420d687a0, 0x27618c0, 0xc421d40ea0, 0x277a8e0, 0xc420125f00, 0x277a8e0, 0xc4201b0200, 0xc420252fc0, 0xc420001980, 0x7ffe7c873e02, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:449 +0xff
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:445 +0x1fb2
+
+goroutine 72961757 [IO wait, 2 minutes]:
+internal/poll.runtime_pollWait(0x7fc93d99c020, 0x72, 0x0)
+	/usr/local/go/src/runtime/netpoll.go:173 +0x57
+internal/poll.(*pollDesc).wait(0xc423171e18, 0x72, 0xffffffffffffff00, 0x2749240, 0x273c920)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:85 +0xae
+internal/poll.(*pollDesc).waitRead(0xc423171e18, 0xc421418000, 0x400, 0x400)
+	/usr/local/go/src/internal/poll/fd_poll_runtime.go:90 +0x3d
+internal/poll.(*FD).Read(0xc423171e00, 0xc421418000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/internal/poll/fd_unix.go:126 +0x18a
+net.(*netFD).Read(0xc423171e00, 0xc421418000, 0x400, 0x400, 0x1, 0x3, 0xc4218f0788)
+	/usr/local/go/src/net/fd_unix.go:202 +0x52
+net.(*conn).Read(0xc42000f9d0, 0xc421418000, 0x400, 0x400, 0x0, 0x0, 0x0)
+	/usr/local/go/src/net/net.go:176 +0x6d
+crypto/tls.(*block).readFromUntil(0xc420feb830, 0x7fc93da6cbe0, 0xc42000f9d0, 0x5, 0xc42000f9d0, 0xc422c464e0)
+	/usr/local/go/src/crypto/tls/conn.go:488 +0x95
+crypto/tls.(*Conn).readRecord(0xc421e3e700, 0x1c05a17, 0xc421e3e820, 0x42faab)
+	/usr/local/go/src/crypto/tls/conn.go:590 +0xe0
+crypto/tls.(*Conn).Read(0xc421e3e700, 0xc423338000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:1134 +0x110
+net/http.(*persistConn).Read(0xc420c5bd40, 0xc423338000, 0x1000, 0x1000, 0xc420f4ed90, 0xc4220025f8, 0x4590b0)
+	/usr/local/go/src/net/http/transport.go:1391 +0x140
+bufio.(*Reader).fill(0xc4221a4660)
+	/usr/local/go/src/bufio/bufio.go:97 +0x11a
+bufio.(*Reader).Peek(0xc4221a4660, 0x1, 0x0, 0x0, 0x0, 0xc422ef5f20, 0x0)
+	/usr/local/go/src/bufio/bufio.go:129 +0x3a
+net/http.(*persistConn).readLoop(0xc420c5bd40)
+	/usr/local/go/src/net/http/transport.go:1539 +0x185
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1186 +0xa2e
+
+goroutine 72969249 [select]:
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func3(0xc420d687a0, 0xc421427ad0, 0xc423b967f0, 0xc421427c50, 0xc421427c40, 0xc423bacac0, 0x1b, 0xc42245e4e0, 0x277a8e0, 0xc420125f00, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:286 +0xb7a
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:214 +0xa50
+
+goroutine 72959125 [select]:
+net/http.(*persistConn).writeLoop(0xc420e145a0)
+	/usr/local/go/src/net/http/transport.go:1759 +0x165
+created by net/http.(*Transport).dialConn
+	/usr/local/go/src/net/http/transport.go:1187 +0xa53
+
+goroutine 72969247 [select]:
+github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump.func3(0xc420d687a0, 0xc421427ad0, 0xc423b967f0, 0xc421427c50, 0xc421427c40, 0xc423bacac0, 0x1b, 0xc42245e4e0, 0x277a8e0, 0xc420125f00, ...)
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:286 +0xb7a
+created by github.com/docker/orca/controller/manager/support.DefaultSupportManager.SupportDump
+	/go/src/github.com/docker/orca/controller/manager/support/support.go:214 +0xa50

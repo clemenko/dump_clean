@@ -1,0 +1,76 @@
+[auth]
+  default_new_user_role = "restrictedcontrol"
+  backend = "managed"
+  [auth.sessions]
+    lifetime_minutes = 4320
+    renewal_threshold_minutes = 1440
+    per_user_limit = 0
+  [auth.ldap]
+    sync_schedule = ""
+    jit_user_provisioning = true
+    server_url = ""
+    no_simple_pagination = false
+    start_tls = false
+    root_certs = ""
+    tls_skip_verify = false
+    reader_dn = ""
+    reader_password = ""
+    [auth.ldap.admin_sync_opts]
+      enable_sync = false
+      select_group_members = false
+      group_dn = ""
+      group_member_attr = ""
+      search_base_dn = ""
+      search_scope_subtree = false
+      search_filter = ""
+
+[[registries]]
+  host_address = "dtr.jswann.dockerps.io"
+  service_id = "b668aa6e-7797-4d87-b43e-6800e06e1028"
+  ca_bundle = "-----BEGIN CERTIFICATE-----\nMIIB8TCCAZegAwIBAgIQAcaVg29jEoGwhqtn5snvOTAKBggqhkjOPQQDAjBHMQsw\nCQYDVQQGEwJVUzEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzEPMA0GA1UEChMGRG9j\na2VyMQ8wDQYDVQQLEwZEb2NrZXIwHhcNMTgwNjIxMjAxODUwWhcNMTkwNjIxMjAx\nODUwWjBHMQswCQYDVQQGEwJVUzEWMBQGA1UEBxMNU2FuIEZyYW5jaXNjbzEPMA0G\nA1UEChMGRG9ja2VyMQ8wDQYDVQQLEwZEb2NrZXIwWTATBgcqhkjOPQIBBggqhkjO\nPQMBBwNCAATkZvUsswErTiDgsPgdZGptIiNwJoxSt6dpSyLtZUtotiA7EP8Qv48v\n50/0qZeR3u1zV4fnHd+w13dTuS7Mz8Upo2UwYzAOBgNVHQ8BAf8EBAMCAqQwDwYD\nVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUMR1LUxkUiUgWZ+jKCGycTkwR3XQwIQYD\nVR0RBBowGIIWZHRyLmpzd2Fubi5kb2NrZXJwcy5pbzAKBggqhkjOPQQDAgNIADBF\nAiB2+1k8g4Nt8otXdIUIQhw0kcA3hQjgk6xSfxPNOXLQOgIhANw9lt7EFTCQwias\nhJNGGBeFOJjPgumUQh7uCS5Dk8uN\n-----END CERTIFICATE-----\n"
+
+[scheduling_configuration]
+  enable_admin_ucp_scheduling = true
+  default_node_orchestrator = "swarm"
+
+[tracking_configuration]
+  disable_usageinfo = false
+  disable_tracking = false
+  anonymize_tracking = false
+  cluster_label = ""
+
+[trust_configuration]
+  require_content_trust = false
+
+[log_configuration]
+  protocol = ""
+  host = ""
+  level = "INFO"
+
+[license_configuration]
+  auto_refresh = true
+
+[cluster_config]
+  controller_port = 443
+  kube_apiserver_port = 6443
+  swarm_port = 2376
+  swarm_strategy = "spread"
+  dns = []
+  dns_opt = []
+  dns_search = []
+  kv_timeout = 5000
+  kv_snapshot_count = 20000
+  profiling_enabled = false
+  external_service_lb = ""
+  metrics_retention_time = "24h"
+  metrics_target_heap_size = "256M"
+  metrics_scrape_interval = "1m"
+  metrics_disk_usage_interval = "2h"
+  rethinkdb_cache_size = "1GB"
+  cloud_provider = ""
+  cni_installer_url = ""
+  pod_cidr = "192.168.0.0/16"
+  nodeport_range = "32768-35535"
+  local_volume_collection_mapping = false
+  manager_kube_reserved_resources = ""
+  worker_kube_reserved_resources = ""

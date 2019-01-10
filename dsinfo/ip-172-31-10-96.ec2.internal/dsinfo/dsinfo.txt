@@ -1,0 +1,834 @@
+=========================
+Docker/System Information
+=========================
+
+Mon Jul 30 13:06:26 UTC 2018
+
+=========================
+Docker Info
+=========================
+
+docker version
+~~~~~~~~~~~~~~
+Client:
+ Version:      17.06.2-ce
+ API version:  1.30
+ Go version:   go1.8.3
+ Git commit:   cec0b72
+ Built:        Tue Sep  5 19:57:21 2017
+ OS/Arch:      linux/amd64
+
+Server:
+ Version:      17.06.2-ee-14
+ API version:  1.30 (minimum version 1.12)
+ Go version:   go1.8.7
+ Git commit:   6345dd7
+ Built:        Thu Jun 21 18:14:22 2018
+ OS/Arch:      linux/amd64
+ Experimental: false
+
+docker info
+~~~~~~~~~~~
+Containers: 20
+ Running: 11
+ Paused: 0
+ Stopped: 9
+Images: 18
+Server Version: 17.06.2-ee-14
+Storage Driver: overlay2
+ Backing Filesystem: xfs
+ Supports d_type: true
+ Native Overlay Diff: true
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
+Plugins: 
+ Volume: local
+ Network: bridge host macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+Swarm: active
+ NodeID: ypkvcv6l7jt6rmni0ln37hm47
+ Is Manager: false
+ Node Address: 172.31.10.96
+ Manager Addresses:
+  172.31.9.58:2377
+Runtimes: runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 6e23458c129b551d5c9871e5174f6b1b7f6d1170
+runc version: 462c82662200a17ee39e74692f536067a3576a50
+init version: 949e6fa
+Security Options:
+ seccomp
+  Profile: default
+Kernel Version: 3.10.0-693.11.6.el7.x86_64
+Operating System: Red Hat Enterprise Linux Server 7.4 (Maipo)
+OSType: linux
+Architecture: x86_64
+CPUs: 2
+Total Memory: 7.638GiB
+Name: ip-172-31-10-96.ec2.internal
+ID: WBA7:UI6F:PSCT:B7UB:KLOE:AKXO:YKVG:QUFK:USZU:7MEU:4ZCD:C5E5
+Docker Root Dir: /var/lib/docker
+Debug Mode (client): false
+Debug Mode (server): false
+Registry: https://index.docker.io/v1/
+Experimental: false
+Insecure Registries:
+ 127.0.0.0/8
+Live Restore Enabled: false
+
+
+docker images --no-trunc
+~~~~~~~~~~~~~~~~~~~~~~~~
+REPOSITORY                       TAG                 IMAGE ID                                                                  CREATED             SIZE
+nginx                            <none>              sha256:5699ececb21caf07b92cbda9daa1e965407e3793a72000ecbf6b8e8595a0824a   4 weeks ago         109MB
+docker/ucp-agent                 3.0.2               sha256:c46de56f7ee830a70874e434996a3bc37995df78d4164865994f07b02aeec67e   5 weeks ago         44.4MB
+docker/ucp-pause                 3.0.2               sha256:99d02c6ee865c6808ce4c85628bed3a2fa12ecb621271878da001ca9df8f54fc   5 weeks ago         747kB
+docker/ucp-interlock-proxy       3.0.2               sha256:f64cde02e629594d1459b9e370b13b2a821489d02c8bf19485a7c6d6603ca812   5 weeks ago         16.8MB
+docker/ucp-interlock-extension   3.0.2               sha256:2b65367e2ed5cd964d42981ade8ae79ff41f37f0ef9f1e90e35b072d0d75675d   5 weeks ago         9.16MB
+docker/ucp-hyperkube             3.0.2               sha256:bd7472bbd0cbcd11570a3b6b17f7a6cd2498b76a2dffa267a67772f50a8841d3   5 weeks ago         528MB
+docker/ucp-dsinfo                3.0.2               sha256:08dce29f87fd61f77e3c08172b8f3e9fd072069447ca53c6bf6c12e8c069383a   5 weeks ago         284MB
+docker/ucp-calico-node           3.0.2               sha256:ec807ed288f401b51c960a315e6278c532566e3eb87755d539c48a780eec1dd9   5 weeks ago         209MB
+docker/ucp-calico-cni            3.0.2               sha256:3161c5d9ee7b577a267a7e916705d203ed20a7e1338ba91cb7d986fc47d1e910   5 weeks ago         71.6MB
+calico/node                      latest              sha256:7eca10056c8e43ea42b317e55e873b41f4a38ddc098d9abf0b9e867e295ee322   2 months ago        248MB
+docker/ucp-pause                 3.0.1               sha256:bc71117dc259c6891721e58c9147b749285b8000c37eb2171f76b2e0845037dd   2 months ago        747kB
+docker/ucp-hyperkube             3.0.1               sha256:75881f30b64d422e1db1b8c21eb2130ee6f0c00c197353130defe27f2b113c80   2 months ago        527MB
+docker/ucp-calico-node           3.0.1               sha256:ae6404458ec2c0c564ab29c30cb578aa119378b1061aee0db29348d6df0edcbc   2 months ago        209MB
+docker/ucp-calico-cni            3.0.1               sha256:c7b8566672d450eff5b9fe1b531d56c4614eb641ef87f579fe6771d9239deca4   2 months ago        71.8MB
+docker/ucp-agent                 3.0.1               sha256:88aba8ea2c318cf36f66812ac1eb17f5d74e7d892a05b781695a3c4b68bbb08d   2 months ago        44.4MB
+osixia/phpldapadmin              <none>              sha256:3b8feb83bfba22b33fa674aaab3126838387f64a8ebf86262a44c1f038b78f83   4 months ago        245MB
+ehazlett/docker-demo             <none>              sha256:12738d0b650faa2b76e465865f242801d69b5dba582a48ab1ee6f482a2ed64cc   8 months ago        13.8MB
+ahromis/openldap-bootstrap       <none>              sha256:33e5efd655f2347918ef4681448831e9dd38ec69929eb9a9d96b541adbfec966   20 months ago       223MB
+
+docker stats --all --no-stream
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CONTAINER           CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+ba1006565f05        0.15%               4.891MiB / 7.638GiB   0.06%               0B / 0B             0B / 0B             8
+94d72ff2786b        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+2d88356c9ed8        0.00%               9.492MiB / 7.638GiB   0.12%               648B / 0B           0B / 0B             8
+38324bf84317        0.00%               1.555MiB / 7.638GiB   0.02%               54.4MB / 32.3MB     0B / 0B             2
+ebd3692a9ee7        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+9e2b74fe348b        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+40b4e48691e3        0.07%               59.7MiB / 7.638GiB    0.76%               4.62MB / 17MB       0B / 2.78MB         117
+e6ab28f06b38        0.00%               24.34MiB / 7.638GiB   0.31%               191kB / 226kB       0B / 4.75MB         6
+c7c9559060ab        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+3b70771b6aeb        0.00%               3.207MiB / 7.638GiB   0.04%               0B / 0B             0B / 0B             2
+1499d10d651f        1.77%               22.57MiB / 7.638GiB   0.29%               0B / 0B             0B / 0B             27
+ab21908ad627        0.00%               360KiB / 7.638GiB     0.00%               0B / 0B             0B / 0B             1
+bde63f6e0a74        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+0d653c34ec4e        0.14%               17.89MiB / 7.638GiB   0.23%               0B / 0B             0B / 0B             9
+080c94f68a1b        0.71%               45.09MiB / 7.638GiB   0.58%               0B / 0B             0B / 15.4kB         13
+85807fff2d45        0.00%               13.59MiB / 7.638GiB   0.17%               6GB / 10.5GB        0B / 0B             8
+7c7899b832ec        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+183951e17778        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+e1a7d9267858        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+bcfd2c894d0b        0.00%               0B / 0B               0.00%               0B / 0B             0B / 0B             0
+
+cat /etc/docker/daemon.json
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+    "storage-driver": "overlay2"
+}
+/check-config.sh
+~~~~~~~~~~~~~~~~
+[37minfo: reading kernel config from /boot/config-3.10.0-693.11.6.el7.x86_64 ...[m
+
+Generally Necessary:
+- [1mcgroup hierarchy[m: [1;31mnonexistent??[m
+    [33m(see https://github.com/tianon/cgroupfs-mount)[m
+- [37mCONFIG_NAMESPACES[m: [32menabled[m
+- [37mCONFIG_NET_NS[m: [32menabled[m
+- [37mCONFIG_PID_NS[m: [32menabled[m
+- [37mCONFIG_IPC_NS[m: [32menabled[m
+- [37mCONFIG_UTS_NS[m: [32menabled[m
+- [37mCONFIG_CGROUPS[m: [32menabled[m
+- [37mCONFIG_CGROUP_CPUACCT[m: [32menabled[m
+- [37mCONFIG_CGROUP_DEVICE[m: [32menabled[m
+- [37mCONFIG_CGROUP_FREEZER[m: [32menabled[m
+- [37mCONFIG_CGROUP_SCHED[m: [32menabled[m
+- [37mCONFIG_CPUSETS[m: [32menabled[m
+- [37mCONFIG_MEMCG[m: [32menabled[m
+- [37mCONFIG_KEYS[m: [32menabled[m
+- [37mCONFIG_VETH[m: [32menabled (as module)[m
+- [37mCONFIG_BRIDGE[m: [32menabled (as module)[m
+- [37mCONFIG_BRIDGE_NETFILTER[m: [32menabled (as module)[m
+- [37mCONFIG_NF_NAT_IPV4[m: [32menabled (as module)[m
+- [37mCONFIG_IP_NF_FILTER[m: [32menabled (as module)[m
+- [37mCONFIG_IP_NF_TARGET_MASQUERADE[m: [32menabled (as module)[m
+- [37mCONFIG_NETFILTER_XT_MATCH_ADDRTYPE[m: [32menabled (as module)[m
+- [37mCONFIG_NETFILTER_XT_MATCH_CONNTRACK[m: [32menabled (as module)[m
+- [37mCONFIG_NETFILTER_XT_MATCH_IPVS[m: [32menabled (as module)[m
+- [37mCONFIG_IP_NF_NAT[m: [32menabled (as module)[m
+- [37mCONFIG_NF_NAT[m: [32menabled (as module)[m
+- [37mCONFIG_NF_NAT_NEEDED[m: [32menabled[m
+- [37mCONFIG_POSIX_MQUEUE[m: [32menabled[m
+- [37mCONFIG_DEVPTS_MULTIPLE_INSTANCES[m: [32menabled[m
+
+Optional Features:
+- [37mCONFIG_USER_NS[m: [32menabled[m
+[1m  (RHEL7/CentOS7[m: [1;31mUser namespaces disabled; add 'user_namespace.enable=1' to boot command line)[m
+- [37mCONFIG_SECCOMP[m: [32menabled[m
+- [37mCONFIG_CGROUP_PIDS[m: [32menabled[m
+- [37mCONFIG_MEMCG_SWAP[m: [32menabled[m
+- [37mCONFIG_MEMCG_SWAP_ENABLED[m: [32menabled[m
+    [1;30m(cgroup swap accounting is currently enabled)[m
+- [37mCONFIG_MEMCG_KMEM[m: [32menabled[m
+- [1mCONFIG_RESOURCE_COUNTERS[m: [1;31mmissing[m
+- [37mCONFIG_BLK_CGROUP[m: [32menabled[m
+- [37mCONFIG_BLK_DEV_THROTTLING[m: [32menabled[m
+- [37mCONFIG_IOSCHED_CFQ[m: [32menabled[m
+- [37mCONFIG_CFQ_GROUP_IOSCHED[m: [32menabled[m
+- [37mCONFIG_CGROUP_PERF[m: [32menabled[m
+- [37mCONFIG_CGROUP_HUGETLB[m: [32menabled[m
+- [37mCONFIG_NET_CLS_CGROUP[m: [32menabled[m
+- [37mCONFIG_NETPRIO_CGROUP[m: [32menabled[m
+- [37mCONFIG_CFS_BANDWIDTH[m: [32menabled[m
+- [37mCONFIG_FAIR_GROUP_SCHED[m: [32menabled[m
+- [37mCONFIG_RT_GROUP_SCHED[m: [32menabled[m
+- [37mCONFIG_IP_VS[m: [32menabled (as module)[m
+- [37mCONFIG_IP_VS_NFCT[m: [32menabled[m
+- [37mCONFIG_IP_VS_RR[m: [32menabled (as module)[m
+- [1mCONFIG_EXT3_FS[m: [1;31mmissing[m
+- [1mCONFIG_EXT3_FS_XATTR[m: [1;31mmissing[m
+- [1mCONFIG_EXT3_FS_POSIX_ACL[m: [1;31mmissing[m
+- [1mCONFIG_EXT3_FS_SECURITY[m: [1;31mmissing[m
+    [1;30m(enable these ext3 configs if you are using ext3 as backing filesystem)[m
+- [37mCONFIG_EXT4_FS[m: [32menabled (as module)[m
+- [37mCONFIG_EXT4_FS_POSIX_ACL[m: [32menabled[m
+- [37mCONFIG_EXT4_FS_SECURITY[m: [32menabled[m
+- Network Drivers:
+  - "[34moverlay[m":
+    - [37mCONFIG_VXLAN[m: [32menabled (as module)[m
+      Optional (for encrypted networks):
+      - [37mCONFIG_CRYPTO[m: [32menabled[m
+      - [37mCONFIG_CRYPTO_AEAD[m: [32menabled[m
+      - [37mCONFIG_CRYPTO_GCM[m: [32menabled (as module)[m
+      - [37mCONFIG_CRYPTO_SEQIV[m: [32menabled[m
+      - [37mCONFIG_CRYPTO_GHASH[m: [32menabled (as module)[m
+      - [37mCONFIG_XFRM[m: [32menabled[m
+      - [37mCONFIG_XFRM_USER[m: [32menabled[m
+      - [37mCONFIG_XFRM_ALGO[m: [32menabled[m
+      - [37mCONFIG_INET_ESP[m: [32menabled (as module)[m
+      - [37mCONFIG_INET_XFRM_MODE_TRANSPORT[m: [32menabled (as module)[m
+  - "[34mipvlan[m":
+    - [1mCONFIG_IPVLAN[m: [1;31mmissing[m
+  - "[34mmacvlan[m":
+    - [37mCONFIG_MACVLAN[m: [32menabled (as module)[m
+    - [37mCONFIG_DUMMY[m: [32menabled (as module)[m
+  - "[34mftp,tftp client in container[m":
+    - [37mCONFIG_NF_NAT_FTP[m: [32menabled (as module)[m
+    - [37mCONFIG_NF_CONNTRACK_FTP[m: [32menabled (as module)[m
+    - [37mCONFIG_NF_NAT_TFTP[m: [32menabled (as module)[m
+    - [37mCONFIG_NF_CONNTRACK_TFTP[m: [32menabled (as module)[m
+- Storage Drivers:
+  - "[34maufs[m":
+    - [1mCONFIG_AUFS_FS[m: [1;31mmissing[m
+  - "[34mbtrfs[m":
+    - [37mCONFIG_BTRFS_FS[m: [32menabled (as module)[m
+    - [37mCONFIG_BTRFS_FS_POSIX_ACL[m: [32menabled[m
+  - "[34mdevicemapper[m":
+    - [37mCONFIG_BLK_DEV_DM[m: [32menabled (as module)[m
+    - [37mCONFIG_DM_THIN_PROVISIONING[m: [32menabled (as module)[m
+  - "[34moverlay[m":
+    - [37mCONFIG_OVERLAY_FS[m: [32menabled (as module)[m
+  - "[34mzfs[m":
+    - [1m/dev/zfs[m: [1;31mmissing[m
+    - [1mzfs command[m: [1;31mmissing[m
+    - [1mzpool command[m: [1;31mmissing[m
+
+Limits:
+[37m- /proc/sys/kernel/keys/root_maxkeys[m: [32m1000000[m
+
+
+=========================
+Docker Trusted Registry 1.4.3
+=========================
+
+The '/usr/local/etc/dtr' directory does not exist.
+=========================
+Docker Trusted Registry 2.0.0 or later
+=========================
+[]
+Error: No such network: dtr-br
+[]
+Error: No such network: dtr-ol
+
+
+=========================
+System Info
+=========================
+
+
+hostname
+~~~~~~~~
+ip-172-31-10-96.ec2.internal
+
+cat /etc/os-release /etc/redhat-release /etc/system-release
+~~~~~~~~~~~~~~~~~
+NAME="Red Hat Enterprise Linux Server"
+VERSION="7.4 (Maipo)"
+ID="rhel"
+ID_LIKE="fedora"
+VARIANT="Server"
+VARIANT_ID="server"
+VERSION_ID="7.4"
+PRETTY_NAME="Red Hat Enterprise Linux Server 7.4 (Maipo)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:7.4:GA:server"
+HOME_URL="https://www.redhat.com/"
+BUG_REPORT_URL="https://bugzilla.redhat.com/"
+
+REDHAT_BUGZILLA_PRODUCT="Red Hat Enterprise Linux 7"
+REDHAT_BUGZILLA_PRODUCT_VERSION=7.4
+REDHAT_SUPPORT_PRODUCT="Red Hat Enterprise Linux"
+REDHAT_SUPPORT_PRODUCT_VERSION="7.4"
+Red Hat Enterprise Linux Server release 7.4 (Maipo)
+Red Hat Enterprise Linux Server release 7.4 (Maipo)
+
+cat /proc/version
+~~~~~~~~~~~~~~~~~
+Linux version 3.10.0-693.11.6.el7.x86_64 (mockbuild@x86-041.build.eng.bos.redhat.com) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) #1 SMP Thu Dec 28 14:23:39 EST 2017
+
+cat /proc/cpuinfo
+~~~~~~~~~~~~~~~~~
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+stepping	: 1
+microcode	: 0xb00002a
+cpu MHz		: 2300.034
+cache size	: 46080 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bogomips	: 4600.07
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 79
+model name	: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+stepping	: 1
+microcode	: 0xb00002a
+cpu MHz		: 2300.034
+cache size	: 46080 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bogomips	: 4600.07
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+cat /proc/meminfo
+~~~~~~~~~~~~~~~~~
+MemTotal:        8009024 kB
+MemFree:         1650244 kB
+MemAvailable:    6309628 kB
+Buffers:            2600 kB
+Cached:          5094988 kB
+SwapCached:            0 kB
+Active:          3119980 kB
+Inactive:        2620856 kB
+Active(anon):     895404 kB
+Inactive(anon):   192184 kB
+Active(file):    2224576 kB
+Inactive(file):  2428672 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:              6720 kB
+Writeback:             0 kB
+AnonPages:        643208 kB
+Mapped:           194892 kB
+Shmem:            444464 kB
+Slab:             461132 kB
+SReclaimable:     309024 kB
+SUnreclaim:       152108 kB
+KernelStack:        8688 kB
+PageTables:        10344 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4004512 kB
+Committed_AS:    4025880 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       27308 kB
+VmallocChunk:   34359671256 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    104448 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      313344 kB
+DirectMap2M:     8075264 kB
+
+cat /proc/cgroups
+~~~~~~~~~~~~~~~~~
+#subsys_name	hierarchy	num_cgroups	enabled
+cpuset	9	20	1
+cpu	8	124	1
+cpuacct	8	124	1
+memory	11	124	1
+devices	5	124	1
+freezer	2	20	1
+net_cls	4	20	1
+blkio	6	124	1
+perf_event	3	20	1
+hugetlb	7	20	1
+pids	10	19	1
+net_prio	4	20	1
+
+cat /proc/self/cgroup
+~~~~~~~~~~~~~~~~~~~~~
+11:memory:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+10:pids:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+9:cpuset:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+8:cpuacct,cpu:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+7:hugetlb:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+6:blkio:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+5:devices:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+4:net_prio,net_cls:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+3:perf_event:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+2:freezer:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+1:name=systemd:/docker/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44
+
+df -h
+~~~~~
+Filesystem                                 Size  Used Avail Use% Mounted on
+overlay                                     20G  3.7G   17G  19% /
+tmpfs                                      3.9G     0  3.9G   0% /dev
+/dev/xvdb                                   20G  3.7G   17G  19% /swarm
+/dev/xvda2                                  10G  1.5G  8.6G  15% /etc
+tmpfs                                      3.9G  397M  3.5G  11% /run
+tmpfs                                      783M     0  783M   0% /run/user/0
+tmpfs                                      783M     0  783M   0% /run/user/1000
+shm                                         64M     0   64M   0% /dev/shm
+tmpfs                                      3.9G     0  3.9G   0% /sys/fs/cgroup
+fs-7600993e.efs.us-east-1.amazonaws.com:/  8.0E     0  8.0E   0% /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/rootfs/mnt/efs/reg
+fs-7700993f.efs.us-east-1.amazonaws.com:/  8.0E     0  8.0E   0% /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/rootfs/mnt/efs/max
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/5c7bbc4ffd8479f347cc5212796aec4547c398e2438106e8274bd0375b9609a4/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/b63cbae9d955ca6b9a683122def396024e0dd1f9c8d9eaa1e7936d34cd280243/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/d6bd7dfcfe2c583fe7d394a18e9ce0510cde58b8562a82d1f43e64f4189fa2d2/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/c10ea1b576b658341e3106d4d73d4d0b9ef1037dc28ca0997a60abf8fb9ef210/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/4de79ff483d8bc6228eeefd79a518acf11450c492489668cf9d682fbe23d4f06/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/a390919f8dd4ad66e868137c8cc308e4f5ea9c6376116d78345dee038839a628/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/445823d88040da04164e881a281beb3271700159a0633991af03911a9dfb8b9c/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/31b908fb1e1af1e02635ebd3a9d6823e7129d0b3fb11f543018ab9fa42d91d4d/merged
+overlay                                     20G  3.7G   17G  19% /var/lib/docker/overlay2/50aec787986c44ff0946ede7894ae4e25b86184ba31d38d5580765031b3e3ba4/merged
+shm                                         64M     0   64M   0% /var/lib/docker/containers/0d653c34ec4eea56232133af8f452121a9e55d68039c243d42b5a6d97e2d7e5e/shm
+shm                                         64M     0   64M   0% /var/lib/docker/containers/85807fff2d45fa2af8ef1fe433f91549cd98a8165619d22c04cf70a9d334b94a/shm
+shm                                         64M     0   64M   0% /var/lib/docker/containers/ab21908ad627fa0969b0e78227e08533e583ab17dd56611eff065b788473f614/shm
+shm                                         64M     0   64M   0% /var/lib/docker/containers/40b4e48691e3537b2983411438827a7b8701d6b891a34a77378d3852e34e8115/shm
+shm                                         64M     0   64M   0% /var/lib/docker/containers/e6ab28f06b38cc496fc2cabeb4c9f6121eef95a4d2ed8502a5cb68de3f659b74/shm
+shm                                         64M     0   64M   0% /var/lib/docker/containers/38324bf843176c77d7cf65173dea9701abb39445bb0ed36000bf3ae79fe9f34e/shm
+shm                                         64M     0   64M   0% /var/lib/docker/containers/2d88356c9ed84030b73a7f6e7c9b9a1512e7fe465172097b388757e87888f20d/shm
+
+mount
+~~~~~
+overlay on / type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/FGEXQK7C55YZ3RVCMYESYENCXJ:/var/lib/docker/overlay2/l/HQ7GAEWBXMDWIWG2OKMSOKHH45:/var/lib/docker/overlay2/l/3NICUEF53CH5JJC65XYHWWY5MS:/var/lib/docker/overlay2/l/FR4W7SLQYWZE5VM3QJ42GNEXY3:/var/lib/docker/overlay2/l/5EIGWYCATXMBX32WIKA2OMOF7V:/var/lib/docker/overlay2/l/LVUMO6KHEKEGEZJKX3SOE7TN7V:/var/lib/docker/overlay2/l/U2E5LCWFKQYZJXU34PGIHOC6EG:/var/lib/docker/overlay2/l/6NQMV7TI23ASJSN3VNNYKO7GN3:/var/lib/docker/overlay2/l/AA2AWXDIMEOATCRX6ZDMEWSGO7:/var/lib/docker/overlay2/l/3SSSDRILMLTXORBKL4MLFLNDKV:/var/lib/docker/overlay2/l/PNSJVIW5TUX2UKVURTPEBXYJWC,upperdir=/var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/diff,workdir=/var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/work)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,seclabel,mode=755)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime,seclabel)
+/dev/xvdb on /ucp-kv-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-cluster-root-ca type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-auth-api-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-auth-worker-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-client-root-ca type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-controller-client-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-auth-worker-data type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvda2 on /etc type xfs (ro,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-node-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+tmpfs on /run/user/0 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=800904k,mode=700)
+tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=800904k,mode=700,uid=1000,gid=1000)
+proc on /run/docker/netns/default type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/f3921d2a066b type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/ingress_sbox type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-vw0lsec8y3 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-ix5cje897w type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/2b83cee932e6 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/0f2ed9a44424 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-ysv3mkpq9l type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/f7a5cf79f89a type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/7c75ae54d422 type proc (rw,nosuid,nodev,noexec,relatime)
+/dev/xvdb on /ucp-controller-server-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /swarm type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvda2 on /boot type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /ucp-auth-store-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+proc on /host/proc type proc (ro,relatime)
+systemd-1 on /host/proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=28,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12669)
+/dev/xvda2 on /var/log type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /etc/hosts type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /etc/hostname type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /etc/resolv.conf type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,relatime,seclabel,mode=755)
+cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio,net_cls)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct,cpu)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+tmpfs on /run/docker.sock type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+/dev/xvdb on /var/lib/docker type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/plugins type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/plugins/854831a85aa9b667d5e8bc8bd540b25e565830b084ca75387ced3b4283c715e1/propagated-mount type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+tmpfs on /var/lib/docker/plugins/854831a85aa9b667d5e8bc8bd540b25e565830b084ca75387ced3b4283c715e1/propagated-mount/plugins type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+tmpfs on /var/lib/docker/plugins/854831a85aa9b667d5e8bc8bd540b25e565830b084ca75387ced3b4283c715e1/propagated-mount/metrics.sock type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+/dev/xvdb on /var/lib/docker/plugins/854831a85aa9b667d5e8bc8bd540b25e565830b084ca75387ced3b4283c715e1/rootfs/run/docker type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+tmpfs on /var/lib/docker/plugins/854831a85aa9b667d5e8bc8bd540b25e565830b084ca75387ced3b4283c715e1/rootfs/run/docker/plugins type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+tmpfs on /var/lib/docker/plugins/854831a85aa9b667d5e8bc8bd540b25e565830b084ca75387ced3b4283c715e1/rootfs/run/docker/metrics.sock type tmpfs (ro,relatime,seclabel,mode=755)
+/dev/xvdb on /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/propagated-mount type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+fs-7600993e.efs.us-east-1.amazonaws.com:/ on /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/propagated-mount/efs/reg type nfs4 (rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=172.31.10.96,local_lock=none,addr=172.31.12.137)
+fs-7700993f.efs.us-east-1.amazonaws.com:/ on /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/propagated-mount/efs/max type nfs4 (rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=172.31.10.96,local_lock=none,addr=172.31.5.120)
+/dev/xvdb on /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/rootfs/mnt type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+fs-7600993e.efs.us-east-1.amazonaws.com:/ on /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/rootfs/mnt/efs/reg type nfs4 (rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=172.31.10.96,local_lock=none,addr=172.31.12.137)
+fs-7700993f.efs.us-east-1.amazonaws.com:/ on /var/lib/docker/plugins/7817e91605745c516947025aec11448adf5e62c2bb97e6dec0e3ace0e16a792b/rootfs/mnt/efs/max type nfs4 (rw,relatime,vers=4.1,rsize=1048576,wsize=1048576,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,clientaddr=172.31.10.96,local_lock=none,addr=172.31.5.120)
+/dev/xvdb on /var/lib/docker/overlay2 type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+overlay on /var/lib/docker/overlay2/5c7bbc4ffd8479f347cc5212796aec4547c398e2438106e8274bd0375b9609a4/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/MH3MWVWRJSWM2WESTUJIKR46KP:/var/lib/docker/overlay2/l/MKAYFNU6R6Q22O3A77LHIVNT4P:/var/lib/docker/overlay2/l/JV7JN3NHGZ7TIEOTV47HILFGSQ:/var/lib/docker/overlay2/l/SVJJEG6RHXIVV72ZPZRVF7SLDX,upperdir=/var/lib/docker/overlay2/5c7bbc4ffd8479f347cc5212796aec4547c398e2438106e8274bd0375b9609a4/diff,workdir=/var/lib/docker/overlay2/5c7bbc4ffd8479f347cc5212796aec4547c398e2438106e8274bd0375b9609a4/work)
+overlay on /var/lib/docker/overlay2/b63cbae9d955ca6b9a683122def396024e0dd1f9c8d9eaa1e7936d34cd280243/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/UOCA55B4BF6QMGNBFH4AQHWMR7:/var/lib/docker/overlay2/l/6MXXZAZNPMVDCC2WGHIWGFU7Z3:/var/lib/docker/overlay2/l/QFAE2UQVUYF2JBR2NGILQWYJK7:/var/lib/docker/overlay2/l/2BLIBZ6BMB3UONUGLHT5UXSYDX:/var/lib/docker/overlay2/l/KCHE4PI5ZG7P4HMIIU3OMUUDWU:/var/lib/docker/overlay2/l/B5H6GX5RMOHQXAIZF7NTLP4YP3:/var/lib/docker/overlay2/l/UPNLWPJOVFA67MKIYG5QUSL2VW:/var/lib/docker/overlay2/l/LVUMO6KHEKEGEZJKX3SOE7TN7V:/var/lib/docker/overlay2/l/U2E5LCWFKQYZJXU34PGIHOC6EG:/var/lib/docker/overlay2/l/6NQMV7TI23ASJSN3VNNYKO7GN3:/var/lib/docker/overlay2/l/AA2AWXDIMEOATCRX6ZDMEWSGO7:/var/lib/docker/overlay2/l/3SSSDRILMLTXORBKL4MLFLNDKV:/var/lib/docker/overlay2/l/PNSJVIW5TUX2UKVURTPEBXYJWC,upperdir=/var/lib/docker/overlay2/b63cbae9d955ca6b9a683122def396024e0dd1f9c8d9eaa1e7936d34cd280243/diff,workdir=/var/lib/docker/overlay2/b63cbae9d955ca6b9a683122def396024e0dd1f9c8d9eaa1e7936d34cd280243/work)
+overlay on /var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/ZI2RIZK6MMYWXAH6EU7XZYH2M6:/var/lib/docker/overlay2/l/6MXXZAZNPMVDCC2WGHIWGFU7Z3:/var/lib/docker/overlay2/l/QFAE2UQVUYF2JBR2NGILQWYJK7:/var/lib/docker/overlay2/l/2BLIBZ6BMB3UONUGLHT5UXSYDX:/var/lib/docker/overlay2/l/KCHE4PI5ZG7P4HMIIU3OMUUDWU:/var/lib/docker/overlay2/l/B5H6GX5RMOHQXAIZF7NTLP4YP3:/var/lib/docker/overlay2/l/UPNLWPJOVFA67MKIYG5QUSL2VW:/var/lib/docker/overlay2/l/LVUMO6KHEKEGEZJKX3SOE7TN7V:/var/lib/docker/overlay2/l/U2E5LCWFKQYZJXU34PGIHOC6EG:/var/lib/docker/overlay2/l/6NQMV7TI23ASJSN3VNNYKO7GN3:/var/lib/docker/overlay2/l/AA2AWXDIMEOATCRX6ZDMEWSGO7:/var/lib/docker/overlay2/l/3SSSDRILMLTXORBKL4MLFLNDKV:/var/lib/docker/overlay2/l/PNSJVIW5TUX2UKVURTPEBXYJWC,upperdir=/var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/diff,workdir=/var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/work)
+overlay on /var/lib/docker/overlay2/d6bd7dfcfe2c583fe7d394a18e9ce0510cde58b8562a82d1f43e64f4189fa2d2/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/MFKQB7QSTCZP56B4BPMT46XPIF:/var/lib/docker/overlay2/l/PIJNRGU4MTATQEMZMQSGCGZEDQ:/var/lib/docker/overlay2/l/5YSAST7X5EBMYXVRKDYKEAB74Y:/var/lib/docker/overlay2/l/4AVNNFN33IRW3YBAUU6RDYILAB,upperdir=/var/lib/docker/overlay2/d6bd7dfcfe2c583fe7d394a18e9ce0510cde58b8562a82d1f43e64f4189fa2d2/diff,workdir=/var/lib/docker/overlay2/d6bd7dfcfe2c583fe7d394a18e9ce0510cde58b8562a82d1f43e64f4189fa2d2/work)
+overlay on /var/lib/docker/overlay2/c10ea1b576b658341e3106d4d73d4d0b9ef1037dc28ca0997a60abf8fb9ef210/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/U67ODJTSDSZBGG5SCOSOM6JOWX:/var/lib/docker/overlay2/l/QII5UR3XIXBFUZVWLV6PYN5SR4:/var/lib/docker/overlay2/l/EV2757H23OQ2YF7P6C4VS6IWFA:/var/lib/docker/overlay2/l/VZYYZSR3QQ7FFSFGGZC2LR6VLN:/var/lib/docker/overlay2/l/FPMSRSDEXAKDPUKKUHXXH25WNU:/var/lib/docker/overlay2/l/SVJJEG6RHXIVV72ZPZRVF7SLDX,upperdir=/var/lib/docker/overlay2/c10ea1b576b658341e3106d4d73d4d0b9ef1037dc28ca0997a60abf8fb9ef210/diff,workdir=/var/lib/docker/overlay2/c10ea1b576b658341e3106d4d73d4d0b9ef1037dc28ca0997a60abf8fb9ef210/work)
+overlay on /var/lib/docker/overlay2/4de79ff483d8bc6228eeefd79a518acf11450c492489668cf9d682fbe23d4f06/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/TZ2P5ACYAXPV67QNJEFPJXQUSH:/var/lib/docker/overlay2/l/LKGBDZOYRGEMNLCJMDYJQB6ICL:/var/lib/docker/overlay2/l/PYZ34CS4DXD5V6QW4HVXFUHEGR:/var/lib/docker/overlay2/l/CGRLYNTXVBQG7MXDIPI252LB7G:/var/lib/docker/overlay2/l/WZEMLT5HOHFOWNIBUUAHNXR5PO:/var/lib/docker/overlay2/l/IKDM65WUNOG6PZONKR66DKIS6Y:/var/lib/docker/overlay2/l/YRTU6JYSZL3L6JP55TTLUQJBI5:/var/lib/docker/overlay2/l/F73BZCQAUW7TTE252XF44T6S5U:/var/lib/docker/overlay2/l/XL4OZ2BXG4KERGIXH6PGFAJP4X:/var/lib/docker/overlay2/l/UREPOUVGV4MNE6VJO3KEEM7KUX:/var/lib/docker/overlay2/l/BAUKOEQFYDJA7KO4NY5WF2TAXW,upperdir=/var/lib/docker/overlay2/4de79ff483d8bc6228eeefd79a518acf11450c492489668cf9d682fbe23d4f06/diff,workdir=/var/lib/docker/overlay2/4de79ff483d8bc6228eeefd79a518acf11450c492489668cf9d682fbe23d4f06/work)
+overlay on /var/lib/docker/overlay2/a390919f8dd4ad66e868137c8cc308e4f5ea9c6376116d78345dee038839a628/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/TTKHTL4IKVJMEHD4U5ICBQLEFG:/var/lib/docker/overlay2/l/FD2O4B3BPCFGFI3KZOWTVVWEZE:/var/lib/docker/overlay2/l/OUZDRRF6QV2JGWSJC4HX3VTC75:/var/lib/docker/overlay2/l/Q2OSJ3EKWGD2WWQMDMDPT5VPZU:/var/lib/docker/overlay2/l/GEBH3X3NESFO37BRU3QQA7GR6N:/var/lib/docker/overlay2/l/TOKX6KAM563SROJSYCURU6W7EE:/var/lib/docker/overlay2/l/M4A3UVOIXXVFSXDJUV4NDWTJAT:/var/lib/docker/overlay2/l/6ZHZLARG6DPPE2PCOR6ZNQDI2C:/var/lib/docker/overlay2/l/UWUD5G5CNT3P2OMT5GJHVAMWDD:/var/lib/docker/overlay2/l/PJ3NFTBBEDMTTHBYGGOCNR23SJ,upperdir=/var/lib/docker/overlay2/a390919f8dd4ad66e868137c8cc308e4f5ea9c6376116d78345dee038839a628/diff,workdir=/var/lib/docker/overlay2/a390919f8dd4ad66e868137c8cc308e4f5ea9c6376116d78345dee038839a628/work)
+overlay on /var/lib/docker/overlay2/445823d88040da04164e881a281beb3271700159a0633991af03911a9dfb8b9c/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/VDY6FW5BJI4SYJXRQ24DU72BAN:/var/lib/docker/overlay2/l/U4XYPML5FFV446YWBTK77HGWG7:/var/lib/docker/overlay2/l/YZ77TYXV3X7FELZBWNRVVAWUCI:/var/lib/docker/overlay2/l/AM32YRJYGDJXAWQM4TGMT4VU5J:/var/lib/docker/overlay2/l/3JVUTGSO673Y4LGPE2E7LQUYDP:/var/lib/docker/overlay2/l/PFRDSVVC2BI5GIALKOOU72TLLZ:/var/lib/docker/overlay2/l/PVHNBCLJRTJHTFV6IHMZPNA57F:/var/lib/docker/overlay2/l/M2XNMKLGVMKGMTQSHNJCX5M4HL:/var/lib/docker/overlay2/l/WRBTCA53LLVK647BDNGS5G6THI:/var/lib/docker/overlay2/l/XDZPU54GZSLZH723XEVDBNHURT:/var/lib/docker/overlay2/l/6DOVYCZUEARCKSSTYOVKXF2QEO,upperdir=/var/lib/docker/overlay2/445823d88040da04164e881a281beb3271700159a0633991af03911a9dfb8b9c/diff,workdir=/var/lib/docker/overlay2/445823d88040da04164e881a281beb3271700159a0633991af03911a9dfb8b9c/work)
+overlay on /var/lib/docker/overlay2/31b908fb1e1af1e02635ebd3a9d6823e7129d0b3fb11f543018ab9fa42d91d4d/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/POLYBDI36GA4BVX6GYA4RP5QMM:/var/lib/docker/overlay2/l/MWQN53BE6VXM4F56AN7PV776XO:/var/lib/docker/overlay2/l/SUHBNAKQ6PWI3JQ5M2ZI3LPH3V:/var/lib/docker/overlay2/l/LXX67NM2IBZHXGM4UTNUSA4SQ4:/var/lib/docker/overlay2/l/YSP63SCBUB2N76XWJW7LYATEKZ,upperdir=/var/lib/docker/overlay2/31b908fb1e1af1e02635ebd3a9d6823e7129d0b3fb11f543018ab9fa42d91d4d/diff,workdir=/var/lib/docker/overlay2/31b908fb1e1af1e02635ebd3a9d6823e7129d0b3fb11f543018ab9fa42d91d4d/work)
+overlay on /var/lib/docker/overlay2/50aec787986c44ff0946ede7894ae4e25b86184ba31d38d5580765031b3e3ba4/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/DBHKNMSMTUJDBDPMXTG4M3PD6P:/var/lib/docker/overlay2/l/MKAYFNU6R6Q22O3A77LHIVNT4P:/var/lib/docker/overlay2/l/JV7JN3NHGZ7TIEOTV47HILFGSQ:/var/lib/docker/overlay2/l/SVJJEG6RHXIVV72ZPZRVF7SLDX,upperdir=/var/lib/docker/overlay2/50aec787986c44ff0946ede7894ae4e25b86184ba31d38d5580765031b3e3ba4/diff,workdir=/var/lib/docker/overlay2/50aec787986c44ff0946ede7894ae4e25b86184ba31d38d5580765031b3e3ba4/work)
+overlay on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/FGEXQK7C55YZ3RVCMYESYENCXJ:/var/lib/docker/overlay2/l/HQ7GAEWBXMDWIWG2OKMSOKHH45:/var/lib/docker/overlay2/l/3NICUEF53CH5JJC65XYHWWY5MS:/var/lib/docker/overlay2/l/FR4W7SLQYWZE5VM3QJ42GNEXY3:/var/lib/docker/overlay2/l/5EIGWYCATXMBX32WIKA2OMOF7V:/var/lib/docker/overlay2/l/LVUMO6KHEKEGEZJKX3SOE7TN7V:/var/lib/docker/overlay2/l/U2E5LCWFKQYZJXU34PGIHOC6EG:/var/lib/docker/overlay2/l/6NQMV7TI23ASJSN3VNNYKO7GN3:/var/lib/docker/overlay2/l/AA2AWXDIMEOATCRX6ZDMEWSGO7:/var/lib/docker/overlay2/l/3SSSDRILMLTXORBKL4MLFLNDKV:/var/lib/docker/overlay2/l/PNSJVIW5TUX2UKVURTPEBXYJWC,upperdir=/var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/diff,workdir=/var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/work)
+overlay on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged type overlay (rw,relatime,seclabel,lowerdir=/var/lib/docker/overlay2/l/FGEXQK7C55YZ3RVCMYESYENCXJ:/var/lib/docker/overlay2/l/HQ7GAEWBXMDWIWG2OKMSOKHH45:/var/lib/docker/overlay2/l/3NICUEF53CH5JJC65XYHWWY5MS:/var/lib/docker/overlay2/l/FR4W7SLQYWZE5VM3QJ42GNEXY3:/var/lib/docker/overlay2/l/5EIGWYCATXMBX32WIKA2OMOF7V:/var/lib/docker/overlay2/l/LVUMO6KHEKEGEZJKX3SOE7TN7V:/var/lib/docker/overlay2/l/U2E5LCWFKQYZJXU34PGIHOC6EG:/var/lib/docker/overlay2/l/6NQMV7TI23ASJSN3VNNYKO7GN3:/var/lib/docker/overlay2/l/AA2AWXDIMEOATCRX6ZDMEWSGO7:/var/lib/docker/overlay2/l/3SSSDRILMLTXORBKL4MLFLNDKV:/var/lib/docker/overlay2/l/PNSJVIW5TUX2UKVURTPEBXYJWC,upperdir=/var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/diff,workdir=/var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/work)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/dev type tmpfs (rw,nosuid,seclabel,mode=755)
+devpts on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=666)
+mqueue on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime,seclabel)
+shm on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+sysfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+tmpfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup type tmpfs (ro,relatime,seclabel,mode=755)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/systemd type cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio,net_cls)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/cpu,cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct,cpu)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-kv-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-cluster-root-ca type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-auth-api-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-auth-worker-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-client-root-ca type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-controller-client-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-auth-worker-data type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvda2 on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/etc type xfs (ro,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/etc/hosts type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/etc/hostname type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/etc/resolv.conf type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-node-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+tmpfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+tmpfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/user/0 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=800904k,mode=700)
+tmpfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=800904k,mode=700,uid=1000,gid=1000)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/default type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/f3921d2a066b type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/ingress_sbox type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/1-vw0lsec8y3 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/1-ix5cje897w type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/2b83cee932e6 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/0f2ed9a44424 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/1-ysv3mkpq9l type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/f7a5cf79f89a type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker/netns/7c75ae54d422 type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/run/docker.sock type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-controller-server-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/swarm type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvda2 on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/boot type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+/dev/xvdb on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/ucp-auth-store-certs type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+proc on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/host/proc type proc (ro,relatime)
+systemd-1 on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/host/proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=28,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=12669)
+/dev/xvda2 on /var/lib/docker/overlay2/9e028cde201f8caff42cfed1eef4a0e7b81ca1cdc50b9dd1c5bbf92ae15c4cf3/merged/var/log type xfs (rw,relatime,seclabel,attr2,inode64,noquota)
+shm on /var/lib/docker/containers/0d653c34ec4eea56232133af8f452121a9e55d68039c243d42b5a6d97e2d7e5e/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/85807fff2d45fa2af8ef1fe433f91549cd98a8165619d22c04cf70a9d334b94a/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/ab21908ad627fa0969b0e78227e08533e583ab17dd56611eff065b788473f614/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/40b4e48691e3537b2983411438827a7b8701d6b891a34a77378d3852e34e8115/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/e6ab28f06b38cc496fc2cabeb4c9f6121eef95a4d2ed8502a5cb68de3f659b74/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/38324bf843176c77d7cf65173dea9701abb39445bb0ed36000bf3ae79fe9f34e/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/2d88356c9ed84030b73a7f6e7c9b9a1512e7fe465172097b388757e87888f20d/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+shm on /var/lib/docker/containers/ba1006565f05c307e2b8e237c586406b7b58007062e74546c89382fd0bc54c44/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel,size=65536k)
+tmpfs on /run/docker.pid type tmpfs (ro,relatime,seclabel,mode=755)
+tmpfs on /run/calico type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+tmpfs on /run/docker type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+proc on /run/docker/netns/default type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/f3921d2a066b type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/ingress_sbox type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-vw0lsec8y3 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-ix5cje897w type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/2b83cee932e6 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/0f2ed9a44424 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-ysv3mkpq9l type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/f7a5cf79f89a type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/7c75ae54d422 type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /run/docker/netns type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+proc on /run/docker/netns/default type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/f3921d2a066b type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/ingress_sbox type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-vw0lsec8y3 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-ix5cje897w type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/2b83cee932e6 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/0f2ed9a44424 type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/1-ysv3mkpq9l type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/f7a5cf79f89a type proc (rw,nosuid,nodev,noexec,relatime)
+proc on /run/docker/netns/7c75ae54d422 type proc (rw,nosuid,nodev,noexec,relatime)
+
+vmstat 1 5
+~~~~~~~~~~
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 1650004   2600 5556292    0    0     0     2    6    5  1  1 98  0  0
+ 0  0      0 1650188   2600 5556396    0    0     0     0 1737 2393  0  1 99  0  0
+ 0  0      0 1649488   2600 5556412    0    0     0     0 3100 4478  3  1 96  0  1
+ 0  0      0 1649504   2600 5556412    0    0     0     0 2549 3242  3  3 95  0  0
+ 0  0      0 1649544   2600 5556412    0    0     0     0 1705 2430  1  0 99  0  1
+
+iostat 1 5
+~~~~~~~~~~
+Linux 3.10.0-693.11.6.el7.x86_64 (ip-172-31-10-96.ec2.internal) 	07/30/18 	_x86_64_	(2 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.85    0.00    0.56    0.00    0.16   98.44
+
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+xvda              0.20         0.08         1.72     280872    5765181
+xvdb              0.15         0.01         1.81      18995    6041149
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.51    0.00    0.51    0.00    0.00   98.99
+
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+xvda              0.00         0.00         0.00          0          0
+xvdb              0.00         0.00         0.00          0          0
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.00    0.00    0.00    0.00    0.00  100.00
+
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+xvda              0.00         0.00         0.00          0          0
+xvdb              0.00         0.00         0.00          0          0
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           0.50    0.00    0.50    0.00    0.50   98.49
+
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+xvda              0.00         0.00         0.00          0          0
+xvdb             18.00         0.00       201.00          0        201
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+           2.04    0.00    2.55    0.00    0.00   95.41
+
+Device:            tps    kB_read/s    kB_wrtn/s    kB_read    kB_wrtn
+xvda              0.00         0.00         0.00          0          0
+xvdb              0.00         0.00         0.00          0          0
+
+
+dmidecode
+~~~~~~~~~
+# dmidecode 3.0
+Getting SMBIOS data from sysfs.
+SMBIOS 2.7 present.
+12 structures occupying 398 bytes.
+Table at 0x000EB01F.
+
+Handle 0x0000, DMI type 0, 24 bytes
+BIOS Information
+	Vendor: Xen
+	Version: 4.2.amazon
+	Release Date: 08/24/2006
+	Address: 0xE8000
+	Runtime Size: 96 kB
+	ROM Size: 64 kB
+	Characteristics:
+		PCI is supported
+		EDD is supported
+		Targeted content distribution is supported
+	BIOS Revision: 4.2
+
+Handle 0x0100, DMI type 1, 27 bytes
+System Information
+	Manufacturer: Xen
+	Product Name: HVM domU
+	Version: 4.2.amazon
+	Serial Number: ec2fa73d-a3fa-3d38-a0d5-9200c1c06808
+	UUID: EC2FA73D-A3FA-3D38-A0D5-9200C1C06808
+	Wake-up Type: Power Switch
+	SKU Number: Not Specified
+	Family: Not Specified
+
+Handle 0x0300, DMI type 3, 13 bytes
+Chassis Information
+	Manufacturer: Xen
+	Type: Other
+	Lock: Not Present
+	Version: Not Specified
+	Serial Number: Not Specified
+	Asset Tag: Not Specified
+	Boot-up State: Safe
+	Power Supply State: Safe
+	Thermal State: Safe
+	Security Status: Unknown
+
+Handle 0x0401, DMI type 4, 26 bytes
+Processor Information
+	Socket Designation: CPU 1
+	Type: Central Processor
+	Family: Other
+	Manufacturer: Intel
+	ID: F1 06 04 00 FF FB 89 17
+	Version: Not Specified
+	Voltage: Unknown
+	External Clock: Unknown
+	Max Speed: 2300 MHz
+	Current Speed: 2300 MHz
+	Status: Populated, Enabled
+	Upgrade: Other
+
+Handle 0x0402, DMI type 4, 26 bytes
+Processor Information
+	Socket Designation: CPU 2
+	Type: Central Processor
+	Family: Other
+	Manufacturer: Intel
+	ID: F1 06 04 00 FF FB 89 17
+	Version: Not Specified
+	Voltage: Unknown
+	External Clock: Unknown
+	Max Speed: 2300 MHz
+	Current Speed: 2300 MHz
+	Status: Populated, Enabled
+	Upgrade: Other
+
+Handle 0x0B00, DMI type 11, 5 bytes
+OEM Strings
+	String 1: Xen
+
+Handle 0x1000, DMI type 16, 19 bytes
+Physical Memory Array
+	Location: Other
+	Use: System Memory
+	Error Correction Type: Multi-bit ECC
+	Maximum Capacity: 8 GB
+	Error Information Handle: Not Provided
+	Number Of Devices: 1
+
+Handle 0x1100, DMI type 17, 34 bytes
+Memory Device
+	Array Handle: 0x1000
+	Error Information Handle: 0x0000
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 8192 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM 0
+	Bank Locator: Not Specified
+	Type: RAM
+	Type Detail: None
+	Speed: Unknown
+	Manufacturer: Not Specified
+	Serial Number: Not Specified
+	Asset Tag: Not Specified
+	Part Number: Not Specified
+	Rank: Unknown
+	Configured Clock Speed: Unknown
+
+Handle 0x1300, DMI type 19, 31 bytes
+Memory Array Mapped Address
+	Starting Address: 0x00000000000
+	Ending Address: 0x001FFFFFFFF
+	Range Size: 8 GB
+	Physical Array Handle: 0x1000
+	Partition Width: 1
+
+Handle 0x1400, DMI type 20, 35 bytes
+Memory Device Mapped Address
+	Starting Address: 0x00000000000
+	Ending Address: 0x001FFFFFFFF
+	Range Size: 8 GB
+	Physical Device Handle: 0x1100
+	Memory Array Mapped Address Handle: 0x1300
+	Partition Row Position: 1
+
+Handle 0x2000, DMI type 32, 11 bytes
+System Boot Information
+	Status: No errors detected
+
+Handle 0x7F00, DMI type 127, 4 bytes
+End Of Table
+
+
+echo 'dockerd limits' && cat /host/proc/9875/limits
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dockerd limits
+Limit                     Soft Limit           Hard Limit           Units     
+Max cpu time              unlimited            unlimited            seconds   
+Max file size             unlimited            unlimited            bytes     
+Max data size             unlimited            unlimited            bytes     
+Max stack size            8388608              unlimited            bytes     
+Max core file size        unlimited            unlimited            bytes     
+Max resident set          unlimited            unlimited            bytes     
+Max processes             unlimited            unlimited            processes 
+Max open files            65536                65536                files     
+Max locked memory         65536                65536                bytes     
+Max address space         unlimited            unlimited            bytes     
+Max file locks            unlimited            unlimited            locks     
+Max pending signals       31125                31125                signals   
+Max msgqueue size         819200               819200               bytes     
+Max nice priority         0                    0                    
+Max realtime priority     0                    0                    
+Max realtime timeout      unlimited            unlimited            us        
+
+cat /host/proc/sys/fs/file-max
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+789267
+
+=========================
+Network Information
+=========================
+
+/network-support.sh: line 1: 404:: command not found

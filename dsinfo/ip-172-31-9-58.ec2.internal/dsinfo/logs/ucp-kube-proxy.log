@@ -1,0 +1,91 @@
+ucp-kube-proxy
+2018-06-22T15:27:11.669195963Z W0622 15:27:11.666154       1 server.go:191] WARNING: all flags other than --config, --write-config-to, and --cleanup are deprecated. Please begin using a config file ASAP.
+2018-06-22T15:27:11.688113933Z time="2018-06-22T15:27:11Z" level=warning msg="Running modprobe ip_vs failed with message: `modprobe: ERROR: ../libkmod/libkmod.c:586 kmod_search_moddep() could not open moddep file '/lib/modules/3.10.0-693.11.6.el7.x86_64/modules.dep.bin'\nmodprobe: WARNING: Module ip_vs not found in directory /lib/modules/3.10.0-693.11.6.el7.x86_64`, error: exit status 1"
+2018-06-22T15:27:11.756952963Z W0622 15:27:11.752907       1 server_others.go:268] Flag proxy-mode="" unknown, assuming iptables proxy
+2018-06-22T15:27:11.762898573Z I0622 15:27:11.759225       1 server_others.go:122] Using iptables Proxier.
+2018-06-22T15:27:21.764864678Z W0622 15:27:21.761205       1 server.go:580] Failed to retrieve node info: Get https://proxy.local:6444/api/v1/nodes/ip-172-31-9-58.ec2.internal: net/http: TLS handshake timeout
+2018-06-22T15:27:21.764881919Z W0622 15:27:21.761346       1 proxier.go:471] invalid nodeIP, initializing kube-proxy with 127.0.0.1 as nodeIP
+2018-06-22T15:27:21.764889431Z I0622 15:27:21.761459       1 server_others.go:157] Tearing down inactive rules.
+2018-06-22T15:27:21.838629746Z E0622 15:27:21.838449       1 proxier.go:699] Failed to execute iptables-restore for nat: exit status 1 (iptables-restore: line 7 failed
+2018-06-22T15:27:21.838652768Z )
+2018-06-22T15:27:21.843472558Z I0622 15:27:21.843303       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_max' to 131072
+2018-06-22T15:27:21.843488031Z I0622 15:27:21.843361       1 conntrack.go:52] Setting nf_conntrack_max to 131072
+2018-06-22T15:27:21.843494806Z I0622 15:27:21.843413       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_established' to 86400
+2018-06-22T15:27:21.843500352Z I0622 15:27:21.843444       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_close_wait' to 3600
+2018-06-22T15:27:21.845301362Z I0622 15:27:21.843991       1 config.go:202] Starting service config controller
+2018-06-22T15:27:21.845318563Z I0622 15:27:21.844017       1 controller_utils.go:1041] Waiting for caches to sync for service config controller
+2018-06-22T15:27:21.845326186Z I0622 15:27:21.844058       1 config.go:102] Starting endpoints config controller
+2018-06-22T15:27:21.845331683Z I0622 15:27:21.844066       1 controller_utils.go:1041] Waiting for caches to sync for endpoints config controller
+2018-06-22T15:27:31.844856603Z E0622 15:27:31.844569       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: net/http: TLS handshake timeout' (may retry after sleeping)
+2018-06-22T15:27:31.845700951Z E0622 15:27:31.845445       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-22T15:27:31.845716236Z E0622 15:27:31.845531       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-22T15:27:41.444414443Z I0622 15:27:41.444220       1 controller_utils.go:1048] Caches are synced for service config controller
+2018-06-22T15:27:41.445187265Z I0622 15:27:41.444300       1 controller_utils.go:1048] Caches are synced for endpoints config controller
+2018-06-28T16:42:24.975720515Z W0628 16:42:24.974388       1 server.go:191] WARNING: all flags other than --config, --write-config-to, and --cleanup are deprecated. Please begin using a config file ASAP.
+2018-06-28T16:42:25.011999277Z time="2018-06-28T16:42:24Z" level=warning msg="Running modprobe ip_vs failed with message: `modprobe: ERROR: ../libkmod/libkmod.c:586 kmod_search_moddep() could not open moddep file '/lib/modules/3.10.0-693.11.6.el7.x86_64/modules.dep.bin'\nmodprobe: WARNING: Module ip_vs not found in directory /lib/modules/3.10.0-693.11.6.el7.x86_64`, error: exit status 1"
+2018-06-28T16:42:25.033266440Z W0628 16:42:25.029889       1 server_others.go:268] Flag proxy-mode="" unknown, assuming iptables proxy
+2018-06-28T16:42:25.039706191Z I0628 16:42:25.038030       1 server_others.go:122] Using iptables Proxier.
+2018-06-28T16:42:25.039722985Z W0628 16:42:25.039400       1 server.go:580] Failed to retrieve node info: Get https://proxy.local:6444/api/v1/nodes/ip-172-31-9-58.ec2.internal: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:42:25.039731002Z W0628 16:42:25.039540       1 proxier.go:471] invalid nodeIP, initializing kube-proxy with 127.0.0.1 as nodeIP
+2018-06-28T16:42:25.040611203Z I0628 16:42:25.040052       1 server_others.go:157] Tearing down inactive rules.
+2018-06-28T16:42:25.187228554Z E0628 16:42:25.179680       1 proxier.go:699] Failed to execute iptables-restore for nat: exit status 1 (iptables-restore: line 7 failed
+2018-06-28T16:42:25.187251928Z )
+2018-06-28T16:42:25.201514513Z I0628 16:42:25.200663       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_max' to 131072
+2018-06-28T16:42:25.201534759Z I0628 16:42:25.200727       1 conntrack.go:52] Setting nf_conntrack_max to 131072
+2018-06-28T16:42:25.201542607Z I0628 16:42:25.200895       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_established' to 86400
+2018-06-28T16:42:25.201548350Z I0628 16:42:25.200927       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_close_wait' to 3600
+2018-06-28T16:42:25.201554191Z I0628 16:42:25.201225       1 config.go:102] Starting endpoints config controller
+2018-06-28T16:42:25.201560139Z I0628 16:42:25.201249       1 controller_utils.go:1041] Waiting for caches to sync for endpoints config controller
+2018-06-28T16:42:25.201566320Z I0628 16:42:25.201285       1 config.go:202] Starting service config controller
+2018-06-28T16:42:25.201571925Z I0628 16:42:25.201292       1 controller_utils.go:1041] Waiting for caches to sync for service config controller
+2018-06-28T16:42:25.202074369Z E0628 16:42:25.201985       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: dial tcp 172.31.9.58:6444: getsockopt: connection refused' (may retry after sleeping)
+2018-06-28T16:42:25.211780030Z E0628 16:42:25.203068       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:42:25.213729800Z E0628 16:42:25.213626       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:42:26.205958996Z E0628 16:42:26.205743       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:42:26.224595380Z E0628 16:42:26.216062       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:42:37.210734139Z E0628 16:42:37.210627       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:42:37.228691351Z E0628 16:42:37.224165       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:42:43.399020982Z E0628 16:42:43.398902       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: net/http: TLS handshake timeout' (may retry after sleeping)
+2018-06-28T16:42:48.211731877Z E0628 16:42:48.211622       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:42:48.224917310Z E0628 16:42:48.224844       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:42:59.212825675Z E0628 16:42:59.212709       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:42:59.225700994Z E0628 16:42:59.225604       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:03.399773290Z E0628 16:43:03.399665       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: net/http: TLS handshake timeout' (may retry after sleeping)
+2018-06-28T16:43:10.214056229Z E0628 16:43:10.213695       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:10.226593724Z E0628 16:43:10.226483       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:21.214782150Z E0628 16:43:21.214664       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:21.227318098Z E0628 16:43:21.227221       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:23.400778409Z E0628 16:43:23.400659       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: net/http: TLS handshake timeout' (may retry after sleeping)
+2018-06-28T16:43:32.215819784Z E0628 16:43:32.215713       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:32.228124217Z E0628 16:43:32.228043       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:43:33.301573107Z I0628 16:43:33.301465       1 controller_utils.go:1048] Caches are synced for service config controller
+2018-06-28T16:43:33.812494846Z I0628 16:43:33.803562       1 controller_utils.go:1048] Caches are synced for endpoints config controller
+2018-06-28T16:56:49.408874135Z W0628 16:56:49.407117       1 server.go:191] WARNING: all flags other than --config, --write-config-to, and --cleanup are deprecated. Please begin using a config file ASAP.
+2018-06-28T16:56:49.424720420Z time="2018-06-28T16:56:49Z" level=warning msg="Running modprobe ip_vs failed with message: `modprobe: ERROR: ../libkmod/libkmod.c:586 kmod_search_moddep() could not open moddep file '/lib/modules/3.10.0-693.11.6.el7.x86_64/modules.dep.bin'\nmodprobe: WARNING: Module ip_vs not found in directory /lib/modules/3.10.0-693.11.6.el7.x86_64`, error: exit status 1"
+2018-06-28T16:56:49.500612208Z W0628 16:56:49.457351       1 server_others.go:268] Flag proxy-mode="" unknown, assuming iptables proxy
+2018-06-28T16:56:49.500655263Z I0628 16:56:49.481069       1 server_others.go:122] Using iptables Proxier.
+2018-06-28T16:56:49.500663215Z W0628 16:56:49.482477       1 server.go:580] Failed to retrieve node info: Get https://proxy.local:6444/api/v1/nodes/ip-172-31-9-58.ec2.internal: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:56:49.500670303Z W0628 16:56:49.482576       1 proxier.go:471] invalid nodeIP, initializing kube-proxy with 127.0.0.1 as nodeIP
+2018-06-28T16:56:49.500676586Z I0628 16:56:49.482689       1 server_others.go:157] Tearing down inactive rules.
+2018-06-28T16:56:50.636207387Z E0628 16:56:50.619339       1 proxier.go:699] Failed to execute iptables-restore for nat: exit status 1 (iptables-restore: line 7 failed
+2018-06-28T16:56:50.636247286Z )
+2018-06-28T16:56:50.636255963Z I0628 16:56:50.625876       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_max' to 131072
+2018-06-28T16:56:50.636261985Z I0628 16:56:50.625924       1 conntrack.go:52] Setting nf_conntrack_max to 131072
+2018-06-28T16:56:50.636267578Z I0628 16:56:50.626150       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_established' to 86400
+2018-06-28T16:56:50.636273396Z I0628 16:56:50.626188       1 conntrack.go:98] Set sysctl 'net/netfilter/nf_conntrack_tcp_timeout_close_wait' to 3600
+2018-06-28T16:56:50.636279277Z I0628 16:56:50.627555       1 config.go:202] Starting service config controller
+2018-06-28T16:56:50.636285035Z I0628 16:56:50.627574       1 controller_utils.go:1041] Waiting for caches to sync for service config controller
+2018-06-28T16:56:50.636290760Z I0628 16:56:50.627650       1 config.go:102] Starting endpoints config controller
+2018-06-28T16:56:50.636296450Z I0628 16:56:50.627659       1 controller_utils.go:1041] Waiting for caches to sync for endpoints config controller
+2018-06-28T16:56:50.636302648Z E0628 16:56:50.628105       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: dial tcp 172.31.9.58:6444: getsockopt: connection refused' (may retry after sleeping)
+2018-06-28T16:56:50.636309057Z E0628 16:56:50.631083       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:56:50.636319764Z E0628 16:56:50.636024       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: dial tcp 172.31.9.58:6444: getsockopt: connection refused
+2018-06-28T16:57:01.638985214Z E0628 16:57:01.638769       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:57:01.651650772Z E0628 16:57:01.651341       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:57:08.733215839Z E0628 16:57:08.732894       1 event.go:209] Unable to write event: 'Post https://proxy.local:6444/api/v1/namespaces/default/events: net/http: TLS handshake timeout' (may retry after sleeping)
+2018-06-28T16:57:12.639965918Z E0628 16:57:12.639717       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:57:12.652348953Z E0628 16:57:12.652113       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:57:23.640851770Z E0628 16:57:23.640589       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Service: Get https://proxy.local:6444/api/v1/services?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:57:23.653067517Z E0628 16:57:23.652961       1 reflector.go:205] k8s.io/kubernetes/pkg/client/informers/informers_generated/internalversion/factory.go:73: Failed to list *api.Endpoints: Get https://proxy.local:6444/api/v1/endpoints?resourceVersion=0: net/http: TLS handshake timeout
+2018-06-28T16:57:24.729181799Z I0628 16:57:24.727758       1 controller_utils.go:1048] Caches are synced for service config controller
+2018-06-28T16:57:24.729206429Z I0628 16:57:24.727758       1 controller_utils.go:1048] Caches are synced for endpoints config controller

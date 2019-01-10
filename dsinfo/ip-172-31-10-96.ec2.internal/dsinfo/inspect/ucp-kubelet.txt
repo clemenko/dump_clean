@@ -1,0 +1,410 @@
+[
+    {
+        "Id": "080c94f68a1b6a1ea3a3d0cc72e69d6643c3f2fb900d127c9f0bb5cd82255b22",
+        "Created": "2018-06-22T15:27:17.810422476Z",
+        "Path": "kubelet",
+        "Args": [
+            "--allow-privileged=true",
+            "--anonymous-auth=false",
+            "--authentication-token-webhook",
+            "--authorization-mode=Webhook",
+            "--cadvisor-port=0",
+            "--client-ca-file=/var/lib/docker/ucp/ucp-node-certs/ca.pem",
+            "--cluster-dns=10.96.0.10",
+            "--cluster-domain=cluster.local",
+            "--network-plugin=cni",
+            "--fail-swap-on=false",
+            "--healthz-port=0",
+            "--iptables-drop-bit=31",
+            "--iptables-masquerade-bit=30",
+            "--kubeconfig=/var/lib/docker/ucp/ucp-node-certs/kubelet.conf",
+            "--node-ip=172.31.10.96",
+            "--read-only-port=0",
+            "--require-kubeconfig=true",
+            "--register-node",
+            "--tls-cert-file=/var/lib/docker/ucp/ucp-node-certs/cert.pem",
+            "--tls-private-key-file=/var/lib/docker/ucp/ucp-node-certs/key.pem",
+            "--pod-infra-container-image=docker/ucp-pause:3.0.2",
+            "--kube-reserved=cpu=100m,memory=300Mi,ephemeral-storage=500Mi",
+            "--address=0.0.0.0"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 10136,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-06-28T16:50:10.186690299Z",
+            "FinishedAt": "2018-06-28T16:49:53.278314497Z"
+        },
+        "Image": "sha256:bd7472bbd0cbcd11570a3b6b17f7a6cd2498b76a2dffa267a67772f50a8841d3",
+        "ResolvConfPath": "/var/lib/docker/containers/080c94f68a1b6a1ea3a3d0cc72e69d6643c3f2fb900d127c9f0bb5cd82255b22/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/080c94f68a1b6a1ea3a3d0cc72e69d6643c3f2fb900d127c9f0bb5cd82255b22/hostname",
+        "HostsPath": "/var/lib/docker/containers/080c94f68a1b6a1ea3a3d0cc72e69d6643c3f2fb900d127c9f0bb5cd82255b22/hosts",
+        "LogPath": "/var/lib/docker/containers/080c94f68a1b6a1ea3a3d0cc72e69d6643c3f2fb900d127c9f0bb5cd82255b22/080c94f68a1b6a1ea3a3d0cc72e69d6643c3f2fb900d127c9f0bb5cd82255b22-json.log",
+        "Name": "/ucp-kubelet",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/usr/libexec/kubernetes/kubelet-plugins/volume:/usr/libexec/kubernetes/kubelet-plugins/volume"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "host",
+            "PortBindings": null,
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [
+                "proxy.local:172.31.10.96"
+            ],
+            "GroupAdd": null,
+            "IpcMode": "host",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": -600,
+            "PidMode": "host",
+            "Privileged": true,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "label=disable"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/var/run/docker.sock",
+                    "Target": "/var/run/docker.sock"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/var/lib/kubelet",
+                    "Target": "/var/lib/kubelet",
+                    "BindOptions": {
+                        "Propagation": "rshared"
+                    }
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/dev",
+                    "Target": "/dev",
+                    "BindOptions": {
+                        "Propagation": "rshared"
+                    }
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/var/lib/docker/network",
+                    "Target": "/var/lib/docker/network"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/var/lib/docker/containers",
+                    "Target": "/var/lib/docker/containers",
+                    "BindOptions": {
+                        "Propagation": "rslave"
+                    }
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/var/log/pods",
+                    "Target": "/var/log/pods"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/var/log/containers",
+                    "Target": "/var/log/containers"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/run",
+                    "Target": "/run"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/sys",
+                    "Target": "/sys"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/etc/cni",
+                    "Target": "/etc/cni"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/opt/cni",
+                    "Target": "/opt/cni"
+                },
+                {
+                    "Type": "volume",
+                    "Source": "ucp-node-certs",
+                    "Target": "/var/lib/docker/ucp/ucp-node-certs"
+                }
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53-init/diff:/var/lib/docker/overlay2/74b3a4a93373f2c6d14dbdca5e5de6d3799d906dbed25e60c197b15a6560133b/diff:/var/lib/docker/overlay2/a40c7e73180a0abd7d8ffe43258ceeee65e339b9e9fb6719431373801c6f045c/diff:/var/lib/docker/overlay2/2c4c29f3b1cf8f33226107534b98912cf7842df593536be95359b925d44a6242/diff:/var/lib/docker/overlay2/69834e21660c0269306a74929447fc8b45a4089f6c52b62d304eec4b3c41281b/diff:/var/lib/docker/overlay2/136a0c6f0504d791cab5bb7a18a3a79ee7c177b32c8b95deb84f0034c820117b/diff:/var/lib/docker/overlay2/b03463dfb043fc5fcb978b34ca5f6d07231aaf044eeeb152cf064b9110cb2a9f/diff:/var/lib/docker/overlay2/d84bab4a9b8cfabda7f02b53c4672c96320b62239b9bfe2dc96442fbf4a07fb4/diff:/var/lib/docker/overlay2/a878e363c1bcbc2a4419d4181e0957359f4e8965c3e869191526b2ab678a8041/diff:/var/lib/docker/overlay2/c450e8bcedd4b3f284aec88ceb08366672c6bc38f28179daf2dbdd81d58e3896/diff:/var/lib/docker/overlay2/12f28a84e404e955181d3b08faa63d21f7b3f8897eef90a4db9370f981a132e7/diff:/var/lib/docker/overlay2/1a262a98d5e4625538e2b90b19f667189d9d6ef32884a141413a801e308f0b01/diff:/var/lib/docker/overlay2/ec71db8dde5fa472fdf0441a67dec083c40627976bf799830a29dbf383c5e61a/diff",
+                "MergedDir": "/var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/merged",
+                "UpperDir": "/var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/diff",
+                "WorkDir": "/var/lib/docker/overlay2/b23a7cbb95086f2a8ab568ce4127e00259c229931d2dcbd99c7ecc60fe009f53/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/var/run/docker.sock",
+                "Destination": "/var/run/docker.sock",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/dev",
+                "Destination": "/dev",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rshared"
+            },
+            {
+                "Type": "bind",
+                "Source": "/opt/cni",
+                "Destination": "/opt/cni",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/sys",
+                "Destination": "/sys",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/lib/docker/network",
+                "Destination": "/var/lib/docker/network",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rslave"
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-node-certs",
+                "Source": "/var/lib/docker/volumes/ucp-node-certs/_data",
+                "Destination": "/var/lib/docker/ucp/ucp-node-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/log/pods",
+                "Destination": "/var/log/pods",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/etc/cni",
+                "Destination": "/etc/cni",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/run",
+                "Destination": "/run",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/usr/libexec/kubernetes/kubelet-plugins/volume",
+                "Destination": "/usr/libexec/kubernetes/kubelet-plugins/volume",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/lib/docker/containers",
+                "Destination": "/var/lib/docker/containers",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rslave"
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/lib/kubelet",
+                "Destination": "/var/lib/kubelet",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rshared"
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/log/containers",
+                "Destination": "/var/log/containers",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ip-172-31-10-96.ec2.internal",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "GODEBUG=netdns=go",
+                "PAUSE_IMAGE=docker/ucp-pause:3.0.2",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "kubelet",
+                "--allow-privileged=true",
+                "--anonymous-auth=false",
+                "--authentication-token-webhook",
+                "--authorization-mode=Webhook",
+                "--cadvisor-port=0",
+                "--client-ca-file=/var/lib/docker/ucp/ucp-node-certs/ca.pem",
+                "--cluster-dns=10.96.0.10",
+                "--cluster-domain=cluster.local",
+                "--network-plugin=cni",
+                "--fail-swap-on=false",
+                "--healthz-port=0",
+                "--iptables-drop-bit=31",
+                "--iptables-masquerade-bit=30",
+                "--kubeconfig=/var/lib/docker/ucp/ucp-node-certs/kubelet.conf",
+                "--node-ip=172.31.10.96",
+                "--read-only-port=0",
+                "--require-kubeconfig=true",
+                "--register-node",
+                "--tls-cert-file=/var/lib/docker/ucp/ucp-node-certs/cert.pem",
+                "--tls-private-key-file=/var/lib/docker/ucp/ucp-node-certs/key.pem",
+                "--pod-infra-container-image=docker/ucp-pause:3.0.2",
+                "--kube-reserved=cpu=100m,memory=300Mi,ephemeral-storage=500Mi",
+                "--address=0.0.0.0"
+            ],
+            "Image": "docker/ucp-hyperkube:3.0.2",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "3d8681c79c1b8ca0ead7d28579e998710d2c66deae0ef058527d2418f4a2c372",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/default",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "host": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "274ff74ff0c1e42c7f236b0e23a5daf8f507dc07b1a4df5f137dc47259121043",
+                    "EndpointID": "6477565eab451ea8f8fdbf038c58d217c97499f72173510a6f93eb6616e7bbc3",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

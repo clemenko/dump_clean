@@ -1,0 +1,236 @@
+[
+    {
+        "Id": "a91a0bc897bc761fc57f531a4631d57915d55cc3b0d41602bd89ee0d3a4ac008",
+        "Created": "2018-07-10T20:21:03.327160556Z",
+        "Path": "/bin/ucp-agent",
+        "Args": [
+            "agent"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 26906,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-07-10T20:21:04.817534034Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:c46de56f7ee830a70874e434996a3bc37995df78d4164865994f07b02aeec67e",
+        "ResolvConfPath": "/var/lib/docker/containers/a91a0bc897bc761fc57f531a4631d57915d55cc3b0d41602bd89ee0d3a4ac008/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a91a0bc897bc761fc57f531a4631d57915d55cc3b0d41602bd89ee0d3a4ac008/hostname",
+        "HostsPath": "/var/lib/docker/containers/a91a0bc897bc761fc57f531a4631d57915d55cc3b0d41602bd89ee0d3a4ac008/hosts",
+        "LogPath": "/var/lib/docker/containers/a91a0bc897bc761fc57f531a4631d57915d55cc3b0d41602bd89ee0d3a4ac008/a91a0bc897bc761fc57f531a4631d57915d55cc3b0d41602bd89ee0d3a4ac008-json.log",
+        "Name": "/ucp-agent.zpjp8pz5zfqu3kxislil61laf.loncmiabhtxq6tndgghq5o1qp",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "label=disable"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/var/run/docker.sock",
+                    "Target": "/var/run/docker.sock"
+                },
+                {
+                    "Type": "bind",
+                    "Source": "/etc/docker",
+                    "Target": "/etc/docker"
+                }
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/d05792c70f67bf23b0d1e3206868556c49e74d8beafee31cd6985ff9c666e6a4-init/diff:/var/lib/docker/overlay2/0f6c8df2ac719c6aca088afa2ad452d1b0b5b6ba2284cb15960575d29ea97e98/diff:/var/lib/docker/overlay2/ec6d81d4a03f52330f97fd0a84d23b59bb5495ed5f8d0d824a22fc1ab5ee129e/diff:/var/lib/docker/overlay2/aff7967f0685ffac86858a79126e11e13ea3766cbbd36935170cf53b184dd211/diff",
+                "MergedDir": "/var/lib/docker/overlay2/d05792c70f67bf23b0d1e3206868556c49e74d8beafee31cd6985ff9c666e6a4/merged",
+                "UpperDir": "/var/lib/docker/overlay2/d05792c70f67bf23b0d1e3206868556c49e74d8beafee31cd6985ff9c666e6a4/diff",
+                "WorkDir": "/var/lib/docker/overlay2/d05792c70f67bf23b0d1e3206868556c49e74d8beafee31cd6985ff9c666e6a4/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/var/run/docker.sock",
+                "Destination": "/var/run/docker.sock",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/etc/docker",
+                "Destination": "/etc/docker",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "a91a0bc897bc",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "2376/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "DNS_OPT=",
+                "CONTROLLER_PORT=443",
+                "KV_TIMEOUT=5000",
+                "EXTERNAL_SERVICE_LB=",
+                "SWARM_PORT=2376",
+                "DNS=",
+                "DNS_SEARCH=%!s(MISSING)",
+                "KV_SNAPSHOT_COUNT=20000",
+                "IMAGE_VERSION=3.0.2",
+                "UCP_INSTANCE_ID=174q5382xmnb2e5a2c4dwyb4g",
+                "SWARM_STRATEGY=spread",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "PORT=2376"
+            ],
+            "Cmd": null,
+            "Image": "docker/ucp-agent:3.0.2@sha256:579ef3d9b54efd7924a139eb792ce61981bea3658336a5dd5d38d57f8e06d623",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/bin/ucp-agent",
+                "agent"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.swarm.node.id": "zpjp8pz5zfqu3kxislil61laf",
+                "com.docker.swarm.service.id": "kii0fgyuee877i8vzotr7j9k0",
+                "com.docker.swarm.service.name": "ucp-agent",
+                "com.docker.swarm.task": "",
+                "com.docker.swarm.task.id": "loncmiabhtxq6tndgghq5o1qp",
+                "com.docker.swarm.task.name": "ucp-agent.zpjp8pz5zfqu3kxislil61laf.loncmiabhtxq6tndgghq5o1qp",
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.min_ee_engine_version": "17.06.2-ee-8",
+                "com.docker.ucp.upgrades_from": "2.2.0,2.2.1,2.2.2,2.2.3,2.2.4,2.2.5,2.2.6,2.2.7,2.2.8,2.2.9,2.2,3.0.0,3.0.1,3.0.2",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "562f303bd89343e884a5bd78bf89a486ba2a8f5136bc883673a12becb1aa0275",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "2376/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/562f303bd893",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "e21099d04c0c7a6b56ee970b1d578bf39f3f6751e083151a11b2a464e81f2547",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.15",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:0f",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "c02813d11560308a8605716be3f843b59d5f48b0146f923722aed95e31b9dc29",
+                    "EndpointID": "e21099d04c0c7a6b56ee970b1d578bf39f3f6751e083151a11b2a464e81f2547",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.15",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:0f",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

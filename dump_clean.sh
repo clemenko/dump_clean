@@ -3,8 +3,11 @@
 # edit vars
 ###################################
 set -e
-password=Pa22word
-URL=ucp.dockr.life
+username=admin
+#password=Pa22word
+#URL=ucp.dockr.life
+password=docker4life
+URL=ucp.jswann.dockerps.io
 data_dir=/Users/clemenko/Dropbox/docker/dump_clean
 
 
@@ -19,8 +22,8 @@ echo "------------------------------------------------------------------"
 
 
 echo -n " Getting Support Dump "
-token=$(curl -sk -d '{"username":"admin","password":"'$password'"}' https://$URL/auth/login | jq -r .auth_token)
-curl -kX POST 'https://ucp.dockr.life/api/support'  -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: en-US,en;q=0.9' -H "Authorization: Bearer $token" --compressed > $data_dir/original-support.tgz
+token=$(curl -sk -d '{"username":"'$username'","password":"'$password'"}' https://$URL/auth/login | jq -r .auth_token)
+curl -kX POST https://$URL/api/support  -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: en-US,en;q=0.9' -H "Authorization: Bearer $token" --compressed > $data_dir/original-support.tgz
 echo "$GREEN" " [ok]" "$NORMAL"
 
 
@@ -42,6 +45,8 @@ for hostname in $(cat ucp-nodes.txt |jq -r .[].Description.Hostname); do
 done
 echo "$GREEN" "[ok]" "$NORMAL"
 
+exit
+
 echo -n " Scrubbing hostnames "
 for hostname in $(cat $data_dir/conversion.txt | grep -v HOST | awk '{print $1}'); do
   new_host=$(cat $data_dir/conversion.txt |grep $hostname | awk '{print $2}')
@@ -58,6 +63,14 @@ done
 echo "$GREEN" "[ok]" "$NORMAL"
 
 echo -n " Scrubbing Domains "
+echo This is tough.........
+#check for SANS
+cat ucp-nodes.txt |jq -r '.[].Spec.Labels | .["com.docker.ucp.SANs"]'
+#there should be enough info here for domain names.
+#check for certs names
+
+#echo test.life | grep -P '(?=^.{5,254}$)(^(?:(?!\d+\.)[a-zA-Z0-9_\-]{1,63}\.?)+(?:[a-zA-Z]{2,})$)'
+
 echo "$GREEN" "[ok]" "$NORMAL"
 
 echo -n " Repackaging "

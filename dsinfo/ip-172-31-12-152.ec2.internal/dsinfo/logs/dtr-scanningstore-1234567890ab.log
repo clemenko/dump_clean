@@ -1,0 +1,234 @@
+dtr-scanningstore-1234567890ab
+2018-06-21T20:20:46.088569979Z time="2018-06-21T20:20:46Z" level=info msg="Establishing connection with Rethinkdb" 
+2018-06-21T20:20:46.142960328Z time="2018-06-21T20:20:46Z" level=info msg="writing out configs and watching for changes" 
+2018-06-21T20:20:46.142978414Z time="2018-06-21T20:20:46Z" level=info msg="watching configs" 
+2018-06-21T20:20:46.142985630Z time="2018-06-21T20:20:46Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_ca/cert.pem\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"eb211311-0c2c-499c-9482-aee5d5e94764\"}" 
+2018-06-21T20:20:46.144041137Z time="2018-06-21T20:20:46Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_server/cert.pem/1234567890ab\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"5455d398-fb00-428a-b7d2-8b181a8385b1\"}" 
+2018-06-21T20:20:46.144905151Z time="2018-06-21T20:20:46Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_server/key.pem/1234567890ab\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"b590f955-28cc-4454-826b-b061f0eb39b4\"}" 
+2018-06-21T20:20:46.182685187Z 2018-06-21 20:20:46.182 UTC [15] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2018-06-21T20:20:46.182697303Z 2018-06-21 20:20:46.182 UTC [15] LOG:  listening on IPv6 address "::", port 5432
+2018-06-21T20:20:46.186438323Z 2018-06-21 20:20:46.186 UTC [15] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2018-06-21T20:20:46.190010344Z 2018-06-21 20:20:46.189 UTC [15] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-06-21T20:20:46.202444496Z 2018-06-21 20:20:46.202 UTC [24] LOG:  database system was interrupted; last known up at 2018-06-21 20:19:53 UTC
+2018-06-21T20:20:46.286466921Z 2018-06-21 20:20:46.286 UTC [24] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-21T20:20:46.288830649Z 2018-06-21 20:20:46.288 UTC [24] LOG:  redo starts at 0/15C0EB8
+2018-06-21T20:20:46.288842766Z 2018-06-21 20:20:46.288 UTC [24] LOG:  invalid record length at 0/15C0EF0: wanted 24, got 0
+2018-06-21T20:20:46.288846998Z 2018-06-21 20:20:46.288 UTC [24] LOG:  redo done at 0/15C0EB8
+2018-06-21T20:20:46.301500122Z 2018-06-21 20:20:46.300 UTC [15] LOG:  database system is ready to accept connections
+2018-06-28T17:58:29.700171811Z time="2018-06-28T17:58:29Z" level=info msg="Establishing connection with Rethinkdb" 
+2018-06-28T17:58:32.292832341Z time="2018-06-28T17:58:32Z" level=info msg="writing out configs and watching for changes" 
+2018-06-28T17:58:32.292852212Z time="2018-06-28T17:58:32Z" level=info msg="watching configs" 
+2018-06-28T17:58:32.292860007Z time="2018-06-28T17:58:32Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_ca/cert.pem\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"b1e7d175-3555-4c44-ba9d-a78f73f49b59\"}" 
+2018-06-28T17:58:32.293636978Z time="2018-06-28T17:58:32Z" level=fatal msg="error watching configs" error="failed to track configs: unable to watch configs: gorethink: cannot subscribe to table `dtr2.properties`: primary replica for shard [\"\", +inf) not available in:\nr.DB(\"dtr2\").Table(\"properties\").Get(\"certs/postgres_ca/cert.pem\").Changes(include_initial=true)" 
+2018-06-28T17:58:34.182685983Z time="2018-06-28T17:58:34Z" level=info msg="Establishing connection with Rethinkdb" 
+2018-06-28T17:58:34.276039669Z time="2018-06-28T17:58:34Z" level=info msg="writing out configs and watching for changes" 
+2018-06-28T17:58:34.276059712Z time="2018-06-28T17:58:34Z" level=info msg="watching configs" 
+2018-06-28T17:58:34.276064815Z time="2018-06-28T17:58:34Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_ca/cert.pem\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"663103be-14b3-4051-80ec-7b6723f8189e\"}" 
+2018-06-28T17:58:34.279786748Z time="2018-06-28T17:58:34Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_server/cert.pem/1234567890ab\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"90264b9a-4311-4b2c-af08-155bb75f4947\"}" 
+2018-06-28T17:58:34.290285859Z time="2018-06-28T17:58:34Z" level=info msg="watching for changes to configtracker.configSpec{src:\"certs/postgres_server/key.pem/1234567890ab\", writer:(configtracker.WriterFunc)(0x5b4ed0), templateFunc:(configtracker.TemplateFunc)(0x5b38a0), cacheKey:\"74072347-0d07-4a3b-97c6-4b7621969c2b\"}" 
+2018-06-28T17:58:34.355888014Z 2018-06-28 17:58:34.355 UTC [14] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2018-06-28T17:58:34.355908129Z 2018-06-28 17:58:34.355 UTC [14] LOG:  listening on IPv6 address "::", port 5432
+2018-06-28T17:58:34.381379271Z 2018-06-28 17:58:34.381 UTC [14] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2018-06-28T17:58:34.384616798Z 2018-06-28 17:58:34.384 UTC [14] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-06-28T17:58:34.400086794Z 2018-06-28 17:58:34.399 UTC [23] LOG:  database system was interrupted; last known up at 2018-06-21 20:20:46 UTC
+2018-06-28T17:58:34.536275591Z 2018-06-28 17:58:34.535 UTC [23] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-06-28T17:58:34.538171078Z 2018-06-28 17:58:34.537 UTC [23] LOG:  redo starts at 0/15C0F60
+2018-06-28T17:58:34.538188201Z 2018-06-28 17:58:34.538 UTC [23] LOG:  invalid record length at 0/15C0F98: wanted 24, got 0
+2018-06-28T17:58:34.538195870Z 2018-06-28 17:58:34.538 UTC [23] LOG:  redo done at 0/15C0F60
+2018-06-28T17:58:34.549505748Z 2018-06-28 17:58:34.549 UTC [14] LOG:  database system is ready to accept connections
+2018-07-11T19:29:42.556440271Z 2018-07-11 19:29:42.556 UTC [24] LOG:  checkpoints are occurring too frequently (28 seconds apart)
+2018-07-11T19:29:42.556471409Z 2018-07-11 19:29:42.556 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-11T19:30:05.369225008Z 2018-07-11 19:30:05.368 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-11T19:30:05.369245475Z 2018-07-11 19:30:05.368 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-11T19:30:28.212862518Z 2018-07-11 19:30:28.212 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-11T19:30:28.212896937Z 2018-07-11 19:30:28.212 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-11T19:31:29.058380059Z 2018-07-11 19:31:29.057 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-11T19:31:29.058406362Z 2018-07-11 19:31:29.057 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-11T19:31:58.540334224Z 2018-07-11 19:31:58.540 UTC [24] LOG:  checkpoints are occurring too frequently (29 seconds apart)
+2018-07-11T19:31:58.540360576Z 2018-07-11 19:31:58.540 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-11T19:32:02.704213568Z 2018-07-11 19:32:02.703 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-11T19:32:02.704247743Z 2018-07-11 19:32:02.703 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-12T06:39:42.919068158Z 2018-07-12 06:39:42.918 UTC [24] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2018-07-12T06:39:42.919105815Z 2018-07-12 06:39:42.918 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-12T06:40:04.240515157Z 2018-07-12 06:40:04.240 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-12T06:40:04.240538793Z 2018-07-12 06:40:04.240 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-12T06:40:26.832561943Z 2018-07-12 06:40:26.832 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-12T06:40:26.832594169Z 2018-07-12 06:40:26.832 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-12T06:41:27.291870056Z 2018-07-12 06:41:27.291 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-12T06:41:27.291900242Z 2018-07-12 06:41:27.291 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-12T06:41:56.861663472Z 2018-07-12 06:41:56.861 UTC [24] LOG:  checkpoints are occurring too frequently (29 seconds apart)
+2018-07-12T06:41:56.861697613Z 2018-07-12 06:41:56.861 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-12T06:42:01.007289005Z 2018-07-12 06:42:01.007 UTC [24] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2018-07-12T06:42:01.007321897Z 2018-07-12 06:42:01.007 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-13T06:39:49.248356707Z 2018-07-13 06:39:49.248 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-13T06:39:49.248379678Z 2018-07-13 06:39:49.248 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-13T06:40:11.009630363Z 2018-07-13 06:40:11.009 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-13T06:40:11.009666883Z 2018-07-13 06:40:11.009 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-13T06:40:33.325799576Z 2018-07-13 06:40:33.325 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-13T06:40:33.325824613Z 2018-07-13 06:40:33.325 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-13T06:41:32.073346714Z 2018-07-13 06:41:32.073 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-13T06:41:32.073426131Z 2018-07-13 06:41:32.073 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-13T06:42:01.496419703Z 2018-07-13 06:42:01.496 UTC [24] LOG:  checkpoints are occurring too frequently (29 seconds apart)
+2018-07-13T06:42:01.496448298Z 2018-07-13 06:42:01.496 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-13T06:42:05.629216153Z 2018-07-13 06:42:05.628 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-13T06:42:05.629249305Z 2018-07-13 06:42:05.628 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-14T06:39:42.946029103Z 2018-07-14 06:39:42.945 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-14T06:39:42.946059838Z 2018-07-14 06:39:42.945 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-14T06:40:04.835071756Z 2018-07-14 06:40:04.834 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-14T06:40:04.835103724Z 2018-07-14 06:40:04.834 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-14T06:40:27.509916686Z 2018-07-14 06:40:27.509 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-14T06:40:27.509949090Z 2018-07-14 06:40:27.509 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-14T06:41:26.584559990Z 2018-07-14 06:41:26.584 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-14T06:41:26.584600953Z 2018-07-14 06:41:26.584 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-14T06:42:00.445421632Z 2018-07-14 06:42:00.445 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-14T06:42:00.445455067Z 2018-07-14 06:42:00.445 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-15T06:39:44.855512598Z 2018-07-15 06:39:44.855 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-15T06:39:44.855543402Z 2018-07-15 06:39:44.855 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-15T06:40:06.302420329Z 2018-07-15 06:40:06.302 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-15T06:40:06.302448036Z 2018-07-15 06:40:06.302 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-15T06:40:28.380510386Z 2018-07-15 06:40:28.380 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-15T06:40:28.380537188Z 2018-07-15 06:40:28.380 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-15T06:41:30.633451830Z 2018-07-15 06:41:30.633 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-15T06:41:30.633496906Z 2018-07-15 06:41:30.633 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-15T06:42:04.521598047Z 2018-07-15 06:42:04.521 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-15T06:42:04.521632126Z 2018-07-15 06:42:04.521 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-16T06:39:43.610638870Z 2018-07-16 06:39:43.610 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-16T06:39:43.610669339Z 2018-07-16 06:39:43.610 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-16T06:40:05.360302204Z 2018-07-16 06:40:05.360 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-16T06:40:05.360333536Z 2018-07-16 06:40:05.360 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-16T06:40:27.898376504Z 2018-07-16 06:40:27.898 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-16T06:40:27.898408346Z 2018-07-16 06:40:27.898 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-16T06:41:26.667555344Z 2018-07-16 06:41:26.667 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-16T06:41:26.667586133Z 2018-07-16 06:41:26.667 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-16T06:42:00.380157752Z 2018-07-16 06:42:00.379 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-16T06:42:00.380188822Z 2018-07-16 06:42:00.379 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-17T06:39:45.837667457Z 2018-07-17 06:39:45.837 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-17T06:39:45.837697346Z 2018-07-17 06:39:45.837 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-17T06:40:07.614356842Z 2018-07-17 06:40:07.614 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-17T06:40:07.614396732Z 2018-07-17 06:40:07.614 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-17T06:40:30.151529241Z 2018-07-17 06:40:30.151 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-17T06:40:30.151560990Z 2018-07-17 06:40:30.151 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-17T06:41:28.691226573Z 2018-07-17 06:41:28.690 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-17T06:41:28.691251843Z 2018-07-17 06:41:28.690 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-17T06:42:03.150599356Z 2018-07-17 06:42:03.150 UTC [24] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2018-07-17T06:42:03.150634157Z 2018-07-17 06:42:03.150 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-18T06:39:43.755997148Z 2018-07-18 06:39:43.755 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-18T06:39:43.756029285Z 2018-07-18 06:39:43.755 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-18T06:40:05.988746121Z 2018-07-18 06:40:05.988 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-18T06:40:05.988777512Z 2018-07-18 06:40:05.988 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-18T06:40:29.406202743Z 2018-07-18 06:40:29.405 UTC [24] LOG:  checkpoints are occurring too frequently (24 seconds apart)
+2018-07-18T06:40:29.406235784Z 2018-07-18 06:40:29.405 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-18T06:41:30.120353773Z 2018-07-18 06:41:30.120 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-18T06:41:30.120395312Z 2018-07-18 06:41:30.120 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-18T06:42:04.398818042Z 2018-07-18 06:42:04.398 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-18T06:42:04.398846129Z 2018-07-18 06:42:04.398 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-19T06:39:43.544476179Z 2018-07-19 06:39:43.544 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-19T06:39:43.544508734Z 2018-07-19 06:39:43.544 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-19T06:40:06.608865451Z 2018-07-19 06:40:06.608 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-19T06:40:06.608895768Z 2018-07-19 06:40:06.608 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-19T06:40:30.036688633Z 2018-07-19 06:40:30.036 UTC [24] LOG:  checkpoints are occurring too frequently (24 seconds apart)
+2018-07-19T06:40:30.036723200Z 2018-07-19 06:40:30.036 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-19T06:41:31.904203165Z 2018-07-19 06:41:31.903 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-19T06:41:31.904237960Z 2018-07-19 06:41:31.903 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-19T06:42:06.371063512Z 2018-07-19 06:42:06.370 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-19T06:42:06.371101695Z 2018-07-19 06:42:06.370 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-20T06:39:43.801034883Z 2018-07-20 06:39:43.800 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-20T06:39:43.801067953Z 2018-07-20 06:39:43.800 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-20T06:40:04.364544037Z 2018-07-20 06:40:04.364 UTC [24] LOG:  checkpoints are occurring too frequently (21 seconds apart)
+2018-07-20T06:40:04.364585618Z 2018-07-20 06:40:04.364 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-20T06:40:27.016743650Z 2018-07-20 06:40:27.016 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-20T06:40:27.016777019Z 2018-07-20 06:40:27.016 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-20T06:41:29.855975167Z 2018-07-20 06:41:29.855 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-20T06:41:29.856008581Z 2018-07-20 06:41:29.855 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-20T06:42:04.109039242Z 2018-07-20 06:42:04.108 UTC [24] LOG:  checkpoints are occurring too frequently (5 seconds apart)
+2018-07-20T06:42:04.109068335Z 2018-07-20 06:42:04.108 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-21T06:39:45.266799614Z 2018-07-21 06:39:45.266 UTC [24] LOG:  checkpoints are occurring too frequently (27 seconds apart)
+2018-07-21T06:39:45.266826408Z 2018-07-21 06:39:45.266 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-21T06:40:07.059869081Z 2018-07-21 06:40:07.059 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-21T06:40:07.059900379Z 2018-07-21 06:40:07.059 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-21T06:40:29.931096293Z 2018-07-21 06:40:29.930 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-21T06:40:29.931129246Z 2018-07-21 06:40:29.930 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-21T06:41:28.624965507Z 2018-07-21 06:41:28.624 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-21T06:41:28.624996830Z 2018-07-21 06:41:28.624 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-21T06:42:02.954135649Z 2018-07-21 06:42:02.953 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-21T06:42:02.954174603Z 2018-07-21 06:42:02.953 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-22T06:39:43.888435613Z 2018-07-22 06:39:43.888 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-22T06:39:43.888466183Z 2018-07-22 06:39:43.888 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-22T06:40:05.676439495Z 2018-07-22 06:40:05.676 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-22T06:40:05.676472565Z 2018-07-22 06:40:05.676 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-22T06:40:28.808288817Z 2018-07-22 06:40:28.807 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-22T06:40:28.808322730Z 2018-07-22 06:40:28.807 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-22T06:41:32.299721222Z 2018-07-22 06:41:32.299 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-22T06:41:32.299762818Z 2018-07-22 06:41:32.299 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-22T06:42:06.836056471Z 2018-07-22 06:42:06.835 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-22T06:42:06.836089076Z 2018-07-22 06:42:06.835 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-23T06:39:41.767063977Z 2018-07-23 06:39:41.766 UTC [24] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2018-07-23T06:39:41.767095573Z 2018-07-23 06:39:41.766 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-23T06:40:03.659011278Z 2018-07-23 06:40:03.658 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-23T06:40:03.659042064Z 2018-07-23 06:40:03.658 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-23T06:40:26.531759087Z 2018-07-23 06:40:26.531 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-23T06:40:26.531790993Z 2018-07-23 06:40:26.531 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-23T06:41:25.013681912Z 2018-07-23 06:41:25.013 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-23T06:41:25.013704162Z 2018-07-23 06:41:25.013 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-23T06:41:59.034496111Z 2018-07-23 06:41:59.034 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-23T06:41:59.034525888Z 2018-07-23 06:41:59.034 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-24T06:39:46.969629020Z 2018-07-24 06:39:46.969 UTC [24] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2018-07-24T06:39:46.969649372Z 2018-07-24 06:39:46.969 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-24T06:40:08.642927223Z 2018-07-24 06:40:08.642 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-24T06:40:08.642957031Z 2018-07-24 06:40:08.642 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-24T06:40:31.317427837Z 2018-07-24 06:40:31.317 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-24T06:40:31.317463482Z 2018-07-24 06:40:31.317 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-24T06:41:29.953017323Z 2018-07-24 06:41:29.952 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-24T06:41:29.953047325Z 2018-07-24 06:41:29.952 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-24T06:42:03.881982434Z 2018-07-24 06:42:03.881 UTC [24] LOG:  checkpoints are occurring too frequently (3 seconds apart)
+2018-07-24T06:42:03.882011381Z 2018-07-24 06:42:03.881 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-25T06:39:51.597630433Z 2018-07-25 06:39:51.597 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-25T06:39:51.597663653Z 2018-07-25 06:39:51.597 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-25T06:40:13.576491830Z 2018-07-25 06:40:13.576 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-25T06:40:13.576527571Z 2018-07-25 06:40:13.576 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-25T06:40:36.843418690Z 2018-07-25 06:40:36.843 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-25T06:40:36.843445366Z 2018-07-25 06:40:36.843 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-25T06:41:38.396285922Z 2018-07-25 06:41:38.395 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-25T06:41:38.396318628Z 2018-07-25 06:41:38.395 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-25T06:42:12.698030083Z 2018-07-25 06:42:12.697 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-25T06:42:12.698067437Z 2018-07-25 06:42:12.697 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-26T06:39:45.465497164Z 2018-07-26 06:39:45.465 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-26T06:39:45.465530059Z 2018-07-26 06:39:45.465 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-26T06:40:07.104952789Z 2018-07-26 06:40:07.104 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-26T06:40:07.104986478Z 2018-07-26 06:40:07.104 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-26T06:40:29.780025180Z 2018-07-26 06:40:29.779 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-26T06:40:29.780057469Z 2018-07-26 06:40:29.779 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-26T06:41:32.255028314Z 2018-07-26 06:41:32.254 UTC [24] LOG:  checkpoints are occurring too frequently (8 seconds apart)
+2018-07-26T06:41:32.255063828Z 2018-07-26 06:41:32.254 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-26T06:42:06.453017206Z 2018-07-26 06:42:06.452 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-26T06:42:06.453049036Z 2018-07-26 06:42:06.452 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-27T06:39:47.580733649Z 2018-07-27 06:39:47.580 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-27T06:39:47.580771156Z 2018-07-27 06:39:47.580 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-27T06:40:08.923334249Z 2018-07-27 06:40:08.923 UTC [24] LOG:  checkpoints are occurring too frequently (21 seconds apart)
+2018-07-27T06:40:08.923364078Z 2018-07-27 06:40:08.923 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-27T06:40:31.716773398Z 2018-07-27 06:40:31.716 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-27T06:40:31.716807029Z 2018-07-27 06:40:31.716 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-27T06:41:29.970543291Z 2018-07-27 06:41:29.970 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-27T06:41:29.970582516Z 2018-07-27 06:41:29.970 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-27T06:42:04.153784536Z 2018-07-27 06:42:04.153 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-27T06:42:04.153818214Z 2018-07-27 06:42:04.153 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-28T06:39:45.125254670Z 2018-07-28 06:39:45.124 UTC [24] LOG:  checkpoints are occurring too frequently (26 seconds apart)
+2018-07-28T06:39:45.125287920Z 2018-07-28 06:39:45.124 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-28T06:40:06.738845454Z 2018-07-28 06:40:06.738 UTC [24] LOG:  checkpoints are occurring too frequently (21 seconds apart)
+2018-07-28T06:40:06.738878401Z 2018-07-28 06:40:06.738 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-28T06:40:29.866408957Z 2018-07-28 06:40:29.866 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-28T06:40:29.866442197Z 2018-07-28 06:40:29.866 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-28T06:41:32.960147163Z 2018-07-28 06:41:32.959 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-28T06:41:32.960183347Z 2018-07-28 06:41:32.959 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-28T06:42:07.579304432Z 2018-07-28 06:42:07.578 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-28T06:42:07.579340688Z 2018-07-28 06:42:07.578 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-30T06:39:46.949779149Z 2018-07-30 06:39:46.949 UTC [24] LOG:  checkpoints are occurring too frequently (25 seconds apart)
+2018-07-30T06:39:46.949813068Z 2018-07-30 06:39:46.949 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-30T06:40:08.483226988Z 2018-07-30 06:40:08.482 UTC [24] LOG:  checkpoints are occurring too frequently (22 seconds apart)
+2018-07-30T06:40:08.483257336Z 2018-07-30 06:40:08.482 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-30T06:40:31.238288609Z 2018-07-30 06:40:31.237 UTC [24] LOG:  checkpoints are occurring too frequently (23 seconds apart)
+2018-07-30T06:40:31.238312681Z 2018-07-30 06:40:31.237 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-30T06:41:29.611573616Z 2018-07-30 06:41:29.611 UTC [24] LOG:  checkpoints are occurring too frequently (7 seconds apart)
+2018-07-30T06:41:29.611602267Z 2018-07-30 06:41:29.611 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".
+2018-07-30T06:42:03.884967922Z 2018-07-30 06:42:03.884 UTC [24] LOG:  checkpoints are occurring too frequently (4 seconds apart)
+2018-07-30T06:42:03.885003735Z 2018-07-30 06:42:03.884 UTC [24] HINT:  Consider increasing the configuration parameter "max_wal_size".

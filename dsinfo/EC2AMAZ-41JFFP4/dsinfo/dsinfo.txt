@@ -1,0 +1,97 @@
+=========================
+
+Docker/System Information
+
+=========================
+
+
+Monday, July 30, 2018 1:06:39 PM
+
+
+
+Platform Version     
+-------- -------     
+ Win32NT 10.0.14393.0
+
+
+
+docker version
+=========================
+Client:
+ Version:	17.06.2-ee-11
+ API version:	1.30
+ Go version:	go1.8.7
+ Git commit:	06fc007
+ Built:	Thu May 17 06:14:39 2018
+ OS/Arch:	windows/amd64
+
+Server:
+ Engine:
+  Version:	17.06.2-ee-14
+  API version:	1.30 (minimum version 1.24)
+  Go version:	go1.8.7
+  Git commit:	6345dd7
+  Built:	Thu Jun 21 18:28:51 2018
+  OS/Arch:	windows/amd64
+  Experimental:	false
+
+docker info
+=========================
+Containers: 8
+ Running: 3
+ Paused: 0
+ Stopped: 5
+Images: 3
+Server Version: 17.06.2-ee-14
+Storage Driver: windowsfilter
+ Windows: 
+Logging Driver: json-file
+Plugins: 
+ Volume: local
+ Network: l2bridge l2tunnel nat null overlay transparent
+ Log: awslogs etwlogs fluentd json-file logentries splunk syslog
+Swarm: active
+ NodeID: gdo2rd57dek3yf4tmyfrkh2ix
+ Is Manager: false
+ Node Address: 172.31.29.135
+ Manager Addresses:
+  172.31.9.58:2377
+Default Isolation: process
+Kernel Version: 10.0 14393 (14393.1794.amd64fre.rs1_release.171008-1615)
+Operating System: Windows Server 2016 Datacenter
+OSType: windows
+Architecture: x86_64
+CPUs: 4
+Total Memory: 30.5GiB
+Name: EC2AMAZ-41JFFP4
+ID: VZIV:QABT:63VB:KUOW:4FOR:BTTB:QULZ:U7KS:CIZK:QWTU:63SI:65EG
+Docker Root Dir: D:\
+Debug Mode (client): false
+Debug Mode (server): false
+Registry: https://index.docker.io/v1/
+Labels:
+ os=windows
+Experimental: false
+Insecure Registries:
+ 127.0.0.0/8
+Live Restore Enabled: false
+
+
+docker images --no-trunc
+=========================
+REPOSITORY              TAG                 IMAGE ID                                                                  CREATED             SIZE
+docker/ucp-dsinfo-win   3.0.2               sha256:75a19bb46a05d4650fc8874979c97f6bb4eae7f04610ef2ed3bcca5011ac2ae8   5 weeks ago         1.17GB
+docker/ucp-agent-win    3.0.2               sha256:2f416369819e7f48c17784f4afb7e52913670df267ab0d5df6b3bdbc2d114ae2   5 weeks ago         1.15GB
+hello-world             nanoserver          sha256:b1bf314a296b6c9da7e93efb25c8b259ea1e7e90d569bd902661fbf4a9a1425a   3 months ago        1.11GB
+
+docker stats --all --no-stream
+=========================
+CONTAINER           CPU %               PRIV WORKING SET    NET I/O             BLOCK I/O
+42c25b3a5983        0.00%               78.99MiB            1.12MB / 57.9kB     4.57MB / 11.9MB
+d90121b61211        0.00%               49.66MiB            2.77GB / 1.02GB     17.4MB / 236MB
+3b13e2f940a7        0.00%               0B                  0B / 0B             0B / 0B
+58e16be6fc42        0.00%               56.43MiB            3.05GB / 2.14GB     26.1MB / 287MB
+57a2cc391d86        0.00%               0B                  0B / 0B             0B / 0B
+854f876eb21a        0.00%               0B                  0B / 0B             0B / 0B
+6af4fa2b52e1        0.00%               0B                  0B / 0B             0B / 0B
+f0e64550411f        0.00%               0B                  0B / 0B             0B / 0B

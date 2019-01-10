@@ -1,0 +1,274 @@
+[
+    {
+        "Id": "1873fa6f06936405cc5676635a0d21207569aad58c452f4ad2495c9c7a4d4705",
+        "Created": "2018-06-21T20:59:03.286512181Z",
+        "Path": "/install-cni.sh",
+        "Args": [],
+        "State": {
+            "Status": "exited",
+            "Running": false,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 0,
+            "ExitCode": 137,
+            "Error": "",
+            "StartedAt": "2018-06-21T20:59:03.546674904Z",
+            "FinishedAt": "2018-06-28T17:00:25.51648061Z"
+        },
+        "Image": "sha256:3161c5d9ee7b577a267a7e916705d203ed20a7e1338ba91cb7d986fc47d1e910",
+        "ResolvConfPath": "/var/lib/docker/containers/15d497c1ba8603021313c092899e006a8f759fb57f6b8d2352bb16f95cabbe75/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/15d497c1ba8603021313c092899e006a8f759fb57f6b8d2352bb16f95cabbe75/hostname",
+        "HostsPath": "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/etc-hosts",
+        "LogPath": "/var/lib/docker/containers/1873fa6f06936405cc5676635a0d21207569aad58c452f4ad2495c9c7a4d4705/1873fa6f06936405cc5676635a0d21207569aad58c452f4ad2495c9c7a4d4705-json.log",
+        "Name": "/k8s_install-cni_calico-node-ftttl_kube-system_ece28e3d-7595-11e8-b33c-0242ac110005_0",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/opt/cni/bin:/host/opt/cni/bin",
+                "/etc/cni/net.d:/host/etc/cni/net.d",
+                "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/volumes/kubernetes.io~secret/etcd-certs:/calico-secrets:ro,Z",
+                "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/volumes/kubernetes.io~secret/cni-plugin-token-8rk2q:/var/run/secrets/kubernetes.io/serviceaccount:ro,Z",
+                "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/etc-hosts:/etc/hosts:Z",
+                "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/containers/install-cni/9df055db:/dev/termination-log:Z"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "container:15d497c1ba8603021313c092899e006a8f759fb57f6b8d2352bb16f95cabbe75",
+            "PortBindings": null,
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "container:15d497c1ba8603021313c092899e006a8f759fb57f6b8d2352bb16f95cabbe75",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 999,
+            "PidMode": "",
+            "Privileged": true,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "seccomp=unconfined",
+                "label=disable"
+            ],
+            "UTSMode": "host",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 2,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "/kubepods/burstable/podece28e3d-7595-11e8-b33c-0242ac110005",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/8145ca7dd518baa2c52488fa790acc9959638540e0070ea41177727de4553376-init/diff:/var/lib/docker/overlay2/824fd5661d8c0da7595bc68b4af142ac8d22b2ea53f4f0a31cbabc2910eefb25/diff:/var/lib/docker/overlay2/529a7717a396eba8a979ce1434220592e587d8823992d82f683e9730de844a40/diff:/var/lib/docker/overlay2/7538100149e423b447f7d92da421ef4b13a2a5f47e233d03e196fe53cced67a0/diff:/var/lib/docker/overlay2/4bae16aa7336bae94665876f17d248fec47b637729efe9b9a7d538a93246bbdc/diff:/var/lib/docker/overlay2/d5e2701118e306613739846dd139d9017e53174d78c39e8470dd33301c25f2dd/diff:/var/lib/docker/overlay2/390bb3ae598ed122f13840927ccd2de3dcd1fb69b489b6553a890d48a81b9047/diff:/var/lib/docker/overlay2/706adc5bf89c9fab84a17de75642518c9e21e70f6c882f6c39ae8143f7b56f86/diff:/var/lib/docker/overlay2/78060d59583672d16b17d3ce9dbaeb9a3b853bdcad516752985feb29dae06c96/diff:/var/lib/docker/overlay2/f68b36a83eee95bcc76197d9a0753b75b18bd818f077af9453d787d4c3a7a2b6/diff:/var/lib/docker/overlay2/77b1a4537462bffe408fc2c6f8933f8116c2f72255d24e99e75551c3b5c3ba3b/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8145ca7dd518baa2c52488fa790acc9959638540e0070ea41177727de4553376/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8145ca7dd518baa2c52488fa790acc9959638540e0070ea41177727de4553376/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8145ca7dd518baa2c52488fa790acc9959638540e0070ea41177727de4553376/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/volumes/kubernetes.io~secret/etcd-certs",
+                "Destination": "/calico-secrets",
+                "Mode": "ro,Z",
+                "RW": false,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/containers/install-cni/9df055db",
+                "Destination": "/dev/termination-log",
+                "Mode": "Z",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/etc-hosts",
+                "Destination": "/etc/hosts",
+                "Mode": "Z",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/etc/cni/net.d",
+                "Destination": "/host/etc/cni/net.d",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "bind",
+                "Source": "/opt/cni/bin",
+                "Destination": "/host/opt/cni/bin",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            },
+            {
+                "Type": "volume",
+                "Name": "9ad26b4fdc4b4d5e0eb6bfbc5d32114388723c295339c1623ff828daf3a20929",
+                "Source": "/var/lib/docker/volumes/9ad26b4fdc4b4d5e0eb6bfbc5d32114388723c295339c1623ff828daf3a20929/_data",
+                "Destination": "/opt/cni",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/var/lib/kubelet/pods/ece28e3d-7595-11e8-b33c-0242ac110005/volumes/kubernetes.io~secret/cni-plugin-token-8rk2q",
+                "Destination": "/var/run/secrets/kubernetes.io/serviceaccount",
+                "Mode": "ro,Z",
+                "RW": false,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ip-172-31-12-152.ec2.internal",
+            "Domainname": "",
+            "User": "0",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "CNI_CONF_NAME=10-calico.conflist",
+                "ETCD_ENDPOINTS=https://proxy.local:12378",
+                "CNI_NETWORK_CONFIG={\n    \"cniVersion\": \"0.3.1\",\n    \"name\": \"k8s-pod-network\",\n    \"plugins\": [\n    {\n            \"type\": \"calico\",\n            \"etcd_endpoints\": \"https://proxy.local:12378\",\n            \"etcd_key_file\": \"/var/lib/docker/ucp/ucp-node-certs/key.pem\",\n            \"etcd_cert_file\": \"/var/lib/docker/ucp/ucp-node-certs/cert.pem\",\n            \"etcd_ca_cert_file\": \"/var/lib/docker/ucp/ucp-node-certs/ca.pem\",\n            \"log_level\": \"info\",\n            \"mtu\": 1500,\n            \n            \"ipam\": {\n                \"type\": \"calico-ipam\"\n            },\n            \n            \"kubernetes\": {\n                \"kubeconfig\": \"/var/lib/docker/ucp/ucp-node-certs/kubeconfig\"\n            },\n            \"policy\": {\n                \"type\": \"k8s\"\n            }\n        },\n       \t{\n            \"type\": \"portmap\",\n            \"snat\": true,\n            \"capabilities\": {\"portMappings\": true}\n       \t}\n    ]\n}",
+                "KUBE_DNS_SERVICE_HOST=10.96.0.10",
+                "KUBE_DNS_PORT_53_UDP_PROTO=udp",
+                "KUBE_DNS_PORT_53_UDP_PORT=53",
+                "KUBE_DNS_PORT_53_TCP_PORT=53",
+                "KUBERNETES_PORT_443_TCP_PROTO=tcp",
+                "KUBE_DNS_PORT_53_UDP=udp://10.96.0.10:53",
+                "KUBE_DNS_PORT_53_UDP_ADDR=10.96.0.10",
+                "KUBERNETES_SERVICE_PORT_HTTPS=443",
+                "KUBERNETES_PORT_443_TCP=tcp://10.96.0.1:443",
+                "KUBE_DNS_SERVICE_PORT=53",
+                "KUBE_DNS_SERVICE_PORT_DNS=53",
+                "KUBE_DNS_PORT_53_TCP_PROTO=tcp",
+                "KUBE_DNS_PORT_53_TCP_ADDR=10.96.0.10",
+                "KUBERNETES_SERVICE_PORT=443",
+                "KUBERNETES_PORT_443_TCP_PORT=443",
+                "KUBERNETES_PORT_443_TCP_ADDR=10.96.0.1",
+                "KUBE_DNS_SERVICE_PORT_DNS_TCP=53",
+                "KUBE_DNS_PORT=udp://10.96.0.10:53",
+                "KUBE_DNS_PORT_53_TCP=tcp://10.96.0.10:53",
+                "KUBERNETES_SERVICE_HOST=10.96.0.1",
+                "KUBERNETES_PORT=tcp://10.96.0.1:443",
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/cni/bin"
+            ],
+            "Cmd": null,
+            "Healthcheck": {
+                "Test": [
+                    "NONE"
+                ]
+            },
+            "Image": "docker/ucp-calico-cni@sha256:d19d15e27d12292037a863c2104479b0cca419727a4360baada26767022ed375",
+            "Volumes": {
+                "/opt/cni": {}
+            },
+            "WorkingDir": "/opt/cni/bin",
+            "Entrypoint": [
+                "/install-cni.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "annotation.io.kubernetes.container.hash": "ce335637",
+                "annotation.io.kubernetes.container.restartCount": "0",
+                "annotation.io.kubernetes.container.terminationMessagePath": "/dev/termination-log",
+                "annotation.io.kubernetes.container.terminationMessagePolicy": "File",
+                "annotation.io.kubernetes.pod.terminationGracePeriod": "0",
+                "com.docker.ucp.calico_cni.version": "calico/cni:v2.0.0",
+                "com.docker.ucp.version": "3.0.2",
+                "io.kubernetes.container.logpath": "/var/log/pods/ece28e3d-7595-11e8-b33c-0242ac110005/install-cni_0.log",
+                "io.kubernetes.container.name": "install-cni",
+                "io.kubernetes.docker.type": "container",
+                "io.kubernetes.pod.name": "calico-node-ftttl",
+                "io.kubernetes.pod.namespace": "kube-system",
+                "io.kubernetes.pod.uid": "ece28e3d-7595-11e8-b33c-0242ac110005",
+                "io.kubernetes.sandbox.id": "15d497c1ba8603021313c092899e006a8f759fb57f6b8d2352bb16f95cabbe75",
+                "maintainer": "Tom Denham <tom@tigera.io>"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {}
+        }
+    }
+]

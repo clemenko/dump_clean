@@ -1,0 +1,30 @@
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 state UNKNOWN qlen 1
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9001 state UP qlen 1000
+    inet6 fe80::878:63ff:fefe:192c/64 scope link 
+       valid_lft forever preferred_lft forever
+3: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::42:c5ff:fe29:7222/64 scope link 
+       valid_lft forever preferred_lft forever
+8: docker_gwbridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::42:9fff:fe53:684a/64 scope link 
+       valid_lft forever preferred_lft forever
+179: veth28cd027@if178: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::b8f8:25ff:fe88:6d87/64 scope link 
+       valid_lft forever preferred_lft forever
+185: veth2a8de2a@if184: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::780b:e2ff:fec9:c7a7/64 scope link 
+       valid_lft forever preferred_lft forever
+191: veth0e95363@if190: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::bcf9:19ff:fe82:2b7b/64 scope link 
+       valid_lft forever preferred_lft forever
+199: vethb1413f2@if198: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::80f6:c9ff:fefd:54d6/64 scope link 
+       valid_lft forever preferred_lft forever
+234: veth1ff1db5@if233: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::644d:51ff:fed9:3df1/64 scope link 
+       valid_lft forever preferred_lft forever
+238: veth63d88a1@if237: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 state UP 
+    inet6 fe80::452:e1ff:fee1:80f0/64 scope link 
+       valid_lft forever preferred_lft forever

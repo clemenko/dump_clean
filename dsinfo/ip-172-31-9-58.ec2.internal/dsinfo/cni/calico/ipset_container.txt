@@ -1,0 +1,29 @@
+Name: cali4-masq-ipam-pools
+Type: hash:net
+Revision: 3
+Header: family inet hashsize 1024 maxelem 1048576
+Size in memory: 16816
+References: 1
+Members:
+192.168.0.0/16
+
+Name: cali4-all-hosts
+Type: hash:ip
+Revision: 1
+Header: family inet hashsize 1024 maxelem 1048576
+Size in memory: 16592
+References: 2
+Members:
+172.31.9.58
+172.31.18.229
+172.31.12.152
+172.31.10.96
+
+Name: cali4-all-ipam-pools
+Type: hash:net
+Revision: 3
+Header: family inet hashsize 1024 maxelem 1048576
+Size in memory: 16816
+References: 1
+Members:
+192.168.0.0/16

@@ -1,0 +1,38 @@
+{
+	"backend": "ldap",
+	"samlEnabled": false
+}
+{
+	"serverURL": "ldaps://172.31.9.58:636",
+	"noSimplePagination": false,
+	"startTLS": false,
+	"rootCerts": "",
+	"tlsSkipVerify": true,
+	"readerDN": "cn=readonly,dc=example,dc=org",
+	"readerPassword": "",
+	"additionalDomains": [],
+	"userSearchConfigs": [
+		{
+			"baseDN": "dc=example,dc=org",
+			"scopeSubtree": true,
+			"usernameAttr": "uid",
+			"fullNameAttr": "cn",
+			"filter": "",
+			"matchGroup": false,
+			"matchGroupDN": "",
+			"matchGroupMemberAttr": "",
+			"matchGroupIterate": false
+		}
+	],
+	"adminSyncOpts": {
+		"enableSync": true,
+		"selectGroupMembers": false,
+		"groupDN": "ou=Administrators,dc=example,dc=org",
+		"groupMemberAttr": "gidNumber",
+		"searchBaseDN": "ou=Administrators,dc=example,dc=org",
+		"searchScopeSubtree": false,
+		"searchFilter": ""
+	},
+	"syncSchedule": "",
+	"jitUserProvisioning": true
+}

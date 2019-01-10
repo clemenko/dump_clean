@@ -1,0 +1,221 @@
+{
+	"ID": "b5hus08elu18gjqzpwc07h27r",
+	"Version": {
+		"Index": 1938
+	},
+	"CreatedAt": "2018-06-28T19:50:25.900892716Z",
+	"UpdatedAt": "2018-06-29T00:48:04.460310901Z",
+	"Spec": {
+		"Name": "ucp-interlock-proxy",
+		"Labels": {
+			"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+			"service_cluster": "",
+			"type": "com.docker.interlock.core.proxy"
+		},
+		"TaskTemplate": {
+			"ContainerSpec": {
+				"Image": "docker/ucp-interlock-proxy:3.0.2",
+				"Labels": {
+					"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g"
+				},
+				"StopSignal": "SIGQUIT",
+				"StopGracePeriod": 5000000000,
+				"Configs": [
+					{
+						"File": {
+							"Name": "/etc/nginx/nginx.conf",
+							"UID": "0",
+							"GID": "0",
+							"Mode": 420
+						},
+						"ConfigID": "a5dr2d44oxcsib2cfajdz9ml6",
+						"ConfigName": "com.docker.interlock.proxy.b59af8"
+					}
+				]
+			},
+			"RestartPolicy": {
+				"Condition": "any",
+				"MaxAttempts": 0
+			},
+			"Placement": {
+				"Constraints": [
+					"node.labels.com.docker.ucp.orchestrator.swarm==true",
+					"node.platform.os==linux"
+				]
+			},
+			"Networks": [
+				{
+					"Target": "ysv3mkpq9lc2f4dq1ri0s31hx",
+					"Aliases": [
+						"web"
+					]
+				}
+			],
+			"ForceUpdate": 1,
+			"Runtime": "container"
+		},
+		"Mode": {
+			"Replicated": {
+				"Replicas": 2
+			}
+		},
+		"UpdateConfig": {
+			"Parallelism": 1,
+			"FailureAction": "pause",
+			"MaxFailureRatio": 0,
+			"Order": "stop-first"
+		},
+		"EndpointSpec": {
+			"Mode": "vip",
+			"Ports": [
+				{
+					"Name": "proxy",
+					"Protocol": "tcp",
+					"TargetPort": 80,
+					"PublishedPort": 80,
+					"PublishMode": "ingress"
+				},
+				{
+					"Name": "proxy-ssl",
+					"Protocol": "tcp",
+					"TargetPort": 443,
+					"PublishedPort": 8443,
+					"PublishMode": "ingress"
+				}
+			]
+		}
+	},
+	"PreviousSpec": {
+		"Name": "ucp-interlock-proxy",
+		"Labels": {
+			"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+			"com.docker.ucp.access.label": "/",
+			"com.docker.ucp.collection": "swarm",
+			"com.docker.ucp.collection.root": "true",
+			"com.docker.ucp.collection.swarm": "true",
+			"service_cluster": "",
+			"type": "com.docker.interlock.core.proxy"
+		},
+		"TaskTemplate": {
+			"ContainerSpec": {
+				"Image": "docker/ucp-interlock-proxy:3.0.2",
+				"Labels": {
+					"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+					"com.docker.ucp.access.label": "/",
+					"com.docker.ucp.collection": "swarm",
+					"com.docker.ucp.collection.root": "true",
+					"com.docker.ucp.collection.swarm": "true"
+				},
+				"StopSignal": "SIGQUIT",
+				"StopGracePeriod": 5000000000,
+				"Configs": [
+					{
+						"File": {
+							"Name": "/etc/nginx/nginx.conf",
+							"UID": "0",
+							"GID": "0",
+							"Mode": 420
+						},
+						"ConfigID": "xvsu9ugwv029xvmf25zxwh7hh",
+						"ConfigName": "com.docker.interlock.proxy.77b196"
+					}
+				]
+			},
+			"RestartPolicy": {
+				"Condition": "any",
+				"MaxAttempts": 0
+			},
+			"Placement": {
+				"Constraints": [
+					"node.labels.com.docker.ucp.orchestrator.swarm==true",
+					"node.platform.os==linux"
+				]
+			},
+			"ForceUpdate": 1,
+			"Runtime": "container"
+		},
+		"Mode": {
+			"Replicated": {
+				"Replicas": 2
+			}
+		},
+		"UpdateConfig": {
+			"Parallelism": 1,
+			"FailureAction": "pause",
+			"MaxFailureRatio": 0,
+			"Order": "stop-first"
+		},
+		"EndpointSpec": {
+			"Mode": "vip",
+			"Ports": [
+				{
+					"Name": "proxy",
+					"Protocol": "tcp",
+					"TargetPort": 80,
+					"PublishedPort": 80,
+					"PublishMode": "ingress"
+				},
+				{
+					"Name": "proxy-ssl",
+					"Protocol": "tcp",
+					"TargetPort": 443,
+					"PublishedPort": 8443,
+					"PublishMode": "ingress"
+				}
+			]
+		}
+	},
+	"Endpoint": {
+		"Spec": {
+			"Mode": "vip",
+			"Ports": [
+				{
+					"Name": "proxy",
+					"Protocol": "tcp",
+					"TargetPort": 80,
+					"PublishedPort": 80,
+					"PublishMode": "ingress"
+				},
+				{
+					"Name": "proxy-ssl",
+					"Protocol": "tcp",
+					"TargetPort": 443,
+					"PublishedPort": 8443,
+					"PublishMode": "ingress"
+				}
+			]
+		},
+		"Ports": [
+			{
+				"Name": "proxy",
+				"Protocol": "tcp",
+				"TargetPort": 80,
+				"PublishedPort": 80,
+				"PublishMode": "ingress"
+			},
+			{
+				"Name": "proxy-ssl",
+				"Protocol": "tcp",
+				"TargetPort": 443,
+				"PublishedPort": 8443,
+				"PublishMode": "ingress"
+			}
+		],
+		"VirtualIPs": [
+			{
+				"NetworkID": "vw0lsec8y3b17uxi723xbg0bw",
+				"Addr": "10.255.0.15/16"
+			},
+			{
+				"NetworkID": "ysv3mkpq9lc2f4dq1ri0s31hx",
+				"Addr": "10.0.2.4/24"
+			}
+		]
+	},
+	"UpdateStatus": {
+		"State": "completed",
+		"StartedAt": "2018-06-29T00:47:50.918282582Z",
+		"CompletedAt": "2018-06-29T00:48:04.46029307Z",
+		"Message": "update completed"
+	}
+}

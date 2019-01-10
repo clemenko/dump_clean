@@ -1,0 +1,187 @@
+{
+	"ID": "xkhjn45xmqg2jjppj7ikc6st2",
+	"Version": {
+		"Index": 1963
+	},
+	"CreatedAt": "2018-06-28T19:50:19.488834252Z",
+	"UpdatedAt": "2018-07-10T20:20:55.589409596Z",
+	"Spec": {
+		"Name": "ucp-interlock",
+		"Labels": {
+			"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+			"com.docker.ucp.access.label": "/System",
+			"com.docker.ucp.collection": "system",
+			"com.docker.ucp.collection.root": "true",
+			"com.docker.ucp.collection.swarm": "true",
+			"com.docker.ucp.collection.system": "true"
+		},
+		"TaskTemplate": {
+			"ContainerSpec": {
+				"Image": "docker/ucp-interlock:3.0.2@sha256:ace8de806c05eaa6fa9490e8759f6936d1257b4b47fc53f8d90bbec96d6cdad2",
+				"Labels": {
+					"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+					"com.docker.ucp.access.label": "/System",
+					"com.docker.ucp.collection": "system",
+					"com.docker.ucp.collection.root": "true",
+					"com.docker.ucp.collection.swarm": "true",
+					"com.docker.ucp.collection.system": "true",
+					"com.docker.ucp.version": "3.0.2"
+				},
+				"Args": [
+					"run",
+					"-c",
+					"/config.toml"
+				],
+				"Privileges": {
+					"CredentialSpec": null,
+					"SELinuxContext": {
+						"Disable": true,
+						"User": "",
+						"Role": "",
+						"Type": "",
+						"Level": ""
+					}
+				},
+				"Mounts": [
+					{
+						"Type": "bind",
+						"Source": "/var/run/docker.sock",
+						"Target": "/var/run/docker.sock"
+					}
+				],
+				"Configs": [
+					{
+						"File": {
+							"Name": "/config.toml",
+							"UID": "0",
+							"GID": "0",
+							"Mode": 292
+						},
+						"ConfigID": "9kpi1jeti0gp96jcmnzzkfcac",
+						"ConfigName": "com.docker.ucp.interlock.conf-9"
+					}
+				]
+			},
+			"Placement": {
+				"Constraints": [
+					"node.platform.os==linux",
+					"node.platform.arch==x86_64",
+					"node.role==manager",
+					"node.labels.com.docker.ucp.orchestrator.swarm==true"
+				]
+			},
+			"ForceUpdate": 0,
+			"Runtime": "container"
+		},
+		"Mode": {
+			"Replicated": {
+				"Replicas": 1
+			}
+		},
+		"UpdateConfig": {
+			"Parallelism": 1,
+			"FailureAction": "pause",
+			"MaxFailureRatio": 0,
+			"Order": "stop-first"
+		},
+		"Networks": [
+			{
+				"Target": "ialtoo08ox3n4zs7zrb8wu1x7"
+			}
+		]
+	},
+	"PreviousSpec": {
+		"Name": "ucp-interlock",
+		"Labels": {
+			"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+			"com.docker.ucp.access.label": "/System",
+			"com.docker.ucp.collection": "system",
+			"com.docker.ucp.collection.root": "true",
+			"com.docker.ucp.collection.swarm": "true",
+			"com.docker.ucp.collection.system": "true"
+		},
+		"TaskTemplate": {
+			"ContainerSpec": {
+				"Image": "docker/ucp-interlock:3.0.2@sha256:ace8de806c05eaa6fa9490e8759f6936d1257b4b47fc53f8d90bbec96d6cdad2",
+				"Labels": {
+					"com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+					"com.docker.ucp.access.label": "/System",
+					"com.docker.ucp.collection": "system",
+					"com.docker.ucp.collection.root": "true",
+					"com.docker.ucp.collection.swarm": "true",
+					"com.docker.ucp.collection.system": "true",
+					"com.docker.ucp.version": "3.0.2"
+				},
+				"Args": [
+					"run",
+					"-c",
+					"/config.toml"
+				],
+				"Privileges": {
+					"CredentialSpec": null,
+					"SELinuxContext": {
+						"Disable": true,
+						"User": "",
+						"Role": "",
+						"Type": "",
+						"Level": ""
+					}
+				},
+				"Mounts": [
+					{
+						"Type": "bind",
+						"Source": "/var/run/docker.sock",
+						"Target": "/var/run/docker.sock"
+					}
+				],
+				"Configs": [
+					{
+						"File": {
+							"Name": "/config.toml",
+							"UID": "0",
+							"GID": "0",
+							"Mode": 292
+						},
+						"ConfigID": "9kpi1jeti0gp96jcmnzzkfcac",
+						"ConfigName": "com.docker.ucp.interlock.conf-9"
+					}
+				]
+			},
+			"Placement": {
+				"Constraints": [
+					"node.platform.os==linux",
+					"node.platform.arch==x86_64",
+					"node.role==manager",
+					"node.labels.com.docker.ucp.orchestrator.swarm==true"
+				]
+			},
+			"ForceUpdate": 0,
+			"Runtime": "container"
+		},
+		"Mode": {
+			"Replicated": {
+				"Replicas": 1
+			}
+		},
+		"UpdateConfig": {
+			"Parallelism": 1,
+			"FailureAction": "pause",
+			"MaxFailureRatio": 0,
+			"Order": "stop-first"
+		},
+		"Networks": [
+			{
+				"Target": "ialtoo08ox3n4zs7zrb8wu1x7"
+			}
+		]
+	},
+	"Endpoint": {
+		"Spec": {},
+		"VirtualIPs": [
+			{
+				"NetworkID": "ialtoo08ox3n4zs7zrb8wu1x7",
+				"Addr": "10.0.0.9/24"
+			}
+		]
+	}
+}

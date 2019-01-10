@@ -1,0 +1,221 @@
+[
+    {
+        "Id": "096aba3184ff537f4b63002a4f78ff7ad4c90895bfdb297e5f0b175c60cc781d",
+        "Created": "2018-06-22T15:27:16.962166283Z",
+        "Path": "kube-proxy",
+        "Args": [
+            "--cluster-cidr=192.168.0.0/16",
+            "--healthz-port=0",
+            "--iptables-masquerade-bit=30",
+            "--kubeconfig=/var/lib/docker/ucp/ucp-node-certs/kubeproxy.conf"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 13051,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-06-28T17:00:32.772005093Z",
+            "FinishedAt": "2018-06-28T17:00:15.69749127Z"
+        },
+        "Image": "sha256:bd7472bbd0cbcd11570a3b6b17f7a6cd2498b76a2dffa267a67772f50a8841d3",
+        "ResolvConfPath": "/var/lib/docker/containers/096aba3184ff537f4b63002a4f78ff7ad4c90895bfdb297e5f0b175c60cc781d/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/096aba3184ff537f4b63002a4f78ff7ad4c90895bfdb297e5f0b175c60cc781d/hostname",
+        "HostsPath": "/var/lib/docker/containers/096aba3184ff537f4b63002a4f78ff7ad4c90895bfdb297e5f0b175c60cc781d/hosts",
+        "LogPath": "/var/lib/docker/containers/096aba3184ff537f4b63002a4f78ff7ad4c90895bfdb297e5f0b175c60cc781d/096aba3184ff537f4b63002a4f78ff7ad4c90895bfdb297e5f0b175c60cc781d-json.log",
+        "Name": "/ucp-kube-proxy",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "host",
+            "PortBindings": null,
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [
+                "proxy.local:172.31.12.152"
+            ],
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": -600,
+            "PidMode": "",
+            "Privileged": true,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [
+                "label=disable"
+            ],
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "Mounts": [
+                {
+                    "Type": "bind",
+                    "Source": "/run/xtables.lock",
+                    "Target": "/run/xtables.lock"
+                },
+                {
+                    "Type": "volume",
+                    "Source": "ucp-node-certs",
+                    "Target": "/var/lib/docker/ucp/ucp-node-certs"
+                }
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/e05f3f908959cb4f917dfb07c913ac661bebf12deba5ea9d68fc45f02ed883c2-init/diff:/var/lib/docker/overlay2/3337e2c9f700f2f1eb08c69a4db5d9f7505f2b02183ae41493a28a95c2126893/diff:/var/lib/docker/overlay2/e6ac007100acb16080f088109b7cfc5b6be50b85783ad05a7d2597b77c672bf2/diff:/var/lib/docker/overlay2/9aa34477f69910eb25a41476e17d1a78159cb2291652684df063b55e47993843/diff:/var/lib/docker/overlay2/7f7dcdb2dfd460468fcc00d88ba7a932070a2aacfe8c9126a629eda8da9a98d8/diff:/var/lib/docker/overlay2/4a9c20887d6eafaeeb75d90e16bc82e10d328584b88b61c646ad896830c32b1b/diff:/var/lib/docker/overlay2/210eb8764d5e477d926290016ec7fc5c8ca5ac5a1fcf8e9200df0049f3b4d921/diff:/var/lib/docker/overlay2/e1f8c6d24ab5e03885581fbb9814f5a27e5054aef65d602e222155d9ed0db447/diff:/var/lib/docker/overlay2/4cb13faafb452d06645a0f92e12bf35494217723f96d2997dd62a4fee3431a35/diff:/var/lib/docker/overlay2/91810101b5fb1427af70fc19cd3d009f03bfceaac6db3fcaad209e81dd746a51/diff:/var/lib/docker/overlay2/6edd8eec2a91fe1dc3fda3c37d1eeced4ae7c732c6e0321f877b4c257b95b84f/diff:/var/lib/docker/overlay2/b907773776ea6976106a39d500839eea25402df31ddb060ac4cc0758103735ec/diff:/var/lib/docker/overlay2/5936171a9dafbde5da80b28baacaee9abae731ca23407a1de2ccfd344f1ad8c2/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e05f3f908959cb4f917dfb07c913ac661bebf12deba5ea9d68fc45f02ed883c2/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e05f3f908959cb4f917dfb07c913ac661bebf12deba5ea9d68fc45f02ed883c2/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e05f3f908959cb4f917dfb07c913ac661bebf12deba5ea9d68fc45f02ed883c2/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "ucp-node-certs",
+                "Source": "/var/lib/docker/volumes/ucp-node-certs/_data",
+                "Destination": "/var/lib/docker/ucp/ucp-node-certs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "bind",
+                "Source": "/run/xtables.lock",
+                "Destination": "/run/xtables.lock",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "ip-172-31-12-152.ec2.internal",
+            "Domainname": "",
+            "User": "root",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "kube-proxy",
+                "--cluster-cidr=192.168.0.0/16",
+                "--healthz-port=0",
+                "--iptables-masquerade-bit=30",
+                "--kubeconfig=/var/lib/docker/ucp/ucp-node-certs/kubeproxy.conf"
+            ],
+            "Image": "docker/ucp-hyperkube:3.0.2",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "7bc2ccae4b5bf3b3b7ebcc402bf425b7532108838079788e5ee48cb21d7c36a3",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/default",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "host": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "655fb334d1e5772cc4d430b9d603897312240f7a7e8dbd020708314f824a9f4e",
+                    "EndpointID": "09f40375f12c5a394fcaf9f88d8676cc0a4fe2fcbac854df5c89fd2cf663a542",
+                    "Gateway": "",
+                    "IPAddress": "",
+                    "IPPrefixLen": 0,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

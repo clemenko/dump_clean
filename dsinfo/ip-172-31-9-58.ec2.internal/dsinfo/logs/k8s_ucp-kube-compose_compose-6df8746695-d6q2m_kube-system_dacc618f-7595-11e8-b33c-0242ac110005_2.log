@@ -1,0 +1,16 @@
+k8s_ucp-kube-compose_compose-6df8746695-d6q2m_kube-system_dacc618f-7595-11e8-b33c-0242ac110005_2
+2018-06-28T16:57:26.290256778Z Version:    v0.2.8-ucp-dirty
+2018-06-28T16:57:26.290307795Z Git commit: d0e9d91-dirty
+2018-06-28T16:57:26.290316491Z OS/Arch:    linux/amd64
+2018-06-28T16:57:26.290321722Z Built:      Fri May 25 12:12:46 2018
+2018-06-28T16:57:26.290326664Z time="2018-06-28T16:57:26Z" level=debug msg="using config file: "
+2018-06-28T16:57:26.290627718Z time="2018-06-28T16:57:26Z" level=debug msg="check API present at https://10.96.0.1:443"
+2018-06-28T16:57:26.365085548Z time="2018-06-28T16:57:26Z" level=info msg="controller ready"
+k8s_ucp-kube-compose_compose-6df8746695-d6q2m_kube-system_dacc618f-7595-11e8-b33c-0242ac110005_2
+2018-06-28T16:57:26.290256778Z Version:    v0.2.8-ucp-dirty
+2018-06-28T16:57:26.290307795Z Git commit: d0e9d91-dirty
+2018-06-28T16:57:26.290316491Z OS/Arch:    linux/amd64
+2018-06-28T16:57:26.290321722Z Built:      Fri May 25 12:12:46 2018
+2018-06-28T16:57:26.290326664Z time="2018-06-28T16:57:26Z" level=debug msg="using config file: "
+2018-06-28T16:57:26.290627718Z time="2018-06-28T16:57:26Z" level=debug msg="check API present at https://10.96.0.1:443"
+2018-06-28T16:57:26.365085548Z time="2018-06-28T16:57:26Z" level=info msg="controller ready"

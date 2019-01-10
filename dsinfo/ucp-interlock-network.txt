@@ -1,0 +1,57 @@
+{
+	"Name": "ucp-interlock",
+	"Id": "ialtoo08ox3n4zs7zrb8wu1x7",
+	"Created": "2018-06-28T19:50:19.651434043Z",
+	"Scope": "swarm",
+	"Driver": "overlay",
+	"EnableIPv6": false,
+	"IPAM": {
+		"Driver": "default",
+		"Options": null,
+		"Config": [
+			{
+				"Subnet": "10.0.0.0/24",
+				"Gateway": "10.0.0.1"
+			}
+		]
+	},
+	"Internal": false,
+	"Attachable": false,
+	"Ingress": false,
+	"ConfigFrom": {
+		"Network": ""
+	},
+	"ConfigOnly": false,
+	"Containers": {
+		"22e0c6b6b2b74b138ffd4c72add26909e86e0dc2fe31a92e6e97d0604343730e": {
+			"Name": "ucp-interlock-extension.1.cvaaepbvma2ffglcuboi36hj4",
+			"EndpointID": "8d51da9ef53e40a6bf46e529d9cecc42e96c49a7a7bede1943d574f83aacfe5e",
+			"MacAddress": "02:42:0a:00:00:0c",
+			"IPv4Address": "10.0.0.12/24",
+			"IPv6Address": ""
+		},
+		"956cfb7bb552ea6ed94351704977450d13047abb443eab01f84a8a36dfcc8175": {
+			"Name": "ucp-interlock.1.hw3c48jhnd0b24nzsqrch5n46",
+			"EndpointID": "0486c577d38412b13908782ee86023a0429ee60ab765e5cf6a16f5b487152d20",
+			"MacAddress": "02:42:0a:00:00:0a",
+			"IPv4Address": "10.0.0.10/24",
+			"IPv6Address": ""
+		}
+	},
+	"Options": {
+		"com.docker.network.driver.overlay.vxlanid_list": "4098"
+	},
+	"Labels": {
+		"com.docker.ucp.access.label": "/System",
+		"com.docker.ucp.collection": "system",
+		"com.docker.ucp.collection.root": "true",
+		"com.docker.ucp.collection.swarm": "true",
+		"com.docker.ucp.collection.system": "true"
+	},
+	"Peers": [
+		{
+			"Name": "ip-172-31-9-58.ec2.internal-060a59632820",
+			"IP": "172.31.9.58"
+		}
+	]
+}

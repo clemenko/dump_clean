@@ -1,0 +1,300 @@
+[
+    {
+        "Id": "49436c140a21537b1ce455f63bd271033ee6833bc27f793e8f62713f6019bd2c",
+        "Created": "2018-06-22T15:27:11.581737706Z",
+        "Path": "/bin/ucp-ca",
+        "Args": [
+            "serve",
+            "-address",
+            "0.0.0.0",
+            "-port",
+            "12381",
+            "-ca",
+            "cert.pem",
+            "-ca-key",
+            "key.pem",
+            "-tls-cert",
+            "/etc/docker/ssl/cert.pem",
+            "-tls-key",
+            "/etc/docker/ssl/key.pem",
+            "-mutual-tls-ca",
+            "/etc/docker/ssl/ca.pem",
+            "-cert-duration",
+            "2160h0m0s"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 32561,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-06-28T16:56:49.774571396Z",
+            "FinishedAt": "2018-06-28T16:56:32.055060175Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2018-07-30T13:04:29.848908024Z",
+                        "End": "2018-07-30T13:04:29.930608335Z",
+                        "ExitCode": 0,
+                        "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n"
+                    },
+                    {
+                        "Start": "2018-07-30T13:04:59.930773644Z",
+                        "End": "2018-07-30T13:05:00.032059587Z",
+                        "ExitCode": 0,
+                        "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n"
+                    },
+                    {
+                        "Start": "2018-07-30T13:05:30.032262339Z",
+                        "End": "2018-07-30T13:05:30.11925707Z",
+                        "ExitCode": 0,
+                        "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n"
+                    },
+                    {
+                        "Start": "2018-07-30T13:06:00.119447253Z",
+                        "End": "2018-07-30T13:06:00.215209913Z",
+                        "ExitCode": 0,
+                        "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n"
+                    },
+                    {
+                        "Start": "2018-07-30T13:06:30.215411223Z",
+                        "End": "2018-07-30T13:06:30.309360228Z",
+                        "ExitCode": 0,
+                        "Output": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\r  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:d4aef277a45a573b4cafadbd7340dec5610610ddbb54019a65fd0b96c2677b88",
+        "ResolvConfPath": "/var/lib/docker/containers/49436c140a21537b1ce455f63bd271033ee6833bc27f793e8f62713f6019bd2c/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/49436c140a21537b1ce455f63bd271033ee6833bc27f793e8f62713f6019bd2c/hostname",
+        "HostsPath": "/var/lib/docker/containers/49436c140a21537b1ce455f63bd271033ee6833bc27f793e8f62713f6019bd2c/hosts",
+        "LogPath": "/var/lib/docker/containers/49436c140a21537b1ce455f63bd271033ee6833bc27f793e8f62713f6019bd2c/49436c140a21537b1ce455f63bd271033ee6833bc27f793e8f62713f6019bd2c-json.log",
+        "Name": "/ucp-cluster-root-ca",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "ucp-cluster-root-ca:/etc/cfssl:z",
+                "ucp-node-certs:/etc/docker/ssl:ro,z"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "12381/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "12381"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": -500,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": -1,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/6228b18f5ac4195d78750fe054479ce0bdfbb373b0bb070e6047d8f528bf0c7b-init/diff:/var/lib/docker/overlay2/af83f660e799a90f41fcb95aa9eaa18ecc7fe29b4c527ab2544cfbd285b8388e/diff:/var/lib/docker/overlay2/6d193906da56edd77d2d75e4ca0e80ec290dfb4e93f0b0bcdfcc152ce7285320/diff:/var/lib/docker/overlay2/ec6d81d4a03f52330f97fd0a84d23b59bb5495ed5f8d0d824a22fc1ab5ee129e/diff:/var/lib/docker/overlay2/aff7967f0685ffac86858a79126e11e13ea3766cbbd36935170cf53b184dd211/diff",
+                "MergedDir": "/var/lib/docker/overlay2/6228b18f5ac4195d78750fe054479ce0bdfbb373b0bb070e6047d8f528bf0c7b/merged",
+                "UpperDir": "/var/lib/docker/overlay2/6228b18f5ac4195d78750fe054479ce0bdfbb373b0bb070e6047d8f528bf0c7b/diff",
+                "WorkDir": "/var/lib/docker/overlay2/6228b18f5ac4195d78750fe054479ce0bdfbb373b0bb070e6047d8f528bf0c7b/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "ucp-cluster-root-ca",
+                "Source": "/var/lib/docker/volumes/ucp-cluster-root-ca/_data",
+                "Destination": "/etc/cfssl",
+                "Driver": "local",
+                "Mode": "z",
+                "RW": true,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-node-certs",
+                "Source": "/var/lib/docker/volumes/ucp-node-certs/_data",
+                "Destination": "/etc/docker/ssl",
+                "Driver": "local",
+                "Mode": "ro,z",
+                "RW": false,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "49436c140a21",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "12381/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "serve",
+                "-address",
+                "0.0.0.0",
+                "-port",
+                "12381",
+                "-ca",
+                "cert.pem",
+                "-ca-key",
+                "key.pem",
+                "-tls-cert",
+                "/etc/docker/ssl/cert.pem",
+                "-tls-key",
+                "/etc/docker/ssl/key.pem",
+                "-mutual-tls-ca",
+                "/etc/docker/ssl/ca.pem",
+                "-cert-duration",
+                "2160h0m0s"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "curl --max-time 60 -f --cert /etc/docker/ssl/cert.pem --key /etc/docker/ssl/key.pem --cacert /etc/docker/ssl/ca.pem https://localhost:12381/api/v1/cfssl/v0/info || exit 1"
+                ]
+            },
+            "Image": "docker/ucp-cfssl:3.0.2",
+            "Volumes": null,
+            "WorkingDir": "/etc/cfssl",
+            "Entrypoint": [
+                "/bin/ucp-ca"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "Docker Universal Control Plane 174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.compose.service": "ucp-cluster-root-ca",
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "32b1b1e143584ae2f77f8525e59653379130cdcf6f0616ac558a9d904896af2c",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "12381/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "12381"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/32b1b1e14358",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "4e8a5c243c64f6c3e70fd276b21fadd916e47edb78e0fdc7c132a08485257495",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.3",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:03",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "c02813d11560308a8605716be3f843b59d5f48b0146f923722aed95e31b9dc29",
+                    "EndpointID": "4e8a5c243c64f6c3e70fd276b21fadd916e47edb78e0fdc7c132a08485257495",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

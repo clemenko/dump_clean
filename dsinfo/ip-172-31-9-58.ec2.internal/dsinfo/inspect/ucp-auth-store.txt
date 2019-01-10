@@ -1,0 +1,353 @@
+[
+    {
+        "Id": "3b3232ad3027c1372e23fd8ad6f7b45d98c7e6fa26d7c66a31dd0a078afe804e",
+        "Created": "2018-06-21T20:58:07.323817826Z",
+        "Path": "rethinkdb",
+        "Args": [
+            "--bind",
+            "all",
+            "--no-http-admin",
+            "--no-update-check",
+            "--server-name",
+            "ucp_auth_store_172_31_9_58",
+            "--cluster-port",
+            "12384",
+            "--driver-port",
+            "12383",
+            "--canonical-address",
+            "172.31.9.58:12384",
+            "--directory",
+            "/var/data/rethinkdb",
+            "--config-file",
+            "/var/data/rethinkdb.config",
+            "--cores",
+            "4",
+            "--cache-size",
+            "1024",
+            "--driver-tls-key",
+            "/tls/key.pem",
+            "--driver-tls-cert",
+            "/tls/cert.pem",
+            "--driver-tls-ca",
+            "/tls/ca.pem",
+            "--cluster-tls-key",
+            "/tls/key.pem",
+            "--cluster-tls-cert",
+            "/tls/cert.pem",
+            "--cluster-tls-ca",
+            "/tls/ca.pem"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 748,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2018-06-28T16:56:50.73432743Z",
+            "FinishedAt": "2018-06-28T16:56:32.055887245Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2018-07-30T13:04:31.666466422Z",
+                        "End": "2018-07-30T13:04:31.841735182Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2018-07-30T13:04:57.841895916Z",
+                        "End": "2018-07-30T13:04:58.018804957Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2018-07-30T13:05:24.019004068Z",
+                        "End": "2018-07-30T13:05:24.234812407Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2018-07-30T13:05:50.234907212Z",
+                        "End": "2018-07-30T13:05:50.430129933Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    },
+                    {
+                        "Start": "2018-07-30T13:06:16.430359403Z",
+                        "End": "2018-07-30T13:06:16.610912491Z",
+                        "ExitCode": 0,
+                        "Output": ""
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:978d27ebfaf97da87dbe99c3b78e163dcf33a8291cd7651bc635f4bf85247a6a",
+        "ResolvConfPath": "/var/lib/docker/containers/3b3232ad3027c1372e23fd8ad6f7b45d98c7e6fa26d7c66a31dd0a078afe804e/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/3b3232ad3027c1372e23fd8ad6f7b45d98c7e6fa26d7c66a31dd0a078afe804e/hostname",
+        "HostsPath": "/var/lib/docker/containers/3b3232ad3027c1372e23fd8ad6f7b45d98c7e6fa26d7c66a31dd0a078afe804e/hosts",
+        "LogPath": "/var/lib/docker/containers/3b3232ad3027c1372e23fd8ad6f7b45d98c7e6fa26d7c66a31dd0a078afe804e/3b3232ad3027c1372e23fd8ad6f7b45d98c7e6fa26d7c66a31dd0a078afe804e-json.log",
+        "Name": "/ucp-auth-store",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "ucp-auth-store-certs:/tls:ro,z",
+                "ucp-auth-store-data:/var/data:rw,z"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "12383/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "12383"
+                    }
+                ],
+                "12384/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "12384"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "always",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": -500,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": -1,
+            "MemorySwappiness": -1,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/bed581a64c73930724266e9340f04d7d827e5de4afd76f81d8cabd49f83b962f-init/diff:/var/lib/docker/overlay2/36b6d07e0d1ee493ec269e88507e301a56ae5a32cbbe9d5262a486a575893854/diff:/var/lib/docker/overlay2/1807db892a031b0ce32c7839230353d566a761a6092794376887e56966a17f1a/diff:/var/lib/docker/overlay2/ec6d81d4a03f52330f97fd0a84d23b59bb5495ed5f8d0d824a22fc1ab5ee129e/diff:/var/lib/docker/overlay2/aff7967f0685ffac86858a79126e11e13ea3766cbbd36935170cf53b184dd211/diff",
+                "MergedDir": "/var/lib/docker/overlay2/bed581a64c73930724266e9340f04d7d827e5de4afd76f81d8cabd49f83b962f/merged",
+                "UpperDir": "/var/lib/docker/overlay2/bed581a64c73930724266e9340f04d7d827e5de4afd76f81d8cabd49f83b962f/diff",
+                "WorkDir": "/var/lib/docker/overlay2/bed581a64c73930724266e9340f04d7d827e5de4afd76f81d8cabd49f83b962f/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-store-certs",
+                "Source": "/var/lib/docker/volumes/ucp-auth-store-certs/_data",
+                "Destination": "/tls",
+                "Driver": "local",
+                "Mode": "ro,z",
+                "RW": false,
+                "Propagation": ""
+            },
+            {
+                "Type": "volume",
+                "Name": "ucp-auth-store-data",
+                "Source": "/var/lib/docker/volumes/ucp-auth-store-data/_data",
+                "Destination": "/var/data",
+                "Driver": "local",
+                "Mode": "rw,z",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "3b3232ad3027",
+            "Domainname": "",
+            "User": "nobody",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "12383/tcp": {},
+                "12384/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "--bind",
+                "all",
+                "--no-http-admin",
+                "--no-update-check",
+                "--server-name",
+                "ucp_auth_store_172_31_9_58",
+                "--cluster-port",
+                "12384",
+                "--driver-port",
+                "12383",
+                "--canonical-address",
+                "172.31.9.58:12384",
+                "--directory",
+                "/var/data/rethinkdb",
+                "--config-file",
+                "/var/data/rethinkdb.config",
+                "--cores",
+                "4",
+                "--cache-size",
+                "1024",
+                "--driver-tls-key",
+                "/tls/key.pem",
+                "--driver-tls-cert",
+                "/tls/cert.pem",
+                "--driver-tls-ca",
+                "/tls/ca.pem",
+                "--cluster-tls-key",
+                "/tls/key.pem",
+                "--cluster-tls-cert",
+                "/tls/cert.pem",
+                "--cluster-tls-ca",
+                "/tls/ca.pem"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD",
+                    "/usr/bin/enzi",
+                    "--db-addr",
+                    "127.0.0.1:12383",
+                    "db-server-health",
+                    "-q",
+                    "172.31.9.58",
+                    "12384"
+                ],
+                "Interval": 26000000000,
+                "Timeout": 5000000000,
+                "StartPeriod": 5000000000,
+                "Retries": 1
+            },
+            "Image": "docker/ucp-auth-store:3.0.2",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "rethinkdb"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "Docker Universal Control Plane 174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.compose.service": "ucp-auth-store",
+                "com.docker.ucp.InstanceID": "174q5382xmnb2e5a2c4dwyb4g",
+                "com.docker.ucp.version": "3.0.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "8ecb30e0fc52c17eb2f3fb70f18d0fc6001e389888b25ae6e121ac4eb54f4a96",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "12383/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "12383"
+                    }
+                ],
+                "12384/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "12384"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/8ecb30e0fc52",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "e64a34fe5df340e99bbcc3f3e486c4d322471cfc5d2de52aaeb42b222bc20c74",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.12",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:0c",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "c02813d11560308a8605716be3f843b59d5f48b0146f923722aed95e31b9dc29",
+                    "EndpointID": "e64a34fe5df340e99bbcc3f3e486c4d322471cfc5d2de52aaeb42b222bc20c74",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.12",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:0c",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]

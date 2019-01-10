@@ -1,0 +1,357 @@
+ucp-kube-apiserver
+2018-06-22T15:27:21.979284024Z I0622 15:27:21.971166       1 server.go:114] Version: v1.8.11-docker-8d637ae
+2018-06-22T15:27:21.979343964Z I0622 15:27:21.971321       1 plugins.go:101] No cloud provider specified.
+2018-06-22T15:27:22.413222226Z I0622 15:27:22.412163       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.413244956Z I0622 15:27:22.412709       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.422130342Z I0622 15:27:22.418922       1 feature_gate.go:162] feature gates: map[Initializers:true]
+2018-06-22T15:27:22.422148354Z I0622 15:27:22.418977       1 initialization.go:84] enabled Initializers feature as part of admission plugin setup
+2018-06-22T15:27:22.422155833Z W0622 15:27:22.419145       1 admission.go:66] PersistentVolumeLabel admission controller is deprecated. Please remove this controller from your configuration files and scripts.
+2018-06-22T15:27:22.429301145Z E0622 15:27:22.428856       1 oidc.go:190] oidc authenticator: failed to fetch provider discovery data: Get https://enzi.example.com/.well-known/openid-configuration: EOF
+2018-06-22T15:27:22.481847196Z I0622 15:27:22.481695       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.487249708Z I0622 15:27:22.486241       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.495379554Z I0622 15:27:22.491150       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.495393273Z I0622 15:27:22.491977       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506288830Z I0622 15:27:22.496123       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506307864Z I0622 15:27:22.497607       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506315334Z I0622 15:27:22.498401       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506321069Z I0622 15:27:22.499232       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506326852Z I0622 15:27:22.500152       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506332794Z I0622 15:27:22.501123       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506338764Z I0622 15:27:22.501777       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.506344554Z I0622 15:27:22.502615       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.509338424Z I0622 15:27:22.503465       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.509366722Z I0622 15:27:22.504572       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.509374647Z I0622 15:27:22.505333       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.509380370Z I0622 15:27:22.506035       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.509386014Z I0622 15:27:22.506504       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.509391742Z I0622 15:27:22.507089       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.559045931Z I0622 15:27:22.557093       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.581040163Z I0622 15:27:22.576607       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.581060367Z I0622 15:27:22.577386       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.581067449Z I0622 15:27:22.580049       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.581073358Z I0622 15:27:22.580705       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.587061686Z I0622 15:27:22.582772       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.587080187Z I0622 15:27:22.583686       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.592994059Z I0622 15:27:22.589487       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.593012709Z I0622 15:27:22.590286       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.593020978Z I0622 15:27:22.590924       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.597767027Z I0622 15:27:22.593850       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.597785127Z I0622 15:27:22.594613       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.597793430Z I0622 15:27:22.595675       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.598851969Z I0622 15:27:22.598538       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606855712Z I0622 15:27:22.599297       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606880788Z I0622 15:27:22.600011       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606889331Z I0622 15:27:22.600738       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606895022Z I0622 15:27:22.601596       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606900424Z I0622 15:27:22.602317       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606906513Z I0622 15:27:22.603037       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606915646Z I0622 15:27:22.603784       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606921531Z I0622 15:27:22.604583       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606926819Z I0622 15:27:22.605421       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606932291Z I0622 15:27:22.606178       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.606937900Z I0622 15:27:22.606811       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.628970887Z I0622 15:27:22.624277       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:22.638900204Z W0622 15:27:22.633371       1 genericapiserver.go:311] Skipping API batch/v2alpha1 because it has no resources.
+2018-06-22T15:27:22.730902677Z [restful] 2018/06/22 15:27:22 log.go:33: [restful/swagger] listing is available at https://172.31.9.58:6443/swaggerapi
+2018-06-22T15:27:22.730927269Z [restful] 2018/06/22 15:27:22 log.go:33: [restful/swagger] https://172.31.9.58:6443/swaggerui/ is mapped to folder /swagger-ui/
+2018-06-22T15:27:23.533908775Z [restful] 2018/06/22 15:27:23 log.go:33: [restful/swagger] listing is available at https://172.31.9.58:6443/swaggerapi
+2018-06-22T15:27:23.533936614Z [restful] 2018/06/22 15:27:23 log.go:33: [restful/swagger] https://172.31.9.58:6443/swaggerui/ is mapped to folder /swagger-ui/
+2018-06-22T15:27:23.562984138Z I0622 15:27:23.562897       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-22T15:27:25.829435621Z I0622 15:27:25.829013       1 serve.go:92] Serving securely on 0.0.0.0:6443
+2018-06-22T15:27:25.829463346Z I0622 15:27:25.829185       1 controller.go:84] Starting OpenAPI AggregationController
+2018-06-22T15:27:25.829470906Z I0622 15:27:25.829190       1 apiservice_controller.go:112] Starting APIServiceRegistrationController
+2018-06-22T15:27:25.829476143Z I0622 15:27:25.829225       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+2018-06-22T15:27:25.829490694Z I0622 15:27:25.829271       1 crd_finalizer.go:242] Starting CRDFinalizer
+2018-06-22T15:27:25.830922012Z I0622 15:27:25.830277       1 available_controller.go:192] Starting AvailableConditionController
+2018-06-22T15:27:25.830959587Z I0622 15:27:25.830302       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+2018-06-22T15:27:25.830969317Z I0622 15:27:25.830591       1 crdregistration_controller.go:112] Starting crd-autoregister controller
+2018-06-22T15:27:25.830975051Z I0622 15:27:25.830609       1 controller_utils.go:1041] Waiting for caches to sync for crd-autoregister controller
+2018-06-22T15:27:25.830980251Z I0622 15:27:25.830660       1 customresource_discovery_controller.go:152] Starting DiscoveryController
+2018-06-22T15:27:25.830985645Z I0622 15:27:25.830689       1 naming_controller.go:277] Starting NamingConditionController
+2018-06-22T15:27:25.929714430Z I0622 15:27:25.929421       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+2018-06-22T15:27:25.930733808Z I0622 15:27:25.930508       1 cache.go:39] Caches are synced for AvailableConditionController controller
+2018-06-22T15:27:25.931453676Z I0622 15:27:25.931013       1 controller_utils.go:1048] Caches are synced for crd-autoregister controller
+2018-06-22T15:27:25.931473467Z I0622 15:27:25.931105       1 autoregister_controller.go:136] Starting autoregister controller
+2018-06-22T15:27:25.931480220Z I0622 15:27:25.931115       1 cache.go:32] Waiting for caches to sync for autoregister controller
+2018-06-22T15:27:26.031463866Z I0622 15:27:26.031301       1 cache.go:39] Caches are synced for autoregister controller
+2018-06-22T15:27:42.425015835Z I0622 15:27:42.421710       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.293966342Z I0628 16:42:27.282113       1 server.go:114] Version: v1.8.11-docker-8d637ae
+2018-06-28T16:42:27.293993431Z I0628 16:42:27.282263       1 plugins.go:101] No cloud provider specified.
+2018-06-28T16:42:27.713341567Z I0628 16:42:27.688502       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.713372173Z I0628 16:42:27.689069       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.713380174Z I0628 16:42:27.692807       1 feature_gate.go:162] feature gates: map[Initializers:true]
+2018-06-28T16:42:27.713386240Z I0628 16:42:27.692832       1 initialization.go:84] enabled Initializers feature as part of admission plugin setup
+2018-06-28T16:42:27.713392429Z W0628 16:42:27.692961       1 admission.go:66] PersistentVolumeLabel admission controller is deprecated. Please remove this controller from your configuration files and scripts.
+2018-06-28T16:42:27.718055838Z E0628 16:42:27.715212       1 oidc.go:190] oidc authenticator: failed to fetch provider discovery data: Get https://enzi.example.com/.well-known/openid-configuration: EOF
+2018-06-28T16:42:27.782049684Z I0628 16:42:27.773052       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.782074265Z I0628 16:42:27.778084       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.782081934Z I0628 16:42:27.778710       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.790029385Z I0628 16:42:27.786536       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.802036442Z I0628 16:42:27.798073       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.802053399Z I0628 16:42:27.798963       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.802061609Z I0628 16:42:27.801533       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814878959Z I0628 16:42:27.808487       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814898620Z I0628 16:42:27.809309       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814906488Z I0628 16:42:27.810093       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814912905Z I0628 16:42:27.811017       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814918791Z I0628 16:42:27.811895       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814924544Z I0628 16:42:27.812603       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.814930458Z I0628 16:42:27.813610       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.827987615Z I0628 16:42:27.821606       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.828005125Z I0628 16:42:27.822288       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.828012578Z I0628 16:42:27.822702       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.828018751Z I0628 16:42:27.823507       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.853029029Z I0628 16:42:27.852278       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.865031340Z I0628 16:42:27.858308       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.865048099Z I0628 16:42:27.859024       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.865066904Z I0628 16:42:27.859714       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.865074100Z I0628 16:42:27.860333       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.865080017Z I0628 16:42:27.861017       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.865085688Z I0628 16:42:27.862351       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.877988322Z I0628 16:42:27.875315       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.884435809Z I0628 16:42:27.877196       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.884452486Z I0628 16:42:27.881755       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.888980714Z I0628 16:42:27.883920       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.888996673Z I0628 16:42:27.885173       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.891093617Z I0628 16:42:27.887071       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.891124156Z I0628 16:42:27.887796       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.891131841Z I0628 16:42:27.888455       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.891138086Z I0628 16:42:27.889110       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.891144212Z I0628 16:42:27.889655       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897036188Z I0628 16:42:27.891432       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897053895Z I0628 16:42:27.892025       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897061072Z I0628 16:42:27.892600       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897067342Z I0628 16:42:27.893291       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897073622Z I0628 16:42:27.893917       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897079722Z I0628 16:42:27.894616       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897096545Z I0628 16:42:27.895210       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897102908Z I0628 16:42:27.895821       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.897109234Z I0628 16:42:27.896443       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:27.905848706Z W0628 16:42:27.903575       1 genericapiserver.go:311] Skipping API batch/v2alpha1 because it has no resources.
+2018-06-28T16:42:28.025046216Z [restful] 2018/06/28 16:42:28 log.go:33: [restful/swagger] listing is available at https://172.31.9.58:6443/swaggerapi
+2018-06-28T16:42:28.025068067Z [restful] 2018/06/28 16:42:28 log.go:33: [restful/swagger] https://172.31.9.58:6443/swaggerui/ is mapped to folder /swagger-ui/
+2018-06-28T16:42:29.142042478Z [restful] 2018/06/28 16:42:29 log.go:33: [restful/swagger] listing is available at https://172.31.9.58:6443/swaggerapi
+2018-06-28T16:42:29.142063200Z [restful] 2018/06/28 16:42:29 log.go:33: [restful/swagger] https://172.31.9.58:6443/swaggerui/ is mapped to folder /swagger-ui/
+2018-06-28T16:42:29.277939161Z I0628 16:42:29.265085       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:42:33.309031753Z I0628 16:42:33.305516       1 serve.go:92] Serving securely on 0.0.0.0:6443
+2018-06-28T16:42:33.309055535Z I0628 16:42:33.305764       1 crd_finalizer.go:242] Starting CRDFinalizer
+2018-06-28T16:42:33.309064246Z I0628 16:42:33.306586       1 apiservice_controller.go:112] Starting APIServiceRegistrationController
+2018-06-28T16:42:33.309069940Z I0628 16:42:33.306613       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+2018-06-28T16:42:33.309075823Z I0628 16:42:33.306644       1 available_controller.go:192] Starting AvailableConditionController
+2018-06-28T16:42:33.309081500Z I0628 16:42:33.306663       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+2018-06-28T16:42:33.309087559Z I0628 16:42:33.308843       1 controller.go:84] Starting OpenAPI AggregationController
+2018-06-28T16:42:33.309093050Z I0628 16:42:33.308892       1 crdregistration_controller.go:112] Starting crd-autoregister controller
+2018-06-28T16:42:33.309099082Z I0628 16:42:33.308908       1 controller_utils.go:1041] Waiting for caches to sync for crd-autoregister controller
+2018-06-28T16:42:33.322027092Z I0628 16:42:33.308935       1 customresource_discovery_controller.go:152] Starting DiscoveryController
+2018-06-28T16:42:33.322044494Z I0628 16:42:33.317010       1 naming_controller.go:277] Starting NamingConditionController
+2018-06-28T16:42:33.408014567Z I0628 16:42:33.406821       1 cache.go:39] Caches are synced for AvailableConditionController controller
+2018-06-28T16:42:33.408034707Z I0628 16:42:33.406821       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+2018-06-28T16:42:33.412225564Z I0628 16:42:33.412016       1 controller_utils.go:1048] Caches are synced for crd-autoregister controller
+2018-06-28T16:42:33.412252882Z I0628 16:42:33.412110       1 autoregister_controller.go:136] Starting autoregister controller
+2018-06-28T16:42:33.412260957Z I0628 16:42:33.412120       1 cache.go:32] Waiting for caches to sync for autoregister controller
+2018-06-28T16:42:33.512438450Z I0628 16:42:33.512309       1 cache.go:39] Caches are synced for autoregister controller
+2018-06-28T16:42:37.154939707Z E0628 16:42:37.154820       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:37.155057666Z E0628 16:42:37.154973       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:37.315634969Z E0628 16:42:37.315344       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:37.315653057Z E0628 16:42:37.315466       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:37.488071528Z E0628 16:42:37.485385       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:37.488096326Z E0628 16:42:37.485497       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:50.319044376Z E0628 16:42:50.318894       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:42:50.319132014Z E0628 16:42:50.319045       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:00.247074470Z E0628 16:43:00.246927       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:00.247132996Z E0628 16:43:00.247071       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:09.047399276Z E0628 16:43:09.047262       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:09.047463798Z E0628 16:43:09.047394       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:10.597763026Z E0628 16:43:10.597469       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:10.597786855Z E0628 16:43:10.597569       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:10.601769661Z E0628 16:43:10.601181       1 webhook.go:187] Failed to make webhook authorizer request: Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:10.601801807Z E0628 16:43:10.601297       1 errors.go:90] Post https://174q5382xmnb2e5a2c4dwyb4g:443/kubeauth: dial tcp 172.31.9.58:443: getsockopt: connection refused
+2018-06-28T16:43:37.928158912Z I0628 16:43:37.927838       1 trace.go:76] Trace[2118778029]: "Create /api/v1/namespaces/kube-system/events" (started: 2018-06-28 16:43:37.399367171 +0000 UTC) (total time: 528.4249ms):
+2018-06-28T16:43:37.928184023Z Trace[2118778029]: [528.34035ms] [528.249739ms] Object stored in database
+2018-06-28T16:43:38.599097392Z I0628 16:43:38.597719       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.267286791Z I0628 16:56:51.262524       1 server.go:114] Version: v1.8.11-docker-8d637ae
+2018-06-28T16:56:51.271111634Z I0628 16:56:51.262751       1 plugins.go:101] No cloud provider specified.
+2018-06-28T16:56:51.684161591Z I0628 16:56:51.674297       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.684280368Z I0628 16:56:51.674815       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.684294125Z I0628 16:56:51.678522       1 feature_gate.go:162] feature gates: map[Initializers:true]
+2018-06-28T16:56:51.684303786Z I0628 16:56:51.678547       1 initialization.go:84] enabled Initializers feature as part of admission plugin setup
+2018-06-28T16:56:51.684312913Z W0628 16:56:51.678674       1 admission.go:66] PersistentVolumeLabel admission controller is deprecated. Please remove this controller from your configuration files and scripts.
+2018-06-28T16:56:51.698091577Z E0628 16:56:51.688072       1 oidc.go:190] oidc authenticator: failed to fetch provider discovery data: Get https://enzi.example.com/.well-known/openid-configuration: EOF
+2018-06-28T16:56:51.750336124Z I0628 16:56:51.749854       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.753941477Z I0628 16:56:51.753658       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.756524786Z I0628 16:56:51.756122       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.756877153Z I0628 16:56:51.756592       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.757900545Z I0628 16:56:51.757265       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.759208233Z I0628 16:56:51.757859       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.759226310Z I0628 16:56:51.758445       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.767365464Z I0628 16:56:51.765078       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.767394176Z I0628 16:56:51.765697       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.769363601Z I0628 16:56:51.766366       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.769380547Z I0628 16:56:51.767064       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.769387681Z I0628 16:56:51.767779       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.769393510Z I0628 16:56:51.768553       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.771153845Z I0628 16:56:51.770030       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.771172857Z I0628 16:56:51.770730       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.771834126Z I0628 16:56:51.771601       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.773131922Z I0628 16:56:51.771977       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.773274031Z I0628 16:56:51.772547       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.820204163Z I0628 16:56:51.816135       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.820229690Z I0628 16:56:51.816869       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.820236251Z I0628 16:56:51.817600       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.827987645Z I0628 16:56:51.818363       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.833702030Z I0628 16:56:51.829031       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.833720363Z I0628 16:56:51.829775       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.833728631Z I0628 16:56:51.830466       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.833734853Z I0628 16:56:51.831182       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.833741086Z I0628 16:56:51.831961       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.833996167Z I0628 16:56:51.832624       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.834022673Z I0628 16:56:51.833411       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.835669012Z I0628 16:56:51.835561       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845007153Z I0628 16:56:51.836264       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845025103Z I0628 16:56:51.836957       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845032470Z I0628 16:56:51.837599       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845038057Z I0628 16:56:51.838224       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845043348Z I0628 16:56:51.838807       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845048883Z I0628 16:56:51.839528       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845054651Z I0628 16:56:51.840194       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845060343Z I0628 16:56:51.840785       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845065966Z I0628 16:56:51.841529       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.845071392Z I0628 16:56:51.842333       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.859258821Z I0628 16:56:51.850680       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.859278255Z I0628 16:56:51.851386       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.859285804Z I0628 16:56:51.852016       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.859291787Z I0628 16:56:51.852680       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:51.900271799Z W0628 16:56:51.894545       1 genericapiserver.go:311] Skipping API batch/v2alpha1 because it has no resources.
+2018-06-28T16:56:51.978213592Z [restful] 2018/06/28 16:56:51 log.go:33: [restful/swagger] listing is available at https://172.31.9.58:6443/swaggerapi
+2018-06-28T16:56:51.978232253Z [restful] 2018/06/28 16:56:51 log.go:33: [restful/swagger] https://172.31.9.58:6443/swaggerui/ is mapped to folder /swagger-ui/
+2018-06-28T16:56:52.958560102Z [restful] 2018/06/28 16:56:52 log.go:33: [restful/swagger] listing is available at https://172.31.9.58:6443/swaggerapi
+2018-06-28T16:56:52.958593951Z [restful] 2018/06/28 16:56:52 log.go:33: [restful/swagger] https://172.31.9.58:6443/swaggerui/ is mapped to folder /swagger-ui/
+2018-06-28T16:56:52.994837251Z I0628 16:56:52.990383       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-06-28T16:56:56.270904844Z I0628 16:56:56.270470       1 serve.go:92] Serving securely on 0.0.0.0:6443
+2018-06-28T16:56:56.270962198Z I0628 16:56:56.270602       1 controller.go:84] Starting OpenAPI AggregationController
+2018-06-28T16:56:56.270971491Z I0628 16:56:56.270625       1 apiservice_controller.go:112] Starting APIServiceRegistrationController
+2018-06-28T16:56:56.270977539Z I0628 16:56:56.270642       1 available_controller.go:192] Starting AvailableConditionController
+2018-06-28T16:56:56.270983720Z I0628 16:56:56.270652       1 cache.go:32] Waiting for caches to sync for APIServiceRegistrationController controller
+2018-06-28T16:56:56.270989658Z I0628 16:56:56.270670       1 cache.go:32] Waiting for caches to sync for AvailableConditionController controller
+2018-06-28T16:56:56.270995143Z I0628 16:56:56.270694       1 crdregistration_controller.go:112] Starting crd-autoregister controller
+2018-06-28T16:56:56.271001055Z I0628 16:56:56.270708       1 controller_utils.go:1041] Waiting for caches to sync for crd-autoregister controller
+2018-06-28T16:56:56.273972750Z I0628 16:56:56.271604       1 crd_finalizer.go:242] Starting CRDFinalizer
+2018-06-28T16:56:56.273990645Z I0628 16:56:56.271655       1 customresource_discovery_controller.go:152] Starting DiscoveryController
+2018-06-28T16:56:56.273997423Z I0628 16:56:56.271680       1 naming_controller.go:277] Starting NamingConditionController
+2018-06-28T16:56:56.371065970Z I0628 16:56:56.370867       1 controller_utils.go:1048] Caches are synced for crd-autoregister controller
+2018-06-28T16:56:56.371085400Z I0628 16:56:56.370889       1 cache.go:39] Caches are synced for AvailableConditionController controller
+2018-06-28T16:56:56.371092349Z I0628 16:56:56.370870       1 cache.go:39] Caches are synced for APIServiceRegistrationController controller
+2018-06-28T16:56:56.371098313Z I0628 16:56:56.370990       1 autoregister_controller.go:136] Starting autoregister controller
+2018-06-28T16:56:56.371104046Z I0628 16:56:56.371002       1 cache.go:32] Waiting for caches to sync for autoregister controller
+2018-06-28T16:56:56.471354695Z I0628 16:56:56.471194       1 cache.go:39] Caches are synced for autoregister controller
+2018-06-28T16:57:25.401793355Z I0628 16:57:25.401352       1 logs.go:41] warning: ignoring ServerName for user-provided CA for backwards compatibility is deprecated
+2018-07-02T13:46:29.560982322Z I0702 13:46:29.560815       1 logs.go:41] http: TLS handshake error from 125.64.94.201:39239: local error: tls: unexpected message
+2018-07-02T13:46:29.597012660Z I0702 13:46:29.596699       1 logs.go:41] http: TLS handshake error from 172.31.57.160:50924: local error: tls: unexpected message
+2018-07-03T05:36:21.966924274Z I0703 05:36:21.966663       1 logs.go:41] http: TLS handshake error from 172.31.14.104:14129: local error: tls: unexpected message
+2018-07-08T22:50:26.685984506Z I0708 22:50:26.685790       1 logs.go:41] http: TLS handshake error from 172.31.14.104:9844: tls: first record does not look like a TLS handshake
+2018-07-08T22:50:26.689683421Z I0708 22:50:26.689436       1 logs.go:41] http: TLS handshake error from 172.31.14.104:9846: tls: first record does not look like a TLS handshake
+2018-07-08T22:50:26.744392991Z I0708 22:50:26.744247       1 logs.go:41] http: TLS handshake error from 172.31.14.104:9850: tls: first record does not look like a TLS handshake
+2018-07-08T22:50:26.756971613Z I0708 22:50:26.756834       1 logs.go:41] http: TLS handshake error from 172.31.14.104:9854: tls: first record does not look like a TLS handshake
+2018-07-09T18:09:34.885957417Z I0709 18:09:34.885758       1 trace.go:76] Trace[1746185798]: "List /apis/admissionregistration.k8s.io/v1alpha1/initializerconfigurations" (started: 2018-07-09 18:09:29.887002231 +0000 UTC) (total time: 4.998705784s):
+2018-07-09T18:09:34.885982650Z Trace[1746185798]: [4.998604202s] [4.998594645s] Listing from storage done
+2018-07-09T18:09:34.889224273Z I0709 18:09:34.886264       1 trace.go:76] Trace[18542802]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-09 18:09:29.616766493 +0000 UTC) (total time: 5.269466924s):
+2018-07-09T18:09:34.889242326Z Trace[18542802]: [5.269414504s] [5.269282075s] Transaction committed
+2018-07-09T18:09:34.889249260Z I0709 18:09:34.886375       1 trace.go:76] Trace[2116359976]: "Update /api/v1/namespaces/kube-system/endpoints/kube-controller-manager" (started: 2018-07-09 18:09:29.616693725 +0000 UTC) (total time: 5.269658493s):
+2018-07-09T18:09:34.889255770Z Trace[2116359976]: [5.269590496s] [5.269549559s] Object stored in database
+2018-07-09T18:09:34.889261262Z I0709 18:09:34.886712       1 trace.go:76] Trace[1423893526]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-09 18:09:29.61625325 +0000 UTC) (total time: 5.270437933s):
+2018-07-09T18:09:34.889267436Z Trace[1423893526]: [5.270416453s] [5.27022546s] Transaction committed
+2018-07-09T18:09:34.889293628Z I0709 18:09:34.886727       1 trace.go:76] Trace[29582928]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-09 18:09:32.329127886 +0000 UTC) (total time: 2.557577991s):
+2018-07-09T18:09:34.889300958Z Trace[29582928]: [2.557489277s] [2.556323747s] Transaction committed
+2018-07-09T18:09:34.889306504Z I0709 18:09:34.886800       1 trace.go:76] Trace[74101412]: "Update /api/v1/namespaces/kube-system/endpoints/kube-scheduler" (started: 2018-07-09 18:09:29.616164857 +0000 UTC) (total time: 5.270614801s):
+2018-07-09T18:09:34.889312608Z Trace[74101412]: [5.270561866s] [5.270516201s] Object stored in database
+2018-07-16T18:10:34.283928557Z I0716 18:10:34.283487       1 trace.go:76] Trace[587916603]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-16 18:10:33.443430988 +0000 UTC) (total time: 840.017359ms):
+2018-07-16T18:10:34.283952424Z Trace[587916603]: [839.974737ms] [839.814653ms] Transaction committed
+2018-07-16T18:10:34.283960036Z I0716 18:10:34.283606       1 trace.go:76] Trace[2104640867]: "Update /api/v1/namespaces/kube-system/endpoints/kube-scheduler" (started: 2018-07-16 18:10:33.443356092 +0000 UTC) (total time: 840.231173ms):
+2018-07-16T18:10:34.283966680Z Trace[2104640867]: [840.154781ms] [840.118905ms] Object stored in database
+2018-07-16T18:10:34.284249667Z I0716 18:10:34.283934       1 trace.go:76] Trace[283625194]: "List /apis/admissionregistration.k8s.io/v1alpha1/initializerconfigurations" (started: 2018-07-16 18:10:33.566237442 +0000 UTC) (total time: 717.675767ms):
+2018-07-16T18:10:34.284266528Z Trace[283625194]: [717.596814ms] [717.589096ms] Listing from storage done
+2018-07-16T18:10:34.284272645Z I0716 18:10:34.283487       1 trace.go:76] Trace[863218982]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-16 18:10:33.443633139 +0000 UTC) (total time: 839.815613ms):
+2018-07-16T18:10:34.284278617Z Trace[863218982]: [839.783415ms] [839.663801ms] Transaction committed
+2018-07-16T18:10:34.284283809Z I0716 18:10:34.284187       1 trace.go:76] Trace[1728087038]: "Update /api/v1/namespaces/kube-system/endpoints/kube-controller-manager" (started: 2018-07-16 18:10:33.443550814 +0000 UTC) (total time: 840.615266ms):
+2018-07-16T18:10:34.284289992Z Trace[1728087038]: [840.572593ms] [840.526791ms] Object stored in database
+2018-07-19T10:53:22.113008427Z I0719 10:53:22.112758       1 logs.go:41] http: TLS handshake error from 172.31.57.160:24649: tls: first record does not look like a TLS handshake
+2018-07-19T22:08:37.034055327Z I0719 22:08:37.033694       1 logs.go:41] http: TLS handshake error from 172.31.14.104:39713: tls: first record does not look like a TLS handshake
+2018-07-21T01:45:11.916703452Z I0721 01:45:11.916348       1 logs.go:41] http: TLS handshake error from 172.31.57.160:50188: tls: first record does not look like a TLS handshake
+2018-07-21T13:20:04.094390785Z I0721 13:20:04.094137       1 logs.go:41] http: TLS handshake error from 172.31.14.104:1899: tls: first record does not look like a TLS handshake
+2018-07-27T03:46:05.071956739Z I0727 03:46:05.071659       1 logs.go:41] http: TLS handshake error from 172.31.57.160:2020: tls: first record does not look like a TLS handshake
+2018-07-28T01:37:58.810774905Z I0728 01:37:58.810483       1 logs.go:41] http: TLS handshake error from 172.31.57.160:52254: tls: first record does not look like a TLS handshake
+2018-07-28T13:19:02.784049748Z I0728 13:19:02.783818       1 logs.go:41] http: TLS handshake error from 172.31.14.104:62486: tls: first record does not look like a TLS handshake
+2018-07-28T13:48:39.956078611Z I0728 13:48:39.955830       1 trace.go:76] Trace[1936376757]: "Get /api/v1/namespaces/default" (started: 2018-07-28 13:48:36.147693125 +0000 UTC) (total time: 3.808102844s):
+2018-07-28T13:48:39.956096509Z Trace[1936376757]: [3.808040047s] [3.808032486s] About to write a response
+2018-07-28T13:48:39.958139222Z I0728 13:48:39.956336       1 trace.go:76] Trace[1492707249]: "Get /api/v1/namespaces/kube-system/endpoints/kube-scheduler" (started: 2018-07-28 13:48:32.471211308 +0000 UTC) (total time: 7.485085975s):
+2018-07-28T13:48:39.958160421Z Trace[1492707249]: [7.485043326s] [7.485035283s] About to write a response
+2018-07-28T13:48:39.958168241Z I0728 13:48:39.956631       1 trace.go:76] Trace[1423467313]: "Get /api/v1/namespaces/kube-system/endpoints/kube-controller-manager" (started: 2018-07-28 13:48:32.481494205 +0000 UTC) (total time: 7.475115458s):
+2018-07-28T13:48:39.958174522Z Trace[1423467313]: [7.475076107s] [7.475068859s] About to write a response
+2018-07-28T13:48:39.958196399Z I0728 13:48:39.957102       1 trace.go:76] Trace[2029752391]: "List /apis/admissionregistration.k8s.io/v1alpha1/initializerconfigurations" (started: 2018-07-28 13:48:30.548116172 +0000 UTC) (total time: 9.408961984s):
+2018-07-28T13:48:39.958214715Z Trace[2029752391]: [9.408895687s] [9.40888718s] Listing from storage done
+2018-07-28T13:48:39.958222066Z I0728 13:48:39.957163       1 trace.go:76] Trace[915946228]: "Get /apis/extensions/v1beta1/namespaces/kube-system/daemonsets/calico-node" (started: 2018-07-28 13:48:34.982873567 +0000 UTC) (total time: 4.974267317s):
+2018-07-28T13:48:39.958228251Z Trace[915946228]: [4.973741342s] [4.973730987s] About to write a response
+2018-07-28T13:48:39.962559796Z I0728 13:48:39.959810       1 trace.go:76] Trace[410636752]: "List /apis/batch/v1/jobs" (started: 2018-07-28 13:48:37.195504762 +0000 UTC) (total time: 2.764284757s):
+2018-07-28T13:48:39.962578045Z Trace[410636752]: [2.764222973s] [2.764212378s] Listing from storage done
+2018-07-28T13:48:39.962586176Z I0728 13:48:39.960007       1 trace.go:76] Trace[496016325]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:48:32.282768376 +0000 UTC) (total time: 7.677213203s):
+2018-07-28T13:48:39.962592099Z Trace[496016325]: [7.677110954s] [7.67617946s] Transaction committed
+2018-07-28T13:48:39.962597344Z I0728 13:48:39.960269       1 trace.go:76] Trace[568327169]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:48:36.564433365 +0000 UTC) (total time: 3.395814346s):
+2018-07-28T13:48:39.962603305Z Trace[568327169]: [3.395749537s] [3.39480683s] Transaction committed
+2018-07-28T13:48:39.962608543Z I0728 13:48:39.960405       1 trace.go:76] Trace[1967875244]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:48:32.32556724 +0000 UTC) (total time: 7.634815814s):
+2018-07-28T13:48:39.962613709Z Trace[1967875244]: [7.634733715s] [7.633615983s] Transaction committed
+2018-07-28T13:48:39.962619055Z I0728 13:48:39.960770       1 trace.go:76] Trace[229332459]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:48:31.408129876 +0000 UTC) (total time: 8.552618963s):
+2018-07-28T13:48:39.962624601Z Trace[229332459]: [8.552549291s] [8.55154655s] Transaction committed
+2018-07-28T13:48:39.962629902Z I0728 13:48:39.961658       1 trace.go:76] Trace[413703831]: "List /api/v1/nodes" (started: 2018-07-28 13:48:38.675609261 +0000 UTC) (total time: 1.286027322s):
+2018-07-28T13:48:39.962635676Z Trace[413703831]: [1.284786522s] [1.284776757s] Listing from storage done
+2018-07-28T13:49:19.506497362Z I0728 13:49:19.506071       1 trace.go:76] Trace[1607535812]: "List /apis/admissionregistration.k8s.io/v1alpha1/initializerconfigurations" (started: 2018-07-28 13:49:11.019030038 +0000 UTC) (total time: 8.487003037s):
+2018-07-28T13:49:19.506521232Z Trace[1607535812]: [8.4868643s] [8.486854599s] Listing from storage done
+2018-07-28T13:49:19.507977049Z I0728 13:49:19.506647       1 trace.go:76] Trace[130485243]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-28 13:49:10.092871545 +0000 UTC) (total time: 9.413752237s):
+2018-07-28T13:49:19.507993785Z Trace[130485243]: [9.413721684s] [9.413588729s] Transaction committed
+2018-07-28T13:49:19.507998387Z I0728 13:49:19.506718       1 trace.go:76] Trace[325832437]: "Get /api/v1/namespaces/kube-system/endpoints/kube-scheduler" (started: 2018-07-28 13:49:12.097159723 +0000 UTC) (total time: 7.409535516s):
+2018-07-28T13:49:19.508012626Z Trace[325832437]: [7.409488149s] [7.409480098s] About to write a response
+2018-07-28T13:49:19.508018827Z I0728 13:49:19.506722       1 trace.go:76] Trace[956086094]: "Update /api/v1/namespaces/kube-system/endpoints/kube-controller-manager" (started: 2018-07-28 13:49:10.092811395 +0000 UTC) (total time: 9.413894432s):
+2018-07-28T13:49:19.508024871Z Trace[956086094]: [9.413854507s] [9.413820606s] Object stored in database
+2018-07-28T13:49:19.508057279Z I0728 13:49:19.507301       1 trace.go:76] Trace[1027623043]: "Get /apis/extensions/v1beta1/namespaces/kube-system/daemonsets/calico-node" (started: 2018-07-28 13:49:13.147090399 +0000 UTC) (total time: 6.360170495s):
+2018-07-28T13:49:19.508066890Z Trace[1027623043]: [6.359678893s] [6.35966972s] About to write a response
+2018-07-28T13:51:56.109588153Z I0728 13:51:56.106851       1 trace.go:76] Trace[440861117]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:51:50.230249617 +0000 UTC) (total time: 5.876563233s):
+2018-07-28T13:51:56.109612068Z Trace[440861117]: [5.876421706s] [5.874914488s] Transaction committed
+2018-07-28T13:51:56.109621321Z I0728 13:51:56.106982       1 trace.go:76] Trace[1286683413]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-28 13:51:48.216110807 +0000 UTC) (total time: 7.890843089s):
+2018-07-28T13:51:56.109628268Z Trace[1286683413]: [7.890788872s] [7.890634071s] Transaction committed
+2018-07-28T13:51:56.109634235Z I0728 13:51:56.107101       1 trace.go:76] Trace[1686440384]: "Update /api/v1/namespaces/kube-system/endpoints/kube-scheduler" (started: 2018-07-28 13:51:48.21603071 +0000 UTC) (total time: 7.891049856s):
+2018-07-28T13:51:56.109640375Z Trace[1686440384]: [7.890987617s] [7.890938918s] Object stored in database
+2018-07-28T13:51:56.109645751Z I0728 13:51:56.107302       1 trace.go:76] Trace[1529698454]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:51:50.196417917 +0000 UTC) (total time: 5.910863276s):
+2018-07-28T13:51:56.109651549Z Trace[1529698454]: [5.910791818s] [5.909860891s] Transaction committed
+2018-07-28T13:51:56.109657364Z I0728 13:51:56.107370       1 trace.go:76] Trace[644373163]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-28 13:51:48.216153346 +0000 UTC) (total time: 7.891197357s):
+2018-07-28T13:51:56.109663796Z Trace[644373163]: [7.891176657s] [7.891046095s] Transaction committed
+2018-07-28T13:51:56.109669641Z I0728 13:51:56.107452       1 trace.go:76] Trace[1040172229]: "Update /api/v1/namespaces/kube-system/endpoints/kube-controller-manager" (started: 2018-07-28 13:51:48.21609271 +0000 UTC) (total time: 7.891338179s):
+2018-07-28T13:51:56.109675911Z Trace[1040172229]: [7.891291453s] [7.891257419s] Object stored in database
+2018-07-28T13:51:56.109681399Z I0728 13:51:56.107632       1 trace.go:76] Trace[995844705]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:51:50.222043969 +0000 UTC) (total time: 5.885566303s):
+2018-07-28T13:51:56.109688550Z Trace[995844705]: [5.885502272s] [5.884330268s] Transaction committed
+2018-07-28T13:51:56.109715972Z I0728 13:51:56.108024       1 trace.go:76] Trace[2068392403]: "List /apis/admissionregistration.k8s.io/v1alpha1/initializerconfigurations" (started: 2018-07-28 13:51:46.838631379 +0000 UTC) (total time: 9.269368957s):
+2018-07-28T13:51:56.109740521Z Trace[2068392403]: [9.269274242s] [9.26926445s] Listing from storage done
+2018-07-28T13:51:56.109748598Z I0728 13:51:56.108089       1 trace.go:76] Trace[976599184]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:51:50.18262844 +0000 UTC) (total time: 5.925438223s):
+2018-07-28T13:51:56.109755156Z Trace[976599184]: [5.925370957s] [5.924408872s] Transaction committed
+2018-07-28T13:51:56.111891394Z I0728 13:51:56.111205       1 trace.go:76] Trace[1699026490]: "List /apis/batch/v1/jobs" (started: 2018-07-28 13:51:50.134081652 +0000 UTC) (total time: 5.977101986s):
+2018-07-28T13:51:56.111911353Z Trace[1699026490]: [5.977037829s] [5.977029586s] Listing from storage done
+2018-07-28T13:54:24.282228700Z I0728 13:54:24.280163       1 trace.go:76] Trace[1883852862]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-28 13:54:10.747855269 +0000 UTC) (total time: 13.53227056s):
+2018-07-28T13:54:24.282250529Z Trace[1883852862]: [13.532224946s] [13.532048893s] Transaction committed
+2018-07-28T13:54:24.282259443Z I0728 13:54:24.280282       1 trace.go:76] Trace[634264425]: "Update /api/v1/namespaces/kube-system/endpoints/kube-controller-manager" (started: 2018-07-28 13:54:10.747784913 +0000 UTC) (total time: 13.532475453s):
+2018-07-28T13:54:24.282265717Z Trace[634264425]: [13.532401302s] [13.532361633s] Object stored in database
+2018-07-28T13:54:24.282270915Z I0728 13:54:24.280344       1 trace.go:76] Trace[1858913428]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:54:16.322389175 +0000 UTC) (total time: 7.957934181s):
+2018-07-28T13:54:24.282276611Z Trace[1858913428]: [7.957848304s] [7.956677163s] Transaction committed
+2018-07-28T13:54:24.282282250Z I0728 13:54:24.280619       1 trace.go:76] Trace[1938976236]: "GuaranteedUpdate etcd3: *api.Endpoints" (started: 2018-07-28 13:54:10.747559181 +0000 UTC) (total time: 13.533039688s):
+2018-07-28T13:54:24.282288261Z Trace[1938976236]: [13.533020082s] [13.532827607s] Transaction committed
+2018-07-28T13:54:24.282293908Z I0728 13:54:24.280699       1 trace.go:76] Trace[2028396250]: "Update /api/v1/namespaces/kube-system/endpoints/kube-scheduler" (started: 2018-07-28 13:54:10.74745879 +0000 UTC) (total time: 13.533220498s):
+2018-07-28T13:54:24.282300135Z Trace[2028396250]: [13.533172729s] [13.533114985s] Object stored in database
+2018-07-28T13:54:24.282306196Z I0728 13:54:24.280725       1 trace.go:76] Trace[1864583294]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:54:16.332330021 +0000 UTC) (total time: 7.948370531s):
+2018-07-28T13:54:24.282312977Z Trace[1864583294]: [7.948302175s] [7.947442973s] Transaction committed
+2018-07-28T13:54:24.282318707Z I0728 13:54:24.281071       1 trace.go:76] Trace[791541785]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:54:16.349099598 +0000 UTC) (total time: 7.931951211s):
+2018-07-28T13:54:24.282325454Z Trace[791541785]: [7.931859354s] [7.93069318s] Transaction committed
+2018-07-28T13:54:24.282330784Z I0728 13:54:24.281377       1 trace.go:76] Trace[488523262]: "GuaranteedUpdate etcd3: *api.Node" (started: 2018-07-28 13:54:16.335081946 +0000 UTC) (total time: 7.946274876s):
+2018-07-28T13:54:24.282345034Z Trace[488523262]: [7.946216116s] [7.945431589s] Transaction committed
+2018-07-28T13:54:24.284467764Z I0728 13:54:24.283173       1 trace.go:76] Trace[1957734233]: "List /apis/admissionregistration.k8s.io/v1alpha1/initializerconfigurations" (started: 2018-07-28 13:54:11.387851623 +0000 UTC) (total time: 12.895297377s):
+2018-07-28T13:54:24.284487476Z Trace[1957734233]: [12.895223221s] [12.895211871s] Listing from storage done
+2018-07-28T13:54:24.284495535Z I0728 13:54:24.283247       1 trace.go:76] Trace[9390263]: "List /apis/batch/v1/jobs" (started: 2018-07-28 13:54:16.275612649 +0000 UTC) (total time: 8.007611654s):
+2018-07-28T13:54:24.284502959Z Trace[9390263]: [8.007532818s] [8.007521538s] Listing from storage done
+2018-07-28T13:54:24.284509280Z I0728 13:54:24.284364       1 trace.go:76] Trace[162575133]: "List /api/v1/nodes" (started: 2018-07-28 13:54:20.04340344 +0000 UTC) (total time: 4.240945558s):
+2018-07-28T13:54:24.284515831Z Trace[162575133]: [4.240413004s] [4.24039931s] Listing from storage done

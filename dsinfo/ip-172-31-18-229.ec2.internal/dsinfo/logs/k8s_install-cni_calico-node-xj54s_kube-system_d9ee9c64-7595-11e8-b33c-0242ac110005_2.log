@@ -1,0 +1,38 @@
+k8s_install-cni_calico-node-xj54s_kube-system_d9ee9c64-7595-11e8-b33c-0242ac110005_2
+2018-06-28T17:27:20.560094791Z Installing any TLS assets from /calico-secrets
+2018-06-28T17:27:20.621188167Z Wrote Calico CNI binaries to /host/opt/cni/bin
+2018-06-28T17:27:20.690957459Z CNI plugin version: v2.0.0
+2018-06-28T17:27:20.690978406Z /host/secondary-bin-dir is non-writeable, skipping
+2018-06-28T17:27:20.699771467Z CNI config: {
+2018-06-28T17:27:20.699785226Z     "cniVersion": "0.3.1",
+2018-06-28T17:27:20.699789519Z     "name": "k8s-pod-network",
+2018-06-28T17:27:20.699793214Z     "plugins": [
+2018-06-28T17:27:20.699796728Z     {
+2018-06-28T17:27:20.699800048Z             "type": "calico",
+2018-06-28T17:27:20.699803802Z             "etcd_endpoints": "https://proxy.local:12378",
+2018-06-28T17:27:20.699807487Z             "etcd_key_file": "/var/lib/docker/ucp/ucp-node-certs/key.pem",
+2018-06-28T17:27:20.699813600Z             "etcd_cert_file": "/var/lib/docker/ucp/ucp-node-certs/cert.pem",
+2018-06-28T17:27:20.699817481Z             "etcd_ca_cert_file": "/var/lib/docker/ucp/ucp-node-certs/ca.pem",
+2018-06-28T17:27:20.699821409Z             "log_level": "info",
+2018-06-28T17:27:20.699825364Z             "mtu": 1500,
+2018-06-28T17:27:20.699829296Z             
+2018-06-28T17:27:20.699832738Z             "ipam": {
+2018-06-28T17:27:20.699836161Z                 "type": "calico-ipam"
+2018-06-28T17:27:20.699839581Z             },
+2018-06-28T17:27:20.699843316Z             
+2018-06-28T17:27:20.699846561Z             "kubernetes": {
+2018-06-28T17:27:20.699850330Z                 "kubeconfig": "/var/lib/docker/ucp/ucp-node-certs/kubeconfig"
+2018-06-28T17:27:20.699854048Z             },
+2018-06-28T17:27:20.699862571Z             "policy": {
+2018-06-28T17:27:20.699865952Z                 "type": "k8s"
+2018-06-28T17:27:20.699869400Z             }
+2018-06-28T17:27:20.699872600Z         },
+2018-06-28T17:27:20.699875875Z        	{
+2018-06-28T17:27:20.699879300Z             "type": "portmap",
+2018-06-28T17:27:20.699882847Z             "snat": true,
+2018-06-28T17:27:20.699886162Z             "capabilities": {"portMappings": true}
+2018-06-28T17:27:20.699889725Z        	}
+2018-06-28T17:27:20.699893337Z     ]
+2018-06-28T17:27:20.699896640Z }
+2018-06-28T17:27:20.701287051Z Created CNI config 10-calico.conflist
+2018-06-28T17:27:20.701299882Z Done configuring CNI.  Sleep=true

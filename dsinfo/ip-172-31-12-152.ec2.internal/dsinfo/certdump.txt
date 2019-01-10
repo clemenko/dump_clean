@@ -1,0 +1,70 @@
+/ucp-node-certs/ca.pem:0
+  Subject: (Cert is a CA)
+    CN:swarm-ca
+    ID:af59e5a1b55e5d694cd36ab3e2508ebf006ce59c
+    O:[]
+    OU:[]
+    Serial:0f7ac4043ae38714f3083ef010cd3b3018addf6a
+    Valid between 2018-06-21 20:11:00 +0000 UTC and 2038-06-16 20:11:00 +0000 UTC (VALID)
+    SANs: []
+  Issuer
+    CN:swarm-ca
+    ID:
+    O:[]
+    OU:[]
+/ucp-node-certs/cert.pem:0
+  Subject:
+    CN:system:ucp:o3ykx8cxg75g1l36mk54qrjk9
+    ID:d9e18f443f2f7712c7a9f0114560410f1da282bc
+    O:[]
+    OU:[swarm]
+    Serial:1c15eab65b05bbdb15e3c23f35171365419fe93c
+    Valid between 2018-06-21 20:13:00 +0000 UTC and 2018-09-19 20:13:00 +0000 UTC (VALID)
+    SANs: [174q5382xmnb2e5a2c4dwyb4g localhost proxy.local ip-172-31-12-152.ec2.internal 172.31.12.152 127.0.0.1]
+  Issuer
+    CN:swarm-ca
+    ID:af59e5a1b55e5d694cd36ab3e2508ebf006ce59c
+    O:[]
+    OU:[]
+/etc_docker_certs.d_dtr.jswann.dockerps.io/dtr.jswann.dockerps.io.crt:0
+  Subject: (Cert is a CA)
+    CN:DST Root CA X3
+    ID:c4a7b1a47b2c71fadbe14b9075ffc41560858910
+    O:[Digital Signature Trust Co.]
+    OU:[]
+    Serial:44afb080d6a327ba893039862ef8406b
+    Valid between 2000-09-30 21:12:19 +0000 UTC and 2021-09-30 14:01:15 +0000 UTC (VALID)
+    SANs: []
+  Issuer
+    CN:DST Root CA X3
+    ID:
+    O:[Digital Signature Trust Co.]
+    OU:[]
+/swarm/swarm-node.crt:0
+  Subject:
+    CN:o3ykx8cxg75g1l36mk54qrjk9
+    ID:9c60a11152bf5c2b722cea61c2fa864e097a8d95
+    O:[174q5382xmnb2e5a2c4dwyb4g]
+    OU:[swarm-worker]
+    Serial:39d29641d19bab8c94b6a9b2d572c7b5a0dd732a
+    Valid between 2018-06-21 20:13:00 +0000 UTC and 2018-09-19 20:13:00 +0000 UTC (VALID)
+    SANs: [swarm-worker o3ykx8cxg75g1l36mk54qrjk9]
+  Issuer
+    CN:swarm-ca
+    ID:af59e5a1b55e5d694cd36ab3e2508ebf006ce59c
+    O:[]
+    OU:[]
+/swarm/swarm-root-ca.crt:0
+  Subject: (Cert is a CA)
+    CN:swarm-ca
+    ID:af59e5a1b55e5d694cd36ab3e2508ebf006ce59c
+    O:[]
+    OU:[]
+    Serial:0f7ac4043ae38714f3083ef010cd3b3018addf6a
+    Valid between 2018-06-21 20:11:00 +0000 UTC and 2038-06-16 20:11:00 +0000 UTC (VALID)
+    SANs: []
+  Issuer
+    CN:swarm-ca
+    ID:
+    O:[]
+    OU:[]

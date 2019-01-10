@@ -1,0 +1,10 @@
+k8s_ucp-kubedns-sidecar_kube-dns-fbf6ff8fb-w5zw8_kube-system_dba6f1dd-7595-11e8-b33c-0242ac110005_2
+2018-06-28T16:57:27.798488622Z I0628 16:57:27.798157       1 main.go:51] Version v1.14.6
+2018-06-28T16:57:27.799849803Z I0628 16:57:27.798240       1 server.go:45] Starting server (options {DnsMasqPort:53 DnsMasqAddr:127.0.0.1 DnsMasqPollIntervalMs:5000 Probes:[{Label:kubedns Server:127.0.0.1:10053 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1} {Label:dnsmasq Server:127.0.0.1:53 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}] PrometheusAddr:0.0.0.0 PrometheusPort:10054 PrometheusPath:/metrics PrometheusNamespace:kubedns})
+2018-06-28T16:57:27.799870842Z I0628 16:57:27.798532       1 dnsprobe.go:75] Starting dnsProbe {Label:kubedns Server:127.0.0.1:10053 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}
+2018-06-28T16:57:27.799878682Z I0628 16:57:27.798637       1 dnsprobe.go:75] Starting dnsProbe {Label:dnsmasq Server:127.0.0.1:53 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}
+k8s_ucp-kubedns-sidecar_kube-dns-fbf6ff8fb-w5zw8_kube-system_dba6f1dd-7595-11e8-b33c-0242ac110005_2
+2018-06-28T16:57:27.798488622Z I0628 16:57:27.798157       1 main.go:51] Version v1.14.6
+2018-06-28T16:57:27.799849803Z I0628 16:57:27.798240       1 server.go:45] Starting server (options {DnsMasqPort:53 DnsMasqAddr:127.0.0.1 DnsMasqPollIntervalMs:5000 Probes:[{Label:kubedns Server:127.0.0.1:10053 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1} {Label:dnsmasq Server:127.0.0.1:53 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}] PrometheusAddr:0.0.0.0 PrometheusPort:10054 PrometheusPath:/metrics PrometheusNamespace:kubedns})
+2018-06-28T16:57:27.799870842Z I0628 16:57:27.798532       1 dnsprobe.go:75] Starting dnsProbe {Label:kubedns Server:127.0.0.1:10053 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}
+2018-06-28T16:57:27.799878682Z I0628 16:57:27.798637       1 dnsprobe.go:75] Starting dnsProbe {Label:dnsmasq Server:127.0.0.1:53 Name:kubernetes.default.svc.cluster.local. Interval:5s Type:1}

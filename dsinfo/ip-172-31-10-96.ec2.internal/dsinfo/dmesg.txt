@@ -1,0 +1,2109 @@
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 3.10.0-693.11.6.el7.x86_64 (mockbuild@x86-041.build.eng.bos.redhat.com) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-16) (GCC) ) #1 SMP Thu Dec 28 14:23:39 EST 2017
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-3.10.0-693.11.6.el7.x86_64 root=UUID=3e11801e-5277-4d87-be4c-0a9a61fbc3da ro console=ttyS0,115200n8 console=tty0 net.ifnames=0 crashkernel=auto LANG=en_US.UTF-8
+[    0.000000] e820: BIOS-provided physical RAM map:
+[    0.000000] BIOS-e820: [mem 0x0000000000000000-0x000000000009dfff] usable
+[    0.000000] BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+[    0.000000] BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000000100000-0x00000000efffffff] usable
+[    0.000000] BIOS-e820: [mem 0x00000000fc000000-0x00000000ffffffff] reserved
+[    0.000000] BIOS-e820: [mem 0x0000000100000000-0x000000020fffffff] usable
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.7 present.
+[    0.000000] DMI: Xen HVM domU, BIOS 4.2.amazon 08/24/2006
+[    0.000000] Hypervisor detected: Xen HVM
+[    0.000000] Xen version 4.2.
+[    0.000000] Xen Platform PCI: I/O protocol version 1
+[    0.000000] Netfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated NICs.
+[    0.000000] Blkfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated disks.
+               You might have to change the root device
+               from /dev/hd[a-d] to /dev/xvd[a-d]
+               in your root= kernel command line option
+[    0.000000] HVMOP_pagetable_dying not supported
+[    0.000000] e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+[    0.000000] e820: remove [mem 0x000a0000-0x000fffff] usable
+[    0.000000] e820: last_pfn = 0x210000 max_arch_pfn = 0x400000000
+[    0.000000] MTRR default type: write-back
+[    0.000000] MTRR fixed ranges enabled:
+[    0.000000]   00000-9FFFF write-back
+[    0.000000]   A0000-BFFFF write-combining
+[    0.000000]   C0000-FFFFF write-back
+[    0.000000] MTRR variable ranges enabled:
+[    0.000000]   0 base 0000F0000000 mask 3FFFF8000000 uncachable
+[    0.000000]   1 base 0000F8000000 mask 3FFFFC000000 uncachable
+[    0.000000]   2 disabled
+[    0.000000]   3 disabled
+[    0.000000]   4 disabled
+[    0.000000]   5 disabled
+[    0.000000]   6 disabled
+[    0.000000]   7 disabled
+[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+[    0.000000] e820: last_pfn = 0xf0000 max_arch_pfn = 0x400000000
+[    0.000000] found SMP MP-table at [mem 0x000fbc50-0x000fbc5f] mapped at [ffff8800000fbc50]
+[    0.000000] Base memory trampoline at [ffff880000098000] 98000 size 24576
+[    0.000000] BRK [0x01ffc000, 0x01ffcfff] PGTABLE
+[    0.000000] BRK [0x01ffd000, 0x01ffdfff] PGTABLE
+[    0.000000] BRK [0x01ffe000, 0x01ffefff] PGTABLE
+[    0.000000] BRK [0x01fff000, 0x01ffffff] PGTABLE
+[    0.000000] BRK [0x02000000, 0x02000fff] PGTABLE
+[    0.000000] BRK [0x02001000, 0x02001fff] PGTABLE
+[    0.000000] BRK [0x02002000, 0x02002fff] PGTABLE
+[    0.000000] BRK [0x02003000, 0x02003fff] PGTABLE
+[    0.000000] RAMDISK: [mem 0x33366000-0x359aafff]
+[    0.000000] Early table checksum verification disabled
+[    0.000000] ACPI: RSDP 00000000000ea020 00024 (v02    Xen)
+[    0.000000] ACPI: XSDT 00000000fc00e2a0 00054 (v01    Xen      HVM 00000000 HVML 00000000)
+[    0.000000] ACPI: FACP 00000000fc00df60 000F4 (v04    Xen      HVM 00000000 HVML 00000000)
+[    0.000000] ACPI: DSDT 00000000fc0021c0 0BD19 (v02    Xen      HVM 00000000 INTL 20090123)
+[    0.000000] ACPI: FACS 00000000fc002180 00040
+[    0.000000] ACPI: APIC 00000000fc00e060 000D8 (v02    Xen      HVM 00000000 HVML 00000000)
+[    0.000000] ACPI: HPET 00000000fc00e1b0 00038 (v01    Xen      HVM 00000000 HVML 00000000)
+[    0.000000] ACPI: WAET 00000000fc00e1f0 00028 (v01    Xen      HVM 00000000 HVML 00000000)
+[    0.000000] ACPI: SSDT 00000000fc00e220 00031 (v02    Xen      HVM 00000000 INTL 20090123)
+[    0.000000] ACPI: SSDT 00000000fc00e260 00031 (v02    Xen      HVM 00000000 INTL 20090123)
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] No NUMA configuration found
+[    0.000000] Faking a node at [mem 0x0000000000000000-0x000000020fffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x20ffd6000-0x20fffcfff]
+[    0.000000] Reserving 161MB of memory at 656MB for crashkernel (System RAM: 8191MB)
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x00001000-0x00ffffff]
+[    0.000000]   DMA32    [mem 0x01000000-0xffffffff]
+[    0.000000]   Normal   [mem 0x100000000-0x20fffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00001000-0x0009dfff]
+[    0.000000]   node   0: [mem 0x00100000-0xefffffff]
+[    0.000000]   node   0: [mem 0x100000000-0x20fffffff]
+[    0.000000] Initmem setup node 0 [mem 0x00001000-0x20fffffff]
+[    0.000000] On node 0 totalpages: 2097053
+[    0.000000]   DMA zone: 64 pages used for memmap
+[    0.000000]   DMA zone: 21 pages reserved
+[    0.000000]   DMA zone: 3997 pages, LIFO batch:0
+[    0.000000]   DMA32 zone: 15296 pages used for memmap
+[    0.000000]   DMA32 zone: 978944 pages, LIFO batch:31
+[    0.000000]   Normal zone: 17408 pages used for memmap
+[    0.000000]   Normal zone: 1114112 pages, LIFO batch:31
+[    0.000000] ACPI: PM-Timer IO Port: 0xb008
+[    0.000000] ACPI: Local APIC address 0xfee00000
+[    0.000000] ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x01] lapic_id[0x02] enabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x02] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x03] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x04] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x05] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x06] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x07] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x08] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x09] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0a] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0b] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0c] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0d] lapic_id[0x00] disabled)
+[    0.000000] ACPI: LAPIC (acpi_id[0x0e] lapic_id[0x00] disabled)
+[    0.000000] ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+[    0.000000] IOAPIC[0]: apic_id 1, version 17, address 0xfec00000, GSI 0-47
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 low level)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 low level)
+[    0.000000] ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 low level)
+[    0.000000] ACPI: IRQ0 used by override.
+[    0.000000] ACPI: IRQ5 used by override.
+[    0.000000] ACPI: IRQ9 used by override.
+[    0.000000] ACPI: IRQ10 used by override.
+[    0.000000] ACPI: IRQ11 used by override.
+[    0.000000] Using ACPI (MADT) for SMP configuration information
+[    0.000000] ACPI: HPET id: 0x8086a201 base: 0xfed00000
+[    0.000000] smpboot: Allowing 15 CPUs, 13 hotplug CPUs
+[    0.000000] PM: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000a0000-0x000dffff]
+[    0.000000] PM: Registered nosave memory: [mem 0x000e0000-0x000fffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xf0000000-0xfbffffff]
+[    0.000000] PM: Registered nosave memory: [mem 0xfc000000-0xffffffff]
+[    0.000000] e820: [mem 0xf0000000-0xfbffffff] available for PCI devices
+[    0.000000] Booting paravirtualized kernel on Xen HVM
+[    0.000000] setup_percpu: NR_CPUS:5120 nr_cpumask_bits:15 nr_cpu_ids:15 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 35 pages/cpu @ffff880207200000 s104536 r8192 d30632 u262144
+[    0.000000] pcpu-alloc: s104536 r8192 d30632 u262144 alloc=1*2097152
+[    0.000000] pcpu-alloc: [0] 00 01 02 03 04 05 06 07 [0] 08 09 10 11 12 13 14 -- 
+[    0.000000] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 2064264
+[    0.000000] Policy zone: Normal
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.10.0-693.11.6.el7.x86_64 root=UUID=3e11801e-5277-4d87-be4c-0a9a61fbc3da ro console=ttyS0,115200n8 console=tty0 net.ifnames=0 crashkernel=auto LANG=en_US.UTF-8
+[    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.000000] x86/fpu: xstate_offset[2]: 0240, xstate_sizes[2]: 0100
+[    0.000000] xsave: enabled xstate_bv 0x7, cntxt size 0x340 using standard form
+[    0.000000] Memory: 5742796k/8650752k available (6916k kernel code, 262540k absent, 420200k reserved, 4551k data, 1800k init)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=15, Nodes=1
+[    0.000000] x86/pti: Unmapping kernel while in userspace
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] 	RCU restricting CPUs from NR_CPUS=5120 to nr_cpu_ids=15.
+[    0.000000] NR_IRQS:327936 nr_irqs:952 0
+[    0.000000] xen:events: Xen HVM callback vector for event delivery is enabled
+[    0.000000] Console: colour VGA+ 80x25
+[    0.000000] console [tty0] enabled
+[    0.000000] Cannot get hvm parameter CONSOLE_EVTCHN (18): -22!
+[    0.000000] console [ttyS0] enabled
+[    0.000000] allocated 33554432 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] hpet clockevent registered
+[    0.000000] tsc: Fast TSC calibration using PIT
+[    0.000000] tsc: Detected 2300.034 MHz processor
+[    0.025000] Calibrating delay loop (skipped), value calculated using timer frequency.. 4600.07 BogoMIPS (lpj=2300036)
+[    0.032005] pid_max: default: 32768 minimum: 301
+[    0.035054] Security Framework initialized
+[    0.038008] SELinux:  Initializing.
+[    0.041021] SELinux:  Starting in permissive mode
+[    0.041024] Yama: becoming mindful.
+[    0.044550] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes)
+[    0.051784] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.057092] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.061016] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes)
+[    0.066060] Initializing cgroup subsys memory
+[    0.069011] Initializing cgroup subsys devices
+[    0.072004] Initializing cgroup subsys freezer
+[    0.075003] Initializing cgroup subsys net_cls
+[    0.078003] Initializing cgroup subsys blkio
+[    0.081002] Initializing cgroup subsys perf_event
+[    0.084006] Initializing cgroup subsys hugetlb
+[    0.088004] Initializing cgroup subsys pids
+[    0.090003] Initializing cgroup subsys net_prio
+[    0.094072] CPU: Physical Processor ID: 0
+[    0.097002] CPU: Processor Core ID: 0
+[    0.101014] FEATURE SPEC_CTRL Not Present
+[    0.104003] FEATURE IBPB_SUPPORT Not Present
+[    0.108565] mce: CPU supports 2 MCE banks
+[    0.111030] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.115004] Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0
+[    0.119003] tlb_flushall_shift: 6
+[    0.123292] Freeing SMP alternatives: 24k freed
+[    0.136577] ACPI: Core revision 20130517
+[    0.145592] ACPI: All ACPI Tables successfully acquired
+[    0.153006] ftrace: allocating 26616 entries in 104 pages
+[    0.182104] smpboot: Max logical packages: 15
+[    0.186828] IRQ remapping doesn't support X2APIC mode, disable x2apic.
+[    0.192004] Switched APIC routing to physical flat.
+[    0.199381] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=0 pin2=0
+[    0.214068] smpboot: CPU0: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz (fam: 06, model: 4f, stepping: 01)
+[    0.224012] Xen: using vcpuop timer interface
+[    0.224021] installing Xen timer for CPU 0
+[    0.229104] cpu 0 spinlock event irq 53
+[    0.230015] Performance Events: unsupported p6 CPU model 79 no PMU driver, software events only.
+[    0.234264] NMI watchdog: disabled (cpu0): hardware events not enabled
+[    0.235005] NMI watchdog: Shutting down hard lockup detector on all cpus
+[    0.236087] installing Xen timer for CPU 1
+[    0.237075] smpboot: Booting Node   0, Processors  #1cpu 1 spinlock event irq 59
+[    0.242033] Brought up 2 CPUs
+[    0.243008] smpboot: Total of 2 processors activated (9200.14 BogoMIPS)
+[    0.254004] random: fast init done
+[    0.255739] node 0 initialised, 556304 pages in 11ms
+[    0.256112] devtmpfs: initialized
+[    0.259086] EVM: security.selinux
+[    0.260006] EVM: security.ima
+[    0.261007] EVM: security.capability
+[    0.262822] atomic64 test passed for x86-64 platform with CX8 and with SSE
+[    0.263017] pinctrl core: initialized pinctrl subsystem
+[    0.264066] RTC time: 19:54:24, date: 06/21/18
+[    0.265127] NET: Registered protocol family 16
+[    0.266134] ACPI: bus type PCI registered
+[    0.269008] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.273275] PCI: Using configuration type 1 for base access
+[    0.280095] ACPI: Added _OSI(Module Device)
+[    0.281010] ACPI: Added _OSI(Processor Device)
+[    0.282008] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    0.283004] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.285467] ACPI: EC: Look up EC in DSDT
+[    0.288526] ACPI: Interpreter enabled
+[    0.289020] ACPI: (supports S0 S3 S4 S5)
+[    0.290005] ACPI: Using IOAPIC for interrupt routing
+[    0.291037] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.358227] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    0.359012] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    0.360018] acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+[    0.361124] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    0.362834] acpiphp: Slot [0] registered
+[    0.363982] acpiphp: Slot [3] registered
+[    0.364379] acpiphp: Slot [4] registered
+[    0.365407] acpiphp: Slot [5] registered
+[    0.366323] acpiphp: Slot [6] registered
+[    0.367347] acpiphp: Slot [7] registered
+[    0.368336] acpiphp: Slot [8] registered
+[    0.369323] acpiphp: Slot [9] registered
+[    0.370422] acpiphp: Slot [10] registered
+[    0.371345] acpiphp: Slot [11] registered
+[    0.372378] acpiphp: Slot [12] registered
+[    0.373328] acpiphp: Slot [13] registered
+[    0.374358] acpiphp: Slot [14] registered
+[    0.375360] acpiphp: Slot [15] registered
+[    0.376359] acpiphp: Slot [16] registered
+[    0.377343] acpiphp: Slot [17] registered
+[    0.378364] acpiphp: Slot [18] registered
+[    0.379350] acpiphp: Slot [19] registered
+[    0.380345] acpiphp: Slot [20] registered
+[    0.381319] acpiphp: Slot [21] registered
+[    0.382480] acpiphp: Slot [22] registered
+[    0.383368] acpiphp: Slot [23] registered
+[    0.384359] acpiphp: Slot [24] registered
+[    0.385406] acpiphp: Slot [25] registered
+[    0.386360] acpiphp: Slot [26] registered
+[    0.387315] acpiphp: Slot [27] registered
+[    0.388278] acpiphp: Slot [28] registered
+[    0.389435] acpiphp: Slot [29] registered
+[    0.390419] acpiphp: Slot [30] registered
+[    0.391399] acpiphp: Slot [31] registered
+[    0.392757] PCI host bridge to bus 0000:00
+[    0.393008] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    0.394011] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    0.395010] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    0.396008] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    0.397008] pci_bus 0000:00: root bus resource [mem 0xf0000000-0xfbffffff window]
+[    0.398157] pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+[    0.399672] pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+[    0.402215] pci 0000:00:01.1: [8086:7010] type 00 class 0x010180
+[    0.403721] pci 0000:00:01.1: reg 0x20: [io  0xc100-0xc10f]
+[    0.404184] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    0.405008] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    0.406008] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    0.407009] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    0.408690] pci 0000:00:01.3: [8086:7113] type 00 class 0x068000
+[    0.408730] * Found PM-Timer Bug on the chipset. Due to workarounds for a bug,
+               * this clock source is slow. Consider trying other clock sources
+[    0.410055] pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+[    0.412000] pci 0000:00:02.0: [1013:00b8] type 00 class 0x030000
+[    0.412218] pci 0000:00:02.0: reg 0x10: [mem 0xf0000000-0xf1ffffff pref]
+[    0.412467] pci 0000:00:02.0: reg 0x14: [mem 0xf3000000-0xf3000fff]
+[    0.414168] pci 0000:00:03.0: [5853:0001] type 00 class 0xff8000
+[    0.414507] pci 0000:00:03.0: reg 0x10: [io  0xc000-0xc0ff]
+[    0.414784] pci 0000:00:03.0: reg 0x14: [mem 0xf2000000-0xf2ffffff pref]
+[    0.417440] ACPI: PCI Interrupt Link [LNKA] (IRQs *5 10 11)
+[    0.420197] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+[    0.423196] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+[    0.426214] ACPI: PCI Interrupt Link [LNKD] (IRQs *5 10 11)
+[    0.444516] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.445093] xen:balloon: Initialising balloon driver
+[    0.449029] xen_balloon: Initialising balloon driver
+[    0.453128] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    0.475009] vgaarb: loaded
+[    0.477007] vgaarb: bridge control possible 0000:00:02.0
+[    0.481107] SCSI subsystem initialized
+[    0.484053] ACPI: bus type USB registered
+[    0.487021] usbcore: registered new interface driver usbfs
+[    0.490018] usbcore: registered new interface driver hub
+[    0.494050] usbcore: registered new device driver usb
+[    0.497073] PCI: Using ACPI for IRQ routing
+[    0.498008] PCI: pci_cache_line_size set to 64 bytes
+[    0.498381] e820: reserve RAM buffer [mem 0x0009e000-0x0009ffff]
+[    0.498521] NetLabel: Initializing
+[    0.499006] NetLabel:  domain hash size = 128
+[    0.500006] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.501020] NetLabel:  unlabeled traffic allowed by default
+[    0.502050] HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+[    0.503023] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+[    0.506007] hpet0: 3 comparators, 64-bit 62.500000 MHz counter
+[    0.508031] amd_nb: Cannot enumerate AMD northbridges
+[    0.509040] Switched to clocksource xen
+[    0.517276] pnp: PnP ACPI init
+[    0.520274] ACPI: bus type PNP registered
+[    0.523700] system 00:00: [mem 0x00000000-0x0009ffff] could not be reserved
+[    0.528558] system 00:00: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.528651] system 00:01: [io  0x08a0-0x08a3] has been reserved
+[    0.533086] system 00:01: [io  0x0cc0-0x0ccf] has been reserved
+[    0.537393] system 00:01: [io  0x04d0-0x04d1] has been reserved
+[    0.542035] system 00:01: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.542068] xen: --> pirq=16 -> irq=8 (gsi=8)
+[    0.542088] pnp 00:02: Plug and Play ACPI device, IDs PNP0b00 (active)
+[    0.542112] xen: --> pirq=17 -> irq=12 (gsi=12)
+[    0.542133] pnp 00:03: Plug and Play ACPI device, IDs PNP0f13 (active)
+[    0.542149] xen: --> pirq=18 -> irq=1 (gsi=1)
+[    0.542159] pnp 00:04: Plug and Play ACPI device, IDs PNP0303 PNP030b (active)
+[    0.542173] xen: --> pirq=19 -> irq=6 (gsi=6)
+[    0.542175] pnp 00:05: [dma 2]
+[    0.542189] pnp 00:05: Plug and Play ACPI device, IDs PNP0700 (active)
+[    0.542212] xen: --> pirq=20 -> irq=4 (gsi=4)
+[    0.542225] pnp 00:06: Plug and Play ACPI device, IDs PNP0501 (active)
+[    0.542258] system 00:07: [io  0x10c0-0x1141] has been reserved
+[    0.546518] system 00:07: [io  0xb044-0xb047] has been reserved
+[    0.550862] system 00:07: Plug and Play ACPI device, IDs PNP0c02 (active)
+[    0.568448] pnp: PnP ACPI: found 8 devices
+[    0.571599] ACPI: bus type PNP unregistered
+[    0.581944] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+[    0.581948] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+[    0.581949] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+[    0.581951] pci_bus 0000:00: resource 7 [mem 0xf0000000-0xfbffffff window]
+[    0.581987] NET: Registered protocol family 2
+[    0.585930] TCP established hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.592356] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes)
+[    0.597715] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.602825] TCP: reno registered
+[    0.605585] UDP hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.612261] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes)
+[    0.619543] NET: Registered protocol family 1
+[    0.624372] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    0.631060] pci 0000:00:01.0: PIIX3: Enabling Passive Release
+[    0.637210] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    0.644679] pci 0000:00:02.0: Boot video device
+[    0.644741] PCI: CLS 0 bytes, default 64
+[    0.644788] Unpacking initramfs...
+[    1.029449] Freeing initrd memory: 39188k freed
+[    1.043339] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    1.048365] software IO TLB [mem 0xec000000-0xf0000000] (64MB) mapped at [ffff8800ec000000-ffff8800efffffff]
+[    1.055456] RAPL PMU: API unit is 2^-32 Joules, 4 fixed counters, 655360 ms ovfl timer
+[    1.061409] RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+[    1.065615] RAPL PMU: hw unit of domain package 2^-14 Joules
+[    1.070030] RAPL PMU: hw unit of domain dram 2^-14 Joules
+[    1.076554] RAPL PMU: hw unit of domain pp1-gpu 2^-14 Joules
+[    1.081890] sha1_ssse3: Using AVX optimized SHA-1 implementation
+[    1.086616] sha256_ssse3: Using AVX2 optimized SHA-256 implementation
+[    1.093489] futex hash table entries: 4096 (order: 6, 262144 bytes)
+[    1.098202] Initialise system trusted keyring
+[    1.101662] audit: initializing netlink socket (disabled)
+[    1.105484] type=2000 audit(1529610865.003:1): initialized
+[    1.130265] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    1.136040] zpool: loaded
+[    1.138877] zbud: loaded
+[    1.141629] VFS: Disk quotas dquot_6.5.2
+[    1.144883] Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    1.149759] msgmni has been set to 15639
+[    1.152788] Key type big_key registered
+[    1.155828] SELinux:  Registering netfilter hooks
+[    1.156894] NET: Registered protocol family 38
+[    1.160146] Key type asymmetric registered
+[    1.163361] Asymmetric key parser 'x509' registered
+[    1.167149] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    1.172985] io scheduler noop registered
+[    1.176199] io scheduler deadline registered (default)
+[    1.180093] io scheduler cfq registered
+[    1.183446] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    1.187528] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    1.192081] intel_idle: does not run on family 6 model 79
+[    1.192180] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    1.197777] ACPI: Power Button [PWRF]
+[    1.200713] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    1.206207] ACPI: Sleep Button [SLPF]
+[    1.209410] GHES: HEST is not enabled!
+[    1.212890] xen: --> pirq=21 -> irq=28 (gsi=28)
+[    1.212970] xen:grant_table: Grant tables using version 1 layout
+[    1.217258] Grant table initialized
+[    1.220301] Cannot get hvm parameter CONSOLE_EVTCHN (18): -22!
+[    1.224545] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    1.256430] 00:06: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+[    1.261370] Non-volatile memory driver v1.3
+[    1.265489] Linux agpgart interface v0.103
+[    1.269004] crash memory driver: version 1.1
+[    1.272208] rdac: device handler registered
+[    1.275763] hp_sw: device handler registered
+[    1.279475] emc: device handler registered
+[    1.282750] alua: device handler registered
+[    1.285895] libphy: Fixed MDIO Bus: probed
+[    1.289143] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.293376] ehci-pci: EHCI PCI platform driver
+[    1.296614] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.300810] ohci-pci: OHCI PCI platform driver
+[    1.304245] uhci_hcd: USB Universal Host Controller Interface driver
+[    1.308808] usbcore: registered new interface driver usbserial
+[    1.313341] usbcore: registered new interface driver usbserial_generic
+[    1.318046] usbserial: USB Serial support registered for generic
+[    1.322391] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+[    1.330039] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    1.333441] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    1.337069] mousedev: PS/2 mouse device common for all mice
+[    1.341937] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    1.344228] rtc_cmos 00:02: rtc core: registered rtc_cmos as rtc0
+[    1.344287] rtc_cmos 00:02: alarms up to one day, 114 bytes nvram, hpet irqs
+[    1.344326] cpuidle: using governor menu
+[    1.344390] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.344471] usbcore: registered new interface driver usbhid
+[    1.344471] usbhid: USB HID core driver
+[    1.344541] drop_monitor: Initializing network drop monitor service
+[    1.344625] TCP: cubic registered
+[    1.344628] Initializing XFRM netlink socket
+[    1.344719] NET: Registered protocol family 10
+[    1.344926] NET: Registered protocol family 17
+[    1.348078] microcode: CPU0 sig=0x406f1, pf=0x1, revision=0xb00002a
+[    1.348086] microcode: CPU1 sig=0x406f1, pf=0x1, revision=0xb00002a
+[    1.348122] microcode: Microcode Update Driver: v2.01 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+[    1.348198] PM: Hibernation image not present or could not be loaded.
+[    1.348201] Loading compiled-in X.509 certificates
+[    1.348613] Loaded X.509 cert 'Red Hat Enterprise Linux Driver Update Program (key 3): bf57f3e87362bc7229d9f465321773dfd1f77a80'
+[    1.349006] Loaded X.509 cert 'Red Hat Enterprise Linux kpatch signing key: 4d38fd864ebe18c5f0b72e3852e2014c3a676fc8'
+[    1.349405] Loaded X.509 cert 'Red Hat Enterprise Linux kernel signing key: 5fd8ebcfc4c5203c3cb7905219fb669d5f4be3ff'
+[    1.349421] registered taskstats version 1
+[    1.351088] Key type trusted registered
+[    1.352418] Key type encrypted registered
+[    1.353708] IMA: No TPM chip found, activating TPM-bypass!
+[    1.354096] xenbus_probe_frontend: Device with no driver: device/vbd/768
+[    1.354096] xenbus_probe_frontend: Device with no driver: device/vbd/51728
+[    1.354097] xenbus_probe_frontend: Device with no driver: device/vif/0
+[    1.354135]   Magic number: 6:485:951
+[    1.354155] tty tty8: hash matches
+[    1.354227] memory memory4: hash matches
+[    1.357536] rtc_cmos 00:02: setting system clock to 2018-06-21 19:54:25 UTC (1529610865)
+[    1.469338] Freeing unused kernel memory: 1800k freed
+[    1.476273] systemd[1]: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+[    1.487739] systemd[1]: Detected virtualization xen.
+[    1.491413] systemd[1]: Detected architecture x86-64.
+[    1.494990] systemd[1]: Running in initial RAM disk.
+[    1.504044] systemd[1]: No hostname configured.
+[    1.507437] systemd[1]: Set hostname to <localhost>.
+[    1.511464] systemd[1]: Initializing machine ID from random generator.
+[    1.546237] systemd[1]: Reached target Timers.
+[    1.549513] systemd[1]: Starting Timers.
+[    1.552560] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[    1.558225] systemd[1]: Starting Dispatch Password Requests to Console Directory Watch.
+[    1.567296] systemd[1]: Reached target Swap.
+[    1.570559] systemd[1]: Starting Swap.
+[    1.576716] systemd[1]: Reached target Paths.
+[    1.579902] systemd[1]: Starting Paths.
+[    1.586013] systemd[1]: Reached target Local File Systems.
+[    1.591212] systemd[1]: Starting Local File Systems.
+[    1.598328] systemd[1]: Created slice Root Slice.
+[    1.601903] systemd[1]: Starting Root Slice.
+[    1.608685] systemd[1]: Listening on udev Control Socket.
+[    1.612622] systemd[1]: Starting udev Control Socket.
+[    1.620171] systemd[1]: Listening on Journal Socket.
+[    1.641437] systemd[1]: Starting Journal Socket.
+[    1.648381] systemd[1]: Listening on udev Kernel Socket.
+[    1.652253] systemd[1]: Starting udev Kernel Socket.
+[    1.659300] systemd[1]: Reached target Sockets.
+[    1.662835] systemd[1]: Starting Sockets.
+[    1.669458] systemd[1]: Created slice System Slice.
+[    1.673336] systemd[1]: Starting System Slice.
+[    1.678486] systemd[1]: Starting Apply Kernel Variables...
+[    1.686288] systemd[1]: Starting Journal Service...
+[    1.695888] systemd[1]: Reached target Slices.
+[    1.699461] systemd[1]: Starting Slices.
+[    1.703093] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+[    1.713151] systemd[1]: Starting dracut cmdline hook...
+[    1.723616] systemd[1]: Started Journal Service.
+[    1.885562] FDC 0 is a S82078B
+[    1.890679] libata version 3.00 loaded.
+[    1.894744] ata_piix 0000:00:01.1: version 2.13
+[    1.896524] scsi host0: ata_piix
+[    1.900193] scsi host1: ata_piix
+[    1.903503] ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc100 irq 14
+[    1.908333] ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc108 irq 15
+[    1.929385] xen_netfront: Initialising Xen virtual ethernet driver
+[    1.968800] blkfront: xvda: barrier or flush: disabled; persistent grants: disabled; indirect descriptors: enabled;
+[    1.979973]  xvda: xvda1 xvda2
+[    1.984031] blkfront: xvdb: barrier or flush: disabled; persistent grants: disabled; indirect descriptors: enabled;
+[    2.083086] tsc: Refined TSC clocksource calibration: 2299.999 MHz
+[    2.134220] SGI XFS with ACLs, security attributes, no debug enabled
+[    2.141065] XFS (xvda2): Mounting V5 Filesystem
+[    2.203419] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+[    2.621062] XFS (xvda2): Ending clean mount
+[    2.942089] random: crng init done
+[    2.948301] systemd-journald[96]: Received SIGTERM from PID 1 (systemd).
+[    3.001451] type=1404 audit(1529610867.146:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    3.129640] SELinux: 2048 avtab hash slots, 106006 rules.
+[    3.176458] SELinux: 2048 avtab hash slots, 106006 rules.
+[    3.202211] SELinux:  8 users, 14 roles, 4998 types, 307 bools, 1 sens, 1024 cats
+[    3.202214] SELinux:  94 classes, 106006 rules
+[    3.205332] SELinux:  Completing initialization.
+[    3.205334] SELinux:  Setting up existing superblocks.
+[    3.213771] type=1403 audit(1529610867.358:3): policy loaded auid=4294967295 ses=4294967295
+[    3.224559] systemd[1]: Successfully loaded SELinux policy in 223.501ms.
+[    3.252198] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    3.256237] systemd[1]: Inserted module 'ip_tables'
+[    3.274932] systemd[1]: Relabelled /dev and /run in 12.989ms.
+[    3.680489] systemd-journald[330]: Received request to flush runtime journal from PID 1
+[    3.920125] type=1305 audit(1529610868.065:4): audit_pid=398 old=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:auditd_t:s0 res=1
+[    4.191878] input: PC Speaker as /devices/platform/pcspkr/input/input4
+[    4.206725] piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+[    4.244907] AES CTR mode by8 optimization enabled
+[    4.263773] ppdev: user-space parallel port driver
+[    4.269096] [drm] Initialized
+[    4.270113] alg: No test for __gcm-aes-aesni (__driver-gcm-aes-aesni)
+[    4.282451] alg: No test for crc32 (crc32-pclmul)
+[    4.290514] intel_rapl: Found RAPL domain package
+[    4.290545] intel_rapl: Found RAPL domain dram
+[    4.290546] intel_rapl: DRAM domain energy unit 15300pj
+[    4.381450] EDAC MC: Ver: 3.0.0
+[    4.387726] EDAC sbridge: Seeking for: PCI ID 8086:6fa0
+[    4.387730] EDAC sbridge:  Ver: 1.1.1 
+[    4.388358] [TTM] Zone  kernel: Available graphics memory: 4004512 kiB
+[    4.388358] [TTM] Zone   dma32: Available graphics memory: 2097152 kiB
+[    4.388359] [TTM] Initializing pool allocator
+[    4.388361] [TTM] Initializing DMA pool allocator
+[    4.388833] [drm] fb mappable at 0xF0000000
+[    4.388833] [drm] vram aper at 0xF0000000
+[    4.388833] [drm] size 33554432
+[    4.388834] [drm] fb depth is 24
+[    4.388834] [drm]    pitch is 3072
+[    4.405153] fbcon: cirrusdrmfb (fb0) is primary device
+[    4.464103] Console: switching to colour frame buffer device 128x48
+[    4.522047] cirrus 0000:00:02.0: fb0: cirrusdrmfb frame buffer device
+[    4.535087] [drm] Initialized cirrus 1.0.0 20110418 for 0000:00:02.0 on minor 0
+[    4.717302] ISOFS: Unable to identify CD-ROM format.
+[    4.756907] ISOFS: Unable to identify CD-ROM format.
+[    5.105978] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[    5.942344] ISOFS: Unable to identify CD-ROM format.
+[    5.972307] ISOFS: Unable to identify CD-ROM format.
+[ 1202.695233] XFS (xvdb): Mounting V5 Filesystem
+[ 1202.710282] XFS (xvdb): Ending clean mount
+[ 1248.808897] SELinux: 2048 avtab hash slots, 106465 rules.
+[ 1248.857500] SELinux: 2048 avtab hash slots, 106465 rules.
+[ 1248.882507] SELinux:  8 users, 14 roles, 5009 types, 310 bools, 1 sens, 1024 cats
+[ 1248.882511] SELinux:  97 classes, 106465 rules
+[ 1271.074574] SELinux: 2048 avtab hash slots, 106775 rules.
+[ 1271.124073] SELinux: 2048 avtab hash slots, 106775 rules.
+[ 1271.150374] SELinux:  8 users, 14 roles, 5011 types, 311 bools, 1 sens, 1024 cats
+[ 1271.150378] SELinux:  97 classes, 106775 rules
+[ 1287.173646] TECH PREVIEW: Overlay filesystem may not be fully supported.
+               Please review provided documentation for limitations.
+[ 1287.229231] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[ 1287.239165] Bridge firewalling registered
+[ 1287.251902] nf_conntrack version 0.5.0 (65536 buckets, 262144 max)
+[ 1287.399165] Netfilter messages via NETLINK v0.30.
+[ 1287.405170] ctnetlink v0.93: registering with nfnetlink.
+[ 1287.447772] IPv6: ADDRCONF(NETDEV_UP): docker0: link is not ready
+[ 1400.881214] br0: port 1(vxlan0) entered blocking state
+[ 1400.884037] br0: port 1(vxlan0) entered disabled state
+[ 1400.886576] device vxlan0 entered promiscuous mode
+[ 1400.889232] br0: port 1(vxlan0) entered blocking state
+[ 1400.891709] br0: port 1(vxlan0) entered forwarding state
+[ 1400.934193] br0: port 2(veth0) entered blocking state
+[ 1400.937609] br0: port 2(veth0) entered disabled state
+[ 1400.941022] device veth0 entered promiscuous mode
+[ 1400.944351] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[ 1400.948189] br0: port 2(veth0) entered blocking state
+[ 1400.951641] br0: port 2(veth0) entered forwarding state
+[ 1401.019460] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[ 1401.123185] IPv6: ADDRCONF(NETDEV_UP): docker_gwbridge: link is not ready
+[ 1401.195038] docker_gwbridge: port 1(veth43d8739) entered blocking state
+[ 1401.199492] docker_gwbridge: port 1(veth43d8739) entered disabled state
+[ 1401.206874] device veth43d8739 entered promiscuous mode
+[ 1401.210790] IPv6: ADDRCONF(NETDEV_UP): veth43d8739: link is not ready
+[ 1401.215238] docker_gwbridge: port 1(veth43d8739) entered blocking state
+[ 1401.219738] docker_gwbridge: port 1(veth43d8739) entered forwarding state
+[ 1401.248874] IPv6: ADDRCONF(NETDEV_CHANGE): docker_gwbridge: link becomes ready
+[ 1401.255318] docker_gwbridge: port 1(veth43d8739) entered disabled state
+[ 1401.278500] IPv6: ADDRCONF(NETDEV_CHANGE): veth43d8739: link becomes ready
+[ 1401.283436] docker_gwbridge: port 1(veth43d8739) entered blocking state
+[ 1401.287833] docker_gwbridge: port 1(veth43d8739) entered forwarding state
+[ 1402.019297] docker0: port 1(veth839099b) entered blocking state
+[ 1402.022290] docker0: port 1(veth839099b) entered disabled state
+[ 1402.025428] device veth839099b entered promiscuous mode
+[ 1402.028358] IPv6: ADDRCONF(NETDEV_UP): veth839099b: link is not ready
+[ 1402.031500] docker0: port 1(veth839099b) entered blocking state
+[ 1402.034559] docker0: port 1(veth839099b) entered forwarding state
+[ 1402.042283] docker0: port 1(veth839099b) entered disabled state
+[ 1402.142492] IPv6: ADDRCONF(NETDEV_CHANGE): veth839099b: link becomes ready
+[ 1402.145918] docker0: port 1(veth839099b) entered blocking state
+[ 1402.149846] docker0: port 1(veth839099b) entered forwarding state
+[ 1402.154000] IPv6: ADDRCONF(NETDEV_CHANGE): docker0: link becomes ready
+[ 1413.086567] docker0: port 2(veth1b44f7c) entered blocking state
+[ 1413.091701] docker0: port 2(veth1b44f7c) entered disabled state
+[ 1413.101397] device veth1b44f7c entered promiscuous mode
+[ 1413.110213] IPv6: ADDRCONF(NETDEV_UP): veth1b44f7c: link is not ready
+[ 1413.123448] docker0: port 3(veth187c27c) entered blocking state
+[ 1413.128206] docker0: port 3(veth187c27c) entered disabled state
+[ 1413.133564] device veth187c27c entered promiscuous mode
+[ 1413.138456] IPv6: ADDRCONF(NETDEV_UP): veth187c27c: link is not ready
+[ 1413.143639] docker0: port 3(veth187c27c) entered blocking state
+[ 1413.148209] docker0: port 3(veth187c27c) entered forwarding state
+[ 1413.225657] docker0: port 4(vetha61b65e) entered blocking state
+[ 1413.230642] docker0: port 4(vetha61b65e) entered disabled state
+[ 1413.237130] device vetha61b65e entered promiscuous mode
+[ 1413.242100] IPv6: ADDRCONF(NETDEV_UP): vetha61b65e: link is not ready
+[ 1413.247042] docker0: port 4(vetha61b65e) entered blocking state
+[ 1413.251621] docker0: port 4(vetha61b65e) entered forwarding state
+[ 1413.393472] docker0: port 3(veth187c27c) entered disabled state
+[ 1413.397441] docker0: port 4(vetha61b65e) entered disabled state
+[ 1413.401182] IPv6: ADDRCONF(NETDEV_CHANGE): veth1b44f7c: link becomes ready
+[ 1413.405407] docker0: port 2(veth1b44f7c) entered blocking state
+[ 1413.409131] docker0: port 2(veth1b44f7c) entered forwarding state
+[ 1413.425577] IPv6: ADDRCONF(NETDEV_CHANGE): veth187c27c: link becomes ready
+[ 1413.430955] docker0: port 3(veth187c27c) entered blocking state
+[ 1413.435582] docker0: port 3(veth187c27c) entered forwarding state
+[ 1413.502626] IPv6: ADDRCONF(NETDEV_CHANGE): vetha61b65e: link becomes ready
+[ 1413.508342] docker0: port 4(vetha61b65e) entered blocking state
+[ 1413.513357] docker0: port 4(vetha61b65e) entered forwarding state
+[ 1414.075624] docker0: port 2(veth1b44f7c) entered disabled state
+[ 1414.086970] docker0: port 2(veth1b44f7c) entered disabled state
+[ 1414.094224] device veth1b44f7c left promiscuous mode
+[ 1414.097497] docker0: port 2(veth1b44f7c) entered disabled state
+[ 1414.135713] docker0: port 3(veth187c27c) entered disabled state
+[ 1414.142838] docker0: port 3(veth187c27c) entered disabled state
+[ 1414.154187] device veth187c27c left promiscuous mode
+[ 1414.158193] docker0: port 3(veth187c27c) entered disabled state
+[ 1414.300497] docker0: port 4(vetha61b65e) entered disabled state
+[ 1414.308341] docker0: port 4(vetha61b65e) entered disabled state
+[ 1414.315897] device vetha61b65e left promiscuous mode
+[ 1414.319142] docker0: port 4(vetha61b65e) entered disabled state
+[ 1414.692781] docker0: port 2(veth6ee2b0e) entered blocking state
+[ 1414.697639] docker0: port 2(veth6ee2b0e) entered disabled state
+[ 1414.736154] device veth6ee2b0e entered promiscuous mode
+[ 1414.755137] IPv6: ADDRCONF(NETDEV_UP): veth6ee2b0e: link is not ready
+[ 1414.760587] docker0: port 2(veth6ee2b0e) entered blocking state
+[ 1414.765180] docker0: port 2(veth6ee2b0e) entered forwarding state
+[ 1414.975165] IPv6: ADDRCONF(NETDEV_CHANGE): veth6ee2b0e: link becomes ready
+[ 1415.552674] docker0: port 3(vethb629166) entered blocking state
+[ 1415.557336] docker0: port 3(vethb629166) entered disabled state
+[ 1415.582039] device vethb629166 entered promiscuous mode
+[ 1415.595262] IPv6: ADDRCONF(NETDEV_UP): vethb629166: link is not ready
+[ 1415.600258] docker0: port 3(vethb629166) entered blocking state
+[ 1415.604695] docker0: port 3(vethb629166) entered forwarding state
+[ 1415.609536] docker0: port 3(vethb629166) entered disabled state
+[ 1415.681132] FS-Cache: Loaded
+[ 1415.704654] RPC: Registered named UNIX socket transport module.
+[ 1415.709176] RPC: Registered udp transport module.
+[ 1415.713052] RPC: Registered tcp transport module.
+[ 1415.716789] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[ 1415.745381] FS-Cache: Netfs 'nfs' registered for caching
+[ 1415.753954] Key type dns_resolver registered
+[ 1415.781546] NFS: Registering the id_resolver key type
+[ 1415.785502] Key type id_resolver registered
+[ 1415.788872] Key type id_legacy registered
+[ 1415.795088] IPv6: ADDRCONF(NETDEV_CHANGE): vethb629166: link becomes ready
+[ 1415.799283] docker0: port 3(vethb629166) entered blocking state
+[ 1415.802914] docker0: port 3(vethb629166) entered forwarding state
+[ 1416.775899] docker0: port 2(veth6ee2b0e) entered disabled state
+[ 1416.801275] docker0: port 2(veth6ee2b0e) entered disabled state
+[ 1416.808689] device veth6ee2b0e left promiscuous mode
+[ 1416.812194] docker0: port 2(veth6ee2b0e) entered disabled state
+[ 1416.935066] docker0: port 1(veth839099b) entered disabled state
+[ 1416.947627] docker0: port 1(veth839099b) entered disabled state
+[ 1416.956249] device veth839099b left promiscuous mode
+[ 1416.959931] docker0: port 1(veth839099b) entered disabled state
+[ 1423.856408] docker0: port 1(vethb646e99) entered blocking state
+[ 1423.860845] docker0: port 1(vethb646e99) entered disabled state
+[ 1423.866973] device vethb646e99 entered promiscuous mode
+[ 1423.872600] IPv6: ADDRCONF(NETDEV_UP): vethb646e99: link is not ready
+[ 1423.877998] docker0: port 1(vethb646e99) entered blocking state
+[ 1423.882127] docker0: port 1(vethb646e99) entered forwarding state
+[ 1423.893077] docker0: port 1(vethb646e99) entered disabled state
+[ 1424.014825] IPv6: ADDRCONF(NETDEV_CHANGE): vethb646e99: link becomes ready
+[ 1424.019705] docker0: port 1(vethb646e99) entered blocking state
+[ 1424.024667] docker0: port 1(vethb646e99) entered forwarding state
+[ 1431.159596] ipip: IPv4 over IPv4 tunneling driver
+[ 1431.186278] ip_set: protocol 6
+[ 1431.240532] IPVS: Registered protocols (TCP, UDP, SCTP, AH, ESP)
+[ 1431.244932] IPVS: Connection hash table configured (size=4096, memory=64Kbytes)
+[ 1431.250206] IPVS: Creating netns size=2040 id=0
+[ 1431.253679] IPVS: Creating netns size=2040 id=1
+[ 1431.256924] IPVS: Creating netns size=2040 id=2
+[ 1431.260680] IPVS: Creating netns size=2040 id=3
+[ 1431.264889] IPVS: Creating netns size=2040 id=4
+[ 1431.268191] IPVS: Creating netns size=2040 id=5
+[ 1431.271735] IPVS: Creating netns size=2040 id=6
+[ 1431.280486] IPVS: ipvs loaded.
+[ 1537.399075] docker0: port 1(vethb646e99) entered disabled state
+[ 1537.408732] docker0: port 1(vethb646e99) entered disabled state
+[ 1537.419890] device vethb646e99 left promiscuous mode
+[ 1537.426084] docker0: port 1(vethb646e99) entered disabled state
+[ 1537.602941] docker0: port 1(vethf124dff) entered blocking state
+[ 1537.609880] docker0: port 1(vethf124dff) entered disabled state
+[ 1537.633167] device vethf124dff entered promiscuous mode
+[ 1537.643726] IPv6: ADDRCONF(NETDEV_UP): vethf124dff: link is not ready
+[ 1537.649677] docker0: port 1(vethf124dff) entered blocking state
+[ 1537.656219] docker0: port 1(vethf124dff) entered forwarding state
+[ 1537.707366] IPVS: Creating netns size=2040 id=7
+[ 1537.773634] IPv6: ADDRCONF(NETDEV_CHANGE): vethf124dff: link becomes ready
+[ 1538.257159] docker0: port 2(veth413b9f9) entered blocking state
+[ 1538.262829] docker0: port 2(veth413b9f9) entered disabled state
+[ 1538.269322] device veth413b9f9 entered promiscuous mode
+[ 1538.274629] IPv6: ADDRCONF(NETDEV_UP): veth413b9f9: link is not ready
+[ 1538.280420] docker0: port 2(veth413b9f9) entered blocking state
+[ 1538.285562] docker0: port 2(veth413b9f9) entered forwarding state
+[ 1538.325217] IPVS: Creating netns size=2040 id=8
+[ 1538.395582] IPv6: ADDRCONF(NETDEV_CHANGE): veth413b9f9: link becomes ready
+[ 1538.596818] docker0: port 2(veth413b9f9) entered disabled state
+[ 1538.608155] docker0: port 2(veth413b9f9) entered disabled state
+[ 1538.615920] device veth413b9f9 left promiscuous mode
+[ 1538.619834] docker0: port 2(veth413b9f9) entered disabled state
+[ 1547.972264] docker0: port 1(vethf124dff) entered disabled state
+[ 1547.982568] docker0: port 1(vethf124dff) entered disabled state
+[ 1547.990404] device vethf124dff left promiscuous mode
+[ 1547.994296] docker0: port 1(vethf124dff) entered disabled state
+[ 1553.148049] docker0: port 1(vethbe24390) entered blocking state
+[ 1553.152271] docker0: port 1(vethbe24390) entered disabled state
+[ 1553.165125] device vethbe24390 entered promiscuous mode
+[ 1553.172295] IPv6: ADDRCONF(NETDEV_UP): vethbe24390: link is not ready
+[ 1553.176781] docker0: port 1(vethbe24390) entered blocking state
+[ 1553.180739] docker0: port 1(vethbe24390) entered forwarding state
+[ 1553.189714] docker0: port 1(vethbe24390) entered disabled state
+[ 1553.226275] IPVS: Creating netns size=2040 id=9
+[ 1553.291681] IPv6: ADDRCONF(NETDEV_CHANGE): vethbe24390: link becomes ready
+[ 1553.299823] docker0: port 1(vethbe24390) entered blocking state
+[ 1553.303918] docker0: port 1(vethbe24390) entered forwarding state
+[ 1592.371870] docker0: port 1(vethbe24390) entered disabled state
+[ 1592.403650] docker0: port 1(vethbe24390) entered disabled state
+[ 1592.411168] device vethbe24390 left promiscuous mode
+[ 1592.414775] docker0: port 1(vethbe24390) entered disabled state
+[ 1592.589403] docker0: port 1(veth6c95b46) entered blocking state
+[ 1592.593316] docker0: port 1(veth6c95b46) entered disabled state
+[ 1592.597353] device veth6c95b46 entered promiscuous mode
+[ 1592.601171] IPv6: ADDRCONF(NETDEV_UP): veth6c95b46: link is not ready
+[ 1592.605472] docker0: port 1(veth6c95b46) entered blocking state
+[ 1592.609139] docker0: port 1(veth6c95b46) entered forwarding state
+[ 1592.648468] IPVS: Creating netns size=2040 id=10
+[ 1592.714623] IPv6: ADDRCONF(NETDEV_CHANGE): veth6c95b46: link becomes ready
+[ 2085.229501] docker0: port 1(veth6c95b46) entered disabled state
+[ 2085.246384] docker0: port 1(veth6c95b46) entered disabled state
+[ 2085.253703] device veth6c95b46 left promiscuous mode
+[ 2085.257158] docker0: port 1(veth6c95b46) entered disabled state
+[ 2085.433587] docker0: port 1(vethad9caab) entered blocking state
+[ 2085.438827] docker0: port 1(vethad9caab) entered disabled state
+[ 2085.461133] device vethad9caab entered promiscuous mode
+[ 2085.472259] IPv6: ADDRCONF(NETDEV_UP): vethad9caab: link is not ready
+[ 2085.478754] docker0: port 1(vethad9caab) entered blocking state
+[ 2085.485758] docker0: port 1(vethad9caab) entered forwarding state
+[ 2085.534133] IPVS: Creating netns size=2040 id=11
+[ 2085.603648] IPv6: ADDRCONF(NETDEV_CHANGE): vethad9caab: link becomes ready
+[ 2752.907968] docker0: port 1(vethad9caab) entered disabled state
+[ 2752.919102] docker0: port 1(vethad9caab) entered disabled state
+[ 2752.927094] device vethad9caab left promiscuous mode
+[ 2752.931131] docker0: port 1(vethad9caab) entered disabled state
+[ 2753.129951] docker0: port 1(veth5ca16a1) entered blocking state
+[ 2753.135001] docker0: port 1(veth5ca16a1) entered disabled state
+[ 2753.146584] device veth5ca16a1 entered promiscuous mode
+[ 2753.154292] IPv6: ADDRCONF(NETDEV_UP): veth5ca16a1: link is not ready
+[ 2753.159403] docker0: port 1(veth5ca16a1) entered blocking state
+[ 2753.164291] docker0: port 1(veth5ca16a1) entered forwarding state
+[ 2753.203183] IPVS: Creating netns size=2040 id=12
+[ 2753.267585] IPv6: ADDRCONF(NETDEV_CHANGE): veth5ca16a1: link becomes ready
+[ 2753.755915] docker0: port 2(veth295bb3a) entered blocking state
+[ 2753.759862] docker0: port 2(veth295bb3a) entered disabled state
+[ 2753.765263] device veth295bb3a entered promiscuous mode
+[ 2753.768837] IPv6: ADDRCONF(NETDEV_UP): veth295bb3a: link is not ready
+[ 2753.772756] docker0: port 2(veth295bb3a) entered blocking state
+[ 2753.776311] docker0: port 2(veth295bb3a) entered forwarding state
+[ 2753.827195] IPVS: Creating netns size=2040 id=13
+[ 2753.893702] IPv6: ADDRCONF(NETDEV_CHANGE): veth295bb3a: link becomes ready
+[ 2754.088328] docker0: port 2(veth295bb3a) entered disabled state
+[ 2754.092175] docker0: port 2(veth295bb3a) entered disabled state
+[ 2754.100304] device veth295bb3a left promiscuous mode
+[ 2754.104505] docker0: port 2(veth295bb3a) entered disabled state
+[ 2763.446253] docker0: port 1(veth5ca16a1) entered disabled state
+[ 2763.452752] docker0: port 1(veth5ca16a1) entered disabled state
+[ 2763.460022] device veth5ca16a1 left promiscuous mode
+[ 2763.463413] docker0: port 1(veth5ca16a1) entered disabled state
+[ 2768.672379] docker0: port 1(vetha4a7eb9) entered blocking state
+[ 2768.676438] docker0: port 1(vetha4a7eb9) entered disabled state
+[ 2768.689130] device vetha4a7eb9 entered promiscuous mode
+[ 2768.696400] IPv6: ADDRCONF(NETDEV_UP): vetha4a7eb9: link is not ready
+[ 2768.700674] docker0: port 1(vetha4a7eb9) entered blocking state
+[ 2768.704577] docker0: port 1(vetha4a7eb9) entered forwarding state
+[ 2768.710639] docker0: port 1(vetha4a7eb9) entered disabled state
+[ 2768.747340] IPVS: Creating netns size=2040 id=14
+[ 2768.810557] IPv6: ADDRCONF(NETDEV_CHANGE): vetha4a7eb9: link becomes ready
+[ 2768.816849] docker0: port 1(vetha4a7eb9) entered blocking state
+[ 2768.822893] docker0: port 1(vetha4a7eb9) entered forwarding state
+[ 3801.420816] docker0: port 1(vetha4a7eb9) entered disabled state
+[ 3801.431485] docker0: port 1(vetha4a7eb9) entered disabled state
+[ 3801.440333] device vetha4a7eb9 left promiscuous mode
+[ 3801.444822] docker0: port 1(vetha4a7eb9) entered disabled state
+[ 3801.640620] docker0: port 1(veth4ac6e08) entered blocking state
+[ 3801.645294] docker0: port 1(veth4ac6e08) entered disabled state
+[ 3801.665545] device veth4ac6e08 entered promiscuous mode
+[ 3801.674183] IPv6: ADDRCONF(NETDEV_UP): veth4ac6e08: link is not ready
+[ 3801.679130] docker0: port 1(veth4ac6e08) entered blocking state
+[ 3801.683731] docker0: port 1(veth4ac6e08) entered forwarding state
+[ 3801.725714] IPVS: Creating netns size=2040 id=15
+[ 3801.789638] IPv6: ADDRCONF(NETDEV_CHANGE): veth4ac6e08: link becomes ready
+[ 3811.994244] docker0: port 2(vethb1630b5) entered blocking state
+[ 3811.998988] docker0: port 2(vethb1630b5) entered disabled state
+[ 3812.004173] device vethb1630b5 entered promiscuous mode
+[ 3812.009019] IPv6: ADDRCONF(NETDEV_UP): vethb1630b5: link is not ready
+[ 3812.014350] docker0: port 2(vethb1630b5) entered blocking state
+[ 3812.019171] docker0: port 2(vethb1630b5) entered forwarding state
+[ 3812.024542] docker0: port 2(vethb1630b5) entered disabled state
+[ 3812.056678] IPVS: Creating netns size=2040 id=16
+[ 3812.126080] IPv6: ADDRCONF(NETDEV_CHANGE): vethb1630b5: link becomes ready
+[ 3812.130423] docker0: port 2(vethb1630b5) entered blocking state
+[ 3812.134255] docker0: port 2(vethb1630b5) entered forwarding state
+[ 3812.392012] docker0: port 3(vethb629166) entered disabled state
+[ 3812.399463] docker0: port 3(vethb629166) entered disabled state
+[ 3812.407455] device vethb629166 left promiscuous mode
+[ 3812.411794] docker0: port 3(vethb629166) entered disabled state
+[ 3812.540353] docker0: port 3(veth02dbdc8) entered blocking state
+[ 3812.544997] docker0: port 3(veth02dbdc8) entered disabled state
+[ 3812.562168] device veth02dbdc8 entered promiscuous mode
+[ 3812.571298] IPv6: ADDRCONF(NETDEV_UP): veth02dbdc8: link is not ready
+[ 3812.576562] docker0: port 3(veth02dbdc8) entered blocking state
+[ 3812.581174] docker0: port 3(veth02dbdc8) entered forwarding state
+[ 3812.686193] IPVS: Creating netns size=2040 id=17
+[ 3812.747574] IPv6: ADDRCONF(NETDEV_CHANGE): veth02dbdc8: link becomes ready
+[ 3813.691022] docker0: port 2(vethb1630b5) entered disabled state
+[ 3813.709245] docker0: port 2(vethb1630b5) entered disabled state
+[ 3813.718479] device vethb1630b5 left promiscuous mode
+[ 3813.721788] docker0: port 2(vethb1630b5) entered disabled state
+[ 3813.884752] docker0: port 1(veth4ac6e08) entered disabled state
+[ 3813.899572] docker0: port 1(veth4ac6e08) entered disabled state
+[ 3813.913577] device veth4ac6e08 left promiscuous mode
+[ 3813.917703] docker0: port 1(veth4ac6e08) entered disabled state
+[ 3819.094445] docker0: port 1(veth0c6db7f) entered blocking state
+[ 3819.099052] docker0: port 1(veth0c6db7f) entered disabled state
+[ 3819.104451] device veth0c6db7f entered promiscuous mode
+[ 3819.115477] IPv6: ADDRCONF(NETDEV_UP): veth0c6db7f: link is not ready
+[ 3819.150989] IPVS: Creating netns size=2040 id=18
+[ 3819.214677] IPv6: ADDRCONF(NETDEV_CHANGE): veth0c6db7f: link becomes ready
+[ 3819.220179] docker0: port 1(veth0c6db7f) entered blocking state
+[ 3819.225024] docker0: port 1(veth0c6db7f) entered forwarding state
+[ 3957.139187] docker0: port 1(veth0c6db7f) entered disabled state
+[ 3957.155620] docker0: port 1(veth0c6db7f) entered disabled state
+[ 3957.163475] device veth0c6db7f left promiscuous mode
+[ 3957.167461] docker0: port 1(veth0c6db7f) entered disabled state
+[ 3957.353908] docker0: port 1(veth6a5e42e) entered blocking state
+[ 3957.358221] docker0: port 1(veth6a5e42e) entered disabled state
+[ 3957.363129] device veth6a5e42e entered promiscuous mode
+[ 3957.367298] IPv6: ADDRCONF(NETDEV_UP): veth6a5e42e: link is not ready
+[ 3957.372057] docker0: port 1(veth6a5e42e) entered blocking state
+[ 3957.376529] docker0: port 1(veth6a5e42e) entered forwarding state
+[ 3957.415791] IPVS: Creating netns size=2040 id=19
+[ 3957.488713] IPv6: ADDRCONF(NETDEV_CHANGE): veth6a5e42e: link becomes ready
+[70283.133134] docker0: port 1(veth6a5e42e) entered disabled state
+[70283.146067] docker0: port 1(veth6a5e42e) entered disabled state
+[70283.156968] device veth6a5e42e left promiscuous mode
+[70283.163231] docker0: port 1(veth6a5e42e) entered disabled state
+[70283.400175] docker0: port 1(vethe7baef3) entered blocking state
+[70283.407867] docker0: port 1(vethe7baef3) entered disabled state
+[70283.415178] device vethe7baef3 entered promiscuous mode
+[70283.421777] IPv6: ADDRCONF(NETDEV_UP): vethe7baef3: link is not ready
+[70283.429457] docker0: port 1(vethe7baef3) entered blocking state
+[70283.437542] docker0: port 1(vethe7baef3) entered forwarding state
+[70283.478341] IPVS: Creating netns size=2040 id=20
+[70283.545571] IPv6: ADDRCONF(NETDEV_CHANGE): vethe7baef3: link becomes ready
+[70284.255729] docker0: port 2(veth18ecf4f) entered blocking state
+[70284.261680] docker0: port 2(veth18ecf4f) entered disabled state
+[70284.270039] device veth18ecf4f entered promiscuous mode
+[70284.275881] IPv6: ADDRCONF(NETDEV_UP): veth18ecf4f: link is not ready
+[70284.282323] docker0: port 2(veth18ecf4f) entered blocking state
+[70284.288428] docker0: port 2(veth18ecf4f) entered forwarding state
+[70284.294617] docker0: port 2(veth18ecf4f) entered disabled state
+[70284.338014] IPVS: Creating netns size=2040 id=21
+[70284.404664] IPv6: ADDRCONF(NETDEV_CHANGE): veth18ecf4f: link becomes ready
+[70284.410783] docker0: port 2(veth18ecf4f) entered blocking state
+[70284.416123] docker0: port 2(veth18ecf4f) entered forwarding state
+[70284.661724] docker0: port 3(veth02dbdc8) entered disabled state
+[70284.672164] docker0: port 3(veth02dbdc8) entered disabled state
+[70284.680787] device veth02dbdc8 left promiscuous mode
+[70284.685084] docker0: port 3(veth02dbdc8) entered disabled state
+[70284.818540] docker0: port 3(veth7e7026f) entered blocking state
+[70284.822249] docker0: port 3(veth7e7026f) entered disabled state
+[70284.826229] device veth7e7026f entered promiscuous mode
+[70284.829492] IPv6: ADDRCONF(NETDEV_UP): veth7e7026f: link is not ready
+[70284.833338] docker0: port 3(veth7e7026f) entered blocking state
+[70284.836949] docker0: port 3(veth7e7026f) entered forwarding state
+[70284.938544] IPVS: Creating netns size=2040 id=22
+[70285.000685] IPv6: ADDRCONF(NETDEV_CHANGE): veth7e7026f: link becomes ready
+[70285.970076] docker0: port 2(veth18ecf4f) entered disabled state
+[70285.982297] docker0: port 2(veth18ecf4f) entered disabled state
+[70285.995306] device veth18ecf4f left promiscuous mode
+[70286.001268] docker0: port 2(veth18ecf4f) entered disabled state
+[70293.707197] docker0: port 1(vethe7baef3) entered disabled state
+[70293.729159] docker0: port 1(vethe7baef3) entered disabled state
+[70293.736639] device vethe7baef3 left promiscuous mode
+[70293.740708] docker0: port 1(vethe7baef3) entered disabled state
+[70298.931736] docker0: port 1(vethb215120) entered blocking state
+[70298.936927] docker0: port 1(vethb215120) entered disabled state
+[70298.949157] device vethb215120 entered promiscuous mode
+[70298.956376] IPv6: ADDRCONF(NETDEV_UP): vethb215120: link is not ready
+[70298.960744] docker0: port 1(vethb215120) entered blocking state
+[70298.964900] docker0: port 1(vethb215120) entered forwarding state
+[70298.970667] docker0: port 1(vethb215120) entered disabled state
+[70299.005895] IPVS: Creating netns size=2040 id=23
+[70299.074657] IPv6: ADDRCONF(NETDEV_CHANGE): vethb215120: link becomes ready
+[70299.079961] docker0: port 1(vethb215120) entered blocking state
+[70299.084521] docker0: port 1(vethb215120) entered forwarding state
+[70371.068301] docker0: port 1(vethb215120) entered disabled state
+[70371.078606] docker0: port 1(vethb215120) entered disabled state
+[70371.086666] device vethb215120 left promiscuous mode
+[70371.090757] docker0: port 1(vethb215120) entered disabled state
+[70371.300446] docker0: port 1(vethbf64615) entered blocking state
+[70371.305233] docker0: port 1(vethbf64615) entered disabled state
+[70371.310004] device vethbf64615 entered promiscuous mode
+[70371.314407] IPv6: ADDRCONF(NETDEV_UP): vethbf64615: link is not ready
+[70371.319069] docker0: port 1(vethbf64615) entered blocking state
+[70371.323598] docker0: port 1(vethbf64615) entered forwarding state
+[70371.365136] IPVS: Creating netns size=2040 id=24
+[70371.432692] IPv6: ADDRCONF(NETDEV_CHANGE): vethbf64615: link becomes ready
+[70372.156417] docker0: port 2(vethd96a4d0) entered blocking state
+[70372.163329] docker0: port 2(vethd96a4d0) entered disabled state
+[70372.169214] device vethd96a4d0 entered promiscuous mode
+[70372.174445] IPv6: ADDRCONF(NETDEV_UP): vethd96a4d0: link is not ready
+[70372.180623] docker0: port 2(vethd96a4d0) entered blocking state
+[70372.188375] docker0: port 2(vethd96a4d0) entered forwarding state
+[70372.196310] docker0: port 2(vethd96a4d0) entered disabled state
+[70372.240783] IPVS: Creating netns size=2040 id=25
+[70372.324650] IPv6: ADDRCONF(NETDEV_CHANGE): vethd96a4d0: link becomes ready
+[70372.329248] docker0: port 2(vethd96a4d0) entered blocking state
+[70372.333326] docker0: port 2(vethd96a4d0) entered forwarding state
+[70372.557152] docker0: port 3(veth7e7026f) entered disabled state
+[70372.571733] docker0: port 3(veth7e7026f) entered disabled state
+[70372.582336] device veth7e7026f left promiscuous mode
+[70372.587022] docker0: port 3(veth7e7026f) entered disabled state
+[70372.716659] docker0: port 3(vetha12c3b4) entered blocking state
+[70372.721960] docker0: port 3(vetha12c3b4) entered disabled state
+[70372.727860] device vetha12c3b4 entered promiscuous mode
+[70372.733035] IPv6: ADDRCONF(NETDEV_UP): vetha12c3b4: link is not ready
+[70372.739423] docker0: port 3(vetha12c3b4) entered blocking state
+[70372.744902] docker0: port 3(vetha12c3b4) entered forwarding state
+[70372.845679] IPVS: Creating netns size=2040 id=26
+[70372.912731] IPv6: ADDRCONF(NETDEV_CHANGE): vetha12c3b4: link becomes ready
+[70373.910849] docker0: port 2(vethd96a4d0) entered disabled state
+[70373.925422] docker0: port 2(vethd96a4d0) entered disabled state
+[70373.950323] device vethd96a4d0 left promiscuous mode
+[70373.955060] docker0: port 2(vethd96a4d0) entered disabled state
+[70381.618975] docker0: port 1(vethbf64615) entered disabled state
+[70381.628778] docker0: port 1(vethbf64615) entered disabled state
+[70381.636490] device vethbf64615 left promiscuous mode
+[70381.640289] docker0: port 1(vethbf64615) entered disabled state
+[70386.788428] docker0: port 1(veth481e5ed) entered blocking state
+[70386.791994] docker0: port 1(veth481e5ed) entered disabled state
+[70386.795802] device veth481e5ed entered promiscuous mode
+[70386.799271] IPv6: ADDRCONF(NETDEV_UP): veth481e5ed: link is not ready
+[70386.803308] docker0: port 1(veth481e5ed) entered blocking state
+[70386.806705] docker0: port 1(veth481e5ed) entered forwarding state
+[70386.811195] docker0: port 1(veth481e5ed) entered disabled state
+[70386.846014] IPVS: Creating netns size=2040 id=27
+[70386.911701] IPv6: ADDRCONF(NETDEV_CHANGE): veth481e5ed: link becomes ready
+[70386.916130] docker0: port 1(veth481e5ed) entered blocking state
+[70386.919942] docker0: port 1(veth481e5ed) entered forwarding state
+[499462.949279] IPVS: Creating netns size=2040 id=28
+[499463.024229] br0: port 1(vxlan0) entered blocking state
+[499463.028489] br0: port 1(vxlan0) entered disabled state
+[499463.038089] device vxlan0 entered promiscuous mode
+[499463.042349] br0: port 1(vxlan0) entered blocking state
+[499463.046224] br0: port 1(vxlan0) entered forwarding state
+[499463.105190] br0: port 2(veth0) entered blocking state
+[499463.109241] br0: port 2(veth0) entered disabled state
+[499463.118191] device veth0 entered promiscuous mode
+[499463.121838] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[499463.125866] br0: port 2(veth0) entered blocking state
+[499463.129320] br0: port 2(veth0) entered forwarding state
+[499463.138572] docker_gwbridge: port 2(veth5ab155f) entered blocking state
+[499463.142954] docker_gwbridge: port 2(veth5ab155f) entered disabled state
+[499463.149285] device veth5ab155f entered promiscuous mode
+[499463.155046] IPv6: ADDRCONF(NETDEV_UP): veth5ab155f: link is not ready
+[499463.161188] docker_gwbridge: port 2(veth5ab155f) entered blocking state
+[499463.166357] docker_gwbridge: port 2(veth5ab155f) entered forwarding state
+[499463.206494] IPVS: Creating netns size=2040 id=29
+[499463.318308] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[499463.322890] docker_gwbridge: port 2(veth5ab155f) entered disabled state
+[499463.359671] IPVS: [rr] scheduler registered.
+[499463.372586] IPv6: ADDRCONF(NETDEV_CHANGE): veth5ab155f: link becomes ready
+[499463.377582] docker_gwbridge: port 2(veth5ab155f) entered blocking state
+[499463.382104] docker_gwbridge: port 2(veth5ab155f) entered forwarding state
+[499469.483188] br0: port 3(veth1) entered blocking state
+[499469.488617] br0: port 3(veth1) entered disabled state
+[499469.494382] device veth1 entered promiscuous mode
+[499469.499015] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[499469.506049] docker_gwbridge: port 3(veth24219ad) entered blocking state
+[499469.510829] docker_gwbridge: port 3(veth24219ad) entered disabled state
+[499469.515718] device veth24219ad entered promiscuous mode
+[499469.519451] IPv6: ADDRCONF(NETDEV_UP): veth24219ad: link is not ready
+[499469.523726] docker_gwbridge: port 3(veth24219ad) entered blocking state
+[499469.528058] docker_gwbridge: port 3(veth24219ad) entered forwarding state
+[499469.578476] IPVS: Creating netns size=2040 id=30
+[499469.688294] docker_gwbridge: port 3(veth24219ad) entered disabled state
+[499469.692851] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[499469.697287] br0: port 3(veth1) entered blocking state
+[499469.700791] br0: port 3(veth1) entered forwarding state
+[499469.754563] IPv6: ADDRCONF(NETDEV_CHANGE): veth24219ad: link becomes ready
+[499469.759258] docker_gwbridge: port 3(veth24219ad) entered blocking state
+[499469.763833] docker_gwbridge: port 3(veth24219ad) entered forwarding state
+[500379.685521] IPVS: Creating netns size=2040 id=31
+[500379.779181] br0: port 1(vxlan0) entered blocking state
+[500379.783563] br0: port 1(vxlan0) entered disabled state
+[500379.787628] device vxlan0 entered promiscuous mode
+[500379.791718] br0: port 1(vxlan0) entered blocking state
+[500379.795628] br0: port 1(vxlan0) entered forwarding state
+[500379.840298] br0: port 2(veth0) entered blocking state
+[500379.843962] br0: port 2(veth0) entered disabled state
+[500379.847536] device veth0 entered promiscuous mode
+[500379.851006] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[500379.854769] br0: port 2(veth0) entered blocking state
+[500379.858129] br0: port 2(veth0) entered forwarding state
+[500379.863347] docker_gwbridge: port 4(vethad490a4) entered blocking state
+[500379.867342] docker_gwbridge: port 4(vethad490a4) entered disabled state
+[500379.885149] device vethad490a4 entered promiscuous mode
+[500379.891243] IPv6: ADDRCONF(NETDEV_UP): vethad490a4: link is not ready
+[500379.895329] docker_gwbridge: port 4(vethad490a4) entered blocking state
+[500379.899260] docker_gwbridge: port 4(vethad490a4) entered forwarding state
+[500379.940427] IPVS: Creating netns size=2040 id=32
+[500380.052860] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[500380.056935] docker_gwbridge: port 4(vethad490a4) entered disabled state
+[500380.069628] IPv6: ADDRCONF(NETDEV_CHANGE): vethad490a4: link becomes ready
+[500380.074333] docker_gwbridge: port 4(vethad490a4) entered blocking state
+[500380.078824] docker_gwbridge: port 4(vethad490a4) entered forwarding state
+[500391.023527] br0: port 3(veth1) entered disabled state
+[500391.035255] docker_gwbridge: port 3(veth24219ad) entered disabled state
+[500391.049842] docker_gwbridge: port 3(veth24219ad) entered disabled state
+[500391.058311] device veth24219ad left promiscuous mode
+[500391.062240] docker_gwbridge: port 3(veth24219ad) entered disabled state
+[500391.080535] br0: port 3(veth1) entered disabled state
+[500391.087506] device veth1 left promiscuous mode
+[500391.090588] br0: port 3(veth1) entered disabled state
+[500391.334189] br0: port 3(veth2) entered blocking state
+[500391.338156] br0: port 3(veth2) entered disabled state
+[500391.341910] device veth2 entered promiscuous mode
+[500391.345605] IPv6: ADDRCONF(NETDEV_UP): veth2: link is not ready
+[500391.349770] br0: port 3(veth2) entered blocking state
+[500391.353375] br0: port 3(veth2) entered forwarding state
+[500391.358305] docker_gwbridge: port 3(vethe872b91) entered blocking state
+[500391.362459] docker_gwbridge: port 3(vethe872b91) entered disabled state
+[500391.367068] device vethe872b91 entered promiscuous mode
+[500391.371407] IPv6: ADDRCONF(NETDEV_UP): vethe872b91: link is not ready
+[500391.375884] docker_gwbridge: port 3(vethe872b91) entered blocking state
+[500391.380181] docker_gwbridge: port 3(vethe872b91) entered forwarding state
+[500391.460198] br0: port 3(veth1) entered blocking state
+[500391.464048] br0: port 3(veth1) entered disabled state
+[500391.467665] device veth1 entered promiscuous mode
+[500391.471075] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[500391.475181] br0: port 3(veth1) entered blocking state
+[500391.478811] br0: port 3(veth1) entered forwarding state
+[500391.515383] IPVS: Creating netns size=2040 id=33
+[500391.622018] br0: port 3(veth2) entered disabled state
+[500391.625360] docker_gwbridge: port 3(vethe872b91) entered disabled state
+[500391.629373] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[500391.696650] IPv6: ADDRCONF(NETDEV_CHANGE): vethe872b91: link becomes ready
+[500391.701439] docker_gwbridge: port 3(vethe872b91) entered blocking state
+[500391.705895] docker_gwbridge: port 3(vethe872b91) entered forwarding state
+[500391.721080] IPv6: ADDRCONF(NETDEV_CHANGE): veth2: link becomes ready
+[500391.725145] br0: port 3(veth2) entered blocking state
+[500391.728472] br0: port 3(veth2) entered forwarding state
+[501064.789530] br0: port 4(veth2) entered blocking state
+[501064.793241] br0: port 4(veth2) entered disabled state
+[501064.797574] device veth2 entered promiscuous mode
+[501064.801401] IPv6: ADDRCONF(NETDEV_UP): veth2: link is not ready
+[501064.823425] br0: port 5(veth3) entered blocking state
+[501064.827212] br0: port 5(veth3) entered disabled state
+[501064.831397] device veth3 entered promiscuous mode
+[501064.834967] IPv6: ADDRCONF(NETDEV_UP): veth3: link is not ready
+[501064.838647] br0: port 5(veth3) entered blocking state
+[501064.842135] br0: port 5(veth3) entered forwarding state
+[501064.862212] br0: port 6(veth4) entered blocking state
+[501064.866175] br0: port 6(veth4) entered disabled state
+[501064.870219] device veth4 entered promiscuous mode
+[501064.874062] IPv6: ADDRCONF(NETDEV_UP): veth4: link is not ready
+[501064.878353] br0: port 6(veth4) entered blocking state
+[501064.882078] br0: port 6(veth4) entered forwarding state
+[501064.888374] docker_gwbridge: port 5(veth110a0a9) entered blocking state
+[501064.892874] docker_gwbridge: port 5(veth110a0a9) entered disabled state
+[501064.897745] device veth110a0a9 entered promiscuous mode
+[501064.901804] IPv6: ADDRCONF(NETDEV_UP): veth110a0a9: link is not ready
+[501064.906158] docker_gwbridge: port 5(veth110a0a9) entered blocking state
+[501064.910690] docker_gwbridge: port 5(veth110a0a9) entered forwarding state
+[501064.971019] docker_gwbridge: port 6(vetha8abb8e) entered blocking state
+[501064.975417] docker_gwbridge: port 6(vetha8abb8e) entered disabled state
+[501064.980390] device vetha8abb8e entered promiscuous mode
+[501064.984621] IPv6: ADDRCONF(NETDEV_UP): vetha8abb8e: link is not ready
+[501064.988701] docker_gwbridge: port 6(vetha8abb8e) entered blocking state
+[501064.993134] docker_gwbridge: port 6(vetha8abb8e) entered forwarding state
+[501065.020252] IPVS: Creating netns size=2040 id=34
+[501065.053918] docker_gwbridge: port 7(vethf5e97e7) entered blocking state
+[501065.058224] docker_gwbridge: port 7(vethf5e97e7) entered disabled state
+[501065.068125] device vethf5e97e7 entered promiscuous mode
+[501065.085465] IPv6: ADDRCONF(NETDEV_UP): vethf5e97e7: link is not ready
+[501065.089764] docker_gwbridge: port 7(vethf5e97e7) entered blocking state
+[501065.093945] docker_gwbridge: port 7(vethf5e97e7) entered forwarding state
+[501065.117952] IPVS: Creating netns size=2040 id=35
+[501065.179189] IPVS: Creating netns size=2040 id=36
+[501065.272237] br0: port 5(veth3) entered disabled state
+[501065.275773] br0: port 6(veth4) entered disabled state
+[501065.278895] docker_gwbridge: port 5(veth110a0a9) entered disabled state
+[501065.283786] docker_gwbridge: port 6(vetha8abb8e) entered disabled state
+[501065.290527] docker_gwbridge: port 7(vethf5e97e7) entered disabled state
+[501065.294489] IPv6: ADDRCONF(NETDEV_CHANGE): veth2: link becomes ready
+[501065.298096] br0: port 4(veth2) entered blocking state
+[501065.301326] br0: port 4(veth2) entered forwarding state
+[501065.324653] IPv6: ADDRCONF(NETDEV_CHANGE): veth3: link becomes ready
+[501065.328360] br0: port 5(veth3) entered blocking state
+[501065.331415] br0: port 5(veth3) entered forwarding state
+[501065.366432] IPv6: ADDRCONF(NETDEV_CHANGE): veth4: link becomes ready
+[501065.370780] br0: port 6(veth4) entered blocking state
+[501065.374277] br0: port 6(veth4) entered forwarding state
+[501065.392468] IPv6: ADDRCONF(NETDEV_CHANGE): veth110a0a9: link becomes ready
+[501065.396699] docker_gwbridge: port 5(veth110a0a9) entered blocking state
+[501065.400591] docker_gwbridge: port 5(veth110a0a9) entered forwarding state
+[501065.472176] IPv6: ADDRCONF(NETDEV_CHANGE): vetha8abb8e: link becomes ready
+[501065.476643] docker_gwbridge: port 6(vetha8abb8e) entered blocking state
+[501065.481255] docker_gwbridge: port 6(vetha8abb8e) entered forwarding state
+[501065.540215] IPv6: ADDRCONF(NETDEV_CHANGE): vethf5e97e7: link becomes ready
+[501065.544741] docker_gwbridge: port 7(vethf5e97e7) entered blocking state
+[501065.549062] docker_gwbridge: port 7(vethf5e97e7) entered forwarding state
+[501075.893204] br0: port 3(veth1) entered disabled state
+[501075.910010] br0: port 3(veth1) entered disabled state
+[501075.917937] device veth1 left promiscuous mode
+[501075.920955] br0: port 3(veth1) entered disabled state
+[501075.953099] br0: port 3(veth2) entered disabled state
+[501075.965190] docker_gwbridge: port 3(vethe872b91) entered disabled state
+[501075.982852] docker_gwbridge: port 3(vethe872b91) entered disabled state
+[501075.990199] device vethe872b91 left promiscuous mode
+[501075.993350] docker_gwbridge: port 3(vethe872b91) entered disabled state
+[501076.009179] br0: port 3(veth2) entered disabled state
+[501076.015950] device veth2 left promiscuous mode
+[501076.018987] br0: port 3(veth2) entered disabled state
+[501076.047288] IPVS: __ip_vs_del_service: enter
+[501076.050119] IPVS: __ip_vs_del_service: enter
+[501076.222181] br0: port 3(veth5) entered blocking state
+[501076.225784] br0: port 3(veth5) entered disabled state
+[501076.229389] device veth5 entered promiscuous mode
+[501076.232624] IPv6: ADDRCONF(NETDEV_UP): veth5: link is not ready
+[501076.236572] br0: port 3(veth5) entered blocking state
+[501076.240015] br0: port 3(veth5) entered forwarding state
+[501076.245189] docker_gwbridge: port 3(veth00ae101) entered blocking state
+[501076.249435] docker_gwbridge: port 3(veth00ae101) entered disabled state
+[501076.269158] device veth00ae101 entered promiscuous mode
+[501076.273099] IPv6: ADDRCONF(NETDEV_UP): veth00ae101: link is not ready
+[501076.277467] docker_gwbridge: port 3(veth00ae101) entered blocking state
+[501076.281676] docker_gwbridge: port 3(veth00ae101) entered forwarding state
+[501076.361214] br0: port 3(veth3) entered blocking state
+[501076.364454] br0: port 3(veth3) entered disabled state
+[501076.367760] device veth3 entered promiscuous mode
+[501076.371127] IPv6: ADDRCONF(NETDEV_UP): veth3: link is not ready
+[501076.374722] br0: port 3(veth3) entered blocking state
+[501076.377755] br0: port 3(veth3) entered forwarding state
+[501076.404944] IPVS: Creating netns size=2040 id=37
+[501076.518085] IPv6: ADDRCONF(NETDEV_CHANGE): veth5: link becomes ready
+[501076.522499] docker_gwbridge: port 3(veth00ae101) entered disabled state
+[501076.526739] br0: port 3(veth3) entered disabled state
+[501076.602672] IPv6: ADDRCONF(NETDEV_CHANGE): veth00ae101: link becomes ready
+[501076.609130] docker_gwbridge: port 3(veth00ae101) entered blocking state
+[501076.613117] docker_gwbridge: port 3(veth00ae101) entered forwarding state
+[501076.632206] IPv6: ADDRCONF(NETDEV_CHANGE): veth3: link becomes ready
+[501076.636986] br0: port 3(veth3) entered blocking state
+[501076.640872] br0: port 3(veth3) entered forwarding state
+[501086.699983] br0: port 3(veth5) entered disabled state
+[501086.705535] br0: port 3(veth5) entered disabled state
+[501086.712641] device veth5 left promiscuous mode
+[501086.716103] br0: port 3(veth5) entered disabled state
+[501086.744517] br0: port 3(veth3) entered disabled state
+[501086.767705] docker_gwbridge: port 3(veth00ae101) entered disabled state
+[501086.777283] docker_gwbridge: port 3(veth00ae101) entered disabled state
+[501086.784243] device veth00ae101 left promiscuous mode
+[501086.787255] docker_gwbridge: port 3(veth00ae101) entered disabled state
+[501086.802799] br0: port 3(veth3) entered disabled state
+[501086.809414] device veth3 left promiscuous mode
+[501086.812773] br0: port 3(veth3) entered disabled state
+[501086.847515] IPVS: __ip_vs_del_service: enter
+[501086.850498] IPVS: __ip_vs_del_service: enter
+[501087.058214] br0: port 3(veth4) entered blocking state
+[501087.061388] br0: port 3(veth4) entered disabled state
+[501087.064622] device veth4 entered promiscuous mode
+[501087.067582] IPv6: ADDRCONF(NETDEV_UP): veth4: link is not ready
+[501087.070901] br0: port 3(veth4) entered blocking state
+[501087.074197] br0: port 3(veth4) entered forwarding state
+[501087.078679] docker_gwbridge: port 3(vethce8c4c3) entered blocking state
+[501087.082616] docker_gwbridge: port 3(vethce8c4c3) entered disabled state
+[501087.086649] device vethce8c4c3 entered promiscuous mode
+[501087.089917] IPv6: ADDRCONF(NETDEV_UP): vethce8c4c3: link is not ready
+[501087.093564] docker_gwbridge: port 3(vethce8c4c3) entered blocking state
+[501087.097433] docker_gwbridge: port 3(vethce8c4c3) entered forwarding state
+[501087.180187] br0: port 3(veth6) entered blocking state
+[501087.183881] br0: port 3(veth6) entered disabled state
+[501087.187405] device veth6 entered promiscuous mode
+[501087.190795] IPv6: ADDRCONF(NETDEV_UP): veth6: link is not ready
+[501087.194808] br0: port 3(veth6) entered blocking state
+[501087.198277] br0: port 3(veth6) entered forwarding state
+[501087.238858] IPVS: Creating netns size=2040 id=38
+[501087.345247] br0: port 3(veth4) entered disabled state
+[501087.348688] docker_gwbridge: port 3(vethce8c4c3) entered disabled state
+[501087.352811] IPv6: ADDRCONF(NETDEV_CHANGE): veth6: link becomes ready
+[501087.426511] IPv6: ADDRCONF(NETDEV_CHANGE): vethce8c4c3: link becomes ready
+[501087.431533] docker_gwbridge: port 3(vethce8c4c3) entered blocking state
+[501087.436161] docker_gwbridge: port 3(vethce8c4c3) entered forwarding state
+[501087.450987] IPv6: ADDRCONF(NETDEV_CHANGE): veth4: link becomes ready
+[501087.454868] br0: port 3(veth4) entered blocking state
+[501087.457980] br0: port 3(veth4) entered forwarding state
+[501521.062602] docker0: port 1(veth481e5ed) entered disabled state
+[501521.075847] docker0: port 1(veth481e5ed) entered disabled state
+[501521.082783] device veth481e5ed left promiscuous mode
+[501521.085880] docker0: port 1(veth481e5ed) entered disabled state
+[501521.274206] docker0: port 1(veth72c9392) entered blocking state
+[501521.277892] docker0: port 1(veth72c9392) entered disabled state
+[501521.299374] device veth72c9392 entered promiscuous mode
+[501521.302997] IPv6: ADDRCONF(NETDEV_UP): veth72c9392: link is not ready
+[501521.306644] docker0: port 1(veth72c9392) entered blocking state
+[501521.310084] docker0: port 1(veth72c9392) entered forwarding state
+[501521.350000] IPVS: Creating netns size=2040 id=39
+[501521.416775] IPv6: ADDRCONF(NETDEV_CHANGE): veth72c9392: link becomes ready
+[501546.849780] br0: port 4(veth2) entered disabled state
+[501546.885384] br0: port 2(veth0) entered disabled state
+[501546.889026] br0: port 6(veth4) entered disabled state
+[501546.914754] docker_gwbridge: port 5(veth110a0a9) entered disabled state
+[501546.919466] docker_gwbridge: port 5(veth110a0a9) entered disabled state
+[501546.929254] device veth110a0a9 left promiscuous mode
+[501546.932968] docker_gwbridge: port 5(veth110a0a9) entered disabled state
+[501546.965869] br0: port 5(veth3) entered disabled state
+[501546.980733] docker_gwbridge: port 4(vethad490a4) entered disabled state
+[501547.008106] docker_gwbridge: port 7(vethf5e97e7) entered disabled state
+[501547.012820] docker_gwbridge: port 4(vethad490a4) entered disabled state
+[501547.021309] device vethad490a4 left promiscuous mode
+[501547.024891] docker_gwbridge: port 4(vethad490a4) entered disabled state
+[501547.038278] docker_gwbridge: port 7(vethf5e97e7) entered disabled state
+[501547.047582] device vethf5e97e7 left promiscuous mode
+[501547.052515] docker_gwbridge: port 7(vethf5e97e7) entered disabled state
+[501547.071212] docker_gwbridge: port 6(vetha8abb8e) entered disabled state
+[501547.077895] br0: port 4(veth2) entered disabled state
+[501547.086246] device veth2 left promiscuous mode
+[501547.090446] br0: port 4(veth2) entered disabled state
+[501547.109745] br0: port 2(veth0) entered disabled state
+[501547.118752] device veth0 left promiscuous mode
+[501547.123295] br0: port 2(veth0) entered disabled state
+[501547.134354] docker_gwbridge: port 6(vetha8abb8e) entered disabled state
+[501547.144032] device vetha8abb8e left promiscuous mode
+[501547.149285] docker_gwbridge: port 6(vetha8abb8e) entered disabled state
+[501547.181861] IPVS: __ip_vs_del_service: enter
+[501547.185520] IPVS: __ip_vs_del_service: enter
+[501547.193083] br0: port 6(veth4) entered disabled state
+[501547.199878] device veth4 left promiscuous mode
+[501547.203169] br0: port 6(veth4) entered disabled state
+[501547.245904] br0: port 5(veth3) entered disabled state
+[501547.252843] device veth3 left promiscuous mode
+[501547.256203] br0: port 5(veth3) entered disabled state
+[501547.296109] IPVS: __ip_vs_del_service: enter
+[501547.299245] IPVS: __ip_vs_del_service: enter
+[501547.309079] IPVS: __ip_vs_del_service: enter
+[501547.312201] IPVS: __ip_vs_del_service: enter
+[501547.440103] IPVS: __ip_vs_del_service: enter
+[501547.444443] IPVS: __ip_vs_del_service: enter
+[501555.850391] br0: port 3(veth6) entered disabled state
+[501555.853660] br0: port 1(vxlan0) entered disabled state
+[501555.863276] device veth6 left promiscuous mode
+[501555.866522] ov-001003-73mm9: port 3(veth6) entered disabled state
+[501555.880155] device vxlan0 left promiscuous mode
+[501555.883382] ov-001003-73mm9: port 1(vxlan0) entered disabled state
+[501555.987799] br0: port 3(veth4) entered disabled state
+[501556.004198] docker_gwbridge: port 3(vethce8c4c3) entered disabled state
+[501556.015443] docker_gwbridge: port 3(vethce8c4c3) entered disabled state
+[501556.022419] device vethce8c4c3 left promiscuous mode
+[501556.025372] docker_gwbridge: port 3(vethce8c4c3) entered disabled state
+[501556.043856] br0: port 3(veth4) entered disabled state
+[501556.050191] device veth4 left promiscuous mode
+[501556.053061] br0: port 3(veth4) entered disabled state
+[501556.085106] IPVS: __ip_vs_del_service: enter
+[501556.087957] IPVS: __ip_vs_del_service: enter
+[501556.288191] br0: port 3(veth5) entered blocking state
+[501556.291648] br0: port 3(veth5) entered disabled state
+[501556.295477] device veth5 entered promiscuous mode
+[501556.298789] IPv6: ADDRCONF(NETDEV_UP): veth5: link is not ready
+[501556.302626] br0: port 3(veth5) entered blocking state
+[501556.306061] br0: port 3(veth5) entered forwarding state
+[501556.310974] docker_gwbridge: port 3(veth31f53f1) entered blocking state
+[501556.315060] docker_gwbridge: port 3(veth31f53f1) entered disabled state
+[501556.320027] device veth31f53f1 entered promiscuous mode
+[501556.323875] IPv6: ADDRCONF(NETDEV_UP): veth31f53f1: link is not ready
+[501556.327786] docker_gwbridge: port 3(veth31f53f1) entered blocking state
+[501556.331628] docker_gwbridge: port 3(veth31f53f1) entered forwarding state
+[501556.404619] IPVS: Creating netns size=2040 id=40
+[501556.473200] br0: port 1(vxlan0) entered blocking state
+[501556.476491] br0: port 1(vxlan0) entered disabled state
+[501556.480300] device vxlan0 entered promiscuous mode
+[501556.483603] br0: port 1(vxlan0) entered blocking state
+[501556.486794] br0: port 1(vxlan0) entered forwarding state
+[501556.534262] br0: port 2(veth0) entered blocking state
+[501556.537480] br0: port 2(veth0) entered disabled state
+[501556.540621] device veth0 entered promiscuous mode
+[501556.543781] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[501556.547136] br0: port 2(veth0) entered blocking state
+[501556.550148] br0: port 2(veth0) entered forwarding state
+[501556.585864] IPVS: Creating netns size=2040 id=41
+[501556.694638] br0: port 3(veth5) entered disabled state
+[501556.698038] docker_gwbridge: port 3(veth31f53f1) entered disabled state
+[501556.701899] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[501556.770534] IPv6: ADDRCONF(NETDEV_CHANGE): veth31f53f1: link becomes ready
+[501556.775139] docker_gwbridge: port 3(veth31f53f1) entered blocking state
+[501556.779757] docker_gwbridge: port 3(veth31f53f1) entered forwarding state
+[501556.798178] IPv6: ADDRCONF(NETDEV_CHANGE): veth5: link becomes ready
+[501556.802590] br0: port 3(veth5) entered blocking state
+[501556.805913] br0: port 3(veth5) entered forwarding state
+[501585.078807] IPVS: __ip_vs_del_service: enter
+[501586.664860] br0: port 2(veth0) entered disabled state
+[501586.668371] br0: port 1(vxlan0) entered disabled state
+[501586.677228] device veth0 left promiscuous mode
+[501586.680709] ov-001003-73mm9: port 2(veth0) entered disabled state
+[501586.693131] device vxlan0 left promiscuous mode
+[501586.696352] ov-001003-73mm9: port 1(vxlan0) entered disabled state
+[501586.805181] br0: port 3(veth5) entered disabled state
+[501586.827231] docker_gwbridge: port 3(veth31f53f1) entered disabled state
+[501586.840352] docker_gwbridge: port 3(veth31f53f1) entered disabled state
+[501586.849766] device veth31f53f1 left promiscuous mode
+[501586.853757] docker_gwbridge: port 3(veth31f53f1) entered disabled state
+[501586.868903] br0: port 3(veth5) entered disabled state
+[501586.875962] device veth5 left promiscuous mode
+[501586.879236] br0: port 3(veth5) entered disabled state
+[501586.909180] IPVS: __ip_vs_del_service: enter
+[501587.057235] br0: port 3(veth6) entered blocking state
+[501587.060688] br0: port 3(veth6) entered disabled state
+[501587.064280] device veth6 entered promiscuous mode
+[501587.067506] IPv6: ADDRCONF(NETDEV_UP): veth6: link is not ready
+[501587.071012] br0: port 3(veth6) entered blocking state
+[501587.074504] br0: port 3(veth6) entered forwarding state
+[501587.079250] docker_gwbridge: port 3(veth1b33eda) entered blocking state
+[501587.083226] docker_gwbridge: port 3(veth1b33eda) entered disabled state
+[501587.101053] device veth1b33eda entered promiscuous mode
+[501587.112225] IPv6: ADDRCONF(NETDEV_UP): veth1b33eda: link is not ready
+[501587.118165] docker_gwbridge: port 3(veth1b33eda) entered blocking state
+[501587.124410] docker_gwbridge: port 3(veth1b33eda) entered forwarding state
+[501587.165709] IPVS: Creating netns size=2040 id=42
+[501587.278088] IPv6: ADDRCONF(NETDEV_CHANGE): veth6: link becomes ready
+[501587.282075] docker_gwbridge: port 3(veth1b33eda) entered disabled state
+[501587.336597] IPv6: ADDRCONF(NETDEV_CHANGE): veth1b33eda: link becomes ready
+[501587.342676] docker_gwbridge: port 3(veth1b33eda) entered blocking state
+[501587.348678] docker_gwbridge: port 3(veth1b33eda) entered forwarding state
+[503860.781452] br0: port 4(veth7) entered blocking state
+[503860.785590] br0: port 4(veth7) entered disabled state
+[503860.791836] device veth7 entered promiscuous mode
+[503860.803252] IPv6: ADDRCONF(NETDEV_UP): veth7: link is not ready
+[503860.816493] docker_gwbridge: port 4(vethe4a8773) entered blocking state
+[503860.822760] docker_gwbridge: port 4(vethe4a8773) entered disabled state
+[503860.842210] device vethe4a8773 entered promiscuous mode
+[503860.866542] IPv6: ADDRCONF(NETDEV_UP): vethe4a8773: link is not ready
+[503860.872075] docker_gwbridge: port 4(vethe4a8773) entered blocking state
+[503860.877799] docker_gwbridge: port 4(vethe4a8773) entered forwarding state
+[503860.939426] IPVS: Creating netns size=2040 id=43
+[503861.051944] br0: port 1(vxlan0) entered blocking state
+[503861.058598] br0: port 1(vxlan0) entered disabled state
+[503861.065179] device vxlan0 entered promiscuous mode
+[503861.071262] br0: port 1(vxlan0) entered blocking state
+[503861.078255] br0: port 1(vxlan0) entered forwarding state
+[503861.148320] br0: port 2(veth0) entered blocking state
+[503861.152743] br0: port 2(veth0) entered disabled state
+[503861.157312] device veth0 entered promiscuous mode
+[503861.161469] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[503861.166831] br0: port 2(veth0) entered blocking state
+[503861.171251] br0: port 2(veth0) entered forwarding state
+[503861.202380] IPVS: Creating netns size=2040 id=44
+[503861.329242] docker_gwbridge: port 4(vethe4a8773) entered disabled state
+[503861.336513] br0: port 2(veth0) entered disabled state
+[503861.342413] IPv6: ADDRCONF(NETDEV_CHANGE): veth7: link becomes ready
+[503861.350062] br0: port 4(veth7) entered blocking state
+[503861.355783] br0: port 4(veth7) entered forwarding state
+[503861.436583] IPv6: ADDRCONF(NETDEV_CHANGE): vethe4a8773: link becomes ready
+[503861.443093] docker_gwbridge: port 4(vethe4a8773) entered blocking state
+[503861.449260] docker_gwbridge: port 4(vethe4a8773) entered forwarding state
+[503861.475787] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[503861.481894] br0: port 2(veth0) entered blocking state
+[503861.485934] br0: port 2(veth0) entered forwarding state
+[503861.556539] br0: port 5(veth8) entered blocking state
+[503861.560617] br0: port 5(veth8) entered disabled state
+[503861.566494] device veth8 entered promiscuous mode
+[503861.572341] IPv6: ADDRCONF(NETDEV_UP): veth8: link is not ready
+[503861.576845] br0: port 5(veth8) entered blocking state
+[503861.580903] br0: port 5(veth8) entered forwarding state
+[503861.591009] docker_gwbridge: port 5(veth89dcb7b) entered blocking state
+[503861.595867] docker_gwbridge: port 5(veth89dcb7b) entered disabled state
+[503861.616186] device veth89dcb7b entered promiscuous mode
+[503861.633860] IPv6: ADDRCONF(NETDEV_UP): veth89dcb7b: link is not ready
+[503861.638602] docker_gwbridge: port 5(veth89dcb7b) entered blocking state
+[503861.643415] docker_gwbridge: port 5(veth89dcb7b) entered forwarding state
+[503861.747226] br0: port 3(veth1) entered blocking state
+[503861.751391] br0: port 3(veth1) entered disabled state
+[503861.755576] device veth1 entered promiscuous mode
+[503861.759495] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[503861.764073] br0: port 3(veth1) entered blocking state
+[503861.768170] br0: port 3(veth1) entered forwarding state
+[503861.774497] br0: port 5(veth8) entered disabled state
+[503861.780181] docker_gwbridge: port 5(veth89dcb7b) entered disabled state
+[503861.785201] br0: port 3(veth1) entered disabled state
+[503861.821268] IPVS: Creating netns size=2040 id=45
+[503861.975130] IPv6: ADDRCONF(NETDEV_CHANGE): veth8: link becomes ready
+[503861.979797] br0: port 5(veth8) entered blocking state
+[503861.983933] br0: port 5(veth8) entered forwarding state
+[503862.053609] IPv6: ADDRCONF(NETDEV_CHANGE): veth89dcb7b: link becomes ready
+[503862.058818] docker_gwbridge: port 5(veth89dcb7b) entered blocking state
+[503862.063921] docker_gwbridge: port 5(veth89dcb7b) entered forwarding state
+[503862.087096] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[503862.092493] br0: port 3(veth1) entered blocking state
+[503862.096362] br0: port 3(veth1) entered forwarding state
+[505004.291973] docker0: port 1(veth72c9392) entered disabled state
+[505004.298578] docker0: port 1(veth72c9392) entered disabled state
+[505004.306635] device veth72c9392 left promiscuous mode
+[505004.310467] docker0: port 1(veth72c9392) entered disabled state
+[505004.500355] docker0: port 1(vethbeca315) entered blocking state
+[505004.504951] docker0: port 1(vethbeca315) entered disabled state
+[505004.512249] device vethbeca315 entered promiscuous mode
+[505004.519176] IPv6: ADDRCONF(NETDEV_UP): vethbeca315: link is not ready
+[505004.523930] docker0: port 1(vethbeca315) entered blocking state
+[505004.528444] docker0: port 1(vethbeca315) entered forwarding state
+[505004.569020] IPVS: Creating netns size=2040 id=46
+[505004.635696] IPv6: ADDRCONF(NETDEV_CHANGE): vethbeca315: link becomes ready
+[505315.345331] docker0: port 1(vethbeca315) entered disabled state
+[505315.353392] docker0: port 1(vethbeca315) entered disabled state
+[505315.361176] device vethbeca315 left promiscuous mode
+[505315.365080] docker0: port 1(vethbeca315) entered disabled state
+[505315.551727] docker0: port 1(veth4ef3f9c) entered blocking state
+[505315.555948] docker0: port 1(veth4ef3f9c) entered disabled state
+[505315.575161] device veth4ef3f9c entered promiscuous mode
+[505315.584445] IPv6: ADDRCONF(NETDEV_UP): veth4ef3f9c: link is not ready
+[505315.588340] docker0: port 1(veth4ef3f9c) entered blocking state
+[505315.591976] docker0: port 1(veth4ef3f9c) entered forwarding state
+[505315.633493] IPVS: Creating netns size=2040 id=47
+[505315.698733] IPv6: ADDRCONF(NETDEV_CHANGE): veth4ef3f9c: link becomes ready
+[505385.922655] docker0: port 1(veth4ef3f9c) entered disabled state
+[505385.931879] docker0: port 1(veth4ef3f9c) entered disabled state
+[505385.938970] device veth4ef3f9c left promiscuous mode
+[505385.942409] docker0: port 1(veth4ef3f9c) entered disabled state
+[505386.129387] docker0: port 1(veth69a14d9) entered blocking state
+[505386.134579] docker0: port 1(veth69a14d9) entered disabled state
+[505386.152264] device veth69a14d9 entered promiscuous mode
+[505386.164197] IPv6: ADDRCONF(NETDEV_UP): veth69a14d9: link is not ready
+[505386.169003] docker0: port 1(veth69a14d9) entered blocking state
+[505386.173574] docker0: port 1(veth69a14d9) entered forwarding state
+[505386.220767] IPVS: Creating netns size=2040 id=48
+[505386.285663] IPv6: ADDRCONF(NETDEV_CHANGE): veth69a14d9: link becomes ready
+[586267.362374] br0: port 6(veth9) entered blocking state
+[586267.366305] br0: port 6(veth9) entered disabled state
+[586267.370441] device veth9 entered promiscuous mode
+[586267.374128] IPv6: ADDRCONF(NETDEV_UP): veth9: link is not ready
+[586267.386646] docker_gwbridge: port 6(veth259e5cb) entered blocking state
+[586267.391327] docker_gwbridge: port 6(veth259e5cb) entered disabled state
+[586267.398210] device veth259e5cb entered promiscuous mode
+[586267.404303] IPv6: ADDRCONF(NETDEV_UP): veth259e5cb: link is not ready
+[586267.410527] docker_gwbridge: port 6(veth259e5cb) entered blocking state
+[586267.415193] docker_gwbridge: port 6(veth259e5cb) entered forwarding state
+[586267.476248] IPVS: Creating netns size=2040 id=49
+[586267.590270] docker_gwbridge: port 6(veth259e5cb) entered disabled state
+[586267.595547] IPv6: ADDRCONF(NETDEV_CHANGE): veth9: link becomes ready
+[586267.600247] br0: port 6(veth9) entered blocking state
+[586267.604029] br0: port 6(veth9) entered forwarding state
+[586267.646630] IPv6: ADDRCONF(NETDEV_CHANGE): veth259e5cb: link becomes ready
+[586267.653121] docker_gwbridge: port 6(veth259e5cb) entered blocking state
+[586267.659501] docker_gwbridge: port 6(veth259e5cb) entered forwarding state
+[586901.128973] IPVS: Creating netns size=2040 id=50
+[586901.220200] br0: port 1(vxlan0) entered blocking state
+[586901.225239] br0: port 1(vxlan0) entered disabled state
+[586901.230095] device vxlan0 entered promiscuous mode
+[586901.237268] br0: port 1(vxlan0) entered blocking state
+[586901.241224] br0: port 1(vxlan0) entered forwarding state
+[586901.293187] br0: port 2(veth0) entered blocking state
+[586901.297782] br0: port 2(veth0) entered disabled state
+[586901.302821] device veth0 entered promiscuous mode
+[586901.307119] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[586901.312068] br0: port 2(veth0) entered blocking state
+[586901.316872] br0: port 2(veth0) entered forwarding state
+[586901.332202] docker_gwbridge: port 7(veth4fd45ff) entered blocking state
+[586901.337716] docker_gwbridge: port 7(veth4fd45ff) entered disabled state
+[586901.343842] device veth4fd45ff entered promiscuous mode
+[586901.348966] IPv6: ADDRCONF(NETDEV_UP): veth4fd45ff: link is not ready
+[586901.354233] docker_gwbridge: port 7(veth4fd45ff) entered blocking state
+[586901.359531] docker_gwbridge: port 7(veth4fd45ff) entered forwarding state
+[586901.396589] IPVS: Creating netns size=2040 id=51
+[586901.508748] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[586901.512717] docker_gwbridge: port 7(veth4fd45ff) entered disabled state
+[586901.526100] IPv6: ADDRCONF(NETDEV_CHANGE): veth4fd45ff: link becomes ready
+[586901.530395] docker_gwbridge: port 7(veth4fd45ff) entered blocking state
+[586901.534440] docker_gwbridge: port 7(veth4fd45ff) entered forwarding state
+[586906.688209] br0: port 3(veth6) entered disabled state
+[586906.710199] docker_gwbridge: port 3(veth1b33eda) entered disabled state
+[586906.716881] docker_gwbridge: port 3(veth1b33eda) entered disabled state
+[586906.725599] device veth1b33eda left promiscuous mode
+[586906.729534] docker_gwbridge: port 3(veth1b33eda) entered disabled state
+[586906.748105] br0: port 3(veth6) entered disabled state
+[586906.755964] device veth6 left promiscuous mode
+[586906.759907] br0: port 3(veth6) entered disabled state
+[586907.004307] br0: port 3(veth10) entered blocking state
+[586907.008715] br0: port 3(veth10) entered disabled state
+[586907.013104] device veth10 entered promiscuous mode
+[586907.017321] IPv6: ADDRCONF(NETDEV_UP): veth10: link is not ready
+[586907.022085] br0: port 3(veth10) entered blocking state
+[586907.026397] br0: port 3(veth10) entered forwarding state
+[586907.039150] docker_gwbridge: port 3(vethb4678cc) entered blocking state
+[586907.043292] docker_gwbridge: port 3(vethb4678cc) entered disabled state
+[586907.047589] device vethb4678cc entered promiscuous mode
+[586907.052098] IPv6: ADDRCONF(NETDEV_UP): vethb4678cc: link is not ready
+[586907.055994] docker_gwbridge: port 3(vethb4678cc) entered blocking state
+[586907.060541] docker_gwbridge: port 3(vethb4678cc) entered forwarding state
+[586907.142271] br0: port 3(veth1) entered blocking state
+[586907.146595] br0: port 3(veth1) entered disabled state
+[586907.151048] device veth1 entered promiscuous mode
+[586907.155504] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[586907.160107] br0: port 3(veth1) entered blocking state
+[586907.164199] br0: port 3(veth1) entered forwarding state
+[586907.192559] IPVS: Creating netns size=2040 id=52
+[586907.303150] br0: port 3(veth10) entered disabled state
+[586907.306912] docker_gwbridge: port 3(vethb4678cc) entered disabled state
+[586907.317464] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[586907.355661] IPv6: ADDRCONF(NETDEV_CHANGE): vethb4678cc: link becomes ready
+[586907.360666] docker_gwbridge: port 3(vethb4678cc) entered blocking state
+[586907.365308] docker_gwbridge: port 3(vethb4678cc) entered forwarding state
+[586907.389293] IPv6: ADDRCONF(NETDEV_CHANGE): veth10: link becomes ready
+[586907.394073] br0: port 3(veth10) entered blocking state
+[586907.397778] br0: port 3(veth10) entered forwarding state
+[587925.670995] IPVS: __ip_vs_del_service: enter
+[587925.687009] IPVS: __ip_vs_del_service: enter
+[587925.747622] IPVS: __ip_vs_del_service: enter
+[587925.790676] br0: port 6(veth9) entered disabled state
+[587925.810791] docker_gwbridge: port 6(veth259e5cb) entered disabled state
+[587925.827380] br0: port 2(veth0) entered disabled state
+[587925.831610] docker_gwbridge: port 6(veth259e5cb) entered disabled state
+[587925.838853] device veth259e5cb left promiscuous mode
+[587925.842237] docker_gwbridge: port 6(veth259e5cb) entered disabled state
+[587925.861221] docker_gwbridge: port 7(veth4fd45ff) entered disabled state
+[587925.877319] docker_gwbridge: port 7(veth4fd45ff) entered disabled state
+[587925.884952] device veth4fd45ff left promiscuous mode
+[587925.888300] docker_gwbridge: port 7(veth4fd45ff) entered disabled state
+[587925.924954] br0: port 6(veth9) entered disabled state
+[587925.932643] device veth9 left promiscuous mode
+[587925.936368] br0: port 6(veth9) entered disabled state
+[587925.976436] br0: port 2(veth0) entered disabled state
+[587925.989204] device veth0 left promiscuous mode
+[587925.993049] br0: port 2(veth0) entered disabled state
+[587926.045087] IPVS: __ip_vs_del_service: enter
+[587935.736040] br0: port 3(veth1) entered disabled state
+[587935.740032] br0: port 1(vxlan0) entered disabled state
+[587935.751146] device veth1 left promiscuous mode
+[587935.754125] ov-001005-pvx82: port 3(veth1) entered disabled state
+[587935.767225] device vxlan0 left promiscuous mode
+[587935.771008] ov-001005-pvx82: port 1(vxlan0) entered disabled state
+[587935.840582] IPVS: __ip_vs_del_service: enter
+[587935.912260] br0: port 3(veth10) entered disabled state
+[587935.929662] docker_gwbridge: port 3(vethb4678cc) entered disabled state
+[587935.941596] docker_gwbridge: port 3(vethb4678cc) entered disabled state
+[587935.949773] device vethb4678cc left promiscuous mode
+[587935.953585] docker_gwbridge: port 3(vethb4678cc) entered disabled state
+[587935.970855] br0: port 3(veth10) entered disabled state
+[587935.977934] device veth10 left promiscuous mode
+[587935.981462] br0: port 3(veth10) entered disabled state
+[587936.168276] br0: port 3(veth11) entered blocking state
+[587936.172484] br0: port 3(veth11) entered disabled state
+[587936.176368] device veth11 entered promiscuous mode
+[587936.180307] IPv6: ADDRCONF(NETDEV_UP): veth11: link is not ready
+[587936.184882] br0: port 3(veth11) entered blocking state
+[587936.189069] br0: port 3(veth11) entered forwarding state
+[587936.194877] docker_gwbridge: port 3(veth36618a9) entered blocking state
+[587936.199495] docker_gwbridge: port 3(veth36618a9) entered disabled state
+[587936.205134] device veth36618a9 entered promiscuous mode
+[587936.210379] IPv6: ADDRCONF(NETDEV_UP): veth36618a9: link is not ready
+[587936.215295] docker_gwbridge: port 3(veth36618a9) entered blocking state
+[587936.220321] docker_gwbridge: port 3(veth36618a9) entered forwarding state
+[587936.269343] IPVS: Creating netns size=2040 id=53
+[587936.376957] IPv6: ADDRCONF(NETDEV_CHANGE): veth11: link becomes ready
+[587936.381708] docker_gwbridge: port 3(veth36618a9) entered disabled state
+[587936.437663] IPv6: ADDRCONF(NETDEV_CHANGE): veth36618a9: link becomes ready
+[587936.442441] docker_gwbridge: port 3(veth36618a9) entered blocking state
+[587936.446752] docker_gwbridge: port 3(veth36618a9) entered forwarding state
+[588175.630315] br0: port 2(veth0) entered disabled state
+[588175.636464] br0: port 1(vxlan0) entered disabled state
+[588175.647188] device veth0 left promiscuous mode
+[588175.653357] ov-001002-ialto: port 2(veth0) entered disabled state
+[588175.663154] device vxlan0 left promiscuous mode
+[588175.667727] ov-001002-ialto: port 1(vxlan0) entered disabled state
+[588175.740181] IPVS: __ip_vs_del_service: enter
+[588175.751319] br0: port 3(veth11) entered disabled state
+[588175.782216] docker_gwbridge: port 3(veth36618a9) entered disabled state
+[588175.808394] docker_gwbridge: port 3(veth36618a9) entered disabled state
+[588175.816000] device veth36618a9 left promiscuous mode
+[588175.819365] docker_gwbridge: port 3(veth36618a9) entered disabled state
+[588175.862203] docker_gwbridge: port 2(veth5ab155f) entered disabled state
+[588175.879638] IPVS: __ip_vs_del_service: enter
+[588175.881821] br0: port 3(veth11) entered disabled state
+[588175.893432] device veth11 left promiscuous mode
+[588175.898538] br0: port 3(veth11) entered disabled state
+[588175.931260] docker_gwbridge: port 2(veth5ab155f) entered disabled state
+[588175.947040] device veth5ab155f left promiscuous mode
+[588175.952884] docker_gwbridge: port 2(veth5ab155f) entered disabled state
+[588176.075094] IPVS: __ip_vs_del_service: enter
+[588202.075262] br0: port 3(veth12) entered blocking state
+[588202.081468] br0: port 3(veth12) entered disabled state
+[588202.105487] device veth12 entered promiscuous mode
+[588202.114021] IPv6: ADDRCONF(NETDEV_UP): veth12: link is not ready
+[588202.142456] docker_gwbridge: port 2(veth2ae0f24) entered blocking state
+[588202.161709] docker_gwbridge: port 2(veth2ae0f24) entered disabled state
+[588202.197161] device veth2ae0f24 entered promiscuous mode
+[588202.235234] IPv6: ADDRCONF(NETDEV_UP): veth2ae0f24: link is not ready
+[588202.251907] docker_gwbridge: port 2(veth2ae0f24) entered blocking state
+[588202.263645] docker_gwbridge: port 2(veth2ae0f24) entered forwarding state
+[588202.310539] IPVS: Creating netns size=2040 id=54
+[588202.420227] docker_gwbridge: port 2(veth2ae0f24) entered disabled state
+[588202.425507] IPv6: ADDRCONF(NETDEV_CHANGE): veth12: link becomes ready
+[588202.430822] br0: port 3(veth12) entered blocking state
+[588202.435020] br0: port 3(veth12) entered forwarding state
+[588202.482528] IPv6: ADDRCONF(NETDEV_CHANGE): veth2ae0f24: link becomes ready
+[588202.494312] docker_gwbridge: port 2(veth2ae0f24) entered blocking state
+[588202.506832] docker_gwbridge: port 2(veth2ae0f24) entered forwarding state
+[588656.563397] IPVS: Creating netns size=2040 id=55
+[588656.638189] br0: port 1(vxlan0) entered blocking state
+[588656.646507] br0: port 1(vxlan0) entered disabled state
+[588656.654350] device vxlan0 entered promiscuous mode
+[588656.663961] br0: port 1(vxlan0) entered blocking state
+[588656.674316] br0: port 1(vxlan0) entered forwarding state
+[588656.731296] br0: port 2(veth0) entered blocking state
+[588656.736517] br0: port 2(veth0) entered disabled state
+[588656.741479] device veth0 entered promiscuous mode
+[588656.745818] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[588656.750562] br0: port 2(veth0) entered blocking state
+[588656.754226] br0: port 2(veth0) entered forwarding state
+[588656.759982] docker_gwbridge: port 3(veth1942893) entered blocking state
+[588656.764522] docker_gwbridge: port 3(veth1942893) entered disabled state
+[588656.782168] device veth1942893 entered promiscuous mode
+[588656.791420] IPv6: ADDRCONF(NETDEV_UP): veth1942893: link is not ready
+[588656.795848] docker_gwbridge: port 3(veth1942893) entered blocking state
+[588656.800075] docker_gwbridge: port 3(veth1942893) entered forwarding state
+[588656.838699] IPVS: Creating netns size=2040 id=56
+[588656.952657] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[588656.958778] docker_gwbridge: port 3(veth1942893) entered disabled state
+[588656.974679] IPv6: ADDRCONF(NETDEV_CHANGE): veth1942893: link becomes ready
+[588656.982250] docker_gwbridge: port 3(veth1942893) entered blocking state
+[588656.990545] docker_gwbridge: port 3(veth1942893) entered forwarding state
+[588669.321671] br0: port 3(veth12) entered disabled state
+[588669.338309] docker_gwbridge: port 2(veth2ae0f24) entered disabled state
+[588669.357683] docker_gwbridge: port 2(veth2ae0f24) entered disabled state
+[588669.366042] device veth2ae0f24 left promiscuous mode
+[588669.370472] docker_gwbridge: port 2(veth2ae0f24) entered disabled state
+[588669.390642] br0: port 3(veth12) entered disabled state
+[588669.398529] device veth12 left promiscuous mode
+[588669.402951] br0: port 3(veth12) entered disabled state
+[588669.654224] br0: port 3(veth13) entered blocking state
+[588669.658860] br0: port 3(veth13) entered disabled state
+[588669.663579] device veth13 entered promiscuous mode
+[588669.668143] IPv6: ADDRCONF(NETDEV_UP): veth13: link is not ready
+[588669.672811] br0: port 3(veth13) entered blocking state
+[588669.677342] br0: port 3(veth13) entered forwarding state
+[588669.683285] docker_gwbridge: port 2(veth54be20a) entered blocking state
+[588669.689911] docker_gwbridge: port 2(veth54be20a) entered disabled state
+[588669.697540] device veth54be20a entered promiscuous mode
+[588669.703991] IPv6: ADDRCONF(NETDEV_UP): veth54be20a: link is not ready
+[588669.710781] docker_gwbridge: port 2(veth54be20a) entered blocking state
+[588669.717617] docker_gwbridge: port 2(veth54be20a) entered forwarding state
+[588669.751183] br0: port 3(veth1) entered blocking state
+[588669.757673] br0: port 3(veth1) entered disabled state
+[588669.762172] device veth1 entered promiscuous mode
+[588669.766870] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[588669.772117] br0: port 3(veth1) entered blocking state
+[588669.776235] br0: port 3(veth1) entered forwarding state
+[588669.806077] IPVS: Creating netns size=2040 id=57
+[588669.926505] br0: port 3(veth13) entered disabled state
+[588669.931808] docker_gwbridge: port 2(veth54be20a) entered disabled state
+[588669.938515] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[588670.011645] IPv6: ADDRCONF(NETDEV_CHANGE): veth54be20a: link becomes ready
+[588670.017100] docker_gwbridge: port 2(veth54be20a) entered blocking state
+[588670.023459] docker_gwbridge: port 2(veth54be20a) entered forwarding state
+[588670.049541] IPv6: ADDRCONF(NETDEV_CHANGE): veth13: link becomes ready
+[588670.054105] br0: port 3(veth13) entered blocking state
+[588670.058384] br0: port 3(veth13) entered forwarding state
+[593091.239840] docker0: port 1(veth69a14d9) entered disabled state
+[593091.252937] docker0: port 1(veth69a14d9) entered disabled state
+[593091.262633] device veth69a14d9 left promiscuous mode
+[593091.265937] docker0: port 1(veth69a14d9) entered disabled state
+[593093.230495] IPVS: __ip_vs_del_service: enter
+[593093.244561] br0: port 3(veth1) entered disabled state
+[593093.248380] br0: port 2(veth0) entered disabled state
+[593093.251651] br0: port 1(vxlan0) entered disabled state
+[593093.262127] device veth1 left promiscuous mode
+[593093.265459] ov-001005-pvx82: port 3(veth1) entered disabled state
+[593093.274539] device veth0 left promiscuous mode
+[593093.277588] ov-001005-pvx82: port 2(veth0) entered disabled state
+[593093.287229] device vxlan0 left promiscuous mode
+[593093.290185] ov-001005-pvx82: port 1(vxlan0) entered disabled state
+[593093.295013] IPVS: __ip_vs_del_service: enter
+[593093.395676] docker_gwbridge: port 3(veth1942893) entered disabled state
+[593093.411441] docker_gwbridge: port 3(veth1942893) entered disabled state
+[593093.418605] device veth1942893 left promiscuous mode
+[593093.421798] docker_gwbridge: port 3(veth1942893) entered disabled state
+[593093.474677] br0: port 3(veth13) entered disabled state
+[593093.530527] IPVS: __ip_vs_del_service: enter
+[593093.591549] docker_gwbridge: port 2(veth54be20a) entered disabled state
+[593093.597679] docker_gwbridge: port 2(veth54be20a) entered disabled state
+[593093.605627] device veth54be20a left promiscuous mode
+[593093.609028] docker_gwbridge: port 2(veth54be20a) entered disabled state
+[593093.635903] br0: port 3(veth13) entered disabled state
+[593093.643144] device veth13 left promiscuous mode
+[593093.646604] br0: port 3(veth13) entered disabled state
+[593093.678350] IPVS: __ip_vs_del_service: enter
+[593093.703354] IPVS: __ip_vs_del_service: enter
+[593093.775017] br0: port 5(veth8) entered disabled state
+[593093.780826] br0: port 5(veth8) entered disabled state
+[593093.787254] device veth8 left promiscuous mode
+[593093.790318] br0: port 5(veth8) entered disabled state
+[593093.802478] IPVS: __ip_vs_del_service: enter
+[593093.839835] IPVS: __ip_vs_del_service: enter
+[593093.891002] br0: port 3(veth1) entered disabled state
+[593093.904208] docker_gwbridge: port 5(veth89dcb7b) entered disabled state
+[593093.920661] docker_gwbridge: port 5(veth89dcb7b) entered disabled state
+[593093.927781] device veth89dcb7b left promiscuous mode
+[593093.930877] docker_gwbridge: port 5(veth89dcb7b) entered disabled state
+[593093.947832] br0: port 3(veth1) entered disabled state
+[593093.954399] device veth1 left promiscuous mode
+[593093.957449] br0: port 3(veth1) entered disabled state
+[593093.990304] IPVS: __ip_vs_del_service: enter
+[593103.243745] IPVS: __ip_vs_del_service: enter
+[593103.335887] br0: port 4(veth7) entered disabled state
+[593103.343853] br0: port 4(veth7) entered disabled state
+[593103.351464] device veth7 left promiscuous mode
+[593103.355689] br0: port 4(veth7) entered disabled state
+[593103.367433] br0: port 2(veth0) entered disabled state
+[593103.370802] br0: port 1(vxlan0) entered disabled state
+[593103.381163] device veth0 left promiscuous mode
+[593103.384660] ov-001004-ix5cj: port 2(veth0) entered disabled state
+[593103.394154] device vxlan0 left promiscuous mode
+[593103.398837] ov-001004-ix5cj: port 1(vxlan0) entered disabled state
+[593103.466390] IPVS: __ip_vs_del_service: enter
+[593103.525194] docker_gwbridge: port 4(vethe4a8773) entered disabled state
+[593103.541730] docker_gwbridge: port 4(vethe4a8773) entered disabled state
+[593103.549923] device vethe4a8773 left promiscuous mode
+[593103.553617] docker_gwbridge: port 4(vethe4a8773) entered disabled state
+[593729.228692] docker0: port 3(vetha12c3b4) entered disabled state
+[593729.238017] docker0: port 3(vetha12c3b4) entered disabled state
+[593729.245377] device vetha12c3b4 left promiscuous mode
+[593729.248685] docker0: port 3(vetha12c3b4) entered disabled state
+[593729.296317] IPVS: __ip_vs_del_service: enter
+[593739.098559] br0: port 2(veth0) entered disabled state
+[593739.103396] br0: port 1(vxlan0) entered disabled state
+[593739.114192] device veth0 left promiscuous mode
+[593739.118012] ov-001000-vw0ls: port 2(veth0) entered disabled state
+[593739.128155] device vxlan0 left promiscuous mode
+[593739.133322] ov-001000-vw0ls: port 1(vxlan0) entered disabled state
+[593739.233707] docker_gwbridge: port 1(veth43d8739) entered disabled state
+[593739.240842] docker_gwbridge: port 1(veth43d8739) entered disabled state
+[593739.264222] device veth43d8739 left promiscuous mode
+[593739.269858] docker_gwbridge: port 1(veth43d8739) entered disabled state
+[593745.867003] docker0: port 1(veth28cd027) entered blocking state
+[593745.870858] docker0: port 1(veth28cd027) entered disabled state
+[593745.877407] device veth28cd027 entered promiscuous mode
+[593745.881002] IPv6: ADDRCONF(NETDEV_UP): veth28cd027: link is not ready
+[593746.123205] IPVS: Creating netns size=2040 id=58
+[593746.264552] IPv6: ADDRCONF(NETDEV_CHANGE): veth28cd027: link becomes ready
+[593746.269523] docker0: port 1(veth28cd027) entered blocking state
+[593746.273893] docker0: port 1(veth28cd027) entered forwarding state
+[593746.934522] IPVS: Creating netns size=2040 id=59
+[593746.996085] IPVS: Creating netns size=2040 id=60
+[593747.055233] br0: port 1(vxlan0) entered blocking state
+[593747.059560] br0: port 1(vxlan0) entered disabled state
+[593747.063936] device vxlan0 entered promiscuous mode
+[593747.068191] br0: port 1(vxlan0) entered blocking state
+[593747.072218] br0: port 1(vxlan0) entered forwarding state
+[593747.114298] br0: port 2(veth0) entered blocking state
+[593747.117857] br0: port 2(veth0) entered disabled state
+[593747.122097] device veth0 entered promiscuous mode
+[593747.125565] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[593747.129506] br0: port 2(veth0) entered blocking state
+[593747.132969] br0: port 2(veth0) entered forwarding state
+[593747.201865] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[593747.223759] docker_gwbridge: port 1(veth2a8de2a) entered blocking state
+[593747.228179] docker_gwbridge: port 1(veth2a8de2a) entered disabled state
+[593747.245137] device veth2a8de2a entered promiscuous mode
+[593747.252234] IPv6: ADDRCONF(NETDEV_UP): veth2a8de2a: link is not ready
+[593747.256647] docker_gwbridge: port 1(veth2a8de2a) entered blocking state
+[593747.260741] docker_gwbridge: port 1(veth2a8de2a) entered forwarding state
+[593747.269326] docker_gwbridge: port 1(veth2a8de2a) entered disabled state
+[593747.286228] IPv6: ADDRCONF(NETDEV_CHANGE): veth2a8de2a: link becomes ready
+[593747.290666] docker_gwbridge: port 1(veth2a8de2a) entered blocking state
+[593747.294825] docker_gwbridge: port 1(veth2a8de2a) entered forwarding state
+[594219.553775] docker0: port 2(veth8c4e55d) entered blocking state
+[594219.559215] docker0: port 2(veth8c4e55d) entered disabled state
+[594219.582151] device veth8c4e55d entered promiscuous mode
+[594219.590288] IPv6: ADDRCONF(NETDEV_UP): veth8c4e55d: link is not ready
+[594219.600052] docker0: port 2(veth8c4e55d) entered blocking state
+[594219.605648] docker0: port 2(veth8c4e55d) entered forwarding state
+[594219.612487] docker0: port 2(veth8c4e55d) entered disabled state
+[594219.705773] IPVS: Creating netns size=2040 id=61
+[594219.741464] IPVS: Creating netns size=2040 id=62
+[594219.791273] br0: port 3(veth1) entered blocking state
+[594219.796115] br0: port 3(veth1) entered disabled state
+[594219.801870] device veth1 entered promiscuous mode
+[594219.807378] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[594219.813529] br0: port 3(veth1) entered blocking state
+[594219.825494] br0: port 3(veth1) entered forwarding state
+[594219.832693] docker_gwbridge: port 2(veth0e95363) entered blocking state
+[594219.840019] docker_gwbridge: port 2(veth0e95363) entered disabled state
+[594219.847648] device veth0e95363 entered promiscuous mode
+[594219.854161] IPv6: ADDRCONF(NETDEV_UP): veth0e95363: link is not ready
+[594219.861013] docker_gwbridge: port 2(veth0e95363) entered blocking state
+[594219.868331] docker_gwbridge: port 2(veth0e95363) entered forwarding state
+[594219.892704] IPVS: Creating netns size=2040 id=63
+[594219.898014] br0: port 3(veth1) entered disabled state
+[594219.903704] docker_gwbridge: port 2(veth0e95363) entered disabled state
+[594219.910556] IPv6: ADDRCONF(NETDEV_CHANGE): veth8c4e55d: link becomes ready
+[594219.918048] docker0: port 2(veth8c4e55d) entered blocking state
+[594219.924376] docker0: port 2(veth8c4e55d) entered forwarding state
+[594219.957183] br0: port 1(vxlan0) entered blocking state
+[594219.960608] br0: port 1(vxlan0) entered disabled state
+[594219.964345] device vxlan0 entered promiscuous mode
+[594219.978630] br0: port 1(vxlan0) entered blocking state
+[594219.982477] br0: port 1(vxlan0) entered forwarding state
+[594220.023380] br0: port 4(veth2) entered blocking state
+[594220.028101] br0: port 4(veth2) entered disabled state
+[594220.037613] device veth2 entered promiscuous mode
+[594220.043587] IPv6: ADDRCONF(NETDEV_UP): veth2: link is not ready
+[594220.051859] br0: port 4(veth2) entered blocking state
+[594220.056029] br0: port 4(veth2) entered forwarding state
+[594220.124251] br0: port 2(veth0) entered blocking state
+[594220.129071] br0: port 2(veth0) entered disabled state
+[594220.133671] device veth0 entered promiscuous mode
+[594220.138617] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[594220.144631] br0: port 2(veth0) entered blocking state
+[594220.148658] br0: port 2(veth0) entered forwarding state
+[594220.182207] br0: port 1(vxlan0) entered blocking state
+[594220.185901] br0: port 1(vxlan0) entered disabled state
+[594220.189377] device vxlan0 entered promiscuous mode
+[594220.193332] docker_gwbridge: port 3(vethb1413f2) entered blocking state
+[594220.198461] docker_gwbridge: port 3(vethb1413f2) entered disabled state
+[594220.216187] device vethb1413f2 entered promiscuous mode
+[594220.226413] IPv6: ADDRCONF(NETDEV_UP): vethb1413f2: link is not ready
+[594220.236884] docker_gwbridge: port 3(vethb1413f2) entered blocking state
+[594220.244568] docker_gwbridge: port 3(vethb1413f2) entered forwarding state
+[594220.258039] br0: port 1(vxlan0) entered blocking state
+[594220.263830] br0: port 1(vxlan0) entered forwarding state
+[594220.315180] br0: port 2(veth0) entered blocking state
+[594220.320802] br0: port 2(veth0) entered disabled state
+[594220.326230] device veth0 entered promiscuous mode
+[594220.332105] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[594220.336775] br0: port 2(veth0) entered blocking state
+[594220.342956] br0: port 2(veth0) entered forwarding state
+[594220.350387] docker_gwbridge: port 4(vetha7337af) entered blocking state
+[594220.354528] docker_gwbridge: port 4(vetha7337af) entered disabled state
+[594220.359134] device vetha7337af entered promiscuous mode
+[594220.363350] IPv6: ADDRCONF(NETDEV_UP): vetha7337af: link is not ready
+[594220.367154] docker_gwbridge: port 4(vetha7337af) entered blocking state
+[594220.371047] docker_gwbridge: port 4(vetha7337af) entered forwarding state
+[594220.416866] IPVS: Creating netns size=2040 id=64
+[594220.434636] IPVS: Creating netns size=2040 id=65
+[594220.449393] br0: port 3(veth1) entered blocking state
+[594220.456019] br0: port 3(veth1) entered disabled state
+[594220.461349] device veth1 entered promiscuous mode
+[594220.472512] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[594220.476553] br0: port 3(veth1) entered blocking state
+[594220.480046] br0: port 3(veth1) entered forwarding state
+[594220.538997] IPVS: Creating netns size=2040 id=66
+[594220.616118] br0: port 4(veth2) entered disabled state
+[594220.622053] br0: port 2(veth0) entered disabled state
+[594220.628880] docker_gwbridge: port 3(vethb1413f2) entered disabled state
+[594220.642909] br0: port 2(veth0) entered disabled state
+[594220.649310] docker_gwbridge: port 4(vetha7337af) entered disabled state
+[594220.657189] br0: port 3(veth1) entered disabled state
+[594220.685649] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[594220.693066] br0: port 3(veth1) entered blocking state
+[594220.698735] br0: port 3(veth1) entered forwarding state
+[594220.719081] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[594220.726650] br0: port 2(veth0) entered blocking state
+[594220.732302] br0: port 2(veth0) entered forwarding state
+[594220.775546] IPv6: ADDRCONF(NETDEV_CHANGE): veth2: link becomes ready
+[594220.781910] br0: port 4(veth2) entered blocking state
+[594220.787160] br0: port 4(veth2) entered forwarding state
+[594220.816091] IPv6: ADDRCONF(NETDEV_CHANGE): vetha7337af: link becomes ready
+[594220.820242] docker_gwbridge: port 4(vetha7337af) entered blocking state
+[594220.824450] docker_gwbridge: port 4(vetha7337af) entered forwarding state
+[594220.856080] IPv6: ADDRCONF(NETDEV_CHANGE): veth0e95363: link becomes ready
+[594220.863568] docker_gwbridge: port 2(veth0e95363) entered blocking state
+[594220.869573] docker_gwbridge: port 2(veth0e95363) entered forwarding state
+[594220.876266] IPv6: ADDRCONF(NETDEV_CHANGE): vethb1413f2: link becomes ready
+[594220.884752] docker_gwbridge: port 3(vethb1413f2) entered blocking state
+[594220.891587] docker_gwbridge: port 3(vethb1413f2) entered forwarding state
+[594220.912705] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[594220.918826] br0: port 2(veth0) entered blocking state
+[594220.923818] br0: port 2(veth0) entered forwarding state
+[594220.938714] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[594220.945781] br0: port 3(veth1) entered blocking state
+[594220.951004] br0: port 3(veth1) entered forwarding state
+[594232.149254] br0: port 5(veth3) entered blocking state
+[594232.153939] br0: port 5(veth3) entered disabled state
+[594232.159887] device veth3 entered promiscuous mode
+[594232.163671] IPv6: ADDRCONF(NETDEV_UP): veth3: link is not ready
+[594232.169046] docker_gwbridge: port 5(veth16d88f0) entered blocking state
+[594232.174039] docker_gwbridge: port 5(veth16d88f0) entered disabled state
+[594232.186176] device veth16d88f0 entered promiscuous mode
+[594232.193391] IPv6: ADDRCONF(NETDEV_UP): veth16d88f0: link is not ready
+[594232.198024] docker_gwbridge: port 5(veth16d88f0) entered blocking state
+[594232.202697] docker_gwbridge: port 5(veth16d88f0) entered forwarding state
+[594232.285163] br0: port 3(veth1) entered blocking state
+[594232.288392] br0: port 3(veth1) entered disabled state
+[594232.292413] device veth1 entered promiscuous mode
+[594232.296046] IPv6: ADDRCONF(NETDEV_UP): veth1: link is not ready
+[594232.299572] br0: port 3(veth1) entered blocking state
+[594232.302784] br0: port 3(veth1) entered forwarding state
+[594232.328136] IPVS: Creating netns size=2040 id=67
+[594232.434868] docker_gwbridge: port 5(veth16d88f0) entered disabled state
+[594232.439572] IPv6: ADDRCONF(NETDEV_CHANGE): veth1: link becomes ready
+[594232.513620] IPv6: ADDRCONF(NETDEV_CHANGE): veth16d88f0: link becomes ready
+[594232.518199] docker_gwbridge: port 5(veth16d88f0) entered blocking state
+[594232.522902] docker_gwbridge: port 5(veth16d88f0) entered forwarding state
+[594232.538721] IPv6: ADDRCONF(NETDEV_CHANGE): veth3: link becomes ready
+[594232.542648] br0: port 5(veth3) entered blocking state
+[594232.546534] br0: port 5(veth3) entered forwarding state
+[598106.303181] br0: port 3(veth1) entered disabled state
+[598106.318229] br0: port 3(veth1) entered disabled state
+[598106.324893] device veth1 left promiscuous mode
+[598106.327848] br0: port 3(veth1) entered disabled state
+[598106.353091] br0: port 5(veth3) entered disabled state
+[598106.372246] docker_gwbridge: port 5(veth16d88f0) entered disabled state
+[598106.386144] docker_gwbridge: port 5(veth16d88f0) entered disabled state
+[598106.393745] device veth16d88f0 left promiscuous mode
+[598106.397104] docker_gwbridge: port 5(veth16d88f0) entered disabled state
+[598106.420549] br0: port 5(veth3) entered disabled state
+[598106.427179] device veth3 left promiscuous mode
+[598106.430280] br0: port 5(veth3) entered disabled state
+[598106.463079] IPVS: __ip_vs_del_service: enter
+[598106.465980] IPVS: __ip_vs_del_service: enter
+[598106.740690] IPVS: __ip_vs_del_service: enter
+[598106.932424] IPVS: __ip_vs_del_service: enter
+[598211.741263] br0: port 5(veth4) entered blocking state
+[598211.744448] br0: port 5(veth4) entered disabled state
+[598211.748056] device veth4 entered promiscuous mode
+[598211.751767] IPv6: ADDRCONF(NETDEV_UP): veth4: link is not ready
+[598211.756782] docker_gwbridge: port 5(veth12deb81) entered blocking state
+[598211.760869] docker_gwbridge: port 5(veth12deb81) entered disabled state
+[598211.764795] device veth12deb81 entered promiscuous mode
+[598211.770547] IPv6: ADDRCONF(NETDEV_UP): veth12deb81: link is not ready
+[598211.774723] docker_gwbridge: port 5(veth12deb81) entered blocking state
+[598211.778569] docker_gwbridge: port 5(veth12deb81) entered forwarding state
+[598211.808308] br0: port 3(veth2) entered blocking state
+[598211.811624] br0: port 3(veth2) entered disabled state
+[598211.814954] device veth2 entered promiscuous mode
+[598211.818458] IPv6: ADDRCONF(NETDEV_UP): veth2: link is not ready
+[598211.822547] br0: port 3(veth2) entered blocking state
+[598211.826236] br0: port 3(veth2) entered forwarding state
+[598211.868295] IPVS: Creating netns size=2040 id=68
+[598211.982343] docker_gwbridge: port 5(veth12deb81) entered disabled state
+[598211.986532] IPv6: ADDRCONF(NETDEV_CHANGE): veth2: link becomes ready
+[598212.031778] IPv6: ADDRCONF(NETDEV_CHANGE): veth12deb81: link becomes ready
+[598212.038042] docker_gwbridge: port 5(veth12deb81) entered blocking state
+[598212.043856] docker_gwbridge: port 5(veth12deb81) entered forwarding state
+[598212.065359] IPv6: ADDRCONF(NETDEV_CHANGE): veth4: link becomes ready
+[598212.070146] br0: port 5(veth4) entered blocking state
+[598212.074044] br0: port 5(veth4) entered forwarding state
+[604141.484349] IPVS: __ip_vs_del_service: enter
+[604141.529379] IPVS: __ip_vs_del_service: enter
+[604141.571196] br0: port 2(veth0) entered disabled state
+[604141.595200] docker_gwbridge: port 4(vetha7337af) entered disabled state
+[604141.609045] docker_gwbridge: port 4(vetha7337af) entered disabled state
+[604141.617436] device vetha7337af left promiscuous mode
+[604141.621585] docker_gwbridge: port 4(vetha7337af) entered disabled state
+[604141.638810] br0: port 2(veth0) entered disabled state
+[604141.646166] device veth0 left promiscuous mode
+[604141.649916] br0: port 2(veth0) entered disabled state
+[604141.682177] IPVS: __ip_vs_del_service: enter
+[604148.692293] br0: port 3(veth2) entered disabled state
+[604148.696958] br0: port 1(vxlan0) entered disabled state
+[604148.709171] device veth2 left promiscuous mode
+[604148.713195] ov-001005-pvx82: port 3(veth2) entered disabled state
+[604148.721136] device vxlan0 left promiscuous mode
+[604148.725019] ov-001005-pvx82: port 1(vxlan0) entered disabled state
+[604148.806356] IPVS: __ip_vs_del_service: enter
+[604148.882414] br0: port 5(veth4) entered disabled state
+[604148.899548] docker_gwbridge: port 5(veth12deb81) entered disabled state
+[604148.907233] docker_gwbridge: port 5(veth12deb81) entered disabled state
+[604148.916131] device veth12deb81 left promiscuous mode
+[604148.920180] docker_gwbridge: port 5(veth12deb81) entered disabled state
+[604148.937252] br0: port 5(veth4) entered disabled state
+[604148.944813] device veth4 left promiscuous mode
+[604148.948692] br0: port 5(veth4) entered disabled state
+[604149.123163] br0: port 5(veth5) entered blocking state
+[604149.127536] br0: port 5(veth5) entered disabled state
+[604149.131762] device veth5 entered promiscuous mode
+[604149.135868] IPv6: ADDRCONF(NETDEV_UP): veth5: link is not ready
+[604149.140708] br0: port 5(veth5) entered blocking state
+[604149.144823] br0: port 5(veth5) entered forwarding state
+[604149.150539] docker_gwbridge: port 4(veth440b6d3) entered blocking state
+[604149.155746] docker_gwbridge: port 4(veth440b6d3) entered disabled state
+[604149.160715] device veth440b6d3 entered promiscuous mode
+[604149.164990] IPv6: ADDRCONF(NETDEV_UP): veth440b6d3: link is not ready
+[604149.169745] docker_gwbridge: port 4(veth440b6d3) entered blocking state
+[604149.175478] docker_gwbridge: port 4(veth440b6d3) entered forwarding state
+[604149.230611] IPVS: Creating netns size=2040 id=69
+[604149.338210] IPv6: ADDRCONF(NETDEV_CHANGE): veth5: link becomes ready
+[604149.343965] docker_gwbridge: port 4(veth440b6d3) entered disabled state
+[604149.396602] IPv6: ADDRCONF(NETDEV_CHANGE): veth440b6d3: link becomes ready
+[604149.403588] docker_gwbridge: port 4(veth440b6d3) entered blocking state
+[604149.409047] docker_gwbridge: port 4(veth440b6d3) entered forwarding state
+[604489.418575] br0: port 5(veth5) entered disabled state
+[604489.436701] docker_gwbridge: port 4(veth440b6d3) entered disabled state
+[604489.442890] docker_gwbridge: port 4(veth440b6d3) entered disabled state
+[604489.450911] device veth440b6d3 left promiscuous mode
+[604489.458573] docker_gwbridge: port 4(veth440b6d3) entered disabled state
+[604489.481425] br0: port 5(veth5) entered disabled state
+[604489.490701] device veth5 left promiscuous mode
+[604489.496258] br0: port 5(veth5) entered disabled state
+[604489.732461] IPVS: __ip_vs_del_service: enter
+[604562.060218] br0: port 5(veth6) entered blocking state
+[604562.064299] br0: port 5(veth6) entered disabled state
+[604562.068342] device veth6 entered promiscuous mode
+[604562.072407] IPv6: ADDRCONF(NETDEV_UP): veth6: link is not ready
+[604562.078191] docker_gwbridge: port 4(vethaf69306) entered blocking state
+[604562.082873] docker_gwbridge: port 4(vethaf69306) entered disabled state
+[604562.088039] device vethaf69306 entered promiscuous mode
+[604562.092490] IPv6: ADDRCONF(NETDEV_UP): vethaf69306: link is not ready
+[604562.096973] docker_gwbridge: port 4(vethaf69306) entered blocking state
+[604562.101594] docker_gwbridge: port 4(vethaf69306) entered forwarding state
+[604562.138300] IPVS: Creating netns size=2040 id=70
+[604562.247433] docker_gwbridge: port 4(vethaf69306) entered disabled state
+[604562.251923] IPv6: ADDRCONF(NETDEV_CHANGE): veth6: link becomes ready
+[604562.256674] br0: port 5(veth6) entered blocking state
+[604562.260430] br0: port 5(veth6) entered forwarding state
+[604562.317618] IPv6: ADDRCONF(NETDEV_CHANGE): vethaf69306: link becomes ready
+[604562.322524] docker_gwbridge: port 4(vethaf69306) entered blocking state
+[604562.327197] docker_gwbridge: port 4(vethaf69306) entered forwarding state
+[604942.532200] br0: port 5(veth6) entered disabled state
+[604942.574333] docker_gwbridge: port 4(vethaf69306) entered disabled state
+[604942.582673] docker_gwbridge: port 4(vethaf69306) entered disabled state
+[604942.595131] device vethaf69306 left promiscuous mode
+[604942.599027] docker_gwbridge: port 4(vethaf69306) entered disabled state
+[604942.616923] br0: port 5(veth6) entered disabled state
+[604942.624032] device veth6 left promiscuous mode
+[604942.627469] br0: port 5(veth6) entered disabled state
+[604942.871294] br0: port 5(veth7) entered blocking state
+[604942.875192] br0: port 5(veth7) entered disabled state
+[604942.879111] device veth7 entered promiscuous mode
+[604942.882877] IPv6: ADDRCONF(NETDEV_UP): veth7: link is not ready
+[604942.887310] br0: port 5(veth7) entered blocking state
+[604942.891107] br0: port 5(veth7) entered forwarding state
+[604942.896557] docker_gwbridge: port 4(veth9c09d23) entered blocking state
+[604942.901188] docker_gwbridge: port 4(veth9c09d23) entered disabled state
+[604942.906156] device veth9c09d23 entered promiscuous mode
+[604942.910476] IPv6: ADDRCONF(NETDEV_UP): veth9c09d23: link is not ready
+[604942.915312] docker_gwbridge: port 4(veth9c09d23) entered blocking state
+[604942.919920] docker_gwbridge: port 4(veth9c09d23) entered forwarding state
+[604942.958924] IPVS: Creating netns size=2040 id=71
+[604943.073205] IPv6: ADDRCONF(NETDEV_CHANGE): veth7: link becomes ready
+[604943.077906] docker_gwbridge: port 4(veth9c09d23) entered disabled state
+[604943.143667] IPv6: ADDRCONF(NETDEV_CHANGE): veth9c09d23: link becomes ready
+[604943.148552] docker_gwbridge: port 4(veth9c09d23) entered blocking state
+[604943.153116] docker_gwbridge: port 4(veth9c09d23) entered forwarding state
+[622409.980177] br0: port 5(veth7) entered disabled state
+[622410.001170] docker_gwbridge: port 4(veth9c09d23) entered disabled state
+[622410.015847] docker_gwbridge: port 4(veth9c09d23) entered disabled state
+[622410.025837] device veth9c09d23 left promiscuous mode
+[622410.029971] docker_gwbridge: port 4(veth9c09d23) entered disabled state
+[622410.047070] br0: port 5(veth7) entered disabled state
+[622410.054744] device veth7 left promiscuous mode
+[622410.058535] br0: port 5(veth7) entered disabled state
+[622410.301082] IPVS: Creating netns size=2040 id=72
+[622410.366242] br0: port 1(vxlan0) entered blocking state
+[622410.372373] br0: port 1(vxlan0) entered disabled state
+[622410.378480] device vxlan0 entered promiscuous mode
+[622410.384278] br0: port 1(vxlan0) entered blocking state
+[622410.390401] br0: port 1(vxlan0) entered forwarding state
+[622410.439172] br0: port 2(veth0) entered blocking state
+[622410.443012] br0: port 2(veth0) entered disabled state
+[622410.446935] device veth0 entered promiscuous mode
+[622410.450654] IPv6: ADDRCONF(NETDEV_UP): veth0: link is not ready
+[622410.454816] br0: port 2(veth0) entered blocking state
+[622410.458482] br0: port 2(veth0) entered forwarding state
+[622410.463851] docker_gwbridge: port 4(veth1ff1db5) entered blocking state
+[622410.468473] docker_gwbridge: port 4(veth1ff1db5) entered disabled state
+[622410.473025] device veth1ff1db5 entered promiscuous mode
+[622410.476962] IPv6: ADDRCONF(NETDEV_UP): veth1ff1db5: link is not ready
+[622410.481514] docker_gwbridge: port 4(veth1ff1db5) entered blocking state
+[622410.486422] docker_gwbridge: port 4(veth1ff1db5) entered forwarding state
+[622410.525257] br0: port 5(veth8) entered blocking state
+[622410.529139] br0: port 5(veth8) entered disabled state
+[622410.533162] device veth8 entered promiscuous mode
+[622410.536731] IPv6: ADDRCONF(NETDEV_UP): veth8: link is not ready
+[622410.540927] br0: port 5(veth8) entered blocking state
+[622410.544932] br0: port 5(veth8) entered forwarding state
+[622410.576094] IPVS: Creating netns size=2040 id=73
+[622410.692100] br0: port 2(veth0) entered disabled state
+[622410.696607] docker_gwbridge: port 4(veth1ff1db5) entered disabled state
+[622410.701336] IPv6: ADDRCONF(NETDEV_CHANGE): veth8: link becomes ready
+[622410.755568] IPv6: ADDRCONF(NETDEV_CHANGE): veth1ff1db5: link becomes ready
+[622410.760559] docker_gwbridge: port 4(veth1ff1db5) entered blocking state
+[622410.765155] docker_gwbridge: port 4(veth1ff1db5) entered forwarding state
+[622410.788063] IPv6: ADDRCONF(NETDEV_CHANGE): veth0: link becomes ready
+[622410.792268] br0: port 2(veth0) entered blocking state
+[622410.795831] br0: port 2(veth0) entered forwarding state
+[1643203.961737] docker0: port 2(veth8c4e55d) entered disabled state
+[1643203.970725] docker0: port 2(veth8c4e55d) entered disabled state
+[1643203.978065] device veth8c4e55d left promiscuous mode
+[1643203.982491] docker0: port 2(veth8c4e55d) entered disabled state
+[1643204.156699] docker0: port 2(veth63d88a1) entered blocking state
+[1643204.161659] docker0: port 2(veth63d88a1) entered disabled state
+[1643204.177145] device veth63d88a1 entered promiscuous mode
+[1643204.186378] IPv6: ADDRCONF(NETDEV_UP): veth63d88a1: link is not ready
+[1643204.191794] docker0: port 2(veth63d88a1) entered blocking state
+[1643204.196946] docker0: port 2(veth63d88a1) entered forwarding state
+[1643204.248022] IPVS: Creating netns size=2040 id=74
+[1643204.316720] IPv6: ADDRCONF(NETDEV_CHANGE): veth63d88a1: link becomes ready
