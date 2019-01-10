@@ -1,6 +1,0 @@
-2018-06-28T17:56:00.668360800Z {"level":"info","msg":"Initializing UCP Agent ...","time":"2018-06-28T17:56:00Z"}
-2018-06-28T17:56:00.669361700Z {"level":"info","msg":"Connecting to local Docker daemon.","time":"2018-06-28T17:56:00Z"}
-2018-06-28T17:56:00.751368000Z {"level":"info","msg":"Loading UCP Configuration file.","time":"2018-06-28T17:56:00Z"}
-2018-06-28T17:56:00.813368100Z {"level":"info","msg":"UCP agent initialization complete.","time":"2018-06-28T17:56:00Z"}
-2018-06-28T17:56:01.018360700Z {"level":"info","msg":"Beginning state difference detection loop...","time":"2018-06-28T17:56:00Z"}
-

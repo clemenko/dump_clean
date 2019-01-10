@@ -1,8 +1,0 @@
-default via 172.31.16.1 dev eth0  proto static  metric 100 
-172.17.0.0/16 dev docker0  proto kernel  scope link  src 172.17.0.1 
-172.18.0.0/16 dev docker_gwbridge  proto kernel  scope link  src 172.18.0.1 
-172.31.16.0/20 dev eth0  proto kernel  scope link  src 172.31.18.229  metric 100 
-192.168.28.64/26 via 172.31.12.152 dev tunl0  proto bird onlink 
-blackhole 192.168.111.192/26  proto bird 
-192.168.171.0/26 via 172.31.9.58 dev tunl0  proto bird onlink 
-192.168.185.128/26 via 172.31.10.96 dev tunl0  proto bird onlink 

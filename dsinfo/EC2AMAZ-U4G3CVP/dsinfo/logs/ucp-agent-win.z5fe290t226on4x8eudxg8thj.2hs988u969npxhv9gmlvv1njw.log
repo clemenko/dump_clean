@@ -1,8 +1,0 @@
-2018-06-28T16:36:24.047761600Z {"level":"info","msg":"Initializing UCP Agent ...","time":"2018-06-28T16:36:23Z"}
-2018-06-28T16:36:24.047761600Z {"level":"info","msg":"Connecting to local Docker daemon.","time":"2018-06-28T16:36:24Z"}
-2018-06-28T16:36:24.292793700Z {"level":"info","msg":"Loading UCP Configuration file.","time":"2018-06-28T16:36:24Z"}
-2018-06-28T16:36:24.325775000Z {"level":"info","msg":"UCP agent initialization complete.","time":"2018-06-28T16:36:24Z"}
-2018-06-28T16:36:24.328793500Z {"level":"info","msg":"Beginning state difference detection loop...","time":"2018-06-28T16:36:24Z"}
-2018-06-28T16:36:24.382792900Z {"level":"info","msg":"detected state difference for component: Docker Proxy","time":"2018-06-28T16:36:24Z"}
-2018-06-28T16:36:24.382792900Z {"level":"info","msg":"Detected difference in desired and current state of UCP on this node.","time":"2018-06-28T16:36:24Z"}
-
